@@ -1,4 +1,5 @@
 import credit0 from "../asset/logo.png";
+import { HashLink } from "react-router-hash-link";
 export function Footer() {
   return (
     <div>
@@ -58,49 +59,60 @@ export function Footer() {
             <h3 className="text-lg font-semibold">Shot Link</h3>
             <ul className="mt-2 space-y-1 text-sm">
               <li>
-                <a href="/" className="hover:text-gray-300">
+                <HashLink smooth to="/" className="hover:text-gray-300">
                   Home
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a href="/about" className="hover:text-gray-300">
+                <HashLink smooth to="/about" className="hover:text-gray-300">
                   About Us
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a href="/services" className="hover:text-gray-300">
+                <HashLink smooth to="/services" className="hover:text-gray-300">
                   Our Services
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a href="/pricing" className="hover:text-gray-300">
+                <HashLink smooth to="/pricing" className="hover:text-gray-300">
                   Pricing Page
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a href="/work" className="hover:text-gray-300">
+                <HashLink smooth to="/work" className="hover:text-gray-300">
                   How It Works
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a href="/learning-center" className="hover:text-gray-300">
+                <HashLink
+                  smooth
+                  to="/learning-center"
+                  className="hover:text-gray-300"
+                >
                   Learning Center
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a href="/terms-and-conditions" className="hover:text-gray-300">
+                <HashLink
+                  to="/terms-and-conditions"
+                  className="hover:text-gray-300"
+                >
                   Terms and Conditions
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a href="/f&q" className="hover:text-gray-300">
+                <HashLink smooth to="/f&q" className="hover:text-gray-300">
                   FAQ
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a href="/privacy-policy" className="hover:text-gray-300">
+                <HashLink
+                  smooth
+                  to="/privacy-policy"
+                  className="hover:text-gray-300"
+                >
                   Privacy Policy
-                </a>
+                </HashLink>
               </li>
             </ul>
           </div>
@@ -125,18 +137,18 @@ export function Footer() {
               />
               <script src="https://cdn.tailwindcss.com"></script>
 
-              <a href="#" className="hover:text-gray-300 ">
+              <HashLink href="#" className="hover:text-gray-300 ">
                 <i className="fab fa-facebook"></i>
-              </a>
-              <a href="#" className="hover:text-gray-300">
+              </HashLink>
+              <HashLink href="#" className="hover:text-gray-300">
                 <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" className="hover:text-gray-300">
+              </HashLink>
+              <HashLink href="#" className="hover:text-gray-300">
                 <i className="fab fa-instagram"></i>
-              </a>
-              <a href="#" className="hover:text-gray-300">
+              </HashLink>
+              <HashLink href="#" className="hover:text-gray-300">
                 <i className="fab fa-youtube"></i>
-              </a>
+              </HashLink>
             </div>
           </div>
         </div>
