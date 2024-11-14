@@ -1,7 +1,5 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../asset/672-6724074_transparent-tm-logo-png-logo-trademark-symbol-png.png"
-
+import logo from "../asset/672-6724074_transparent-tm-logo-png-logo-trademark-symbol-png.png";
 
 export function MainNav() {
   // Helper function for active class styling
@@ -11,9 +9,9 @@ export function MainNav() {
       : "hover:text-blue-700";
 
   return (
-    <nav className="flex justify-around items-center shadow-md border-b-[6px] border-zinc-500/50 text-sm font-semibold text-gray-700">
+    <nav className="flex justify-around items-center border-zinc-500/50 text-sm font-semibold text-gray-700">
       <div className="flex p-5 items-center h-16">
-        <NavLink to="/" className="text-2xl font-bold text-blue-700">
+        <NavLink to="/" className="text-2xl font-bold text-[#15549A]">
           <img src={logo} alt="Eze Credit Repair Logo" className="h-[60px] " />
         </NavLink>
       </div>
