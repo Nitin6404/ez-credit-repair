@@ -18,6 +18,7 @@ import chingchong from "../asset/chingchong.png";
 import creditrepairing from "../asset/creditrapiring.jpg";
 import layer from "../asset/Layer 1002 copy.png";
 import about from "../asset/about.png";
+import faqbg from "../asset/faqbg.png";
 export function Home() {
   return (
     // div of the woman
@@ -169,7 +170,9 @@ export function Home() {
           {/* Left Side - What We Do Section */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 max-w-md">
             {/* Main Title */}
-            <h1 className="text-4xl font-bold text-[#78B6F6] font-inter">What We Do</h1>
+            <h1 className="text-4xl font-bold text-[#78B6F6] font-inter">
+              What We Do
+            </h1>
 
             {/* Description */}
             <p className="text-lg font-inter font-[300]">
@@ -224,7 +227,7 @@ export function Home() {
 
           {/* Right Side - Basketball Image and Text */}
           <div className="flex flex-col w-1/2 items-center  justify-center mt-6 md:mt-0">
-           {/* <img src={basket} className="object-cover" alt="" /> */}
+            {/* <img src={basket} className="object-cover" alt="" /> */}
             {/* Basketball Image Placeholder */}
             <div className="w-[300px] h-[200px]  flex items-center justify-center mb-4">
               <img
@@ -369,7 +372,6 @@ export function Home() {
   );
 }
 
-
 function FeQ3() {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -386,9 +388,9 @@ function FeQ3() {
           <img
             src={about} // Replace with your image URL or imported image
             alt="Recovery Icon"
-            className="mb-4 w-[70px] h-[60px] absolute" // Optional: Add some styling (e.g., margin)
+            className="mb-4 w-[120px] h-[100px] absolute" // Optional: Add some styling (e.g., margin)
           />
-          <p className="ml-[100px]">
+          <p className="ml-[120px]">
             Credit repair involves resolving any questionable negative items
             that may be damaging your credit profile. If the credit bureaus or
             your creditors cannot provide proof that these items are fair,
@@ -422,16 +424,16 @@ function FeQ3() {
   return (
     <div className="h-[550px] bg-gray-100">
       <div className="max-w-4xl ml-[10px] p-6 mt-[10px]">
-        <h1 className="text-4xl font-bold mb-4 text-blue-700">
+        <h1 className="text-4xl font-inter font-normal mb-4 text-[#15549A]">
           Frequently Asked Questions
         </h1>
       </div>
-      <div className="bg-white-100 font-sans p-[10px]">
-        <div className="w-[500px] mx-auto mt-[-20px] ml-[5px] bg-white border border-gray-300 rounded-lg overflow-hidden shadow-md">
+      <div className="bg-white-100 font-opensans flex justify-center w-full  font-[500] p-[10px]">
+        <div className="w-[550px] mx-auto mt-[-20px] ml-[5px] bg-white border border-gray-300 rounded-lg overflow-hidden shadow-md">
           {accordionData.map((item, index) => (
             <div key={index} className="border-b border-gray-300">
               <div
-                className="accordion-title flex justify-between items-center px-6 py-4 bg-white-100 cursor-pointer font-semibold hover:bg-gray-200"
+                className="accordion-title flex justify-between items-center px-6 py-4 bg-white-100 cursor-pointer font-opensans font-bold hover:bg-gray-200"
                 onClick={() => toggleAccordion(index)}
               >
                 {item.title}
@@ -468,7 +470,7 @@ function Program() {
         <div className="flex flex-col md:flex-row justify-between items-start md:space-x-4 mb-6">
           {/* Card 1 */}
           {/* Card 1 */}
-          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0">
+          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0 hover:shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
             <div className="flex p-2 items-center">
               <div className="bg-white text-[#15549A] font-montserrat text-lg font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
                 01
@@ -479,7 +481,7 @@ function Program() {
             </div>
 
             {/* Inner Card similar to Card 3 */}
-            <div className="bg-[#ECF6FF] text-[#9A9A9A] p-3 flex rounded">
+            <div className="bg-[#ECF6FF]  p-3 flex rounded hover:bg-[#15549A] text-white">
               <div className="relative inline-block mr-3">
                 {/* Image for Credit Report */}
                 <img
@@ -489,7 +491,7 @@ function Program() {
                 />
                 {/* Nested Image (if needed) */}
               </div>
-              <p className="font-montserrat font-bold text-[#9A9A9A]">
+              <p className="font-montserrat font-bold text-[#9A9A9A]  hover:text-white">
                 Establish a plan to identify roadblocks and inaccuracies
                 impacting your score
               </p>
@@ -497,7 +499,7 @@ function Program() {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0 shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
+          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0  hover:shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
             <div className="flex p-2 items-center">
               <div className="bg-white text-[#15549A] font-montserrat text-lg font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
                 02
@@ -506,20 +508,20 @@ function Program() {
                 Dispute & Escalations
               </h3>
             </div>
-            <div className="bg-[#15549A] text-gray-700 p-3 flex rounded">
+            <div className="bg-[#ECF6FF]  p-3 flex rounded hover:bg-[#15549A] text-white">
               <img
                 src={credit2}
                 alt="Dispute Icon"
                 className="inline-block mr-2 w-[70px] h-[70px]"
               />
-              <p className="font-montserrat font-bold text-[#fff]">
+              <p className="font-montserrat font-bold text-[#9A9A9A] hover:text-white ">
                 Challenge and Dispute negative items until they are removed
               </p>
             </div>
           </div>
 
           {/* Card 3 */}
-          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0">
+          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0 hover:shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
             <div className="flex p-2 items-center">
               <div className="bg-white text-[#15549A] font-montserrat text-lg font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
                 03
@@ -530,7 +532,7 @@ function Program() {
             </div>
 
             {/* Similar Inner Card as Card 2 */}
-            <div className="bg-[#ECF6FF] text-[#9A9A9A] p-3 flex rounded">
+            <div className="bg-[#ECF6FF]  p-3 flex rounded hover:bg-[#15549A] text-white">
               <div className="relative inline-block mr-3">
                 {/* Image for Credit 3 */}
                 <img
@@ -545,7 +547,7 @@ function Program() {
                   className="absolute w-[40px] h-[40px] top-[15px] left-[7px]"
                 />
               </div>
-              <p className="font-montserrat font-bold text-[#9A9A9A">
+              <p className="font-montserrat font-bold text-[#9A9A9A]  hover:text-white">
                 Take action to boost your credit score to reach your desired
                 score range
               </p>
@@ -569,18 +571,23 @@ function Program() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function Contactform() {
   return (
     <div>
       <div class=" text-white p-2 flex items-center h-[100px] mt-[150px]">
-      <div className="flex justify-center mt-[-900px] px-4 py-6 w-[500px] bg-gray-100 h-[550px] mx-auto mb-[70px] ml-[700px]">
-      <div className="bg-blue-800 w-full p-6 rounded-lg flex flex-col md:flex-row">
+        <div className="flex justify-center mt-[-900px] px-4 py-6 w-[500px]  h-[550px] mx-auto mb-[70px] ml-[700px]">
+          {/* <div
+          className="flex justify-center mt-[-900px] px-4 py-6 w-[500px] h-[550px] mx-auto mb-[70px] ml-[700px] bg-cover bg-center rounded-lg"
+          style={{ backgroundImage: `url(${Rectangle5})` }} */}
+          {/* > */}
+          <div className=" w-full p-6 bg-[url('/src/components/asset/faqbg.png')] rounded flex flex-col md:flex-row">
+            {/* <img src={Rectangle5} alt="Rectangle5" className="object-cover w-full h-full"/> */}
             {/* Left Section - Form */}
             <div className="flex-1 md:mr-8 mt-[-15px]">
-              <h2 className="text-2xl font-bold">Start Your Recovery</h2>
+              <h2 className="text-4xl font-[400px] font-inter">Start Your Recovery</h2>
               <form className="grid gap-3 mt-[25px]">
                 <div className="grid grid-cols-2 gap-1">
                   <input
