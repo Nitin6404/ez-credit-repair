@@ -1,89 +1,57 @@
 import React from "react";
-import Matthew from "../asset/Matthew.png";
-import Jack from "../asset/Jack.png";
-import Susan from "../asset/manS.png";
-import comma from "../asset/comma.png";
+import Matthew2 from "../asset/Mathew.png";
+import Jack from "../asset/JackD.png";
+import Susan from "../asset/MathewBlacky.png";
+
 
 export function Testinomial() {
   return (
     <div className="bg-white relative py-10 flex flex-col items-center">
       {/* Header Section */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl text-blue-600 font-semibold">
+        <h2 className="text-3xl text-[#15549A] font-inter font-bold">
           What Our Customers Say?
         </h2>
       </div>
 
       {/* Background Section (Behind Cards) */}
-      <div className="absolute top-[100px] w-full bg-blue-800 h-[200px] z-0"></div>
+      <div className="absolute top-[100px] w-full bg-[#15549A] h-[200px] z-0"></div>
       <div className="absolute top-[125px] w-[1100px] bg-white shadow-xl h-[250px] rounded-md z-5"></div>
 
       {/* Testimonial Cards Container */}
       <div className="relative flex justify-center top-[50px] items-center w-full max-w-4xl h-[400px]">
         {/* Left Card */}
-        <div className="absolute  w-[330px] h-[330px] bg-white shadow-lg border-4 border-blue-800 z-10 left-[10px] top-[25px] flex flex-col items-center p-4">
+        <div className="absolute  w-[330px] h-[330px]   z-10 left-[10px] top-[25px] flex flex-col items-center p-4">
           {/* Image Section */}
           <img
-            src={Matthew}
+            src={Matthew2}
             alt="Customer 1"
-            className="w-[120px] h-[120px] rounded object-cover mb-2"
+            className="w-full h-full rounded object-cover "
           />
-          {/* Name and Date Section */}
-          <span className="text-md font-medium font-inter text-[#292929]">Mathew S.</span>
-          <p className="text-[10px] text-[#292929] font-bold font-inter mb-4">June 17, 2024 / Brooklyn, NY</p>
-          {/* Feedback Section */}
-          <p className="text-[10px] font-bold text-[#262626] font-inter leading-tight text-center">
-            <img src={comma} alt="comma" className="w-[20px] h-[20px] "/>
-            "I'm very pleased with the service I received from the A-Team. My
-            credit was in terrible shape and I couldn't get a decent rate on
-            anything. The transformation saved us thousands. I'm about to close
-            on a house. The service is excellent and fast."
-            <img src={comma} alt="comma" className="w-[20px] h-[20px] transform rotate-180 ml-2 inline-block align-bottom"/>
-          </p>
         </div>
 
         {/* Center Card (Slightly Bigger) */}
-        <div className="absolute w-[360px] h-[360px] bg-white shadow-lg border-4 border-blue-800 z-20 flex top-3 flex-col items-center p-4">
+        <div className="absolute w-[360px] h-[360px]    z-20 flex top-3 flex-col items-center p-4">
           {/* Image Section */}
           <img
             src={Jack}
             alt="Customer 2"
-            className="w-[130px] h-[130px] rounded object-cover mb-2"
+            className="w-full h-full rounded object-cover mb-2"
           />
-          {/* Name and Date Section */}
-          <span className="text-md font-medium font-inter text-[#292929]">Jack D.</span>
-          <p className="text-[10px] text-[#292929] font-bold font-inter mb-4">July 10, 2024 / San Francisco, CA</p>
-          {/* Feedback Section */}
-          <p className="text-[10px] font-bold text-[#262626] font-inter leading-tight text-center">
-            <img src={comma} alt="comma" className="w-[20px] h-[20px]"/>
-            "I'm very pleased with the service I received from the A-Team. My
-            credit was in terrible shape and I couldn't get a decent rate on
-            anything. The transformation saved us thousands. I'm about to close
-            on a house. The service is excellent and fast."
-            <img src={comma} alt="comma" className="w-[20px] h-[20px] transform rotate-180 ml-2 inline-block align-bottom"/>
-          </p>
+          
+          
         </div>
 
         {/* Right Card */}
-        <div className="absolute w-[330px] h-[330px] bg-white shadow-lg border-4 border-blue-800 z-10 right-[10px] top-[25px] flex flex-col items-center p-4">
+        <div className="absolute w-[330px] h-[330px]    z-10 right-[10px] top-[25px] flex flex-col items-center p-4">
           {/* Image Section */}
           <img
             src={Susan}
             alt="Customer 3"
-            className="w-[120px] h-[120px] rounded object-cover mb-2"
+            className="w-full h-full rounded object-cover mb-2"
           />
-          {/* Name and Date Section */}
-          <span className="text-md font-medium font-inter text-[#292929]">Susan A.</span>
-          <p className="text-[10px] text-[#292929] font-bold font-inter mb-4">August 5, 2024 / Chicago, IL</p>
-          {/* Feedback Section */}
-            <p className="text-[10px] font-bold text-[#262626] font-inter leading-tight text-center">
-            <img src={comma} alt="comma" className="w-[20px] h-[20px]"/>
-            "I'm very pleased with the service I received from the A-Team. My
-            credit was in terrible shape and I couldn't get a decent rate on
-            anything. The transformation saved us thousands. I'm about to close
-            on a house. The service is excellent and fast."
-            <img src={comma} alt="comma" className="w-[20px] h-[20px] transform rotate-180 ml-2 inline-block align-bottom"/>
-          </p>
+        
+          
         </div>
       </div>
     </div>

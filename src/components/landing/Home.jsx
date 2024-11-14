@@ -258,43 +258,43 @@ export function Home() {
       <div className="p-8 bg-gray-100 min-h-screen">
         {/* Main Content Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-blue-700">News & Blog</h1>
+          <h1 className="text-3xl font-inter font-bold text-[#15549A]">News & Blog</h1>
         </div>
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Credit Repair Section */}
           <div className="space-y-8">
-            <h2 className="text-blue-700 text-xl font-bold">
+            <h2 className="text-[#15549A] text-xl font-bold">
               Credit Repair: What It Is, How It Works, Related...
             </h2>
 
             {/* Credit Repair Card 1 */}
-            <div className=" relative rounded-lg shadow-md overflow-hidden">
+            <div className=" relative rounded-lg bg-white overflow-hidden">
               <img
                 src={hands}
                 alt="Credit Repair 1"
                 className="w-full h-48 object-cover"
               />
               <div className="absolute inset-0 flex flex-col justify-end p-4">
-                <span className="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-sm border-2 border-white text-xs w-fit">
+                <span className="absolute top-2 left-2 bg-[#059C4B] font-inter font-[400] text-white px-2 py-1 rounded-md border-2 border-white text-xs w-fit">
                   August 29, 2024
                 </span>
               </div>
             </div>
 
             {/* Credit Repair Card 2 */}
-            <h2 className="text-blue-700 text-xl font-bold">
+            <h2 className="text-[#15549A] font-inter text-xl font-bold">
               Credit Repair: How Credit Repair Works
             </h2>
-            <div className="relative bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="relative bg-white rounded-lg overflow-hidden">
               <img
                 src={mobile}
                 alt="Credit Repair 2"
                 className="w-full h-48 object-cover"
               />
               <div className="absolute inset-0 flex flex-col justify-end p-4">
-                <span className="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-sm border-2 border-white text-xs w-fit">
+                <span className="absolute top-2 left-2 bg-[#059C4B] font-inter font-[400] text-white px-2 py-1 rounded-md border-2 border-white text-xs w-fit">
                   August 29, 2024
                 </span>
               </div>
@@ -303,7 +303,7 @@ export function Home() {
 
           {/* Related Articles Section */}
           <div className="space-y-6 bg-gray-100 p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold text-gray-700">
+            <h2 className="text-2xl font-normal text-[#4B4B4B] font-inter">
               Related Articles
             </h2>
 
@@ -315,10 +315,10 @@ export function Home() {
                 className="w-20 h-20 object-cover rounded-md"
               />
               <div>
-                <h3 className="font-bold text-blue-700">
+                <h3 className="font-bold font-inter  text-[#15549A]">
                   Common Things That Improve or Lower Scores
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm font-inter font-[400] text-[#424242]">
                   A secured credit card is a type of credit card that is backed
                   by a cash deposit, which serves as collateral should you
                   default on payments. A secured card can rebuild credit.
@@ -334,11 +334,11 @@ export function Home() {
                 className="w-20 h-20 object-cover rounded-md"
               />
               <div>
-                <h3 className="font-bold text-blue-700">
+                <h3 className="font-bold font-inter  text-[#15549A]">
                   Average Outstanding Balance on Credit Cards: How It Works and
                   Calculation
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm font-inter font-[400] text-[#424242]">
                   Credit history is the ongoing documentation of your financial
                   information, including repayment of your debts. Your credit
                   history is an essential part of your credit report.
@@ -354,10 +354,10 @@ export function Home() {
                 className="w-20 h-20 object-cover rounded-md"
               />
               <div>
-                <h3 className="font-bold text-blue-700">
+                <h3 className="font-bold font-inter  text-[#15549A]">
                   What Is a Secured Credit Card? How It Works and Benefits
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm font-inter font-[400] text-[#424242]">
                   A fair credit score falls in the range between poor and good.
                   A fair FICO credit score is 580 to 669, and the equivalent
                   near-prime VantageScore is 601 to 660.
@@ -390,7 +390,7 @@ function FeQ3() {
             alt="Recovery Icon"
             className="mb-4 w-[120px] h-[100px] absolute" // Optional: Add some styling (e.g., margin)
           />
-          <p className="ml-[120px]">
+          <p className="ml-[140px]">
             Credit repair involves resolving any questionable negative items
             that may be damaging your credit profile. If the credit bureaus or
             your creditors cannot provide proof that these items are fair,
@@ -423,13 +423,13 @@ function FeQ3() {
 
   return (
     <div className="h-[550px] bg-gray-100">
-      <div className="max-w-4xl ml-[10px] p-6 mt-[10px]">
+      <div className="max-w-4xl ml-[45px] p-6 mt-[10px]">
         <h1 className="text-4xl font-inter font-normal mb-4 text-[#15549A]">
           Frequently Asked Questions
         </h1>
       </div>
-      <div className="bg-white-100 font-opensans flex justify-center w-full  font-[500] p-[10px]">
-        <div className="w-[550px] mx-auto mt-[-20px] ml-[5px] bg-white border border-gray-300 rounded-lg overflow-hidden shadow-md">
+      <div className="bg-white-100 font-opensans flex justify-center w-full  font-[400] p-[10px]">
+        <div className="w-[550px] mx-auto mt-[-20px] ml-[60px] bg-white border border-gray-300 rounded-lg overflow-hidden shadow-md">
           {accordionData.map((item, index) => (
             <div key={index} className="border-b border-gray-300">
               <div
@@ -481,7 +481,7 @@ function Program() {
             </div>
 
             {/* Inner Card similar to Card 3 */}
-            <div className="bg-[#ECF6FF]  p-3 flex rounded hover:bg-[#15549A] text-white">
+            <div className="bg-[#ECF6FF]  p-3 flex rounded text-[#9A9A9A]  hover:bg-[#15549A] hover:text-white">
               <div className="relative inline-block mr-3">
                 {/* Image for Credit Report */}
                 <img
@@ -491,7 +491,7 @@ function Program() {
                 />
                 {/* Nested Image (if needed) */}
               </div>
-              <p className="font-montserrat font-bold text-[#9A9A9A]  hover:text-white">
+              <p className="font-montserrat font-bold ">
                 Establish a plan to identify roadblocks and inaccuracies
                 impacting your score
               </p>
@@ -508,13 +508,13 @@ function Program() {
                 Dispute & Escalations
               </h3>
             </div>
-            <div className="bg-[#ECF6FF]  p-3 flex rounded hover:bg-[#15549A] text-white">
+            <div className="bg-[#ECF6FF]  p-3 flex rounded text-[#9A9A9A]  hover:bg-[#15549A] hover:text-white">
               <img
                 src={credit2}
                 alt="Dispute Icon"
                 className="inline-block mr-2 w-[70px] h-[70px]"
               />
-              <p className="font-montserrat font-bold text-[#9A9A9A] hover:text-white ">
+              <p className="font-montserrat font-bold  ">
                 Challenge and Dispute negative items until they are removed
               </p>
             </div>
@@ -532,7 +532,7 @@ function Program() {
             </div>
 
             {/* Similar Inner Card as Card 2 */}
-            <div className="bg-[#ECF6FF]  p-3 flex rounded hover:bg-[#15549A] text-white">
+            <div className="bg-[#ECF6FF] text-[#9A9A9A]  p-3 flex rounded hover:bg-[#15549A] hover:text-white">
               <div className="relative inline-block mr-3">
                 {/* Image for Credit 3 */}
                 <img
@@ -547,7 +547,7 @@ function Program() {
                   className="absolute w-[40px] h-[40px] top-[15px] left-[7px]"
                 />
               </div>
-              <p className="font-montserrat font-bold text-[#9A9A9A]  hover:text-white">
+              <p className="font-montserrat font-bold  ">
                 Take action to boost your credit score to reach your desired
                 score range
               </p>
