@@ -1,88 +1,67 @@
 import React, { useState } from "react";
 import { Testinomial } from "../common/Testinomial";
 import { Footer } from "../common/Footer";
-import credit9 from "../asset/improvecs3.png";
-import credit0 from "../asset/logo.png";
-import credit8 from "../asset/Rectangle0.png";
-import credit10 from "../asset/Rectangle10.png";
-import credit11 from "../asset/Rectangle11.png";
-import credit from "../asset/Rectangle.png";
-import credit2 from "../asset/Rectangle1.png";
-import credit3 from "../asset/Rectangle4.png";
-import credit4 from "../asset/Rectangle2.png";
-import hands from "../asset/hands.png";
-import mobile from "../asset/mobile.png";
-import wemen from "../asset/Rectangle 20.png";
-import rect3 from "../asset/REct3.png";
-import chingchong from "../asset/chingchong.png";
+import credit9 from '../asset/improvecs3.png';
+import credit0 from '../asset/logo.png';
+import credit8 from '../asset/Rectangle0.png';
+import credit10 from '../asset/Rectangle10.png';
+import credit11 from '../asset/Rectangle11.png';
+import credit from '../asset/Rectangle.png';
+import credit2 from '../asset/Rectangle1.png';
+import credit3 from '../asset/Rectangle4.png';
+import credit4 from '../asset/Rectangle2.png';
+import hands from '../asset/hands.png';
+import mobile from '../asset/mobile.png';
+import wemen from '../asset/Rectangle 20.png';
+import rect3 from '../asset/REct3.png';
+import chingchong from '../asset/chingchong.png';
 export function Home() {
   return (
     // div of the woman
     <>
-      <div className="bg-[#ECF5FF] flex h-[430px] w-full">
-        <div className="p-[60px]">
-          <h2 className="text-blue-600  mb-1 text-2xl">
-            YOUR PATH TO BETTER CREDIT,
-          </h2>
-          <h1 className="text-blue-900 text-4xl font-bold">MADE EASY</h1>
-          <p className="text-zinc-600 text-xl mb-3 font-semibold">
-            Let's Fix Your Credit and Raise Your Score
-          </p>
-          <p className="text-zinc-600 font-semibold">
-            Unlock financial freedom with a better credit score.
-          </p>
-          <p className="text-zinc-600 font-semibold">
-            {" "}
-            Our easy-to-follow approach helps you improve your{" "}
-          </p>
-          <p className="text-zinc-600 mb-5 font-semibold">
-            credit for better rates,loans and peace of mind.
-          </p>
-          <button className="bg-blue-600 text-white px-4 py-1 rounded-md">
-            SIGN UP NOW
-          </button>
+        <div className="bg-zinc-100/20 flex  h-[430px] w-full">
+            <div className="p-[60px]">
+                <h2 className="text-blue-600  mb-1 text-2xl">YOUR PATH TO BETTER CREDIT,</h2>
+                <h1 className="text-blue-900 text-4xl font-bold">MADE EASY</h1>
+                <p className="text-zinc-600 text-xl mb-3 font-semibold">Let's Fix Your Credit and Raise Your Score</p>
+                <p className="text-zinc-600 font-semibold">Unlock financial freedom with a better credit score.</p>
+                <p className="text-zinc-600 font-semibold"> Our easy-to-follow approach helps you improve your </p>
+                <p className="text-zinc-600 mb-5 font-semibold">credit for better rates,loans and peace of mind.</p>
+                <button className="bg-blue-600 text-white px-4 py-1 rounded-md">SIGN UP NOW</button>
+            </div>
+            <div className=" w-[350px] z-10 right-[300px] absolute p-[20px]">
+            <img 
+                        src={credit11}
+                        alt="Eze Credit Repair Logo" 
+                        className="object-cover"
+                    />
+            </div>
         </div>
-        <div className=" w-[350px] z-10 right-[300px] absolute p-[20px]">
-          <img
-            src={credit11}
-            alt="Eze Credit Repair Logo"
-            className="object-cover"
-          />
+        {/* get started section  */}
+        <div className="bg-blue-800 h-[500px] relative  w-full">
+            <div className="bg-slate-500 w-1/2 h-[340px]  rounded-md absolute top-[100px] border-2 border-white left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <img 
+                        src={credit10}
+                        alt="Eze Credit Repair Logo" 
+                        className="object-cover"
+                    /></div>
+            <div className="absolute text-center left-1/2 transform -translate-x-1/2  bottom-5">
+            
+            <p className="text-white w-[900px] text-lg mb-[20px]">Achieving a better credit score is key to unlocking financial freedom and accessing life's biggest opportunities.With our EzeCredit Repair Program, our services will change your path to a brighter and improving credit profile,so you can secure better rates, loans, and financial peace of mind.</p>
+            <button className="bg-red-600 font-bold text-xl text-white px-4 py-1 rounded-md ">Get Started</button>
+            </div>
         </div>
-      </div>
-      {/* get started section  */}
-      <div className="bg-blue-800 h-[500px] relative  w-full">
-        <div className="bg-slate-500 w-1/2 h-[340px]  rounded-md absolute top-[100px] border-2 border-white left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <img
-            src={credit10}
-            alt="Eze Credit Repair Logo"
-            className="object-cover"
-          />
-        </div>
-        <div className="absolute text-center left-1/2 transform -translate-x-1/2  bottom-5">
-          <p className="text-white w-[900px] text-lg mb-[20px]">
-            Achieving a better credit score is key to unlocking financial
-            freedom and accessing life's biggest opportunities.With our
-            EzeCredit Repair Program, our services will change your path to a
-            brighter and improving credit profile,so you can secure better
-            rates, loans, and financial peace of mind.
-          </p>
-          <button className="bg-red-600 font-bold text-xl text-white px-4 py-1 rounded-md ">
-            Get Started
-          </button>
-        </div>
-      </div>
-      {/* About us section */}
-      <div className="flex flex-col md:flex-row items-start py-8 px-12 font-sans">
-        {/* Text Content */}
-        <div className="flex-1 ">
-          <h1 className="text-3xl font-bold text-blue-800">About Us</h1>
-          <p className="text-base text-gray-800 mt-4 leading-relaxed">
-            For the past 15 years, we've been dedicated to helping thousands of
-            individuals repair their credit and reclaim financial control. At{" "}
-            <strong>EzeCredit</strong>, we fight for every consumer's right to
-            an accurate, fair, and substantiated credit report.
-          </p>
+        {/* About us section */}
+        <div className="flex flex-col md:flex-row items-start py-8 px-12 font-sans">
+      {/* Text Content */}
+      <div className="flex-1 ">
+        <h1 className="text-3xl font-bold text-blue-800">About Us</h1>
+        <p className="text-base text-gray-800 mt-4 leading-relaxed">
+          For the past 15 years, we've been dedicated to helping thousands of
+          individuals repair their credit and reclaim financial control.
+          At <strong>EzeCredit</strong>, we fight for every consumer's right to an accurate, fair,
+          and substantiated credit report.
+        </p>
 
           <h2 className="text-xl font-bold text-green-700 mt-6">Target Area</h2>
           <ul className="list-none pl-0 text-base text-gray-800 mt-4 space-y-2 leading-relaxed">
@@ -341,71 +320,45 @@ export function Home() {
       </div>
       <Footer></Footer>
     </>
-  );
+        
+        
+    )
 }
 
-function FeQ3() {
-  const [selectedQuestion, setSelectedQuestion] = useState(
-    "Can any credit be repaired?"
-  );
 
-  const questions = [
-    {
-      question: "Can any credit be repaired?",
-      answer:
-        "Credit repair involves resolving any questionable negative items that may be damaging your credit profile. If the credit bureaus or your creditors cannot provide proof that these items are fair, accurate, and verified, they are legally required to remove them.",
-    },
-    {
-      question: "How long can this process take?",
-      answer:
-        "The time varies depending on your unique credit situation, but results can often be seen within a few months.",
-    },
-    {
-      question: "What type of items can be removed on my credit report?",
-      answer:
-        "Items such as late payments, collections, charge-offs, and other inaccurate or unfair items may be disputed and removed if applicable.",
-    },
-    {
-      question: "If I just pay off my bills will that restore my good credit?",
-      answer:
-        "Paying off bills can help, but removing negative items and building positive credit history are key for credit restoration.",
-    },
-    {
-      question: "What is a good credit score?",
-      answer:
-        "A good credit score typically ranges from 700 to 749, with higher scores reflecting better creditworthiness.",
-    },
-  ];
-
-  const handleQuestionClick = (question) => {
-    setSelectedQuestion(question);
-  };
-  return (
+function FeQ3  ()  {
+    const [selectedQuestion, setSelectedQuestion] = useState('Can any credit be repaired?');
+    
+    const questions = [
+      { question: 'Can any credit be repaired?', answer: 'Credit repair involves resolving any questionable negative items that may be damaging your credit profile. If the credit bureaus or your creditors cannot provide proof that these items are fair, accurate, and verified, they are legally required to remove them.' },
+      { question: 'How long can this process take?', answer: 'The time varies depending on your unique credit situation, but results can often be seen within a few months.' },
+      { question: 'What type of items can be removed on my credit report?', answer: 'Items such as late payments, collections, charge-offs, and other inaccurate or unfair items may be disputed and removed if applicable.' },
+      { question: 'If I just pay off my bills will that restore my good credit?', answer: 'Paying off bills can help, but removing negative items and building positive credit history are key for credit restoration.' },
+      { question: 'What is a good credit score?', answer: 'A good credit score typically ranges from 700 to 749, with higher scores reflecting better creditworthiness.' },
+    ];
+  
+    const handleQuestionClick = (question) => {
+      setSelectedQuestion(question);
+    };
+    return (
     <div>
+     
       <div className="max-w-4xl ml-[1px] p-6">
-        <h1 className="text-3xl font-bold mb-4 text-blue-700">
-          Frequently Asked Questions
-        </h1>
+        <h1 className="text-3xl font-bold mb-4 text-blue-700">Frequently Asked Questions</h1>
         <div className="flex">
           <div className="w-1/4 border-4 mt-3 bg-gray-100 rounded-2xl border-white">
             {questions.map((q) => (
               <button
                 key={q.question}
                 onClick={() => handleQuestionClick(q.question)}
-                className={`block w-full text-left p-4 border-b ${
-                  selectedQuestion === q.question
-                    ? "bg-white border-l-4 border-blue-600 font-bold"
-                    : ""
-                } hover:bg-white`}
+                className={`block w-full text-left p-4 border-b ${selectedQuestion === q.question ? 'bg-white border-l-4 border-blue-600 font-bold' : ''} hover:bg-white`}
               >
                 {q.question}
               </button>
             ))}
           </div>
           <div className="w-1/3 p-4 mt-3 bg-white rounded-2xl border-4 border-black">
-            <p>
-              {questions.find((q) => q.question === selectedQuestion)?.answer}
-            </p>
+            <p>{questions.find((q) => q.question === selectedQuestion)?.answer}</p>
           </div>
         </div>
       </div>
@@ -413,23 +366,19 @@ function FeQ3() {
   );
 }
 
-function Program() {
-  return (
-    <div>
-      <div className="p-6 bg-white max-w-screen-lg mx-auto shadow-md rounded">
-        {/* Header Section */}
-        <div className="text-center mb-8">
-          <p className="text-gray-700 mb-2">
-            For the past 15 years, we've been dedicated to helping thousands of
-            individuals repair their credit and reclaim financial control. At
-            EzeCredit, we fight for every consumer’s right to an accurate, fair,
-            and substantiated credit report.
-          </p>
-          <h2 className="text-3xl font-bold text-blue-800">Our Program</h2>
-          <p className="text-gray-600">
-            Progressive Corrective & Recovery Plan
-          </p>
-        </div>
+        function Program() {
+            return (
+                <div>
+                     
+    <div className="p-6 bg-white max-w-screen-lg mx-auto shadow-md rounded">
+      {/* Header Section */}
+      <div className="text-center mb-8">
+        <p className="text-gray-700 mb-2">
+          For the past 15 years, we've been dedicated to helping thousands of individuals repair their credit and reclaim financial control. At EzeCredit, we fight for every consumer’s right to an accurate, fair, and substantiated credit report.
+        </p>
+        <h2 className="text-3xl font-bold text-blue-800">Our Program</h2>
+        <p className="text-gray-600">Progressive Corrective & Recovery Plan</p>
+      </div>
 
         {/* Program Cards Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:space-x-4 mb-6">
@@ -514,60 +463,31 @@ function Program() {
   );
 }
 
-function Contactform() {
-  return (
-    <div>
-      <div class="bg-blue-900 text-white p-2 flex items-center h-[80px] mt-3">
-        <div className="flex justify-center mt-[-650px] px-4 py-6 bg-blue-700 rounded-2xl border-8 border-blue-800 w-[500px] h-[550px] mx-auto mb-1  ml-[700px] ">
-          <div className="bg-blue-800 text-white w-full p-6 rounded-lg flex flex-col md:flex-row">
-            {/* Left Section - Form */}
-            <div className="flex-1 md:mr-8 mt-[-15px]">
-              <h2 className="text-2xl font-bold">Start Your Recovery</h2>
-              <form className="grid gap-3 mt-[25px]">
-                <div className="grid grid-cols-2 gap-1">
-                  <input
-                    type="text"
-                    placeholder="First Name"
-                    className="p-3 rounded bg-white text-black"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Last Name"
-                    className="p-3 rounded bg-white text-black"
-                  />
-                </div>
-                <input
-                  type="text"
-                  placeholder="Phone Number"
-                  className="p-3 rounded bg-white text-black"
-                />
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  className="p-3 rounded bg-white text-black"
-                />
-                <input
-                  type="text"
-                  placeholder="Current Credit Score"
-                  className="p-3 rounded bg-white text-black"
-                />
-                <input
-                  type="text"
-                  placeholder="Reason for Credit Repair"
-                  className="p-3 rounded bg-white text-black"
-                />
-                <textarea
-                  placeholder="How Soon?"
-                  className="p-3 rounded bg-white text-black h-10"
-                ></textarea>
-                <button className="p-3 rounded bg-green-500 text-white font-bold">
-                  Sign Up Now
-                </button>
-              </form>
+        function Contactform() {
+            return (
+                <div>
+                       <div class="bg-blue-900 text-white p-2 flex items-center h-[80px] mt-3">
+    <div className="flex justify-center mt-[-650px] px-4 py-6 bg-blue-700 rounded-2xl border-8 border-blue-800 w-[500px] h-[550px] mx-auto mb-1  ml-[700px] ">
+      <div className="bg-blue-800 text-white w-full p-6 rounded-lg flex flex-col md:flex-row">
+        {/* Left Section - Form */}
+        <div className="flex-1 md:mr-8 mt-[-15px]">
+          <h2 className="text-2xl font-bold">Start Your Recovery</h2>
+          <form className="grid gap-3 mt-[25px]">
+            <div className="grid grid-cols-2 gap-1">
+              <input type="text" placeholder="First Name" className="p-3 rounded bg-white text-black" />
+              <input type="text" placeholder="Last Name" className="p-3 rounded bg-white text-black" />
             </div>
-          </div>
+            <input type="text" placeholder="Phone Number" className="p-3 rounded bg-white text-black" />
+            <input type="text" placeholder="Subject" className="p-3 rounded bg-white text-black" />
+            <input type="text" placeholder="Current Credit Score" className="p-3 rounded bg-white text-black" />
+            <input type="text" placeholder="Reason for Credit Repair" className="p-3 rounded bg-white text-black" />
+            <textarea placeholder="How Soon?" className="p-3 rounded bg-white text-black h-10"></textarea>
+            <button className="p-3 rounded bg-green-500 text-white font-bold">Sign Up Now</button>
+          </form>
         </div>
-      </div>
-    </div>
-  );
-}
+                </div>
+                </div>
+                </div>
+                </div>
+            )
+        }

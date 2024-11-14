@@ -5,6 +5,7 @@ import credit from "../asset/Rectangle.png";
 import credit2 from "../asset/Rectangle1.png";
 import credit3 from "../asset/Rectangle4.png";
 import credit4 from "../asset/Rectangle2.png";
+import about from '../asset/about.png';
 
 export function About() {
   return (
@@ -118,69 +119,190 @@ export function About() {
   );
 }
 
-function FeQ1() {
-  const [selectedQuestion, setSelectedQuestion] = useState(
-    "Can any credit be repaired?"
-  );
+// export function FeQ1() {
+//   // Use useEffect to handle DOM manipulation
+//   useEffect(() => {
+//     const items = document.querySelectorAll('.accordion-title');
+//     items.forEach(item => {
+//       const handleClick = () => {
+//         const content = item.nextElementSibling;
+//         const icon = item.querySelector('.plus-minus-icon');
 
-  const questions = [
+//         item.classList.toggle('bg-gray-300');
+//         if (content.classList.contains('hidden')) {
+//           content.classList.remove('hidden');
+//           icon.textContent = '-';
+//         } else {
+//           content.classList.add('hidden');
+//           icon.textContent = '+';
+//         }
+//       };
+
+//       // Attach click event listener
+//       item.addEventListener('click', handleClick);
+
+//       // Cleanup listener on component unmount
+//       return () => {
+//         item.removeEventListener('click', handleClick);
+//       };
+//     });
+//   }, []);
+
+//   return (
+//     <div>
+//     <div className="max-w-4xl ml-[400px] p-6 mt-[10px]">
+//     <h1 className="text-3xl font-bold mb-4 text-blue-700">
+//       Frequently Asked Questions
+//     </h1>
+//     </div>
+//     <div className="bg-gray-100 font-sans p-[10px]">
+//       <div className="w-4/5 mx-auto mt-[10px] bg-white border border-gray-300 rounded-lg overflow-hidden shadow-md">
+//         <div className="border-b border-gray-300 mt-">
+//           <div className="accordion-title flex justify-between items-center px-6 py-4 bg-white-100 cursor-pointer font-semibold hover:bg-gray-200">
+//             Can any credit be repaired?
+//             <span className="plus-minus-icon">+</span>
+//           </div>
+//           <div className="accordion-content px-6 py-4 hidden bg-gray-100">
+//             <img 
+//             src={about}
+//             alt="Recovery Icon"
+//             className=""
+//             />
+//             <p>
+//               Credit repair involves resolving any questionable negative items
+//               that may be damaging your credit profile. If the credit bureaus or
+//               your creditors cannot provide proof that these items are fair,
+//               accurate, and verified, they are legally required to remove them.
+//             </p>
+//           </div>
+//         </div>
+//         <div className="border-b border-gray-300">
+//           <div className="accordion-title flex justify-between items-center px-6 py-4 bg-white-100 cursor-pointer font-semibold hover:bg-gray-200">
+//             How long can this process take?
+//             <span className="plus-minus-icon">+</span>
+//           </div>
+//           <div className="accordion-content px-6 py-4 hidden bg-gray-100">
+//             <p>
+//               The length of the credit repair process varies depending on the
+//               number of items disputed and the responsiveness of the creditors
+//               or credit bureaus.
+//             </p>
+//           </div>
+//         </div>
+//         <div className="border-b border-gray-300">
+//           <div className="accordion-title flex justify-between items-center px-6 py-4 bg-white-100 cursor-pointer font-semibold hover:bg-gray-200">
+//             What type of items can be removed on my credit report?
+//             <span className="plus-minus-icon">+</span>
+//           </div>
+//           <div className="accordion-content px-6 py-4 hidden bg-gray-100">
+//             <p>
+//               Items such as late payments, charge-offs, collections, and
+//               foreclosures can potentially be removed if they are found to be
+//               inaccurate, unverifiable, or unfair.
+//             </p>
+//           </div>
+//         </div>
+//         <div className="border-b border-gray-300">
+//           <div className="accordion-title flex justify-between items-center px-6 py-4 bg-white-100 cursor-pointer font-semibold hover:bg-gray-200">
+//             If I just pay off my bills will that restore my good credit?
+//             <span className="plus-minus-icon">+</span>
+//           </div>
+//           <div className="accordion-content px-6 py-4 hidden bg-gray-100">
+//             <p>
+//               Paying off bills is important, but it may not immediately improve
+//               your credit score. Credit repair may still be necessary for
+//               inaccurate items.
+//             </p>
+//           </div>
+//         </div>
+//         <div className="border-b border-gray-300">
+//           <div className="accordion-title flex justify-between items-center px-6 py-4 bg-white-100 cursor-pointer font-semibold hover:bg-gray-200">
+//             What is a good credit score?
+//             <span className="plus-minus-icon">+</span>
+//           </div>
+//           <div className="accordion-content px-6 py-4 hidden bg-gray-100">
+//             <p>
+//               A good credit score generally ranges from 670 to 739. Higher
+//               scores reflect better creditworthiness.
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//     </div>
+//   );
+// }
+
+
+export function FeQ1() {
+  // State to track which accordion index is open
+  const [openIndex, setOpenIndex] = useState(null);
+
+  // Toggle function to handle accordion state
+  const toggleAccordion = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const accordionData = [
     {
-      question: "Can any credit be repaired?",
-      answer:
-        "Credit repair involves resolving any questionable negative items that may be damaging your credit profile. If the credit bureaus or your creditors cannot provide proof that these items are fair, accurate, and verified, they are legally required to remove them.",
+      title: 'Can any credit be repaired?',
+      content: (
+        <>
+          <img
+            src={about} // Replace with your image URL or imported image
+            alt="Recovery Icon"
+            className="mb-4 w-[70px] h-[60px] absolute" // Optional: Add some styling (e.g., margin)
+          />
+          <p className="ml-[100px]">
+            Credit repair involves resolving any questionable negative items that may be damaging your credit profile.
+            If the credit bureaus or your creditors cannot provide proof that these items are fair, accurate, and
+            verified, they are legally required to remove them.
+          </p>
+        </>
+      ),
     },
     {
-      question: "How long can this process take?",
-      answer:
-        "The time varies depending on your unique credit situation, but results can often be seen within a few months.",
+      title: 'How long can this process take?',
+      content:
+        'The length of the credit repair process varies depending on the number of items disputed and the responsiveness of the creditors or credit bureaus.',
     },
     {
-      question: "What type of items can be removed on my credit report?",
-      answer:
-        "Items such as late payments, collections, charge-offs, and other inaccurate or unfair items may be disputed and removed if applicable.",
+      title: 'What type of items can be removed on my credit report?',
+      content:
+        'Items such as late payments, charge-offs, collections, and foreclosures can potentially be removed if they are found to be inaccurate, unverifiable, or unfair.',
     },
     {
-      question: "If I just pay off my bills will that restore my good credit?",
-      answer:
-        "Paying off bills can help, but removing negative items and building positive credit history are key for credit restoration.",
+      title: 'If I just pay off my bills will that restore my good credit?',
+      content:
+        'Paying off bills is important, but it may not immediately improve your credit score. Credit repair may still be necessary for inaccurate items.',
     },
     {
-      question: "What is a good credit score?",
-      answer:
-        "A good credit score typically ranges from 700 to 749, with higher scores reflecting better creditworthiness.",
+      title: 'What is a good credit score?',
+      content: 'A good credit score generally ranges from 670 to 739. Higher scores reflect better creditworthiness.',
     },
   ];
 
-  const handleQuestionClick = (question) => {
-    setSelectedQuestion(question);
-  };
   return (
     <div>
-      <div className="max-w-4xl ml-[100px] p-6">
-        <h1 className="text-3xl font-bold mb-4 ml-[300px] mt-[20px] text-blue-700">
-          Frequently Asked Questions
-        </h1>
-        <div className="flex">
-          <div className="w-1/3 border-4 mt-3 bg-gray-100 rounded-2xl border-white">
-            {questions.map((q) => (
-              <button
-                key={q.question}
-                onClick={() => handleQuestionClick(q.question)}
-                className={`block w-full text-left p-4 border-b ${
-                  selectedQuestion === q.question
-                    ? "bg-white border-l-4 border-blue-600 font-bold"
-                    : ""
-                } hover:bg-white`}
+      <div className="max-w-4xl ml-[400px] p-6 mt-[10px]">
+        <h1 className="text-3xl font-bold mb-4 text-blue-700">Frequently Asked Questions</h1>
+      </div>
+      <div className="bg-white-100 font-sans p-[10px]">
+        <div className="w-4/5 mx-auto mt-[10px] bg-white border border-gray-300 rounded-lg overflow-hidden shadow-md">
+          {accordionData.map((item, index) => (
+            <div key={index} className="border-b border-gray-300">
+              <div
+                className="accordion-title flex justify-between items-center px-6 py-4 bg-white-100 cursor-pointer font-semibold hover:bg-gray-200"
+                onClick={() => toggleAccordion(index)}
               >
-                {q.question}
-              </button>
-            ))}
-          </div>
-          <div className="w-2/3 p-4 mt-3 bg-white rounded-2xl border-4 border-black">
-            <p>
-              {questions.find((q) => q.question === selectedQuestion)?.answer}
-            </p>
-          </div>
+                {item.title}
+                <span className="plus-minus-icon">{openIndex === index ? '-' : '+'}</span>
+              </div>
+              <div className={`accordion-content px-6 py-4 ${openIndex === index ? '' : 'hidden'} bg-gray-100`}>
+                <p>{item.content}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
