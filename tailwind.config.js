@@ -4,9 +4,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        openSans: ["Open Sans"],
-        monsterrat: ["Montserrat"],
-        inter: ["Inter"],
+        'times': ['"Times New Roman"', 'Times', 'serif'],
+        'inter': ['Inter', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'opensans': ['"Open Sans"', 'sans-serif'],
+
       },
     },
   },

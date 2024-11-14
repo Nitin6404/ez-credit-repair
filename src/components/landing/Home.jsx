@@ -15,6 +15,8 @@ import mobile from "../asset/mobile.png";
 import wemen from "../asset/Rectangle 20.png";
 import rect3 from "../asset/REct3.png";
 import chingchong from "../asset/chingchong.png";
+import creditrepairing from "../asset/creditrapiring.jpg";
+import layer from "../asset/Layer 1002 copy.png";
 import about from "../asset/about.png";
 export function Home() {
   return (
@@ -22,24 +24,26 @@ export function Home() {
     <>
       <div className="bg-zinc-100/20 flex  h-[430px] w-full">
         <div className="p-[60px]">
-          <h2 className="text-blue-600  mb-1 text-2xl">
+          <h2 className="text-[#15549A] font-[500] font-inter mb-1 text-2xl">
             YOUR PATH TO BETTER CREDIT,
           </h2>
-          <h1 className="text-blue-900 text-4xl font-bold">MADE EASY</h1>
-          <p className="text-zinc-600 text-xl mb-3 font-semibold">
+          <h1 className="text-[#04284F] font-inter text-5xl font-[700]">
+            MADE EASY
+          </h1>
+          <p className="text-[#737373] text-xl mb-3 font-inter font-bold">
             Let's Fix Your Credit and Raise Your Score
           </p>
-          <p className="text-zinc-600 font-semibold">
+          <p className="text-[#626161] font-semibold">
             Unlock financial freedom with a better credit score.
           </p>
-          <p className="text-zinc-600 font-semibold">
+          <p className="text-[#626161] font-semibold">
             {" "}
             Our easy-to-follow approach helps you improve your{" "}
           </p>
-          <p className="text-zinc-600 mb-5 font-semibold">
+          <p className="text-[#626161] mb-5 font-semibold">
             credit for better rates,loans and peace of mind.
           </p>
-          <button className="bg-blue-600 text-white px-4 py-1 rounded-md">
+          <button className="bg-[#15549A] font-inter font-bold  text-white px-4 py-1 rounded-md">
             SIGN UP NOW
           </button>
         </div>
@@ -53,6 +57,11 @@ export function Home() {
       </div>
       {/* get started section  */}
       <div className="bg-blue-800 h-[500px] relative  w-full">
+        <img
+          src={creditrepairing}
+          className="object-cover w-full h-full"
+          alt=""
+        />
         <div className="bg-slate-500 w-1/2 h-[340px]  rounded-md absolute top-[100px] border-2 border-white left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <img
             src={credit10}
@@ -61,14 +70,14 @@ export function Home() {
           />
         </div>
         <div className="absolute text-center left-1/2 transform -translate-x-1/2  bottom-5">
-          <p className="text-white w-[900px] text-lg mb-[20px]">
+          <p className="text-white w-[900px] font-inter text-lg mb-[20px]">
             Achieving a better credit score is key to unlocking financial
             freedom and accessing life's biggest opportunities.With our
             EzeCredit Repair Program, our services will change your path to a
             brighter and improving credit profile,so you can secure better
             rates, loans, and financial peace of mind.
           </p>
-          <button className="bg-red-600 font-bold text-xl text-white px-4 py-1 rounded-md ">
+          <button className="bg-[#F30000] font-bold font-inter text-xl text-white px-4 py-1 rounded-md ">
             Get Started
           </button>
         </div>
@@ -77,53 +86,67 @@ export function Home() {
       <div className="flex flex-col md:flex-row items-start py-8 px-12 font-sans">
         {/* Text Content */}
         <div className="flex-1 ">
-          <h1 className="text-3xl font-bold text-blue-800">About Us</h1>
-          <p className="text-base text-gray-800 mt-4 leading-relaxed">
+          <h1 className="text-4xl font-bold text-[#15549A] font-opensans">
+            About Us
+          </h1>
+          <p className="text-base text-[#2E2F31] font-inter font-[550] leading-relaxed">
             For the past 15 years, we've been dedicated to helping thousands of
             individuals repair their credit and reclaim financial control. At{" "}
             <strong>EzeCredit</strong>, we fight for every consumer's right to
             an accurate, fair, and substantiated credit report.
           </p>
 
-          <h2 className="text-xl font-bold text-green-700 mt-6">Target Area</h2>
-          <ul className="list-none pl-0 text-base text-gray-800 mt-4 space-y-2 leading-relaxed">
+          <h2 className="text-xl font-bold text-[#529400] font-opensans mt-2">
+            Target Area
+          </h2>
+          <ul className="list-none pl-0 text-base text-[#2E2F31] font-opensans font-[400] space-y-2 leading-relaxed">
             <li>
-              <span role="img" aria-label="check">
-                ✔️
-              </span>{" "}
+              <img
+                src={layer}
+                alt="Layer Icon"
+                className="inline-block w-[20px] h-[20px] mr-2"
+              />
               Like the A-Team, we become your trusted advocates, challenging
               inaccuracies and disputing negative items until they are removed.
             </li>
             <li>
-              <span role="img" aria-label="check">
-                ✔️
-              </span>{" "}
+              <img
+                src={layer}
+                alt="Layer Icon"
+                className="inline-block w-[20px] h-[20px] mr-2"
+              />
               Credit Evaluation - In-depth assessment of your credit report
             </li>
             <li>
-              <span role="img" aria-label="check">
-                ✔️
-              </span>{" "}
+              <img
+                src={layer}
+                alt="Layer Icon"
+                className="inline-block w-[20px] h-[20px] mr-2"
+              />
               Unlimited Disputes: We challenge any number of inaccuracies
             </li>
             <li>
-              <span role="img" aria-label="check">
-                ✔️
-              </span>{" "}
+              <img
+                src={layer}
+                alt="Layer Icon"
+                className="inline-block w-[20px] h-[20px] mr-2"
+              />
               Debt & Inquiry Verification and Removal: We verify and dispute
               unauthorized inquiries
             </li>
             <li>
-              <span role="img" aria-label="check">
-                ✔️
-              </span>{" "}
+              <img
+                src={layer}
+                alt="Layer Icon"
+                className="inline-block w-[20px] h-[20px] mr-2"
+              />
               Escalation of Disputes for Fast Removal: We escalate disputes when
               necessary. Recommendations to Boost Score: Personalized strategies
               to help raise your credit score.
             </li>
           </ul>
 
-          <button className="bg-blue-800 text-white px-4 py-2 rounded mt-6 text-sm flex items-center hover:bg-blue-900">
+          <button className="bg-[#15549A] font-inter font-bold text-md text-white px-4 py-2 rounded mt-6  flex items-center hover:bg-blue-900">
             READ MORE <span className="ml-2">→</span>
           </button>
         </div>
@@ -140,20 +163,20 @@ export function Home() {
         </div>
       </div>
       {/* What we do section*/}
-      <div className="flex flex-col items-center bg-blue-900 text-white p-6 font-sans">
+      <div className="flex flex-col h-[480px] items-center bg-blue-900 text-white p-6 font-sans">
         {/* Main Container with Flex */}
         <div className="flex flex-col md:flex-row items-center justify-center w-full space-x-0 md:space-x-10">
           {/* Left Side - What We Do Section */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 max-w-md">
             {/* Main Title */}
-            <h1 className="text-3xl font-bold text-blue-200">What We Do</h1>
+            <h1 className="text-4xl font-bold text-[#78B6F6] font-inter">What We Do</h1>
 
             {/* Description */}
-            <p className="text-lg">
+            <p className="text-lg font-inter font-[300]">
               Empowering You to Seize New Opportunities, <br />
               Because Everyone Deserves a Second Chance.
             </p>
-            <p className="text-green-400 italic">
+            <p className="text-[#31FF01] font-inter font-[300] italic">
               When opportunity knocks, will your credit stand in the way?
             </p>
 
@@ -178,16 +201,16 @@ export function Home() {
             {/* Benefits List */}
             <ul className="text-base space-y-3">
               <li className="flex items-start">
-                <span className="text-green-400 mr-2">➡️</span>
+                <span className="text-green-400 mr-2">➡</span>
                 Strong credit score opens doors to financial freedom.
               </li>
               <li className="flex items-start">
-                <span className="text-green-400 mr-2">➡️</span>
+                <span className="text-green-400 mr-2">➡</span>
                 Easy path to better credit, to be ready for every opportunity
                 that comes your way.
               </li>
               <li className="flex items-start">
-                <span className="text-green-400 mr-2">➡️</span>
+                <span className="text-green-400 mr-2">➡</span>
                 Fast track repair and boost your score by 50-100 points* within
                 30 to 60 days.
               </li>
@@ -200,7 +223,8 @@ export function Home() {
           </div>
 
           {/* Right Side - Basketball Image and Text */}
-          <div className="flex flex-col items-center justify-center mt-6 md:mt-0">
+          <div className="flex flex-col w-1/2 items-center  justify-center mt-6 md:mt-0">
+           {/* <img src={basket} className="object-cover" alt="" /> */}
             {/* Basketball Image Placeholder */}
             <div className="w-[300px] h-[200px]  flex items-center justify-center mb-4">
               <img
@@ -344,6 +368,8 @@ export function Home() {
     </>
   );
 }
+
+
 function FeQ3() {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -427,88 +453,113 @@ function FeQ3() {
     </div>
   );
 }
-
 function Program() {
   return (
     <div>
-      <div className="p-6 bg-white max-w-screen-lg mx-auto shadow-md rounded">
+      <div className="p-6 bg-white max-w-screen-lg mx-auto  rounded">
         {/* Header Section */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-blue-800 mt-[-200px]">Progressive Corrective & Recovery Plan</h2>
-         
+          <p className="text-[#15549A] font-inter mt-[-240px] font-bold text-4xl">
+            Progressive Corrective & Recovery Plan
+          </p>
         </div>
 
         {/* Program Cards Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:space-x-4 mb-6">
           {/* Card 1 */}
-          <div className="bg-green-500 text-white rounded p-4 flex-1 mb-4 md:mb-0">
-            <div className="flex items-center">
-              <div className="bg-white text-green-500 font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">
+          {/* Card 1 */}
+          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0">
+            <div className="flex p-2 items-center">
+              <div className="bg-white text-[#15549A] font-montserrat text-lg font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
                 01
               </div>
-              <h3 className="font-semibold">Credit Report Analysis</h3>
+              <h3 className="font-bold font-montserrat text-xl">
+                Credit Report Analysis
+              </h3>
             </div>
-            <div className="mt-2 bg-blue-100 text-gray-700 p-3 rounded">
-              <img
-                src={credit}
-                alt="Credit Report"
-                className="inline-block mr-2 w-[50px] h-[50px]"
-              />
-              Establish plan to identify roadblocks and inaccuracies impacting
-              your score
+
+            {/* Inner Card similar to Card 3 */}
+            <div className="bg-[#ECF6FF] text-[#9A9A9A] p-3 flex rounded">
+              <div className="relative inline-block mr-3">
+                {/* Image for Credit Report */}
+                <img
+                  src={credit}
+                  alt="Credit Report Icon"
+                  className="inline-block"
+                />
+                {/* Nested Image (if needed) */}
+              </div>
+              <p className="font-montserrat font-bold text-[#9A9A9A]">
+                Establish a plan to identify roadblocks and inaccuracies
+                impacting your score
+              </p>
             </div>
           </div>
 
           {/* Card 2 */}
-          <div className="bg-green-500 text-white rounded p-4 flex-1 mb-4 md:mb-0">
-            <div className="flex items-center">
-              <div className="bg-white text-green-500 font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">
+          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0 shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
+            <div className="flex p-2 items-center">
+              <div className="bg-white text-[#15549A] font-montserrat text-lg font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
                 02
               </div>
-              <h3 className="font-semibold">Dispute & Escalations</h3>
+              <h3 className="font-bold font-montserrat text-xl">
+                Dispute & Escalations
+              </h3>
             </div>
-            <div className="mt-2 bg-blue-100 text-gray-700 p-3 rounded">
+            <div className="bg-[#15549A] text-gray-700 p-3 flex rounded">
               <img
                 src={credit2}
                 alt="Dispute Icon"
-                className="inline-block mr-2 w-[50px] h-[50px]"
+                className="inline-block mr-2 w-[70px] h-[70px]"
               />
-              Challenge and Dispute negative items until they are removed
+              <p className="font-montserrat font-bold text-[#fff]">
+                Challenge and Dispute negative items until they are removed
+              </p>
             </div>
           </div>
 
           {/* Card 3 */}
-          <div className="bg-green-500 text-white rounded p-4 flex-1">
-            <div className="flex items-center">
-              <div className="bg-white text-green-500 font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">
+          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0">
+            <div className="flex p-2 items-center">
+              <div className="bg-white text-[#15549A] font-montserrat text-lg font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
                 03
               </div>
-              <h3 className="font-semibold">Credit Recovery</h3>
+              <h3 className="font-bold font-montserrat text-xl">
+                Credit Recovery
+              </h3>
             </div>
-            <div className="mt-2 ml-[3px] bg-blue-100 text-gray-700 p-3 rounded relative">
-              <img
-                src={credit4}
-                alt="Recovery Icon"
-                className="inline-block mr-2 w-[38px] h-[42px]"
-              />
-              <img
-                src={credit3}
-                alt="Recovery Icon"
-                className="inline-block mr-2 w-[55px] h-[58px] absolute left-[3px] top-[1px]"
-              />
-              Take action to boost your credit score to reach your desired score
-              range
+
+            {/* Similar Inner Card as Card 2 */}
+            <div className="bg-[#ECF6FF] text-[#9A9A9A] p-3 flex rounded">
+              <div className="relative inline-block mr-3">
+                {/* Image for Credit 3 */}
+                <img
+                  src={credit3}
+                  alt="Recovery Icon"
+                  className=" inline-block"
+                />
+                {/* Image for Credit 4 inside Credit 3 */}
+                <img
+                  src={credit4}
+                  alt="Nested Icon"
+                  className="absolute w-[40px] h-[40px] top-[15px] left-[7px]"
+                />
+              </div>
+              <p className="font-montserrat font-bold text-[#9A9A9A">
+                Take action to boost your credit score to reach your desired
+                score range
+              </p>
             </div>
           </div>
         </div>
 
         {/* Dispute & Escalation Details */}
         <h1 className="ml-[475px] text-7xl mt-[-40px]">↓</h1>
-        <div className="bg-blue-100 p-4 rounded shadow-md">
-          <h4 className="text-lg font-bold text-blue-800 mb-2">
+        <div className="bg-blue-100 py-6 px-4 border-[#4054B2] border-[1px] ">
+          <h4 className="text-xl font-inter font-bold text-[#07284F] mb-2">
             Dispute & Escalation
           </h4>
-          <p className="text-gray-700">
+          <p className="text-[#173455] font-sans font-semibold">
             We start by assessing your current credit situation and identifying
             the roadblocks impacting your score. Each case is unique, but we
             specialize in spotting inaccuracies and other factors that should
@@ -518,7 +569,7 @@ function Program() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 function Contactform() {

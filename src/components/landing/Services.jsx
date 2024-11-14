@@ -1,15 +1,26 @@
 import React from "react";
 import { Footer } from "../common/Footer";
 import { Testinomial } from "../common/Testinomial";
+import AboutUs from '../asset/AboutUsbackground.png';
 
 export function Service() {
   return (
     <div>
-      <div class="bg-blue-900 text-white p-2 flex items-center h-[80px] mt-3">
-        <div class="flex justify-start max-w-screen-lg ml-10">
-          <span class="font-semibold ml-10">Home</span>
-          <span class="mx-1">|</span>
-          <span class="font-semibold">Services</span>
+    <div className="relative p-2 mt-3">
+        {/* Background Image */}
+        <img
+          src={AboutUs}
+          alt="About Us Background"
+          className="absolute inset-0 w-full h-full object-cover opacity-100"
+        />
+
+        {/* Inner Div with Background Image */}
+        <div className="relative bg-blue-900/20 text-white p-2 flex items-center h-[80px] ">
+          <div className="flex justify-start max-w-screen-lg ml-10">
+            <span className="font-semibold ml-10">Home</span>
+            <span className="mx-1">|</span>
+            <span className="font-semibold">Services</span>
+          </div>
         </div>
       </div>
       <div className="w-full flex flex-col md:flex-row items-start justify-between p-6 bg-white">

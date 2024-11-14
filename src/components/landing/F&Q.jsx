@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Footer } from "../common/Footer";
+import AboutUs from '../asset/AboutUsbackground.png';
+
 
 export function FeQ() {
   const [selectedQuestion, setSelectedQuestion] = useState(
@@ -39,11 +41,21 @@ export function FeQ() {
   };
   return (
     <div>
-      <div class="bg-blue-900 text-white p-2 flex items-center h-[80px] mt-3">
-        <div class="flex justify-start max-w-screen-lg ml-10">
-          <span class="font-semibold ml-10">Home</span>
-          <span class="mx-1">|</span>
-          <span class="font-semibold">Frequently Asked Questions</span>
+      <div className="relative p-2 mt-3">
+        {/* Background Image */}
+        <img
+          src={AboutUs}
+          alt="About Us Background"
+          className="absolute inset-0 w-full h-full object-cover opacity-100"
+        />
+
+        {/* Inner Div with Background Image */}
+        <div className="relative bg-blue-900/20 text-white p-2 flex items-center h-[80px] ">
+          <div className="flex justify-start max-w-screen-lg ml-10">
+            <span className="font-semibold ml-10">Home</span>
+            <span className="mx-1">|</span>
+            <span className="font-semibold">Frequently Asked Questions</span>
+          </div>
         </div>
       </div>
       <div className="max-w-4xl ml-[100px] p-6">

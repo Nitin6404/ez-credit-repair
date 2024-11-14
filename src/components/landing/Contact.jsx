@@ -7,15 +7,26 @@ import credit4 from '../asset/map.png';
 import credit0 from '../asset/rctangle.png';
 import credit10 from '../asset/map1.png';
 import credit11 from '../asset/sign.png';
+import AboutUs from '../asset/AboutUsbackground.png';
 
 export function Contact() {
   return (
     <div>
-      <div className="bg-blue-900 text-white p-2 flex items-center h-[80px] mt-3">
-        <div className="flex justify-start max-w-screen-lg ml-10">
-          <span className="font-semibold ml-10">Home</span>
-          <span className="mx-1">|</span>
-          <span className="font-semibold">Contact Us!</span>
+     <div className="relative p-2 mt-3">
+        {/* Background Image */}
+        <img
+          src={AboutUs}
+          alt="About Us Background"
+          className="absolute inset-0 w-full h-full object-cover opacity-100"
+        />
+
+        {/* Inner Div with Background Image */}
+        <div className="relative bg-blue-900/20 text-white p-2 flex items-center h-[80px] ">
+          <div className="flex justify-start max-w-screen-lg ml-10">
+            <span className="font-semibold ml-10">Home</span>
+            <span className="mx-1">|</span>
+            <span className="font-semibold">Contact Us</span>
+          </div>
         </div>
       </div>
       {/* Apply credit0 as background */}
