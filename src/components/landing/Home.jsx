@@ -22,12 +22,12 @@ export function Home() {
   return (
     // div of the woman
     <>
-      <div className="bg-zinc-100/20 flex h-[430px] w-full">
-        <div className="p-[60px]">
-          <h1 className="text-[#15549A] font-[500] font-inter mb-1 text-2xl">
+      <div className="bg-[#ECF5FF] flex h-[430px] w-full">
+        <div className="pt-24 pl-32">
+          <h1 className="text-[#15549A] font-medium font-inter mb-1 text-3xl">
             YOUR PATH TO BETTER CREDIT,
           </h1>
-          <h1 className="text-[#04284F] font-inter text-5xl font-[700]">
+          <h1 className="text-[#04284F] font-inter text-6xl font-bold mb-1">
             MADE EASY
           </h1>
           <p className="text-[#737373] text-xl mb-3 font-inter font-bold">

@@ -9,8 +9,8 @@ export function MainNav() {
       : "text-[#04284F]";
 
   return (
-    <nav className="py-3 flex justify-around items-center text-sm font-semibold">
-      <div className="flex items-center h-16 ml-20">
+    <nav className="pt-3 pb-0.5 flex justify-around items-center text-sm font-semibold">
+      <div className="flex items-center h-16 ml-40">
         <NavLink to="/" className="text-2xl font-bold text-[#15549A]">
           <img src={logo} alt="Eze Credit Repair Logo" className="h-20" />
         </NavLink>
