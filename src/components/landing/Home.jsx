@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Testinomial } from "../common/Testinomial";
 import { Footer } from "../common/Footer";
 import credit9 from "../asset/improvecs3.png";
@@ -18,16 +18,15 @@ import chingchong from "../asset/chingchong.png";
 import creditrepairing from "../asset/creditrapiring.jpg";
 import layer from "../asset/Layer 1002 copy.png";
 import about from "../asset/about.png";
-import faqbg from "../asset/faqbg.png";
 export function Home() {
   return (
     // div of the woman
     <>
-      <div className="bg-zinc-100/20 flex  h-[430px] w-full">
+      <div className="bg-zinc-100/20 flex h-[430px] w-full">
         <div className="p-[60px]">
-          <h2 className="text-[#15549A] font-[500] font-inter mb-1 text-2xl">
+          <h1 className="text-[#15549A] font-[500] font-inter mb-1 text-2xl">
             YOUR PATH TO BETTER CREDIT,
-          </h2>
+          </h1>
           <h1 className="text-[#04284F] font-inter text-5xl font-[700]">
             MADE EASY
           </h1>
@@ -48,7 +47,7 @@ export function Home() {
             SIGN UP NOW
           </button>
         </div>
-        <div className=" w-[350px] z-10 right-[300px] absolute p-[20px]">
+        <div className=" w-[350px] z-10 right-[140px] absolute p-[20px]">
           <img
             src={credit11}
             alt="Eze Credit Repair Logo"
@@ -63,7 +62,7 @@ export function Home() {
           className="object-cover w-full h-full"
           alt=""
         />
-        <div className="bg-slate-500 w-1/2 h-[340px]  rounded-md absolute top-[100px] border-2 border-white left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="w-2/3 h-[340px] rounded-md absolute top-[100px]  border-white left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <img
             src={credit10}
             alt="Eze Credit Repair Logo"
@@ -258,7 +257,9 @@ export function Home() {
       <div className="p-8 bg-gray-100 min-h-screen">
         {/* Main Content Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-inter font-bold text-[#15549A]">News & Blog</h1>
+          <h1 className="text-3xl font-inter font-bold text-[#15549A]">
+            News & Blog
+          </h1>
         </div>
 
         {/* Main Content Grid */}
@@ -587,7 +588,9 @@ function Contactform() {
             {/* <img src={Rectangle5} alt="Rectangle5" className="object-cover w-full h-full"/> */}
             {/* Left Section - Form */}
             <div className="flex-1 md:mr-8 mt-[-15px]">
-              <h2 className="text-4xl font-[400px] font-inter">Start Your Recovery</h2>
+              <h2 className="text-4xl font-[400px] font-inter">
+                Start Your Recovery
+              </h2>
               <form className="grid gap-3 mt-[25px]">
                 <div className="grid grid-cols-2 gap-1">
                   <input
