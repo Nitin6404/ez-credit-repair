@@ -18,36 +18,36 @@ import chingchong from "../asset/chingchong.png";
 import creditrepairing from "../asset/creditrapiring.jpg";
 import layer from "../asset/Layer 1002 copy.png";
 import about from "../asset/about.png";
+import tick from '../asset/whatwedotick.png';
 export function Home() {
   return (
-    // div of the woman
     <>
-      <div className="bg-[#ECF5FF] flex h-[430px] w-full">
-        <div className="pt-24 pl-32">
-          <h1 className="text-[#15549A] font-medium font-inter mb-1 text-3xl">
+      <div className="bg-[#ECF5FF] flex  w-full h-[462px]">
+        <div className="pt-14 pl-32">
+          <h1 className="text-[#15549A] font-bold font-inter mb-1 text-[26px] leading-[32px]">
             YOUR PATH TO BETTER CREDIT,
           </h1>
-          <h1 className="text-[#04284F] font-inter text-6xl font-bold mb-1">
+          <h1 className="text-[#04284F] font-inter text-[73px] leading-[89px] font-bold mb-1">
             MADE EASY
           </h1>
-          <p className="text-[#737373] text-xl mb-3 font-inter font-bold">
+          <p className="text-[#737373] text-[26px] leading-[31px] mb-3 font-inter font-bold">
             Let's Fix Your Credit and Raise Your Score
           </p>
-          <p className="text-[#626161] font-semibold">
+          <p className="text-[#626161] font-[400px] font-inter text-[20px] leading-[25px] ">
             Unlock financial freedom with a better credit score.
           </p>
-          <p className="text-[#626161] font-semibold">
+          <p className="text-[#626161] font-[400px] font-inter text-[20px] leading-[25px] ">
             {" "}
             Our easy-to-follow approach helps you improve your{" "}
           </p>
-          <p className="text-[#626161] mb-5 font-semibold">
+          <p className="text-[#626161] mb-5 font-[400px] font-inter text-[20px] leading-[25px] ">
             credit for better rates,loans and peace of mind.
           </p>
           <button className="bg-[#15549A] font-inter font-bold  text-white px-4 py-1 rounded-md">
             SIGN UP NOW
           </button>
         </div>
-        <div className=" w-[350px] z-10 right-[140px] absolute p-[20px]">
+        <div className=" w-[398px] h-[509px] z-10 right-[140px] absolute p-[20px]">
           <img
             src={credit11}
             alt="Eze Credit Repair Logo"
@@ -56,13 +56,13 @@ export function Home() {
         </div>
       </div>
       {/* get started section  */}
-      <div className="bg-blue-800 h-[500px] relative  w-full">
+      <div className="bg-blue-800 h-[779px] relative  w-full">
         <img
           src={creditrepairing}
           className="object-cover w-full h-full"
           alt=""
         />
-        <div className="w-2/3 h-[340px] rounded-md absolute top-[100px]  border-white left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="w-[997px] h-[530px] rounded-md absolute top-[200px]  border-white left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <img
             src={credit10}
             alt="Eze Credit Repair Logo"
@@ -70,15 +70,15 @@ export function Home() {
           />
         </div>
         <div className="absolute text-center left-1/2 transform -translate-x-1/2  bottom-5">
-          <p className="text-white w-[900px] font-inter text-lg mb-[20px]">
+          <p className="text-white w-[1233px] h-[81.34px] font-inter text-xl font-bold mb-[70px]">
             Achieving a better credit score is key to unlocking financial
             freedom and accessing life's biggest opportunities.With our
             EzeCredit Repair Program, our services will change your path to a
             brighter and improving credit profile,so you can secure better
             rates, loans, and financial peace of mind.
           </p>
-          <button className="bg-[#F30000] font-bold font-inter text-xl text-white px-4 py-1 rounded-md ">
-            Get Started
+          <button className="bg-[#F30000] font-bold font-inter text-3xl text-white px-4 py-1 rounded-md w-[248px] h-[52px]">
+            Get Started▶
           </button>
         </div>
       </div>
@@ -86,20 +86,20 @@ export function Home() {
       <div className="flex flex-col md:flex-row items-start py-8 px-12 font-sans">
         {/* Text Content */}
         <div className="flex-1 ">
-          <h1 className="text-4xl font-bold text-[#15549A] font-opensans">
+          <h1 className="text-[50.04px] leading-[60.57px] font-bold text-[#15549A] font-inter">
             About Us
           </h1>
-          <p className="text-base text-[#2E2F31] font-inter font-[550] leading-relaxed">
+          <p className="text-[22.92px] leading-[27.73px] text-[#2E2F31] font-inter font-[550] ">
             For the past 15 years, we've been dedicated to helping thousands of
             individuals repair their credit and reclaim financial control. At{" "}
             <strong>EzeCredit</strong>, we fight for every consumer's right to
             an accurate, fair, and substantiated credit report.
           </p>
 
-          <h2 className="text-xl font-bold text-[#529400] font-opensans mt-2">
+          <h2 className="text-[29px] leading-[35px] font-bold text-[#529400] font-Montserrat mt-2">
             Target Area
           </h2>
-          <ul className="list-none pl-0 text-base text-[#2E2F31] font-opensans font-[400] space-y-2 leading-relaxed">
+          <ul className="list-none pl-0 text-[22.91px] leading-[27.73px] text-[#2E2F31] font-inter font-bold w-[736px] space-y-2">
             <li>
               <img
                 src={layer}
@@ -145,15 +145,17 @@ export function Home() {
               to help raise your credit score.
             </li>
           </ul>
-
-          <button className="bg-[#15549A] font-inter font-bold text-md text-white px-4 py-2 rounded mt-6  flex items-center hover:bg-blue-900">
-            READ MORE <span className="ml-2">→</span>
+    <div className="flex">
+          <button className="bg-[#15549A] font-inter font-bold text-[27px] leading-[32px] w-[200px] h-[51px] text-white rounded mt-6 p-[10px] flex items-center">
+            READ MORE 
           </button>
+          <span className=" ml-[2px] h-[51px] text-[35px] justify-center items-center mt-[24px] w-[35px] bg-[#15549A] rounded text-white">→</span>
+        </div>
         </div>
 
         {/* Image Placeholder */}
         <div className="flex-1 flex justify-center items-center mt-[50px] md:pl-6">
-          <div className="w-[450px] h-80 flex justify-center items-center text-sm italic rounded-lg">
+          <div className="w-[474px] h-[459px] flex justify-center items-center text-sm italic rounded-lg">
             <img
               src={credit9}
               alt="Recovery Icon"
@@ -163,22 +165,22 @@ export function Home() {
         </div>
       </div>
       {/* What we do section*/}
-      <div className="flex flex-col h-[480px] items-center bg-blue-900 text-white p-6 font-sans">
+      <div className="flex flex-col h-[695px] w-full items-center bg-[#15549A] text-white p-6 font-sans">
         {/* Main Container with Flex */}
         <div className="flex flex-col md:flex-row items-center justify-center w-full space-x-0 md:space-x-10">
           {/* Left Side - What We Do Section */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 max-w-md">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 ml-[10px] ">
             {/* Main Title */}
-            <h1 className="text-4xl font-bold text-[#78B6F6] font-inter">
+            <h1 className="text-[50px] leading-[60px] mt-[20px] font-bold text-[#78B6F6] font-inter">
               What We Do
             </h1>
 
             {/* Description */}
-            <p className="text-lg font-inter font-[300]">
-              Empowering You to Seize New Opportunities, <br />
+            <p className="text-[29px] leading-[35px] font-inter font-[400px]">
+              Empowering You to Seize New Opportunities, <br/>
               Because Everyone Deserves a Second Chance.
             </p>
-            <p className="text-[#31FF01] font-inter font-[300] italic">
+            <p className="text-[#31FF01] font-inter font-[400] text-[29.16px] leading-[35.29px] italic">
               When opportunity knocks, will your credit stand in the way?
             </p>
 
@@ -191,55 +193,55 @@ export function Home() {
                 <img
                   src={credit0}
                   alt="Eze Credit Repair Logo"
-                  className="h-[60px] ml-[20px] "
+                  className="h-[54px] w-[143px] ml-[20px] "
                 />
               </div>
               {/* Services Benefits Heading */}
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-[50px] leading-[60.51px] font-bold text-white font-inter">
                 Services Benefits:
               </h2>
             </div>
 
             {/* Benefits List */}
             <ul className="text-base space-y-3">
-              <li className="flex items-start">
-                <span className="text-green-400 mr-2">➡</span>
+              <li className="flex items-center font-inter font-bold text-[22px] leading-[27px]">
+                <span className="text-green-400 mr-2 items-center "><img src= {tick} className="w-[40px] h-[50px]"/></span>
                 Strong credit score opens doors to financial freedom.
               </li>
-              <li className="flex items-start">
-                <span className="text-green-400 mr-2">➡</span>
+              <li className="flex items-center font-inter font-bold text-[22px] leading-[27px]">
+                <span className="text-green-400 mr-2"><img src= {tick} className="w-[40px] h-[50px]"/></span>
                 Easy path to better credit, to be ready for every opportunity
                 that comes your way.
               </li>
-              <li className="flex items-start">
-                <span className="text-green-400 mr-2">➡</span>
+              <li className="flex items-center font-inter font-bold text-[22px] leading-[27px]">
+                <span className=" mr-2"><img src= {tick} className="w-[40px] h-[50px]"/></span>
                 Fast track repair and boost your score by 50-100 points* within
                 30 to 60 days.
               </li>
             </ul>
 
             {/* Get Started Button */}
-            <button className="bg-green-500 text-white font-semibold px-6 py-2 rounded mt-4 hover:bg-green-600">
-              GET STARTED
+            <button className="bg-[#46CC02] text-white font-semibold  rounded w-[244px] h-[52px]">
+             <span  className="font-inter font-bold text-[27px] leading-[32px]" >GET STARTED▶</span>
             </button>
           </div>
 
           {/* Right Side - Basketball Image and Text */}
-          <div className="flex flex-col w-1/2 items-center  justify-center mt-6 md:mt-0">
+          <div className="flex flex-col w-1/2 items-center  justify-center mt-[50px]">
             {/* <img src={basket} className="object-cover" alt="" /> */}
             {/* Basketball Image Placeholder */}
-            <div className="w-[300px] h-[200px]  flex items-center justify-center mb-4">
+            <div className="w-[506px] h-[477px]  flex items-center justify-center mb-4">
               <img
                 src={credit8}
                 alt="Eze Credit Repair Logo"
-                className="object-cover ml-[20px] "
+                className="object-cover ml-[20px] w-[506px] h-[477px] "
               />
             </div>
 
             {/* Text beside the Basketball Image */}
-            <p className="text-sm text-center md:text-left mt-[70px]">
+            <p className="font-inter font-[400px] text-[26.36px] leading-[31.9px] md:text-left mt-[30px]">
               Don’t Let Your Credit Block Opportunities <br />
-              Start Building a Better Score Today!
+              <p className="font-inter font-[400px] text-[26.36px] leading-[31.9px] ml-[30px]">Start Building a Better Score Today!</p>
             </p>
           </div>
         </div>
@@ -254,10 +256,10 @@ export function Home() {
       <Testinomial></Testinomial>
 
       {/* News Blog section */}
-      <div className="p-8 bg-gray-100 min-h-screen">
+      <div className="p-8 bg-gray-100 min-h-screen mt-[50px]">
         {/* Main Content Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-inter font-bold text-[#15549A]">
+          <h1 className="text-[50px] leading-[60px] font-inter font-bold text-[#15549A]">
             News & Blog
           </h1>
         </div>
@@ -376,7 +378,6 @@ export function Home() {
 function FeQ3() {
   const [openIndex, setOpenIndex] = useState(null);
 
-  // Toggle function to handle accordion state
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -387,11 +388,11 @@ function FeQ3() {
       content: (
         <>
           <img
-            src={about} // Replace with your image URL or imported image
+            src={about}
             alt="Recovery Icon"
-            className="mb-4 w-[120px] h-[100px] absolute" // Optional: Add some styling (e.g., margin)
+            className="mb-4 w-[120px] h-[100px] absolute"
           />
-          <p className="ml-[140px]">
+          <p className="ml-[140px] font-inter font-bold">
             Credit repair involves resolving any questionable negative items
             that may be damaging your credit profile. If the credit bureaus or
             your creditors cannot provide proof that these items are fair,
@@ -425,7 +426,7 @@ function FeQ3() {
   return (
     <div className="h-[550px] bg-gray-100">
       <div className="max-w-4xl ml-[45px] p-6 mt-[10px]">
-        <h1 className="text-4xl font-inter font-normal mb-4 text-[#15549A]">
+        <h1 className="text-[45px] leading-[54px] font-inter font-[400px] mb-4 text-[#15549A]">
           Frequently Asked Questions
         </h1>
       </div>
@@ -462,7 +463,7 @@ function Program() {
       <div className="p-6 bg-white max-w-screen-lg mx-auto  rounded">
         {/* Header Section */}
         <div className="text-center mb-8">
-          <p className="text-[#15549A] font-inter mt-[-240px] font-bold text-4xl">
+          <p className="text-[#15549A] font-inter mt-[-240px] font-bold text-[50px] leading-[60px]">
             Progressive Corrective & Recovery Plan
           </p>
         </div>
@@ -471,7 +472,7 @@ function Program() {
         <div className="flex flex-col md:flex-row justify-between items-start md:space-x-4 mb-6">
           {/* Card 1 */}
           {/* Card 1 */}
-          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0 hover:shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
+          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0 w-[407px] h-[56.48px] hover:shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
             <div className="flex p-2 items-center">
               <div className="bg-white text-[#15549A] font-montserrat text-lg font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
                 01
@@ -500,7 +501,7 @@ function Program() {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0  hover:shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
+          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0 w-[407px] h-[56.48px] hover:shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
             <div className="flex p-2 items-center">
               <div className="bg-white text-[#15549A] font-montserrat text-lg font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
                 02
@@ -522,7 +523,7 @@ function Program() {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0 hover:shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
+          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0 w-[407px] h-[56.48px] hover:shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
             <div className="flex p-2 items-center">
               <div className="bg-white text-[#15549A] font-montserrat text-lg font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
                 03
@@ -557,12 +558,12 @@ function Program() {
         </div>
 
         {/* Dispute & Escalation Details */}
-        <h1 className="ml-[475px] text-7xl mt-[-40px]">↓</h1>
-        <div className="bg-blue-100 py-6 px-4 border-[#4054B2] border-[1px] ">
-          <h4 className="text-xl font-inter font-bold text-[#07284F] mb-2">
+        <h1 className="ml-[475px] text-7xl mt-[80px]">↓</h1>
+        <div className="bg-blue-100 py-6 px-4 border-[#4054B2] border-[1px] mt-[30px] w-[1100px] h-[208px]">
+          <h4 className="text-[27px] leading-[32px] font-inter font-bold text-[#07284F] mb-2">
             Dispute & Escalation
           </h4>
-          <p className="text-[#173455] font-sans font-semibold">
+          <p className="text-[#173455] font-opensans font-bold text-[24px] leading-[32px]">
             We start by assessing your current credit situation and identifying
             the roadblocks impacting your score. Each case is unique, but we
             specialize in spotting inaccuracies and other factors that should
@@ -578,8 +579,8 @@ function Program() {
 function Contactform() {
   return (
     <div>
-      <div class=" text-white p-2 flex items-center h-[100px] mt-[150px]">
-        <div className="flex justify-center mt-[-900px] px-4 py-6 w-[500px]  h-[550px] mx-auto mb-[70px] ml-[700px]">
+      <div className =" text-white p-2 flex items-center h-[100px] mt-[150px]">
+        <div className="flex justify-center mt-[-900px] px-4 py-6 w-[533px]  h-[636 px] mx-auto mb-[70px] ml-[700px]">
           {/* <div
           className="flex justify-center mt-[-900px] px-4 py-6 w-[500px] h-[550px] mx-auto mb-[70px] ml-[700px] bg-cover bg-center rounded-lg"
           style={{ backgroundImage: `url(${Rectangle5})` }} */}
@@ -588,7 +589,7 @@ function Contactform() {
             {/* <img src={Rectangle5} alt="Rectangle5" className="object-cover w-full h-full"/> */}
             {/* Left Section - Form */}
             <div className="flex-1 md:mr-8 mt-[-15px]">
-              <h2 className="text-4xl font-[400px] font-inter">
+              <h2 className="text-[45px] leading-[54.46px] font-[400px] font-inter">
                 Start Your Recovery
               </h2>
               <form className="grid gap-3 mt-[25px]">

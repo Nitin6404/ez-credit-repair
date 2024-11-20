@@ -18,7 +18,7 @@ export function Navbar() {
             />
             <p className="text-xl font-semibold">0000-000-000</p>
           </div>
-          <div className="flex justify-end gap-1 font-monsterrat font-semibold text-xl">
+          <div className="flex justify-end gap-1 font-monsterrat font-bold text-xl">
             <a href="/" className="hover:underline">
               LOGIN
             </a>
