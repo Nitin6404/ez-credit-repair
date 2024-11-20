@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import logo from "../asset/672-6724074_transparent-tm-logo-png-logo-trademark-symbol-png.png";
+// import navlink from "../asset/nav-link.svg";
 
 export function MainNav() {
   // Helper function for active class styling
@@ -9,10 +10,16 @@ export function MainNav() {
       : "text-[#04284F]";
 
   return (
-    <nav className="pt-3 pb-0.5 flex justify-around items-center text-sm font-semibold">
-      <div className="flex items-center h-16 ml-40">
+    <nav className="py-3  flex justify-around items-center text-sm font-semibold">
+      <div className="flex items-center h-16 ml-20">
         <NavLink to="/" className="text-2xl font-bold text-[#15549A]">
-          <img src={logo} alt="Eze Credit Repair Logo" className="h-20" />
+          <img
+            height={85}
+            width={146}
+            src={logo}
+            alt="Eze Credit Repair Logo"
+            className="h-20"
+          />
         </NavLink>
       </div>
       <div className="flex space-x-8 text-xl text-[#04284F]">
@@ -38,6 +45,9 @@ export function MainNav() {
           Contact Us
         </NavLink>
       </div>
+      {/* <div className="w-full">
+        <img src="" alt="" />
+      </div> */}
     </nav>
   );
 }
