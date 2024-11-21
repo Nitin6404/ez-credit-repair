@@ -192,7 +192,7 @@ export function Home() {
         <img src={basketBallNet} alt="" />
       </div>
       {/* What we do section*/}
-      <div className="flex flex-col h-[695px] w-full items-center bg-[#15549A] text-white p-6 font-sans">
+      <div className="flex flex-col h-[695px] w-full items-center border-2 border-b-[#E8EEF5] bg-[#15549A] text-white p-6 font-sans">
         {/* Main Container with Flex */}
         <div className="flex flex-col md:flex-row items-center justify-center w-full space-x-0 md:space-x-10">
           {/* Left Side - What We Do Section */}
@@ -291,7 +291,7 @@ export function Home() {
       </div>
       {/* faq section */}
       <FeQ3></FeQ3>
-      <Contactform></Contactform>
+      <Contactform />
 
       {/* progressive correct and recovery plan */}
       <Program></Program>
@@ -636,7 +636,7 @@ function Contactform() {
           className="flex justify-center mt-[-900px] px-4 py-6 w-[500px] h-[550px] mx-auto mb-[70px] ml-[700px] bg-cover bg-center rounded-lg"
           style={{ backgroundImage: `url(${Rectangle5})` }} */}
           {/* > */}
-          <div className=" w-full p-6 bg-[url('/src/components/asset/faqbg.png')] rounded flex flex-col md:flex-row">
+          <div className="w-full p-6 bg-[url('/src/components/asset/faqbg.png')] bg-cover flex flex-col md:flex-row">
             {/* <img src={Rectangle5} alt="Rectangle5" className="object-cover w-full h-full"/> */}
             {/* Left Section - Form */}
             <div className="flex-1 md:mr-8 mt-[-15px]">
