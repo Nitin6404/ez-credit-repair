@@ -443,7 +443,7 @@ function FeQ3() {
             alt="Recovery Icon"
             className="mb-4 w-[120px] h-[100px] absolute"
           />
-          <p className="ml-[140px] font-inter font-bold">
+          <p className="ml-[140px] font-montserrat text-[22px] leading-[27px] font-semibold">
             Credit repair involves resolving any questionable negative items
             that may be damaging your credit profile. If the credit bureaus or
             your creditors cannot provide proof that these items are fair,
@@ -475,18 +475,19 @@ function FeQ3() {
   ];
 
   return (
-    <div className="h-[550px] bg-gray-100">
-      <div className="max-w-4xl ml-[45px] p-6 mt-[10px]">
-        <h1 className="text-[45px] leading-[54px] font-inter font-[400px] mb-4 text-[#15549A]">
+    <div className="bg-[#3F8FC4] w-[640px] h-[713px] ml-[80px] bg-opacity-[10%]">
+    
+      <div className="max-w-4xl ml-[1px] p-6 mt-[10px]">
+        <h1 className="text-[42px] leading-[54px] font-interfont-[400px] mb-4 text-[#15549A]">
           Frequently Asked Questions
         </h1>
       </div>
-      <div className="bg-white-100 font-opensans flex justify-center w-full  font-[400] p-[10px]">
-        <div className="w-[550px] mx-auto mt-[-20px] ml-[60px] bg-white border border-gray-300 rounded-lg overflow-hidden shadow-md">
+      <div className="font-opensans flex justify-center w-[850px] font-[400] p-[10px]">
+        <div className="w-[620px] mx-auto mt-[-20px] ml-[5px] overflow-hidden">
           {accordionData.map((item, index) => (
-            <div key={index} className="border-b border-gray-300">
+            <div key={index} className=" p-2">
               <div
-                className="accordion-title flex justify-between items-center px-6 py-4 bg-white-100 cursor-pointer font-opensans font-bold hover:bg-gray-200"
+                className="accordion-title flex justify-between items-center px-6 py-4  font-montserrat font-bold text-[20px] leading-[25px] cursor-pointer bg-white hover:bg-gray-200"
                 onClick={() => toggleAccordion(index)}
               >
                 {item.title}
@@ -497,9 +498,9 @@ function FeQ3() {
               <div
                 className={`accordion-content px-6 py-4 ${
                   openIndex === index ? "" : "hidden"
-                } bg-gray-100`}
+                }`}
               >
-                <p>{item.content}</p>
+                <p className="font-montserrat text-[22px] leading-[27px] font-semibold">{item.content}</p>
               </div>
             </div>
           ))}
@@ -630,55 +631,52 @@ function Program() {
 function Contactform() {
   return (
     <div>
-      <div className=" text-white p-2 flex items-center h-[100px] mt-[150px]">
-        <div className="flex justify-center mt-[-900px] px-4 py-6 w-[533px]  h-[636 px] mx-auto mb-[70px] ml-[700px]">
-          {/* <div
-          className="flex justify-center mt-[-900px] px-4 py-6 w-[500px] h-[550px] mx-auto mb-[70px] ml-[700px] bg-cover bg-center rounded-lg"
-          style={{ backgroundImage: `url(${Rectangle5})` }} */}
-          {/* > */}
-          <div className="w-full p-6 bg-[url('/src/components/asset/faqbg.png')] bg-cover flex flex-col md:flex-row">
-            {/* <img src={Rectangle5} alt="Rectangle5" className="object-cover w-full h-full"/> */}
-            {/* Left Section - Form */}
-            <div className="flex-1 md:mr-8 mt-[-15px]">
-              <h2 className="text-[45px] leading-[54.46px] font-[400px] font-inter">
+        <div className="flex justify-center ml-[660px] mt-[-713px] mb-[300px]">
+          <div className=" w-[533px] h-[720px] p-6 bg-[url('/src/components/asset/faqbg.png')] flex flex-col md:flex-row">
+          
+            <div className="flex-1 md:mr-8 mt-[-10px]">
+              <h2 className="text-[45px] leading-[54.46px] font-[400px] text-[#FFFFFF] font-inter">
+
                 Start Your Recovery
               </h2>
-              <form className="grid gap-3 mt-[25px]">
-                <div className="grid grid-cols-2 gap-1">
+              <form className="grid gap-4 mt-[25px]">
+                <div className="grid grid-cols-2 gap-3">
                   <input
                     type="text"
                     placeholder="First Name"
-                    className="p-3 rounded font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
+                    className="p-4 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
-                    className="p-3 rounded font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
+                    className="p-4 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
                   />
                 </div>
+                <div className="grid grid-cols-2 gap-3">
                 <input
                   type="text"
                   placeholder="Phone Number"
-                  className="p-3 rounded font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
+                  className="p-4 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
                 />
                 <input
                   type="text"
                   placeholder="Subject"
-                  className="p-3 rounded font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
+                  className="p-4 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
                 />
+                </div>
                 <input
                   type="text"
                   placeholder="Current Credit Score"
-                  className="p-3 rounded font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
+                  className="p-4 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
                 />
                 <input
                   type="text"
                   placeholder="Reason for Credit Repair"
-                  className="p-3 rounded font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
+                  className="p-4 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
                 />
                 <textarea
                   placeholder="How Soon?"
-                  className="p-3 rounded font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px] h-17"
+                  className="p-3 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px] h-[250px]"
                 ></textarea>
                 <button className="p-3 w-[186px] h-[54px] bg-[#46CC02]  text-white font-[400px] font-inter text-[18px] leading-[22px]">
                   Sign Up Now
@@ -688,6 +686,5 @@ function Contactform() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
