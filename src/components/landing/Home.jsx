@@ -20,6 +20,7 @@ import layer from "../asset/Layer 1002 copy.png";
 import about from "../asset/about.png";
 import tick from "../asset/whatwedotick.png";
 import pauseIcon from "../asset/pauseIcon.svg";
+import basketBallNet from "../asset/basketballNet.svg";
 export function Home() {
   return (
     <>
@@ -187,12 +188,15 @@ export function Home() {
           </div>
         </div>
       </div>
+      <div className="absolute right-0 w-[837px] h-[580px] z-0">
+        <img src={basketBallNet} alt="" />
+      </div>
       {/* What we do section*/}
       <div className="flex flex-col h-[695px] w-full items-center bg-[#15549A] text-white p-6 font-sans">
         {/* Main Container with Flex */}
         <div className="flex flex-col md:flex-row items-center justify-center w-full space-x-0 md:space-x-10">
           {/* Left Side - What We Do Section */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 ml-[10px] ">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 ml-[20px] ">
             {/* Main Title */}
             <h1 className="text-[50px] leading-[60px] mt-[20px] font-bold text-[#78B6F6] font-inter">
               What We Do
@@ -226,22 +230,22 @@ export function Home() {
             </div>
 
             {/* Benefits List */}
-            <ul className="text-base space-y-3">
+            <ul className="text-base space-y-3 mx-16">
               <li className="flex items-center font-inter font-bold text-[22px] leading-[27px]">
                 <span className="text-green-400 mr-2 items-center ">
-                  <img src={tick} className="w-[40px] h-[50px]" />
+                  <img src={tick} className="w-[29px] h-[50px]" />
                 </span>
                 Strong credit score opens doors to financial freedom.
               </li>
               <li className="flex items-center font-inter font-bold text-[22px] leading-[27px]">
-                <span className="text-green-400 mr-2">
+                <span className="text-green-400 mr-2 items-center ">
                   <img src={tick} className="w-[40px] h-[50px]" />
                 </span>
                 Easy path to better credit, to be ready for every opportunity
                 that comes your way.
               </li>
               <li className="flex items-center font-inter font-bold text-[22px] leading-[27px]">
-                <span className=" mr-2">
+                <span className="text-green-400 mr-2 items-center ">
                   <img src={tick} className="w-[40px] h-[50px]" />
                 </span>
                 Fast track repair and boost your score by 50-100 points* within
@@ -250,15 +254,21 @@ export function Home() {
             </ul>
 
             {/* Get Started Button */}
-            <button className="bg-[#46CC02] text-white font-semibold  rounded w-[244px] h-[52px]">
+            <button className="bg-[#46CC02] text-white font-semibold  rounded-2xl w-[244px] h-[52px] flex items-center justify-center gap-3">
               <span className="font-inter font-bold text-[27px] leading-[32px]">
-                GET STARTED▶
+                GET STARTED
               </span>
+              <img
+                width={20}
+                height={23}
+                className="h-[23px] w-[20px]"
+                src={pauseIcon}
+                alt="pause-icon"
+              />
             </button>
           </div>
-
           {/* Right Side - Basketball Image and Text */}
-          <div className="flex flex-col w-1/2 items-center  justify-center mt-[50px]">
+          <div className="flex flex-col w-1/2 items-center justify-center mt-[50px] z-10">
             {/* <img src={basket} className="object-cover" alt="" /> */}
             {/* Basketball Image Placeholder */}
             <div className="w-[506px] h-[477px]  flex items-center justify-center mb-4">
