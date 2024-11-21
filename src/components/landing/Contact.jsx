@@ -1,4 +1,3 @@
-import React from "react";
 import { Footer } from "../common/Footer";
 import credit1 from '../asset/phone.png';
 import credit2 from '../asset/mail.png';

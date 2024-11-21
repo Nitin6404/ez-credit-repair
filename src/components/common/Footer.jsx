@@ -8,7 +8,7 @@ import office from "../asset/officeaddress.png";
 export function Footer() {
   return (
     <div>
-      <div className="bg-[#15549A] text-white py-4 border-y  mb-[0px]">
+      <div className="bg-[#15549A] text-white py-4 border-y  mb-[0px] mt-[40px]">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
           {/* Logo Section */}
           <div className="flex items-center mb-4 md:mb-0">
@@ -59,13 +59,13 @@ export function Footer() {
         </div>
       </div>
       <footer className="bg-[#15549a] text-white py-[2px]">
-        <div className="container mx-auto px-[0px] grid grid-cols-1 ml:grid-cols-2 xl:grid-cols-3 gap-[40px]">
+        <div className="container mx-auto px-[0px] grid xl:grid-cols-3">
           {/* Logo and Description */}
-          <div className="ml-[-20px] mt-[1px]">
+          <div className="mt-[1px]">
             <h2 className="text-[31px] leading-[88px] font-montserrat font-bold">
               EzeCreditRepair LLC.
             </h2>
-            <p className="mt-2 font-montserrat font-[700] text-[20px] leading-[25px] ">
+            <p className="mt-2 font-montserrat font-[700] text-[20px] leading-[25px] mr-[50px] ">
               EzeCredit Repair is your trusted guide to better credit, ensuring
               you're ready for every opportunity that comes your way. As the
               A-Team of credit repair, our fast-track process improves your
@@ -146,11 +146,11 @@ export function Footer() {
               </li>
             </ul>
           </div> */}
-          <div className="relative ml-[30px] border-x border-solid p-3">
-            <h3 className="text-[31px] leading-[28px] font-bold font-montserrat">
+          <div className="relative border-x border-solid p-3">
+            <h3 className="text-[31px] leading-[28px] font-bold font-montserrat p-3 mt-[10px]">
               Shot Link
             </h3>
-            <ul className="mt-[20px] space-y-1 font-montserrat text-sm">
+            <ul className="mt-[5px] space-y-1 font-montserrat p-5">
               {/* Main List */}
               <li>
                 <img
@@ -161,7 +161,7 @@ export function Footer() {
                 <HashLink
                   smooth
                   to="/"
-                  className="hover:font-bold font-montserrat text-[20px] leading-[25px]"
+                  className="hover:font-bold font-montserrat text-[20px] leading-[25px] align-middle"
                 >
                   Home
                 </HashLink>
@@ -175,7 +175,7 @@ export function Footer() {
                 <HashLink
                   smooth
                   to="/about"
-                  className="hover:font-bold font-montserrat text-[20px] leading-[25px]"
+                  className="hover:font-bold font-montserrat text-[20px] leading-[25px] align-middle"
                 >
                   About Us
                 </HashLink>
@@ -189,7 +189,7 @@ export function Footer() {
                 <HashLink
                   smooth
                   to="/services"
-                  className="hover:font-bold font-montserrat text-[20px] leading-[25px]"
+                  className="hover:font-bold font-montserrat text-[20px] leading-[25px] align-middle"
                 >
                   Our Services
                 </HashLink>
@@ -203,7 +203,7 @@ export function Footer() {
                 <HashLink
                   smooth
                   to="/pricing"
-                  className="hover:font-bold font-montserrat text-[20px] leading-[25px]"
+                  className="hover:font-bold font-montserrat text-[20px] leading-[25px] align-middle"
                 >
                   Pricing Page
                 </HashLink>
@@ -217,7 +217,7 @@ export function Footer() {
                 <HashLink
                   smooth
                   to="/work"
-                  className="hover:font-bold font-montserrat text-[20px] leading-[25px]"
+                  className="hover:font-bold font-montserrat text-[20px] leading-[25px] align-middle"
                 >
                   How It Works
                 </HashLink>
@@ -231,7 +231,7 @@ export function Footer() {
                 <HashLink
                   smooth
                   to="/learning-center"
-                  className="hover:font-bold font-montserrat text-[20px] leading-[25px]"
+                  className="hover:font-bold font-montserrat text-[20px] leading-[25px] align-middle"
                 >
                   Learning Center
                 </HashLink>
@@ -245,7 +245,7 @@ export function Footer() {
                 <HashLink
                   smooth
                   to="/terms-and-conditions"
-                  className="hover:font-bold font-montserrat text-[20px] leading-[25px]"
+                  className="hover:font-bold font-montserrat text-[20px] leading-[25px] align-middle"
                 >
                   Terms and Conditions
                 </HashLink>
@@ -253,7 +253,7 @@ export function Footer() {
             </ul>
 
             {/* Right-Aligned Section */}
-            <ul className="absolute top-[47px] mt-[12px] right-5 space-y-1">
+            <ul className="absolute top-[85px] mt-[12px] right-5 space-y-1">
               <li>
                 <img
                   src={wsquare}
@@ -263,7 +263,7 @@ export function Footer() {
                 <HashLink
                   smooth
                   to="/f&q"
-                  className="hover:font-bold font-montserrat text-[20px] leading-[25px]"
+                  className="hover:font-bold font-montserrat text-[20px] leading-[25px] align-middle"
                 >
                   FAQ
                 </HashLink>
@@ -277,7 +277,7 @@ export function Footer() {
                 <HashLink
                   smooth
                   to="/privacy-policy"
-                  className="hover:font-bold font-montserrat text-[20px] leading-[25px]"
+                  className="hover:font-bold font-montserrat text-[20px] leading-[25px] align-middle"
                 >
                   Privacy Policy
                 </HashLink>
@@ -286,7 +286,7 @@ export function Footer() {
           </div>
 
           {/* Subscribe and Social Media */}
-          <div className="mt-[30px]">
+          <div className="mt-[30px] ml-[20px]">
             <h3 className="text-[31px] leading-[38px] font-bold font-montserrat">
               Follow us
             </h3>
