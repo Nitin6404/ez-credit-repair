@@ -1,4 +1,3 @@
-import React from "react";
 import Matthew2 from "../asset/Mathew.png";
 import Jack from "../asset/JackD.png";
 import Susan from "../asset/MathewBlacky.png";
@@ -9,14 +8,14 @@ export function Testinomial() {
     <div className="bg-white relative py-10 flex flex-col items-center">
       {/* Header Section */}
       <div className="text-center mb-8">
-        <h2 className="text-[50px] leading-[60px] text-[#15549A] font-inter font-bold">
+        <h2 className="text-[50px] leading-[60px] text-[#15549A] font-inter font-bold mb-[70px] mt-[-20px]">
           What Our Customers Say?
         </h2>
       </div>
 
       {/* Background Section (Behind Cards) */}
       <div className="absolute top-[100px] w-full bg-[#15549A] h-[281px] z-0"></div>
-      <div className="absolute top-[125px] w-[1100px] bg-white shadow-xl h-[250px] rounded-md z-5"></div>
+      <div className="absolute top-[135px] w-[1222px] bg-white shadow-xl h-[407px] rounded-md z-5"></div>
 
       {/* Testimonial Cards Container */}
       <div className="relative flex justify-center top-[50px] items-center w-full max-w-4xl h-[400px]">

@@ -289,80 +289,70 @@ export function Home() {
           </div>
         </div>
       </div>
-      {/* faq section */}
       <FeQ3></FeQ3>
-      <Contactform />
+      <Contactform></Contactform>
 
       {/* progressive correct and recovery plan */}
       <Program></Program>
-      {/* testimonials */}
       <Testinomial></Testinomial>
 
       {/* News Blog section */}
-      <div className="p-8 bg-gray-100 min-h-screen mt-[50px]">
+      <div className="w-full mt-[90px]">
         {/* Main Content Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-5">
           <h1 className="text-[50px] leading-[60px] font-inter font-bold text-[#15549A]">
             News & Blog
           </h1>
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] w-full bg-[#15549A] bg-opacity-[10%] p-2">
           {/* Credit Repair Section */}
-          <div className="space-y-8">
-            <h2 className="text-[#15549A] text-[25px] leading-[30px] font-bold font-inter">
-              Credit Repair:
-              <span className="font-inter font-bold text-[20px] leading-[25px]">
-                {" "}
-                What It Is, How It Works, Related...
-              </span>
+          <div className="space-y-4 p-5 ml-[50px] mt-[10px]">
+            <h2 className="text-[#15549A] text-[25px] leading-[30px] font-bold font-inter ml-[20px]">
+              Credit Repair:<span className="font-inter font-bold text-[20px] leading-[25px]"> What It Is, How It Works, Related...</span>
             </h2>
 
             {/* Credit Repair Card 1 */}
-            <div className=" relative rounded-lg bg-white overflow-hidden w-[540px] h-[191px]">
+            <div className=" relative rounded-lg overflow-hidden w-[540px] h-[191px]">
               <img
                 src={hands}
                 alt="Credit Repair 1"
                 className="w-[540px] h-[191px] object-cover"
               />
               <div className="absolute inset-0 flex flex-col justify-end p-4">
-                <span className="absolute top-4 left-5 bg-[#059C4B] font-inter font-[400] text-white px-2 py-1 rounded-md border-2 border-white text-[10px] leading-[12px] w-fit">
+                <span className="absolute top-4 text-center left-5 bg-[#059C4B] font-inter font-[400] text-white px-2 py-1 rounded-lg border-2 border-white text-[10px] leading-[12px] w-[93px] h-[25px]">
                   August 29, 2024
                 </span>
               </div>
             </div>
 
             {/* Credit Repair Card 2 */}
-            <h2 className="text-[#15549A]  text-[25px] leading-[30px] font-bold font-inter ">
-              Credit Repair:{" "}
-              <span className="font-inter font-bold text-[20px] leading-[25px]">
-                {" "}
-                How Credit Repair Works{" "}
-              </span>
+            <h2 className="text-[#15549A]  text-[25px] leading-[30px] font-bold font-inter ml-[20px]">
+              Credit Repair: <span className="font-inter font-bold text-[20px] leading-[25px]"> How Credit Repair Works </span>
             </h2>
-            <div className="relative bg-white rounded-lg overflow-hidden w-[540px] h-[191px]">
+            <div className="relative rounded-lg overflow-hidden w-[540px] h-[191px]">
               <img
                 src={mobile}
                 alt="Credit Repair 2"
-                className="w-[535px] h-[189px] object-cover"
+                className="w-[535px] h-[189px] object-cover rounded-lg mt-[-20px]"
               />
               <div className="absolute inset-0 flex flex-col justify-end p-4">
-                <span className="absolute top-2 left-2 bg-[#059C4B] font-inter font-[400] text-white px-2 py-1 rounded-md border-2 border-white text-[10px] leading-[12px] w-fit">
+                <span className="absolute top-2 text-center left-2 bg-[#059C4B] font-inter font-[400] text-white px-2 py-1 rounded-lg border-2 border-white text-[10px] leading-[12px] w-[93px] h-[25px]">
                   August 29, 2024
                 </span>
               </div>
             </div>
           </div>
-
+          <div className="hidden lg:block h-[500px] mt-[50px] w-[1px] bg-gray-300 mx-4"></div>
           {/* Related Articles Section */}
-          <div className="space-y-6 bg-gray-100 p-6 rounded-lg shadow-md">
+          <div className="space-y-6 p-6 rounded-lg mr-[20px]">
             <h2 className="text-[29px] leading-[35px] font-bold text-[#4B4B4B] font-inter">
               Related Articles
             </h2>
 
             {/* Article 1 */}
-            <div className="flex items-start space-x-4 border-b border-gray-300 pb-4">
+            <div className="flex items-start space-x-4 pb-4">
               <img
                 src={wemen}
                 alt="Common Things"
@@ -381,7 +371,7 @@ export function Home() {
             </div>
 
             {/* Article 2 */}
-            <div className="flex items-start space-x-4 border-b border-gray-300 pb-4">
+            <div className="flex items-start space-x-4  border-gray-300 pb-4">
               <img
                 src={rect3}
                 alt="Average Outstanding Balance"
@@ -512,7 +502,7 @@ function FeQ3() {
 function Program() {
   return (
     <div>
-      <div className="p-6 bg-white max-w-screen-lg mx-auto  rounded">
+      <div className="p-6 bg-white max-w-screen-xl mx-auto  rounded">
         {/* Header Section */}
         <div className="text-center mb-8">
           <p className="text-[#15549A] font-inter mt-[-240px] font-bold text-[50px] leading-[60px]">
@@ -521,31 +511,27 @@ function Program() {
         </div>
 
         {/* Program Cards Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:space-x-4 mb-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:space-x-1 mb-6">
           {/* Card 1 */}
-          {/* Card 1 */}
-          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0 w-[407px] h-[56.48px] hover:shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
+          <div className="bg-[#46CC02] text-white rounded-lg flex-1 mb-4 md:mb-0 w-[407px] h-[56.48px] hover:shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
             <div className="flex p-2 items-center">
-              <div className="bg-white text-[#15549A] font-montserrat text-lg font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
+              <div className="bg-white text-[#15549A] font-montserrat text-[25px] leading-[30px] font-bold rounded w-8 h-8 flex items-center justify-center">
                 01
               </div>
-              <h3 className="font-bold font-montserrat text-xl">
+              <h3 className="font-bold font-montserrat text-[25px] leading-[30px] ml-[10px]">
                 Credit Report Analysis
               </h3>
             </div>
 
-            {/* Inner Card similar to Card 3 */}
-            <div className="bg-[#ECF6FF]  p-3 flex rounded text-[#9A9A9A]  hover:bg-[#15549A] hover:text-white">
-              <div className="relative inline-block mr-3">
-                {/* Image for Credit Report */}
+            <div className="bg-[#ECF6FF]  p-2 flex rounded text-[#9A9A9A] justify-center items-center hover:bg-[#15549A] h-[150px] hover:text-white">
+              <div className="relative inline-block mr-[20px]">
                 <img
                   src={credit}
                   alt="Credit Report Icon"
-                  className="inline-block"
+                  className="inline-block w-[77px] h-[106px] mr-[80px] ml-[30px]"
                 />
-                {/* Nested Image (if needed) */}
               </div>
-              <p className="font-montserrat font-bold ">
+              <p className="font-montserrat font-bold text-[20px] leading-[25px] ">
                 Establish a plan to identify roadblocks and inaccuracies
                 impacting your score
               </p>
@@ -553,55 +539,55 @@ function Program() {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0 w-[407px] h-[56.48px] hover:shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
+          <div className="bg-[#46CC02] text-white rounded-lg flex-1 mb-4 md:mb-0 w-[407px] h-[56.48px] hover:shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
             <div className="flex p-2 items-center">
-              <div className="bg-white text-[#15549A] font-montserrat text-lg font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
+              <div className="bg-white text-[#15549A] font-montserrat text-[25px] leading-[30px] font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
                 02
               </div>
-              <h3 className="font-bold font-montserrat text-xl">
+              <h3 className="font-bold font-montserrat text-[25px] leading-[30px]">
                 Dispute & Escalations
               </h3>
             </div>
-            <div className="bg-[#ECF6FF]  p-3 flex rounded text-[#9A9A9A]  hover:bg-[#15549A] hover:text-white">
+            <div className="bg-[#ECF6FF]  p-3 flex rounded text-[#9A9A9A] h-[150px] justify-center items-center hover:bg-[#15549A] hover:text-white">
               <img
                 src={credit2}
                 alt="Dispute Icon"
-                className="inline-block mr-2 w-[70px] h-[70px]"
+                className="inline-block mr-2 w-[95px] h-[99px] ml-[30px]"
               />
-              <p className="font-montserrat font-bold  ">
+              <p className="font-montserrat font-bold text-[20px] leading-[25px] ml-[20px]">
                 Challenge and Dispute negative items until they are removed
               </p>
             </div>
           </div>
 
           {/* Card 3 */}
-          <div className="bg-[#46CC02] text-white rounded flex-1 mb-4 md:mb-0 w-[407px] h-[56.48px] hover:shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
+          <div className="bg-[#46CC02] text-white rounded-lg flex-1 mb-4 md:mb-0 w-[407px] h-[56.48px] hover:shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
             <div className="flex p-2 items-center">
-              <div className="bg-white text-[#15549A] font-montserrat text-lg font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
+              <div className="bg-white text-[#15549A] font-montserrat text-[25px] leading-[30px] font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
                 03
               </div>
-              <h3 className="font-bold font-montserrat text-xl">
+              <h3 className="font-bold font-montserrat text-[25px] leading-[30px]">
                 Credit Recovery
               </h3>
             </div>
 
             {/* Similar Inner Card as Card 2 */}
-            <div className="bg-[#ECF6FF] text-[#9A9A9A]  p-3 flex rounded hover:bg-[#15549A] hover:text-white">
+            <div className="bg-[#ECF6FF] text-[#9A9A9A]  p-3 flex rounded justify-center items-center h-[150px] hover:bg-[#15549A] hover:text-white">
               <div className="relative inline-block mr-3">
                 {/* Image for Credit 3 */}
                 <img
                   src={credit3}
                   alt="Recovery Icon"
-                  className=" inline-block"
+                  className=" inline-block ml-[17px]"
                 />
                 {/* Image for Credit 4 inside Credit 3 */}
                 <img
                   src={credit4}
                   alt="Nested Icon"
-                  className="absolute w-[40px] h-[40px] top-[15px] left-[7px]"
+                  className="absolute w-[40px] h-[40px] top-[20px] left-[3px] ml-[30px]"
                 />
               </div>
-              <p className="font-montserrat font-bold  ">
+              <p className="font-montserrat font-bold text-[20px] leading-[25px] ml-[20px]">
                 Take action to boost your credit score to reach your desired
                 score range
               </p>
@@ -610,8 +596,8 @@ function Program() {
         </div>
 
         {/* Dispute & Escalation Details */}
-        <h1 className="ml-[475px] text-7xl mt-[80px]">↓</h1>
-        <div className="bg-blue-100 py-6 px-4 border-[#4054B2] border-[1px] mt-[30px] w-[1100px] h-[208px]">
+        <h1 className="ml-[600px] text-7xl mt-[130px]">↓</h1>
+        <div className="bg-blue-100 py-6 px-4 border-[#4054B2] border-[1px] mt-[10px] w-[1230px] h-[208px]">
           <h4 className="text-[27px] leading-[32px] font-inter font-bold text-[#07284F] mb-2">
             Dispute & Escalation
           </h4>
