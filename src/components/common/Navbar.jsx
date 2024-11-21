@@ -1,3 +1,5 @@
+import navCall from "../asset/navCall.svg";
+
 export function Navbar() {
   return (
     <>
@@ -10,12 +12,7 @@ export function Navbar() {
         </div>
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
-            <img
-              width={20}
-              height={20}
-              src="/src/components/asset/navCall.svg"
-              alt="caller"
-            />
+            <img width={20} height={20} src={navCall} alt="caller" />
             <p className="text-xl font-semibold">0000-000-000</p>
           </div>
           <div className="flex justify-end gap-1 font-monsterrat font-bold text-xl">
