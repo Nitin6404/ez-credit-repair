@@ -265,39 +265,39 @@ export function Home() {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
           {/* Credit Repair Section */}
           <div className="space-y-8">
-            <h2 className="text-[#15549A] text-xl font-bold">
-              Credit Repair: What It Is, How It Works, Related...
+            <h2 className="text-[#15549A] text-[25px] leading-[30px] font-bold font-inter">
+              Credit Repair:<span className="font-inter font-bold text-[20px] leading-[25px]"> What It Is, How It Works, Related...</span>
             </h2>
 
             {/* Credit Repair Card 1 */}
-            <div className=" relative rounded-lg bg-white overflow-hidden">
+            <div className=" relative rounded-lg bg-white overflow-hidden w-[540px] h-[191px]">
               <img
                 src={hands}
                 alt="Credit Repair 1"
-                className="w-full h-48 object-cover"
+                className="w-[540px] h-[191px] object-cover"
               />
               <div className="absolute inset-0 flex flex-col justify-end p-4">
-                <span className="absolute top-2 left-2 bg-[#059C4B] font-inter font-[400] text-white px-2 py-1 rounded-md border-2 border-white text-xs w-fit">
+                <span className="absolute top-4 left-5 bg-[#059C4B] font-inter font-[400] text-white px-2 py-1 rounded-md border-2 border-white text-[10px] leading-[12px] w-fit">
                   August 29, 2024
                 </span>
               </div>
             </div>
 
             {/* Credit Repair Card 2 */}
-            <h2 className="text-[#15549A] font-inter text-xl font-bold">
-              Credit Repair: How Credit Repair Works
+            <h2 className="text-[#15549A]  text-[25px] leading-[30px] font-bold font-inter ">
+              Credit Repair: <span className="font-inter font-bold text-[20px] leading-[25px]"> How Credit Repair Works </span>
             </h2>
-            <div className="relative bg-white rounded-lg overflow-hidden">
+            <div className="relative bg-white rounded-lg overflow-hidden w-[540px] h-[191px]">
               <img
                 src={mobile}
                 alt="Credit Repair 2"
-                className="w-full h-48 object-cover"
+                className="w-[535px] h-[189px] object-cover"
               />
               <div className="absolute inset-0 flex flex-col justify-end p-4">
-                <span className="absolute top-2 left-2 bg-[#059C4B] font-inter font-[400] text-white px-2 py-1 rounded-md border-2 border-white text-xs w-fit">
+                <span className="absolute top-2 left-2 bg-[#059C4B] font-inter font-[400] text-white px-2 py-1 rounded-md border-2 border-white text-[10px] leading-[12px] w-fit">
                   August 29, 2024
                 </span>
               </div>
@@ -306,7 +306,7 @@ export function Home() {
 
           {/* Related Articles Section */}
           <div className="space-y-6 bg-gray-100 p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-normal text-[#4B4B4B] font-inter">
+            <h2 className="text-[29px] leading-[35px] font-bold text-[#4B4B4B] font-inter">
               Related Articles
             </h2>
 
@@ -315,13 +315,13 @@ export function Home() {
               <img
                 src={wemen}
                 alt="Common Things"
-                className="w-20 h-20 object-cover rounded-md"
+                className="w-[148px] h-[111px] object-cover rounded-md"
               />
               <div>
-                <h3 className="font-bold font-inter  text-[#15549A]">
+                <h3 className="font-bold font-inter text-[20px] leading-[25px]  text-[#15549A]">
                   Common Things That Improve or Lower Scores
                 </h3>
-                <p className="text-sm font-inter font-[400] text-[#424242]">
+                <p className="text-[18px] leading-[22px] font-inter font-[400] text-[#424242]">
                   A secured credit card is a type of credit card that is backed
                   by a cash deposit, which serves as collateral should you
                   default on payments. A secured card can rebuild credit.
@@ -334,14 +334,14 @@ export function Home() {
               <img
                 src={rect3}
                 alt="Average Outstanding Balance"
-                className="w-20 h-20 object-cover rounded-md"
+                className="w-[148px] h-[111px] object-cover rounded-md"
               />
               <div>
-                <h3 className="font-bold font-inter  text-[#15549A]">
+                <h3 className="font-bold font-inter text-[20px] leading-[25px]  text-[#15549A]">
                   Average Outstanding Balance on Credit Cards: How It Works and
                   Calculation
                 </h3>
-                <p className="text-sm font-inter font-[400] text-[#424242]">
+                <p className="text-[18px] leading-[22px] font-inter font-[400] text-[#424242]">
                   Credit history is the ongoing documentation of your financial
                   information, including repayment of your debts. Your credit
                   history is an essential part of your credit report.
@@ -354,13 +354,13 @@ export function Home() {
               <img
                 src={chingchong}
                 alt="What is a Secured Credit Card?"
-                className="w-20 h-20 object-cover rounded-md"
+                className="w-[148px] h-[111px] object-cover rounded-md"
               />
               <div>
-                <h3 className="font-bold font-inter  text-[#15549A]">
+                <h3 className="font-bold font-inter text-[20px] leading-[25px]  text-[#15549A]">
                   What Is a Secured Credit Card? How It Works and Benefits
                 </h3>
-                <p className="text-sm font-inter font-[400] text-[#424242]">
+                <p className="text-[18px] leading-[22px] font-inter font-[400] text-[#424242]">
                   A fair credit score falls in the range between poor and good.
                   A fair FICO credit score is 580 to 669, and the equivalent
                   near-prime VantageScore is 601 to 660.
@@ -597,39 +597,39 @@ function Contactform() {
                   <input
                     type="text"
                     placeholder="First Name"
-                    className="p-3 rounded bg-white text-black"
+                    className="p-3 rounded font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
-                    className="p-3 rounded bg-white text-black"
+                    className="p-3 rounded font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
                   />
                 </div>
                 <input
                   type="text"
                   placeholder="Phone Number"
-                  className="p-3 rounded bg-white text-black"
+                  className="p-3 rounded font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
                 />
                 <input
                   type="text"
                   placeholder="Subject"
-                  className="p-3 rounded bg-white text-black"
+                  className="p-3 rounded font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
                 />
                 <input
                   type="text"
                   placeholder="Current Credit Score"
-                  className="p-3 rounded bg-white text-black"
+                  className="p-3 rounded font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
                 />
                 <input
                   type="text"
                   placeholder="Reason for Credit Repair"
-                  className="p-3 rounded bg-white text-black"
+                  className="p-3 rounded font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
                 />
                 <textarea
                   placeholder="How Soon?"
-                  className="p-3 rounded bg-white text-black h-10"
+                  className="p-3 rounded font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px] h-17"
                 ></textarea>
-                <button className="p-3 rounded bg-green-500 text-white font-bold">
+                <button className="p-3 w-[186px] h-[54px] bg-[#46CC02]  text-white font-[400px] font-inter text-[18px] leading-[22px]">
                   Sign Up Now
                 </button>
               </form>

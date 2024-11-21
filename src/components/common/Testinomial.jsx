@@ -24,7 +24,7 @@ export function Testinomial() {
         <div className="absolute  w-[469px] h-[464px]   z-10 left-[-100px] mt-[-1px] flex flex-col items-center p-4">
           {/* Image Section */}
           <img
-            src={Matthew2}
+            src={Jack}
             alt="Customer 1"
             className="w-full h-full rounded object-cover "
           />
@@ -34,7 +34,7 @@ export function Testinomial() {
         <div className="absolute w-[530px] h-[524px] z-20 flex mt[-50px] flex-col items-center p-4">
           {/* Image Section */}
           <img
-            src={Jack}
+            src={Matthew2}
             alt="Customer 2"
             className="w-full h-full rounded object-cover mb-2"
           />

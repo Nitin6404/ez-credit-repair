@@ -50,7 +50,7 @@ export function MainNav() {
      
     </nav>
     <div className="w-full">
-        <img src= {credit0} alt="whitebar" className="w-[1447px] h-[30px]" />
+        <img src= {credit0} alt="whitebar" className="w-[1447px] h-[20px]" />
       </div>
     </div>
   );

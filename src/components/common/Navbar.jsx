@@ -3,7 +3,7 @@ export function Navbar() {
     <>
       <nav className="flex justify-between  items-center py-4 px-[88px] bg-[#15549A] text-white font-montserrat">
         <div className="flex font-medium font-montserrat">
-          <p className="text-xl ">
+          <p className="font-medium font-montserrat text-[20px] leading-[24px] items-center ">
             Start your journey to a better credit score today,{" "}
           </p>
           <p className="text-[#02C8F3] text-xl pl-1 font-medium"> Start now</p>
