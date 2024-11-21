@@ -167,10 +167,10 @@ export function Home() {
             </li>
           </ul>
           <div className="flex">
-            <button className="bg-[#15549A] font-inter font-bold text-[27px] leading-[32px] w-[200px] h-[51px] text-white rounded mt-6 p-[10px] flex items-center">
+            <button className="bg-[#15549A] font-inter font-bold text-[27px] leading-[32px] w-[180px] h-[51px] text-white rounded-l-xl mt-6 p-[10px] flex items-center">
               READ MORE
             </button>
-            <span className=" ml-[2px] h-[51px] text-[35px] justify-center items-center mt-[24px] w-[35px] bg-[#15549A] rounded text-white">
+            <span className=" ml-[2px] h-[51px] text-[35px] text-center justify-center items-center mt-[24px] w-[45px] bg-[#15549A] rounded-r-xl text-white">
               →
             </span>
           </div>
