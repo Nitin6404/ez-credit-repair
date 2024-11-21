@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import logo from "../asset/672-6724074_transparent-tm-logo-png-logo-trademark-symbol-png.png";
+import credit0 from '../asset/whitebar.png';
 // import navlink from "../asset/nav-link.svg";
 
 export function MainNav() {
@@ -10,6 +11,7 @@ export function MainNav() {
       : "text-[#04284F]";
 
   return (
+    <div>
     <nav className="py-3  flex justify-around items-center text-sm font-semibold">
       <div className="flex items-center h-16 ml-20">
         <NavLink to="/" className="text-2xl font-bold text-[#15549A]">
@@ -45,9 +47,11 @@ export function MainNav() {
           Contact Us
         </NavLink>
       </div>
-      {/* <div className="w-full">
-        <img src="" alt="" />
-      </div> */}
+     
     </nav>
+    <div className="w-full">
+        <img src= {credit0} alt="whitebar" className="w-[1447px] h-[20px]" />
+      </div>
+    </div>
   );
 }
