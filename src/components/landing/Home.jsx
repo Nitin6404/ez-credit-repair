@@ -308,8 +308,8 @@ export function Home() {
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] w-full bg-[#15549A] bg-opacity-[10%] p-2">
           {/* Credit Repair Section */}
-          <div className="space-y-8">
-            <h2 className="text-[#15549A] text-[25px] leading-[30px] font-bold font-inter">
+          <div className="space-y-4 p-5 ml-[50px] mt-[10px]">
+            <h2 className="text-[#15549A] text-[25px] leading-[30px] font-bold font-inter ml-[20px]">
               Credit Repair:<span className="font-inter font-bold text-[20px] leading-[25px]"> What It Is, How It Works, Related...</span>
             </h2>
 
@@ -328,7 +328,7 @@ export function Home() {
             </div>
 
             {/* Credit Repair Card 2 */}
-            <h2 className="text-[#15549A]  text-[25px] leading-[30px] font-bold font-inter ">
+            <h2 className="text-[#15549A]  text-[25px] leading-[30px] font-bold font-inter ml-[20px]">
               Credit Repair: <span className="font-inter font-bold text-[20px] leading-[25px]"> How Credit Repair Works </span>
             </h2>
             <div className="relative rounded-lg overflow-hidden w-[540px] h-[191px]">
@@ -371,7 +371,7 @@ export function Home() {
             </div>
 
             {/* Article 2 */}
-            <div className="flex items-start space-x-4 border-b border-gray-300 pb-4">
+            <div className="flex items-start space-x-4  border-gray-300 pb-4">
               <img
                 src={rect3}
                 alt="Average Outstanding Balance"
