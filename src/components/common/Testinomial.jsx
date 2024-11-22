@@ -5,10 +5,10 @@ import Susan from "../asset/MathewBlacky.png";
 
 export function Testinomial() {
   return (
-    <div className="bg-white relative py-10 flex flex-col items-center">
+    <div className="bg-white relative py-10 flex flex-col items-center mb-[100px]">
       {/* Header Section */}
       <div className="text-center mb-8">
-        <h2 className="text-[50px] leading-[60px] text-[#15549A] font-inter font-bold mb-[70px] mt-[-20px]">
+        <h2 className="text-[50px] leading-[60px] text-[#15549A] font-inter font-bold mb-[70px] mt-[-10px]">
           What Our Customers Say?
         </h2>
       </div>
