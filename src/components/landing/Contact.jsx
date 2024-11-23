@@ -6,6 +6,7 @@ import credit4 from "../asset/map.png";
 import credit10 from "../asset/map1.png";
 import credit11 from "../asset/sign.png";
 import AboutUs from "../asset/AboutUsbackground.png";
+import socialLinks from "../asset/socialLinks.svg";
 
 export function Contact() {
   return (
@@ -33,7 +34,7 @@ export function Contact() {
           <div className="w-1/2">
             {/* Left Section - Form */}
             <div className="flex-1 md:mr-8 mt-[15px]">
-              <h2 className="text-5xl leading-[60px] font-inter font-bold">
+              <h2 className="text-5xl leading-[60px] w-[568px] font-inter font-bold">
                 We are here to help you
               </h2>
               <p className="my-5 font-montserrat font-normal text-lg leading-6 w-[513px]">
@@ -89,7 +90,7 @@ export function Contact() {
           </div>
 
           {/* Right Section - Contact Information */}
-          <div>
+          <div className="flex flex-col">
             <div className="md:w-[70%] mt-[20px] ml-[50px]">
               <h2 className="text-5xl leading-[60px] font-inter font-bold mb-4">
                 Contact Us
@@ -107,7 +108,7 @@ export function Contact() {
                   <img
                     src={credit2}
                     alt="Credit Report"
-                    className="inline-block mr-2 w-[40px] h-[40px]"
+                    className="inline-block mr-2 w-[33px] h-[25px]"
                   />
                   info@ezecreditrepair.com
                 </li>
@@ -115,7 +116,7 @@ export function Contact() {
                   <img
                     src={credit3}
                     alt="Credit Report"
-                    className="inline-block mr-2 w-[40px] h-[40px]"
+                    className="inline-block mr-2 w-[38px] h-[38px]"
                   />
                   ezecreditrepair.com
                 </li>
@@ -123,7 +124,7 @@ export function Contact() {
                   <img
                     src={credit4}
                     alt="Credit Report"
-                    className="inline-block mr-2 w-[40px] h-[40px]"
+                    className="inline-block mr-2 w-[31px] h-[51px]"
                   />
                   120 Double Street, Texas, Houston, USA
                 </li>
@@ -143,13 +144,19 @@ export function Contact() {
                 </a>
               </div>
             </div>
+            <div>
+              <img src={socialLinks} alt="socialLinks" className=" ml-[50px]" />
+            </div>
           </div>
         </div>
       </div>
-      <div className="mt-20">
-        <span className="p-1 w-[200px] h-[80px] ml-[500px] mt-[220px] bg-white text-black absolute">
-          Eze Credit Repair 120 Double Texas, Houston USA{" "}
-        </span>
+      <div className="mt-20 font-montserrat">
+        <div className="px-3 py-1 w-[260px] h-[93px] ml-[440px] mt-[295px] bg-white leading-6 text-lg text-black absolute">
+          <div className="font-bold">Eze Credit Repair</div>{" "}
+          <div className="font-normal text-[#232323]">
+            120 Double Street, Texas, Houston USA{" "}
+          </div>
+        </div>
         <img src={credit10} alt="map" className=" mb-[30px]" />
         <img
           src={credit11}
