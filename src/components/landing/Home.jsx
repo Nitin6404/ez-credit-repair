@@ -168,7 +168,7 @@ export function Home() {
             </li>
           </ul>
           <div className="flex">
-            <button className="bg-[#15549A] font-inter font-bold text-[27px] leading-[32px] w-[180px] h-[51px] text-white rounded-l-xl mt-6 p-[10px] flex items-center">
+            <button className="bg-[#15549A] font-inter font-bold text-[27px] text-center leading-[32px] w-[200px] h-[51px] text-white rounded-l-xl mt-6 p-[10px] flex items-center justify-center">
               READ MORE
             </button>
             <span className=" ml-[2px] h-[51px] text-[35px] text-center justify-center items-center mt-[24px] w-[45px] bg-[#15549A] rounded-r-xl text-white">
@@ -310,7 +310,11 @@ export function Home() {
           {/* Credit Repair Section */}
           <div className="space-y-4 p-5 ml-[50px] mt-[10px]">
             <h2 className="text-[#15549A] text-[25px] leading-[30px] font-bold font-inter ml-[20px]">
-              Credit Repair:<span className="font-inter font-bold text-[20px] leading-[25px]"> What It Is, How It Works, Related...</span>
+              Credit Repair:
+              <span className="font-inter font-bold text-[20px] leading-[25px]">
+                {" "}
+                What It Is, How It Works, Related...
+              </span>
             </h2>
 
             {/* Credit Repair Card 1 */}
@@ -329,7 +333,11 @@ export function Home() {
 
             {/* Credit Repair Card 2 */}
             <h2 className="text-[#15549A]  text-[25px] leading-[30px] font-bold font-inter ml-[20px]">
-              Credit Repair: <span className="font-inter font-bold text-[20px] leading-[25px]"> How Credit Repair Works </span>
+              Credit Repair:{" "}
+              <span className="font-inter font-bold text-[20px] leading-[25px]">
+                {" "}
+                How Credit Repair Works{" "}
+              </span>
             </h2>
             <div className="relative rounded-lg overflow-hidden w-[540px] h-[191px]">
               <img
@@ -466,7 +474,6 @@ function FeQ3() {
 
   return (
     <div className="bg-[#3F8FC4] w-[640px] h-[713px] ml-[80px] bg-opacity-[10%]">
-    
       <div className="max-w-4xl ml-[1px] p-6 mt-[10px]">
         <h1 className="text-[42px] leading-[54px] font-interfont-[400px] mb-4 text-[#15549A]">
           Frequently Asked Questions
@@ -490,7 +497,9 @@ function FeQ3() {
                   openIndex === index ? "" : "hidden"
                 }`}
               >
-                <p className="font-montserrat text-[22px] leading-[27px] font-semibold">{item.content}</p>
+                <p className="font-montserrat text-[22px] leading-[27px] font-semibold">
+                  {item.content}
+                </p>
               </div>
             </div>
           ))}
@@ -617,28 +626,26 @@ function Program() {
 function Contactform() {
   return (
     <div>
-        <div className="flex justify-center ml-[660px] mt-[-713px] mb-[300px]">
-          <div className=" w-[533px] h-[720px] p-6 bg-[url('/src/components/asset/faqbg.png')] flex flex-col md:flex-row">
-          
-            <div className="flex-1 md:mr-8 mt-[-10px]">
-              <h2 className="text-[45px] leading-[54.46px] font-[400px] text-[#FFFFFF] font-inter">
-
-                Start Your Recovery
-              </h2>
-              <form className="grid gap-4 mt-[25px]">
-                <div className="grid grid-cols-2 gap-3">
-                  <input
-                    type="text"
-                    placeholder="First Name"
-                    className="p-4 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Last Name"
-                    className="p-4 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
-                  />
-                </div>
-                <div className="grid grid-cols-2 gap-3">
+      <div className="flex justify-center ml-[660px] mt-[-713px] mb-[300px]">
+        <div className=" w-[533px] h-[720px] p-6 bg-[url('/src/components/asset/faqbg.png')] flex flex-col md:flex-row">
+          <div className="flex-1 md:mr-8 mt-[-10px]">
+            <h2 className="text-[45px] leading-[54.46px] font-[400px] text-[#FFFFFF] font-inter">
+              Start Your Recovery
+            </h2>
+            <form className="grid gap-4 mt-[25px]">
+              <div className="grid grid-cols-2 gap-3">
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  className="p-4 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
+                />
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  className="p-4 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-3">
                 <input
                   type="text"
                   placeholder="Phone Number"
@@ -649,28 +656,28 @@ function Contactform() {
                   placeholder="Subject"
                   className="p-4 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
                 />
-                </div>
-                <input
-                  type="text"
-                  placeholder="Current Credit Score"
-                  className="p-4 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
-                />
-                <input
-                  type="text"
-                  placeholder="Reason for Credit Repair"
-                  className="p-4 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
-                />
-                <textarea
-                  placeholder="How Soon?"
-                  className="p-3 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px] h-[250px]"
-                ></textarea>
-                <button className="p-3 w-[186px] h-[54px] bg-[#46CC02]  text-white font-[400px] font-inter text-[18px] leading-[22px]">
-                  Sign Up Now
-                </button>
-              </form>
-            </div>
+              </div>
+              <input
+                type="text"
+                placeholder="Current Credit Score"
+                className="p-4 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
+              />
+              <input
+                type="text"
+                placeholder="Reason for Credit Repair"
+                className="p-4 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px]"
+              />
+              <textarea
+                placeholder="How Soon?"
+                className="p-3 font-montserrat bg-[#496480] font-[400px] text-[18px] leading-[22px] h-[250px]"
+              ></textarea>
+              <button className="p-3 w-[186px] h-[54px] bg-[#46CC02]  text-white font-[400px] font-inter text-[18px] leading-[22px]">
+                Sign Up Now
+              </button>
+            </form>
           </div>
         </div>
       </div>
+    </div>
   );
 }

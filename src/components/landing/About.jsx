@@ -21,22 +21,24 @@ export function About() {
 
         {/* Inner Div with Background Image */}
         <div className="relative text-white p-2 items-center flex h-[130px]">
-          <div className="flex max-w-screen-lg ml-[80px] mt-[50px]">
-            <span className="font-semibold ml-10">Home</span>
+          <div className="flex max-w-screen-lg ml-[80px] mt-[50px] font-inter font-bold text-2xl leading-7">
+            <span className="ml-10">Home</span>
             <span className="mx-1">|</span>
-            <span className="font-semibold">About Us</span>
+            <span>About Us</span>
           </div>
         </div>
       </div>
 
-      <div className="bg-white max-w-screen-lg mx-auto">
+      <div className="flex flex-col justify-center items-center bg-white mx-16">
         {/* Header Section */}
-        <div className="text-center items-center mt-[80px] w-[1100px]">
-          <p className="text-[#434343] font-inter font-[400px] text-[23px] leading-[27px] ml-[-90px]">
+        <div className="flex flex-col justify-center text-center items-center mt-[80px] w-[1300px]">
+          <p className="text-[#434343] font-inter font-normal text-2xl leading-7 w-full">
             For the past 15 years, we've been dedicated to helping thousands of
-            individuals repair their credit and reclaim <span className=''>financial control.At
-            EzeCredit,we fight for every consumer’s right to an accurate,fair,
-            and substantiated credit report.</span>
+            individuals repair their credit and reclaim{" "}
+            <div>
+              financial control. At EzeCredit, we fight for every consumer’s
+              right to an accurate, fair, and substantiated credit report.
+            </div>
           </p>
           <h2 className="text-[50px] leading-[60px] font-bold font-inter mt-[50px] text-[#15549A]">
             Our Program
@@ -158,7 +160,6 @@ export function About() {
   );
 }
 
-
 function FeQ4() {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -209,39 +210,39 @@ function FeQ4() {
 
   return (
     <div>
-    <div className=" flex text-center justify-center items-center p-6 mt-[20px]">
-    <h1 className="text-[50px] leading-[60px] font-bold font-inter mb-4 text-[#15549A]">
-      Frequently Asked Questions
-    </h1>
-  </div>
-    <div className="bg-[#000000] w-[1300px] h-[521px] ml-[60px] bg-opacity-[10%]">
-    
-     
-      <div className="font-opensans flex justify-center w-[1290px] font-[400] p-[20px]">
-        <div className="w-[1290px] mx-auto mt-[10px] ml-[5px] overflow-hidden">
-          {accordionData.map((item, index) => (
-            <div key={index} className=" p-2">
-              <div
-                className="accordion-title flex justify-between items-center px-6 py-4  font-montserrat font-bold text-[20px] leading-[25px] cursor-pointer bg-white hover:bg-gray-100"
-                onClick={() => toggleAccordion(index)}
-              >
-                {item.title}
-                <span className="plus-minus-icon">
-                  {openIndex === index ? "-" : "+"}
-                </span>
+      <div className=" flex text-center justify-center items-center p-6 mt-[20px]">
+        <h1 className="text-[50px] leading-[60px] font-bold font-inter mb-4 text-[#15549A]">
+          Frequently Asked Questions
+        </h1>
+      </div>
+      <div className="bg-[#000000] w-[1300px] h-[521px] ml-[60px] bg-opacity-[10%]">
+        <div className="font-opensans flex justify-center w-[1290px] font-[400] p-[20px]">
+          <div className="w-[1290px] mx-auto mt-[10px] ml-[5px] overflow-hidden">
+            {accordionData.map((item, index) => (
+              <div key={index} className=" p-2">
+                <div
+                  className="accordion-title flex justify-between items-center px-6 py-4  font-montserrat font-bold text-[20px] leading-[25px] cursor-pointer bg-white hover:bg-gray-100"
+                  onClick={() => toggleAccordion(index)}
+                >
+                  {item.title}
+                  <span className="plus-minus-icon">
+                    {openIndex === index ? "-" : "+"}
+                  </span>
+                </div>
+                <div
+                  className={`accordion-content px-6 py-4 ${
+                    openIndex === index ? "" : "hidden"
+                  }`}
+                >
+                  <p className="font-montserrat text-[20px] leading-[25px] font-semibold">
+                    {item.content}
+                  </p>
+                </div>
               </div>
-              <div
-                className={`accordion-content px-6 py-4 ${
-                  openIndex === index ? "" : "hidden"
-                }`}
-              >
-                <p className="font-montserrat text-[20px] leading-[25px] font-semibold">{item.content}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
