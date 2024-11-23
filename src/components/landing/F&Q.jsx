@@ -1,7 +1,8 @@
-import React, { useState } from "react";
 import { Footer } from "../common/Footer";
 import AboutUs from "../asset/AboutUsbackground.png";
 import searchFaq from "../asset/searchFaq.svg";
+import manOnFaq from "../asset/manOnFaq.svg";
+import { useState } from "react";
 
 export function FeQ() {
   const [selectedQuestion, setSelectedQuestion] = useState(null);
@@ -96,21 +97,25 @@ export function FeQ() {
             <p>{questions.find((q) => q.id === selectedQuestion)?.answer}</p>
           </div>
         </div>
-        <div className="w-[1050px] min-h-[400px] mt-[100px] flex items-center justify-between p-6 bg-gray-100">
+      </div>
+      <div className="lg:w-[1437px] lg:h-[542px] mt-20 flex items-center justify-between bg-[url('/src/components/asset/areYouReadyToTakeActionBg.svg')] bg-cover">
+        <div className="w-full mx-10 flex items-center justify-evenly">
           {/* Left Side Text */}
-          <div className="max-w-md">
-            <h1 className="text-3xl font-bold mb-4">Welcome to Our Platform</h1>
-            <h2 className="text-2xl"> Are You Ready to Take action?</h2>
-            <h2 className="text-2xl">We Are Ready to Help</h2>
-
-            <button className="mt-5 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-              Sign Up Now
+          <div className="font-inter font-bold text-white text-[50px] leading-[60px]">
+            <p> Are You Ready to Take action?</p>
+            <p>We Are Ready to Help.</p>
+            <button className="mt-5 px-4 py-2 text-3xl leading-8 bg-[#46CC02] text-white rounded-lg">
+              SIGN UP NOW
             </button>
           </div>
 
           {/* Right Side Image */}
-          <div className="w-1/2 max-w-xs">
-            <img src="" alt="Placeholder" className="w-full h-auto rounded" />
+          <div className="">
+            <img
+              src={manOnFaq}
+              alt="Placeholder"
+              className="w-full mb-[105px]"
+            />
           </div>
         </div>
       </div>
