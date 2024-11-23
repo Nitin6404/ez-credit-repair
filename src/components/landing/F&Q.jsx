@@ -1,87 +1,99 @@
 import React, { useState } from "react";
 import { Footer } from "../common/Footer";
-import AboutUs from '../asset/AboutUsbackground.png';
-
+import AboutUs from "../asset/AboutUsbackground.png";
+import searchFaq from "../asset/searchFaq.svg";
 
 export function FeQ() {
-  const [selectedQuestion, setSelectedQuestion] = useState(
-    "Can any credit be repaired?"
-  );
+  const [selectedQuestion, setSelectedQuestion] = useState(null);
 
   const questions = [
     {
+      id: 1,
       question: "Can any credit be repaired?",
       answer:
         "Credit repair involves resolving any questionable negative items that may be damaging your credit profile. If the credit bureaus or your creditors cannot provide proof that these items are fair, accurate, and verified, they are legally required to remove them.",
     },
     {
+      id: 2,
       question: "How long can this process take?",
       answer:
         "The time varies depending on your unique credit situation, but results can often be seen within a few months.",
     },
     {
+      id: 3,
       question: "What type of items can be removed on my credit report?",
       answer:
         "Items such as late payments, collections, charge-offs, and other inaccurate or unfair items may be disputed and removed if applicable.",
     },
     {
+      id: 4,
       question: "If I just pay off my bills will that restore my good credit?",
       answer:
         "Paying off bills can help, but removing negative items and building positive credit history are key for credit restoration.",
     },
     {
+      id: 5,
       question: "What is a good credit score?",
       answer:
         "A good credit score typically ranges from 700 to 749, with higher scores reflecting better creditworthiness.",
     },
   ];
 
-  const handleQuestionClick = (question) => {
-    setSelectedQuestion(question);
+  const handleQuestionClick = (id) => {
+    setSelectedQuestion(id);
   };
   return (
-    <div>
+    <div className="w-full flex flex-col ">
       <div className="relative p-2 mt-3">
         {/* Background Image */}
         <img
           src={AboutUs}
           alt="About Us Background"
-          className="absolute inset-0 w-full h-full object-cover opacity-100"
+          className="absolute inset-0 w-full h-full object-cover opacity-100 mt-[30px]"
         />
 
         {/* Inner Div with Background Image */}
-        <div className="relative bg-blue-900/20 text-white p-2 flex items-center h-[80px] ">
-          <div className="flex justify-start max-w-screen-lg ml-10">
-            <span className="font-semibold ml-10">Home</span>
+        <div className="relative text-white p-2 items-center flex h-[130px]">
+          <div className="flex max-w-screen-lg ml-[80px] mt-[50px] font-inter font-bold text-2xl leading-7">
+            <span className="ml-10">Home</span>
             <span className="mx-1">|</span>
-            <span className="font-semibold">Frequently Asked Questions</span>
+            <span>Frequently Asked Questions</span>
           </div>
         </div>
       </div>
-      <div className="max-w-4xl ml-[100px] p-6">
-        <h1 className="text-3xl font-bold mb-4 text-blue-700">
-          Frequently Asked Questions
-        </h1>
-        <div className="flex">
-          <div className="w-1/3 border-4 mt-3 bg-gray-100 rounded-2xl border-white">
+      <div className="m-5 p-6">
+        <div className="flex justify-center">
+          <h1 className="text-5xl leading-[60px] font-inter font-bold mb-4 text-[#15549A]">
+            Frequently Asked Questions
+          </h1>
+        </div>
+        <div className="w-full flex justify-between items-center bg-[#E6E6E6] rounded-lg px-10 py-3">
+          <p className="font-inter font-bold text-xl leading-6">
+            Have any Questions?
+          </p>
+          <img src={searchFaq} alt="Search Icon" />
+        </div>
+        <div className="flex space-x-6 my-10">
+          <div className="w-1/3 mt-3 space-y-1 font-inter font-bold rounded-2xl">
             {questions.map((q) => (
               <button
                 key={q.question}
-                onClick={() => handleQuestionClick(q.question)}
-                className={`block w-full text-left p-4 border-b ${
-                  selectedQuestion === q.question
-                    ? "bg-white border-l-4 border-blue-600 font-bold"
-                    : ""
-                } hover:bg-white`}
+                onClick={() => handleQuestionClick(q.id)}
+                className={`block hover:bg-[#46CC02] w-full text-left p-4 ${
+                  selectedQuestion === q.id
+                    ? "bg-[#46CC02] font-bold text-white"
+                    : "bg-[#E3F9FF]"
+                } 
+                ${q.id === 1 ? "rounded-t-2xl" : ""}
+                ${q.id === questions.length ? "rounded-b-2xl" : ""}
+                `}
               >
                 {q.question}
               </button>
             ))}
           </div>
-          <div className="w-2/3 p-4 mt-3 bg-white rounded-2xl border-4 border-black">
-            <p>
-              {questions.find((q) => q.question === selectedQuestion)?.answer}
-            </p>
+          <div className="w-2/3 p-4 mt-3 font-inter font-normal text-xl leading-6 bg-white rounded-2xl border-4 border-[#DCDCDC]">
+            <p>{questions.find((q) => q.id === selectedQuestion)?.answer}</p>
           </div>
         </div>
         <div className="w-[1050px] min-h-[400px] mt-[100px] flex items-center justify-between p-6 bg-gray-100">
@@ -106,5 +118,3 @@ export function FeQ() {
     </div>
   );
 }
-
- 
