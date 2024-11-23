@@ -2,7 +2,6 @@ import Matthew2 from "../asset/Mathew.png";
 import Jack from "../asset/JackD.png";
 import Susan from "../asset/MathewBlacky.png";
 
-
 export function Testinomial() {
   return (
     <div className="bg-white relative py-10 flex flex-col items-center mb-[100px]">
@@ -15,7 +14,7 @@ export function Testinomial() {
 
       {/* Background Section (Behind Cards) */}
       <div className="absolute top-[100px] w-full bg-[#15549A] h-[281px] z-0"></div>
-      <div className="absolute top-[135px] w-[1222px] bg-white shadow-xl h-[407px] rounded-md z-5"></div>
+      <div className="absolute top-[145px] w-[1222px] bg-white shadow-md h-[385px] rounded-xl z-5"></div>
 
       {/* Testimonial Cards Container */}
       <div className="relative flex justify-center top-[50px] items-center w-full max-w-4xl h-[400px]">
@@ -37,8 +36,6 @@ export function Testinomial() {
             alt="Customer 2"
             className="w-full h-full rounded object-cover mb-2"
           />
-          
-          
         </div>
 
         {/* Right Card */}
@@ -49,8 +46,6 @@ export function Testinomial() {
             alt="Customer 3"
             className="w-full h-full rounded object-cover mb-2"
           />
-        
-          
         </div>
       </div>
     </div>

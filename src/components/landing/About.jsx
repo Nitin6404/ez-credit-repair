@@ -43,13 +43,13 @@ export function About() {
           <h2 className="text-[50px] leading-[60px] font-bold font-inter mt-[50px] text-[#15549A]">
             Our Program
           </h2>
-          <p className="text-[#4B4B4B] font-inter font-bold text-[29px] leading-[35px]">
+          <p className="text-[#4B4B4B] font-inter font-bold text-[29px] leading-[35px] mt-2">
             Progressive Corrective & Recovery Plan
           </p>
         </div>
 
         {/* Program Cards Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:space-x-8 mb-6 mt-[50px] ml-[-135px] ">
+        <div className="flex flex-col md:flex-row justify-between items-start md:space-x-8 mb-6 mt-[50px]">
           {/* Card 1 */}
           {/* Card 1 */}
           <div className="bg-[#46CC02] text-white rounded-2xl flex-1 mb-4 md:mb-0 w-[410px]">
@@ -138,8 +138,8 @@ export function About() {
         </div>
 
         {/* Dispute & Escalation Details */}
-        <h1 className="ml-[500px] text-7xl mt-[-30px]">↓</h1>
-        <div className="bg-blue-100 py-6 px-5 border-[#4054B2] border-[1px] h-[209px] w-[1300px] ml-[-130px]">
+        <h1 className="text-7xl mt-[-30px]">↓</h1>
+        <div className="bg-blue-100 py-6 px-5 border-[#4054B2] border-[1px] h-[209px] w-[1300px]">
           <h4 className="text-[27px] leading-[32px] font-inter font-bold text-[#07284F] mb-2">
             Dispute & Escalation
           </h4>
@@ -154,7 +154,6 @@ export function About() {
       </div>
       <FeQ4></FeQ4>
       <Testinomial></Testinomial>
-
       <Footer></Footer>
     </div>
   );
@@ -209,13 +208,13 @@ function FeQ4() {
   ];
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center">
       <div className=" flex text-center justify-center items-center p-6 mt-[20px]">
         <h1 className="text-[50px] leading-[60px] font-bold font-inter mb-4 text-[#15549A]">
           Frequently Asked Questions
         </h1>
       </div>
-      <div className="bg-[#000000] w-[1300px] h-[521px] ml-[60px] bg-opacity-[10%]">
+      <div className="bg-[#000000] w-[1300px] bg-opacity-[10%]">
         <div className="font-opensans flex justify-center w-[1290px] font-[400] p-[20px]">
           <div className="w-[1290px] mx-auto mt-[10px] ml-[5px] overflow-hidden">
             {accordionData.map((item, index) => (
