@@ -295,7 +295,7 @@ export function Home() {
 
       {/* progressive correct and recovery plan */}
       <Program></Program>
-      <Testinomial></Testinomial>
+      <Testinomial />
 
       {/* News Blog section */}
       <div className="w-full mt-[90px]">
