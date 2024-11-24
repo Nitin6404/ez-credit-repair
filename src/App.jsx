@@ -7,6 +7,7 @@ import { MainNav } from "./components/common/MainNav";
 import { FeQ } from "./components/landing/F&Q";
 import { Service } from "./components/landing/Services";
 import { Navbar } from "./components/common/Navbar";
+import { Pricing } from "./components/landing/Pricing";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/footer" element={<Footer />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Service />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/f&q" element={<FeQ />} />
         </Routes>
       </Router>
