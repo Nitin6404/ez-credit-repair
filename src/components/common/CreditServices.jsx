@@ -1,3 +1,6 @@
+import pricingPageBoi from "../asset/pricingPageBoi.svg";
+import pricingPageBar from "../asset/pricingPageBar.svg";
+
 export function CreditServices() {
   const services = [
     {
@@ -27,20 +30,24 @@ export function CreditServices() {
   ];
 
   return (
-    <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-3xl font-bold text-[#15549A] mb-4">
-        Our Credit Services
-      </h2>
-      <div className="space-y-4">
-        {services.map((service, index) => (
-          <div key={index} className="flex items-start">
-            <div className="text-green-500 text-2xl mr-2">|</div>
-            <div>
-              <h3 className="font-semibold">{service.title}</h3>
-              <p className="text-gray-700">{service.description}</p>
+    <div className="my-28 flex justify-center items-center">
+      <div className="w-[1260px] h-[659px] space-x-2 flex items-center bg-[url('/src/components/asset/pricingPageBg2.svg')]">
+        <div className="mb-8">
+          <img src={pricingPageBoi} alt="" />
+        </div>
+        <div className="space-y-4 mb-20">
+          {services.map((service, index) => (
+            <div key={index} className="flex items-start">
+              <div className="text-2xl mr-2 mt-1">
+                <img src={pricingPageBar} alt="" />
+              </div>
+              <div className="font-inter font-bold text-white">
+                <p className="text-3xl leading-8">{service.title}</p>
+                <p className="text-xl leading-6">{service.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

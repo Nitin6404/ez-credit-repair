@@ -1,6 +1,6 @@
 import AboutUs from "../asset/AboutUsbackground.png";
 import { Footer } from "../common/Footer";
-import CreditServices from "../common/CreditServices";
+import { CreditServices } from "../common/CreditServices";
 
 export function Pricing() {
   return (
@@ -74,7 +74,21 @@ export function Pricing() {
         </div>
       </div>
       <CreditServices />
+      <LastHeading />
       <Footer />
+    </div>
+  );
+}
+
+function LastHeading() {
+  return (
+    <div className="w-full -mb-8 bg-[#46CC02] flex justify-center items-center font-inter font-bold">
+      <div className="mx-20 my-16">
+        <div className=" px-56 text-white text-3xl text-center lLastHeadingeading-9 ">
+          With our fast and efficient process, we guarantee results and a
+          clearer path to financial freedom.
+        </div>
+      </div>
     </div>
   );
 }
