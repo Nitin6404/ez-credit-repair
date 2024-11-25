@@ -25,7 +25,7 @@ export function Home() {
   return (
     <>
       <div className="bg-[#ECF5FF] flex  w-full h-[462px]">
-        <div className="pt-16 pl-32 ">
+        <div className="lg:pt-16 md:pt-8 lg:pl-32 md:pl-8 ">
           <h1 className="text-[#15549A] font-bold font-inter mb-1 text-2xl leading-[32px]">
             YOUR PATH TO BETTER CREDIT,
           </h1>
@@ -49,7 +49,7 @@ export function Home() {
             SIGN UP NOW
           </button>
         </div>
-        <div className=" w-[398px] h-[509px] z-10 right-[140px] absolute pt-20 pl-5 px-[20px]">
+        <div className="w-[398px] h-[509px] z-10 right-[140px] absolute pt-20 pl-5 px-[20px]">
           <img
             src={credit11}
             alt="Eze Credit Repair Logo"
