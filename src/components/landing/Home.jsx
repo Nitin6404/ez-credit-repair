@@ -317,7 +317,7 @@ export function Home() {
             <div className="relative h-[191px] w-[540px] overflow-hidden rounded-lg">
               <img src={hands} alt="Credit Repair 1" className="h-[191px] w-[540px] object-cover" />
               <div className="absolute inset-0 flex flex-col justify-end p-4">
-                <span className="absolute left-5 top-4 h-[25px] w-[93px] rounded-lg border-2 border-white bg-[#059C4B] px-2 py-1 text-center font-inter text-[10px] font-[400] leading-[12px] text-white">
+                <span className="absolute left-5 top-4 h-[25px] w-[93px] rounded-lg border-2 border-white bg-[#059C4B] px-1 py-1 text-center font-inter text-[10px] font-[400] leading-[12px] text-white">
                   August 29, 2024
                 </span>
               </div>
@@ -338,7 +338,7 @@ export function Home() {
                 className="mt-[-20px] h-[189px] w-[535px] rounded-lg object-cover"
               />
               <div className="absolute inset-0 flex flex-col justify-end p-4">
-                <span className="absolute left-2 top-2 h-[25px] w-[93px] rounded-lg border-2 border-white bg-[#059C4B] px-2 py-1 text-center font-inter text-[10px] font-[400] leading-[12px] text-white">
+                <span className="absolute left-2 top-2 h-[25px] w-[93px] rounded-lg border-2 border-white bg-[#059C4B] px-1 py-1 text-center font-inter text-[10px] font-[400] leading-[12px] text-white">
                   August 29, 2024
                 </span>
               </div>

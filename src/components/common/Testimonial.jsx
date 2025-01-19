@@ -1,21 +1,24 @@
 import { useState } from 'react';
 import comma from '../asset/comma.png';
+import jack from '../asset/jack.svg';
+import mathew from '../asset/mathew.svg';
+import susan from '../asset/susan.svg';
 
 const testimonials = [
   {
-    image: '/src/components/asset/jack.svg',
+    image: jack,
     name: 'Jack D',
     date: 'August 28th, 2024 / Raleigh, NC',
     text: 'I’m very pleased with the service I received from the A-Team, my credit was in terrible shape. Could not get a decent rate on anything. The transformation saved us thousands. I’m about to close on a house. The service is excellent and fast.',
   },
   {
-    image: '/src/components/asset/mathew.svg',
+    image: mathew,
     name: 'Mathew S.',
     date: 'June 17, 2024 / Brooklyn, NY',
     text: 'I’m very pleased with the service I received from the A-Team, my credit was in terrible shape. Could not get a decent rate on anything. The transformation saved us thousands. I’m about to close on a house. The service is excellent and fast.',
   },
   {
-    image: '/src/components/asset/susan.svg',
+    image: susan,
     name: 'Susan S.',
     date: 'July 10, 2024 / New York, NY',
     text: 'I’m very pleased with the service I received from the A-Team, my credit was in terrible shape. Could not get a decent rate on anything. The transformation saved us thousands. I’m about to close on a house. The service is excellent and fast.',
