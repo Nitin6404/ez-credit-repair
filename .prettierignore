@@ -1,0 +1,26 @@
+# Ignore artifacts:
+build
+coverage
+.next
+dist
+out
+
+# Dependencies
+node_modules
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Misc
+.git
+.gitignore
+.DS_Store
+*.log
+
+# Public assets
+public
+static
+
+# Generated files
+*.generated.*
+.cache

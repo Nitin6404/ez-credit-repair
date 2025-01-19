@@ -1,8 +1,8 @@
-import AboutUs from "../asset/AboutUsbackground.png";
-import { Footer } from "../common/Footer";
-import { CreditServices } from "../common/CreditServices";
-import pricingPageAero from "../asset/pricingPageAero.svg";
-import pricingPageCircleBlue from "../asset/pricingPageCircleBlue.svg";
+import AboutUs from '../asset/AboutUsbackground.png';
+import { Footer } from '../common/Footer';
+import { CreditServices } from '../common/CreditServices';
+import pricingPageAero from '../asset/pricingPageAero.svg';
+import pricingPageCircleBlue from '../asset/pricingPageCircleBlue.svg';
 
 export function Pricing() {
   return (
@@ -26,12 +26,11 @@ export function Pricing() {
       </div>
       <div className="mx-16 mt-20 mb-10 flex justify-center text-center">
         <div className="font-inter font-semibold text-start text-2xl text-[#173455] leading-7">
-          At EzeCredit, we believe in transparency and results. We don’t nickel
-          and dime you with monthly fees for our services. Instead, we offer a
-          straightforward, fixed price of $799 for the complete credit repair
-          process. We work fast and efficiently to deliver real improvements to
-          your credit score without dragging out the process. No hidden costs,
-          just results you can count on.
+          At EzeCredit, we believe in transparency and results. We don’t nickel and dime you with
+          monthly fees for our services. Instead, we offer a straightforward, fixed price of $799
+          for the complete credit repair process. We work fast and efficiently to deliver real
+          improvements to your credit score without dragging out the process. No hidden costs, just
+          results you can count on.
         </div>
       </div>
       <div className="w-full h-[535px] flex justify-center items-center bg-[url('/src/components/asset/pricingBg.svg')]">
@@ -51,9 +50,7 @@ export function Pricing() {
             </button>
           </div>
           <div className="py-3 mt-2">
-            <div className="font-normal text-xl text-white leading-6">
-              or sign up online »
-            </div>
+            <div className="font-normal text-xl text-white leading-6">or sign up online »</div>
           </div>
         </div>
       </div>
@@ -63,15 +60,14 @@ export function Pricing() {
             Additional Services for Fast Credit Score Boost
           </div>
           <div className="text-3xl leading-8 text-[#07284F]">
-            Once your credit is repaired, we offer additional services to help
-            you quickly elevate your score even further
+            Once your credit is repaired, we offer additional services to help you quickly elevate
+            your score even further
           </div>
           <div className="font-semibold text-[#173455] text-2xl leading-7 mt-3">
-            We start by assessing your current credit situation and identify the
-            roadblocks impacting your score. Each case is unique, but we
-            specialize in spotting inaccuracies and other factors that should
-            not be in your report damaging to credit reputation. Together, we’ll
-            map out a plan to a better credit score.
+            We start by assessing your current credit situation and identify the roadblocks
+            impacting your score. Each case is unique, but we specialize in spotting inaccuracies
+            and other factors that should not be in your report damaging to credit reputation.
+            Together, we’ll map out a plan to a better credit score.
           </div>
         </div>
       </div>
@@ -88,8 +84,8 @@ function LastHeading() {
     <div className="w-full -mb-8 bg-[#46CC02] flex justify-center items-center font-inter font-bold">
       <div className="mx-20 my-16">
         <div className=" px-56 text-white text-3xl text-center lLastHeadingeading-9 ">
-          With our fast and efficient process, we guarantee results and a
-          clearer path to financial freedom.
+          With our fast and efficient process, we guarantee results and a clearer path to financial
+          freedom.
         </div>
       </div>
     </div>
@@ -99,41 +95,41 @@ function LastHeading() {
 function CreditRepairProcess() {
   const steps = [
     {
-      title: "Credit Assessment & Target Identification",
+      title: 'Credit Assessment & Target Identification',
       description: [
-        "We begin by pulling your credit report from all three major bureaus—TransUnion, Experian, and Equifax.",
-        "Our experts conduct a comprehensive assessment to identify all negative and derogatory items impacting your score.",
-        "These identified issues are detailed in our service agreement, ensuring transparency and clarity on the items we will target for removal.",
-        "We also provide your current FICO and Vantage Score as part of this report.",
+        'We begin by pulling your credit report from all three major bureaus—TransUnion, Experian, and Equifax.',
+        'Our experts conduct a comprehensive assessment to identify all negative and derogatory items impacting your score.',
+        'These identified issues are detailed in our service agreement, ensuring transparency and clarity on the items we will target for removal.',
+        'We also provide your current FICO and Vantage Score as part of this report.',
       ],
     },
     {
-      title: "Item Removal Process",
+      title: 'Item Removal Process',
       description: [
-        "Once the service agreement is finalized, we go to work on removing the negative items.",
-        "We focus on inaccuracies, unverified information, late payments, collections, and other derogatory items listed in your agreement.",
-        "We handle all disputes and interventions with the bureaus and creditors to ensure your credit report is cleaned up as quickly as possible.",
+        'Once the service agreement is finalized, we go to work on removing the negative items.',
+        'We focus on inaccuracies, unverified information, late payments, collections, and other derogatory items listed in your agreement.',
+        'We handle all disputes and interventions with the bureaus and creditors to ensure your credit report is cleaned up as quickly as possible.',
       ],
     },
     {
-      title: "Timely Progress Updates",
+      title: 'Timely Progress Updates',
       description: [
-        "Throughout the process, you’ll receive timely updates as each negative item is removed from your credit profile.",
-        "Our member dashboard allows you to track real-time progress and view the improvements on all three credit reports.",
+        'Throughout the process, you’ll receive timely updates as each negative item is removed from your credit profile.',
+        'Our member dashboard allows you to track real-time progress and view the improvements on all three credit reports.',
       ],
     },
     {
-      title: "Post-Cleanup Score Boost Options",
+      title: 'Post-Cleanup Score Boost Options',
       description: [
-        "Once all targeted items are removed, we’ll provide options to help boost your score further.",
-        "This may include credit line recommendations, secured credit cards, or other strategies to help you reach your desired FICO score range.",
+        'Once all targeted items are removed, we’ll provide options to help boost your score further.',
+        'This may include credit line recommendations, secured credit cards, or other strategies to help you reach your desired FICO score range.',
       ],
     },
     {
-      title: "Ongoing Monitoring & Maintenance",
+      title: 'Ongoing Monitoring & Maintenance',
       description: [
-        "To ensure long-term success, we offer ongoing credit monitoring services.",
-        "We’ll track your credit score improvements, helping you maintain a strong credit standing.",
+        'To ensure long-term success, we offer ongoing credit monitoring services.',
+        'We’ll track your credit score improvements, helping you maintain a strong credit standing.',
       ],
     },
   ];
@@ -155,10 +151,7 @@ function CreditRepairProcess() {
             <div className="px-10 py-5">
               <ul className="list-none space-y-3">
                 {step.description.map((desc, idx) => (
-                  <li
-                    key={idx}
-                    className="h-full flex items-start text-lg text-[#555]"
-                  >
+                  <li key={idx} className="h-full flex items-start text-lg text-[#555]">
                     <img
                       src={pricingPageCircleBlue}
                       alt="Bullet"

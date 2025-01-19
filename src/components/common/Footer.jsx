@@ -1,10 +1,10 @@
-import credit0 from "../asset/logo.png";
-import { HashLink } from "react-router-hash-link";
-import square from "../asset/Vector.svg";
-import wsquare from "../asset/wsquare.svg";
-import layer191 from "../asset/Layer191.png";
-import mail from "../asset/mailfooter.png";
-import office from "../asset/officeaddress.png";
+import credit0 from '../asset/logo.png';
+import { HashLink } from 'react-router-hash-link';
+import square from '../asset/Vector.svg';
+import wsquare from '../asset/wsquare.svg';
+import layer191 from '../asset/Layer191.png';
+import mail from '../asset/mailfooter.png';
+import office from '../asset/officeaddress.png';
 export function Footer() {
   return (
     <div>
@@ -26,9 +26,7 @@ export function Footer() {
               <i className="fas fa-user-circle text-3xl"></i>
             </div>
             <div>
-              <h3 className="font-bold font-montserrat text-[25px] leading-[30px]">
-                Mail & Phone
-              </h3>
+              <h3 className="font-bold font-montserrat text-[25px] leading-[30px]">Mail & Phone</h3>
               <p className="font-normal font-montserrat text-[22px] leading-[27px]">
                 Support@EZEcreditRepair.com
               </p>
@@ -51,9 +49,7 @@ export function Footer() {
               <p className="font-normal font-montserrat text-[22px] leading-[27px]">
                 120 Double Street, Texas,
               </p>
-              <p className="font-normal text-[22px] leading-[27px] font-montserrat">
-                Houston USA
-              </p>
+              <p className="font-normal text-[22px] leading-[27px] font-montserrat">Houston USA</p>
             </div>
           </div>
         </div>
@@ -66,10 +62,9 @@ export function Footer() {
               EzeCreditRepair LLC.
             </h2>
             <p className="mt-2 font-montserrat font-[700] text-[20px] leading-[25px] mr-[50px] ">
-              EzeCredit Repair is your trusted guide to better credit, ensuring
-              you're ready for every opportunity that comes your way. As the
-              A-Team of credit repair, our fast-track process improves your
-              credit for better rates, loans, and peace of mind.
+              EzeCredit Repair is your trusted guide to better credit, ensuring you're ready for
+              every opportunity that comes your way. As the A-Team of credit repair, our fast-track
+              process improves your credit for better rates, loans, and peace of mind.
             </p>
           </div>
 
@@ -153,11 +148,7 @@ export function Footer() {
             <ul className="mt-[5px] space-y-1 font-montserrat p-5">
               {/* Main List */}
               <li>
-                <img
-                  src={square}
-                  alt="square"
-                  className="inline-block w-[8px] h-[15px] mr-2"
-                />
+                <img src={square} alt="square" className="inline-block w-[8px] h-[15px] mr-2" />
                 <HashLink
                   smooth
                   to="/"
@@ -167,11 +158,7 @@ export function Footer() {
                 </HashLink>
               </li>
               <li>
-                <img
-                  src={wsquare}
-                  alt="square"
-                  className="inline-block w-[8px] h-[15px] mr-2"
-                />
+                <img src={wsquare} alt="square" className="inline-block w-[8px] h-[15px] mr-2" />
                 <HashLink
                   smooth
                   to="/about"
@@ -181,11 +168,7 @@ export function Footer() {
                 </HashLink>
               </li>
               <li>
-                <img
-                  src={wsquare}
-                  alt="square"
-                  className="inline-block w-[8px] h-[15px] mr-2"
-                />
+                <img src={wsquare} alt="square" className="inline-block w-[8px] h-[15px] mr-2" />
                 <HashLink
                   smooth
                   to="/services"
@@ -195,11 +178,7 @@ export function Footer() {
                 </HashLink>
               </li>
               <li>
-                <img
-                  src={wsquare}
-                  alt="square"
-                  className="inline-block w-[8px] h-[15px] mr-2"
-                />
+                <img src={wsquare} alt="square" className="inline-block w-[8px] h-[15px] mr-2" />
                 <HashLink
                   smooth
                   to="/pricing"
@@ -209,11 +188,7 @@ export function Footer() {
                 </HashLink>
               </li>
               <li>
-                <img
-                  src={wsquare}
-                  alt="square"
-                  className="inline-block w-[8px] h-[15px] mr-2"
-                />
+                <img src={wsquare} alt="square" className="inline-block w-[8px] h-[15px] mr-2" />
                 <HashLink
                   smooth
                   to="/work"
@@ -223,11 +198,7 @@ export function Footer() {
                 </HashLink>
               </li>
               <li>
-                <img
-                  src={wsquare}
-                  alt="square"
-                  className="inline-block w-[8px] h-[15px] mr-2"
-                />
+                <img src={wsquare} alt="square" className="inline-block w-[8px] h-[15px] mr-2" />
                 <HashLink
                   smooth
                   to="/learning-center"
@@ -237,11 +208,7 @@ export function Footer() {
                 </HashLink>
               </li>
               <li>
-                <img
-                  src={wsquare}
-                  alt="square"
-                  className="inline-block w-[8px] h-[15px] mr-2"
-                />
+                <img src={wsquare} alt="square" className="inline-block w-[8px] h-[15px] mr-2" />
                 <HashLink
                   smooth
                   to="/terms-and-conditions"
@@ -255,11 +222,7 @@ export function Footer() {
             {/* Right-Aligned Section */}
             <ul className="absolute top-[85px] mt-[12px] right-5 space-y-1">
               <li>
-                <img
-                  src={wsquare}
-                  alt="square"
-                  className="inline-block w-[8px] h-[15px] mr-2"
-                />
+                <img src={wsquare} alt="square" className="inline-block w-[8px] h-[15px] mr-2" />
                 <HashLink
                   smooth
                   to="/f&q"
@@ -269,11 +232,7 @@ export function Footer() {
                 </HashLink>
               </li>
               <li>
-                <img
-                  src={wsquare}
-                  alt="square"
-                  className="inline-block w-[8px] h-[15px] mr-2"
-                />
+                <img src={wsquare} alt="square" className="inline-block w-[8px] h-[15px] mr-2" />
                 <HashLink
                   smooth
                   to="/privacy-policy"
@@ -287,9 +246,7 @@ export function Footer() {
 
           {/* Subscribe and Social Media */}
           <div className="mt-[30px] ml-[20px]">
-            <h3 className="text-[31px] leading-[38px] font-bold font-montserrat">
-              Follow us
-            </h3>
+            <h3 className="text-[31px] leading-[38px] font-bold font-montserrat">Follow us</h3>
             <div className="flex flex-col mt-4 space-y-2">
               <input
                 type="email"
@@ -301,11 +258,7 @@ export function Footer() {
               </button>
             </div>
             <div className="flex space-x-4 mt-4 text-lg ">
-              <img
-                src={layer191}
-                alt="layer191"
-                className="w-[211px] h-[45px] mb-[40px]"
-              />
+              <img src={layer191} alt="layer191" className="w-[211px] h-[45px] mb-[40px]" />
               {/* <link
                 rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"

@@ -1,31 +1,27 @@
-import pricingPageBoi from "../asset/pricingPageBoi.svg";
-import pricingPageBar from "../asset/pricingPageBar.svg";
+import pricingPageBoi from '../asset/pricingPageBoi.svg';
+import pricingPageBar from '../asset/pricingPageBar.svg';
 
 export function CreditServices() {
   const services = [
     {
-      title: "Credit Line Recommendations:",
-      description:
-        "Guidance on securing credit lines that positively impact your score.",
+      title: 'Credit Line Recommendations:',
+      description: 'Guidance on securing credit lines that positively impact your score.',
     },
     {
-      title: "Authorized User Tradelines:",
-      description: "Add tradelines to your credit report for a quick boost.",
+      title: 'Authorized User Tradelines:',
+      description: 'Add tradelines to your credit report for a quick boost.',
     },
     {
-      title: "Credit Utilization Strategy:",
-      description:
-        "Tailored advice on managing credit limits for optimal score improvement.",
+      title: 'Credit Utilization Strategy:',
+      description: 'Tailored advice on managing credit limits for optimal score improvement.',
     },
     {
-      title: "Secured Credit Card Options:",
-      description:
-        "Access to secured credit cards to build positive credit history.",
+      title: 'Secured Credit Card Options:',
+      description: 'Access to secured credit cards to build positive credit history.',
     },
     {
-      title: "Score Monitoring Tools:",
-      description:
-        "Ongoing monitoring services to track your credit score improvements.",
+      title: 'Score Monitoring Tools:',
+      description: 'Ongoing monitoring services to track your credit score improvements.',
     },
   ];
 

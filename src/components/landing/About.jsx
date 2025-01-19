@@ -1,12 +1,11 @@
-import { useState } from "react";
-import { Footer } from "../common/Footer";
-import { Testinomial } from "../common/Testinomial";
-import credit from "../asset/Rectangle.png";
-import credit2 from "../asset/Rectangle1.png";
-import credit3 from "../asset/Rectangle4.png";
-import credit4 from "../asset/Rectangle2.png";
-import AboutUs from "../asset/AboutUsbackground.png";
-import about from "../asset/about.png";
+import AboutUs from '../asset/AboutUsbackground.png';
+import credit from '../asset/Rectangle.png';
+import credit2 from '../asset/Rectangle1.png';
+import credit4 from '../asset/Rectangle2.png';
+import credit3 from '../asset/Rectangle4.png';
+import { FaqAbout } from '../common/FAQSection';
+import { Footer } from '../common/Footer';
+import { Testimonial } from '../common/Testimonial';
 
 export function About() {
   return (
@@ -33,11 +32,11 @@ export function About() {
         {/* Header Section */}
         <div className="flex flex-col justify-center text-center items-center mt-[80px] w-[1300px]">
           <p className="text-[#434343] font-inter font-normal text-2xl leading-7 w-full">
-            For the past 15 years, we've been dedicated to helping thousands of
-            individuals repair their credit and reclaim{" "}
+            For the past 15 years, we've been dedicated to helping thousands of individuals repair
+            their credit and reclaim{' '}
             <div>
-              financial control. At EzeCredit, we fight for every consumer’s
-              right to an accurate, fair, and substantiated credit report.
+              financial control. At EzeCredit, we fight for every consumer’s right to an accurate,
+              fair, and substantiated credit report.
             </div>
           </p>
           <h2 className="text-[50px] leading-[60px] font-bold font-inter mt-[50px] text-[#15549A]">
@@ -74,8 +73,7 @@ export function About() {
                 {/* Nested Image (if needed) */}
               </div>
               <p className="font-montserrat font-bold text-[25px] leading-[30px] ml-[30px]">
-                Establish a plan to identify roadblocks and inaccuracies
-                impacting your score
+                Establish a plan to identify roadblocks and inaccuracies impacting your score
               </p>
             </div>
           </div>
@@ -130,8 +128,7 @@ export function About() {
                 />
               </div>
               <p className="font-montserrat font-bold text-[20px] leading-[25px] mt-[15px]">
-                Take action to boost your credit score to reach your desired
-                score range
+                Take action to boost your credit score to reach your desired score range
               </p>
             </div>
           </div>
@@ -144,104 +141,16 @@ export function About() {
             Dispute & Escalation
           </h4>
           <p className="text-[#173455] font-inter text-[25px] leading-[30px] font-semibold">
-            We start by assessing your current credit situation and identifying
-            the roadblocks impacting your score. Each case is unique, but we
-            specialize in spotting inaccuracies and other factors that should
-            not be in your report damaging to credit reputation. Together, we’ll
-            map out a plan to a better credit score.
+            We start by assessing your current credit situation and identifying the roadblocks
+            impacting your score. Each case is unique, but we specialize in spotting inaccuracies
+            and other factors that should not be in your report damaging to credit reputation.
+            Together, we’ll map out a plan to a better credit score.
           </p>
         </div>
       </div>
-      <FeQ4></FeQ4>
-      <Testinomial></Testinomial>
+      <FaqAbout />
+      <Testimonial />
       <Footer></Footer>
-    </div>
-  );
-}
-
-function FeQ4() {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleAccordion = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  const accordionData = [
-    {
-      title: "Can any credit be repaired?",
-      content: (
-        <>
-          <img
-            src={about}
-            alt="Recovery Icon"
-            className="mb-4 w-[136px] h-[102px] absolute"
-          />
-          <p className="ml-[170px] font-montserrat text-[22px] leading-[27px] font-semibold">
-            Credit repair involves resolving any questionable negative items
-            that may be damaging your credit profile. If the credit bureaus or
-            your creditors cannot provide proof that these items are fair,
-            accurate, and verified, they are legally required to remove them.
-          </p>
-        </>
-      ),
-    },
-    {
-      title: "How long can this process take?",
-      content:
-        "The length of the credit repair process varies depending on the number of items disputed and the responsiveness of the creditors or credit bureaus.",
-    },
-    {
-      title: "What type of items can be removed on my credit report?",
-      content:
-        "Items such as late payments, charge-offs, collections, and foreclosures can potentially be removed if they are found to be inaccurate, unverifiable, or unfair.",
-    },
-    {
-      title: "If I just pay off my bills will that restore my good credit?",
-      content:
-        "Paying off bills is important, but it may not immediately improve your credit score. Credit repair may still be necessary for inaccurate items.",
-    },
-    {
-      title: "What is a good credit score?",
-      content:
-        "A good credit score generally ranges from 670 to 739. Higher scores reflect better creditworthiness.",
-    },
-  ];
-
-  return (
-    <div className="flex flex-col justify-center items-center">
-      <div className=" flex text-center justify-center items-center p-6 mt-[20px]">
-        <h1 className="text-[50px] leading-[60px] font-bold font-inter mb-4 text-[#15549A]">
-          Frequently Asked Questions
-        </h1>
-      </div>
-      <div className="bg-[#000000] w-[1300px] bg-opacity-[10%]">
-        <div className="font-opensans flex justify-center w-[1290px] font-[400] p-[20px]">
-          <div className="w-[1290px] mx-auto mt-[10px] ml-[5px] overflow-hidden">
-            {accordionData.map((item, index) => (
-              <div key={index} className=" p-2">
-                <div
-                  className="accordion-title flex justify-between items-center px-6 py-4  font-montserrat font-bold text-[20px] leading-[25px] cursor-pointer bg-white hover:bg-gray-100"
-                  onClick={() => toggleAccordion(index)}
-                >
-                  {item.title}
-                  <span className="plus-minus-icon">
-                    {openIndex === index ? "-" : "+"}
-                  </span>
-                </div>
-                <div
-                  className={`accordion-content px-6 py-4 ${
-                    openIndex === index ? "" : "hidden"
-                  }`}
-                >
-                  <p className="font-montserrat text-[20px] leading-[25px] font-semibold">
-                    {item.content}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

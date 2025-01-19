@@ -1,4 +1,4 @@
-import navCall from "../asset/navCall.svg";
+import navCall from '../asset/navCall.svg';
 
 export function Navbar() {
   return (
@@ -6,7 +6,7 @@ export function Navbar() {
       <nav className="flex justify-between  items-center py-4 md:px-5 lg:px-[88px] bg-[#15549A] text-white font-montserrat">
         <div className="flex font-medium font-montserrat">
           <p className="font-medium font-montserrat text-[20px] leading-[24px] items-center ">
-            Start your journey to a better credit score today,{" "}
+            Start your journey to a better credit score today,{' '}
           </p>
           <p className="text-[#02C8F3] text-xl pl-1 font-medium"> Start now</p>
         </div>
@@ -17,7 +17,7 @@ export function Navbar() {
               <p className="text-xl font-semibold">0000-000-000</p>
             </div>
           </div>
-          <div className="flex justify-end gap-1 font-monsterrat font-bold text-xl">
+          <div className="flex justify-end gap-1 font-montserrat font-semibold text-md">
             <a href="/" className="hover:underline">
               LOGIN
             </a>
@@ -25,11 +25,6 @@ export function Navbar() {
             <a href="/" className="hover:underline">
               REGISTER
             </a>
-            {/* <Link  */}
-            {/* // to="/signin" 
-          // className="hover:underline">LOGIN</Link>
-          // <span>|</span>
-          // <Link to="/signup" className="hover:underline">REGISTER</Link> */}
           </div>
         </div>
       </nav>

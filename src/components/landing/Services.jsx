@@ -1,10 +1,9 @@
-import { Footer } from "../common/Footer";
-import { Testinomial } from "../common/Testinomial";
-import AboutUs from "../asset/AboutUsbackground.png";
-import creditReportAnalysisServices from "../asset/creditReportAnalysisServices.svg";
-import Rectangle10 from "../asset/Rectangle10.png";
+import { Footer } from '../common/Footer';
+import AboutUs from '../asset/AboutUsbackground.png';
+import creditReportAnalysisServices from '../asset/creditReportAnalysisServices.svg';
+import Rectangle10 from '../asset/Rectangle10.png';
 
-export function Service() {
+export function Services() {
   return (
     <div>
       <div className="relative p-2 mt-3">
@@ -51,9 +50,7 @@ export function Service() {
               <span className="h-11 w-11 bg-white text-[#15549A] text-2xl leading-8 font-montserrat font-bold rounded-lg flex items-center justify-center mr-3">
                 03
               </span>
-              <span className="text-2xl leading-7 font-bold font-montserrat">
-                Credit Recovery
-              </span>
+              <span className="text-2xl leading-7 font-bold font-montserrat">Credit Recovery</span>
             </div>
           </div>
         </div>
@@ -70,12 +67,10 @@ export function Service() {
               Credit Report Analysis
             </h3>
             <p className="text-[#173455] text-2xl leading-7 font-inter font-medium ">
-              We start by assessing your current credit situation and
-              identifying the roadblocks impacting your score. Each case is
-              unique, but we specialize in spotting inaccuracies and other
-              factors that should not be in your report damaging to credit
-              reputation. Together, we’ll map out a plan to a better credit
-              score.
+              We start by assessing your current credit situation and identifying the roadblocks
+              impacting your score. Each case is unique, but we specialize in spotting inaccuracies
+              and other factors that should not be in your report damaging to credit reputation.
+              Together, we’ll map out a plan to a better credit score.
             </p>
           </div>
         </div>
@@ -83,11 +78,7 @@ export function Service() {
       <div className="w-full h-[565px] min-h-[400px] mt-[100px] mb-2 px-24 flex items-center justify-evenly p-6 bg-[url('/src/components/asset/betterCreditsAwaitServices.svg')]">
         {/* Right Side Image */}
         <div className="w-1/2 flex justify-center items-center">
-          <img
-            src={Rectangle10}
-            alt="Placeholder"
-            className="w-full h-auto rounded"
-          />
+          <img src={Rectangle10} alt="Placeholder" className="w-full h-auto rounded" />
         </div>
         {/* Left Side Text */}
         <div className="w-1/2 flex flex-col items-center font-inter">

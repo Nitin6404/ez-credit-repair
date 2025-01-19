@@ -1,12 +1,12 @@
-import { Footer } from "../common/Footer";
-import credit1 from "../asset/phone.svg";
-import credit2 from "../asset/mail.png";
-import credit3 from "../asset/earth.png";
-import credit4 from "../asset/map.png";
-import credit10 from "../asset/map1.png";
-import credit11 from "../asset/sign.png";
-import AboutUs from "../asset/AboutUsbackground.png";
-import socialLinks from "../asset/socialLinks.svg";
+import { Footer } from '../common/Footer';
+import credit1 from '../asset/phone.svg';
+import credit2 from '../asset/mail.png';
+import credit3 from '../asset/earth.png';
+import credit4 from '../asset/map.png';
+import credit10 from '../asset/map1.png';
+import credit11 from '../asset/sign.png';
+import AboutUs from '../asset/AboutUsbackground.png';
+import socialLinks from '../asset/socialLinks.svg';
 
 export function Contact() {
   return (
@@ -39,9 +39,8 @@ export function Contact() {
                   We are here to help you
                 </h2>
                 <p className="my-5 font-montserrat font-normal text-lg leading-6 w-[513px]">
-                  We specialize in helping individuals and families regain
-                  control of their finances by repairing and improving their
-                  credit scores.
+                  We specialize in helping individuals and families regain control of their finances
+                  by repairing and improving their credit scores.
                 </p>
                 <form className="grid gap-3 mt-[30px]">
                   <div className="grid grid-cols-2 gap-2 w-[513px]">
@@ -93,16 +92,10 @@ export function Contact() {
             {/* Right Section - Contact Information */}
             <div className="flex flex-col">
               <div className="md:w-[70%] mt-[20px] ml-[50px]">
-                <h2 className="text-5xl leading-[60px] font-inter font-bold mb-4">
-                  Contact Us
-                </h2>
+                <h2 className="text-5xl leading-[60px] font-inter font-bold mb-4">Contact Us</h2>
                 <ul className="space-y-8 font-montserrat font-normal text-3xl leading-9">
                   <li className="flex items-center ">
-                    <img
-                      src={credit1}
-                      alt="Credit Report"
-                      className="mr-2 w-[40px] h-[40px]"
-                    />
+                    <img src={credit1} alt="Credit Report" className="mr-2 w-[40px] h-[40px]" />
                     0000-00-0000
                   </li>
                   <li className="flex items-center">
@@ -146,11 +139,7 @@ export function Contact() {
                 </div>
               </div>
               <div>
-                <img
-                  src={socialLinks}
-                  alt="socialLinks"
-                  className=" ml-[50px]"
-                />
+                <img src={socialLinks} alt="socialLinks" className=" ml-[50px]" />
               </div>
             </div>
           </div>
@@ -159,10 +148,8 @@ export function Contact() {
       <div className="flex flex-col space-y-1">
         <div className="mt-16 font-montserrat">
           <div className="px-3 py-1 w-[260px] h-[93px] ml-[440px] mt-[295px] bg-white leading-6 text-lg text-black absolute">
-            <div className="font-bold">Eze Credit Repair</div>{" "}
-            <div className="font-normal text-[#232323]">
-              120 Double Street, Texas, Houston USA{" "}
-            </div>
+            <div className="font-bold">Eze Credit Repair</div>{' '}
+            <div className="font-normal text-[#232323]">120 Double Street, Texas, Houston USA </div>
           </div>
           <img src={credit10} alt="map" className=" mb-[30px]" />
           <img

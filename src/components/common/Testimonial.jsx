@@ -1,38 +1,36 @@
-import { useState } from "react";
-import comma from "../asset/comma.png"; // Import the comma image
+import { useState } from 'react';
+import comma from '../asset/comma.png'; // Import the comma image
 
 const testimonials = [
   {
-    image: "/src/components/asset/jack.svg",
-    name: "Jack D",
-    date: "August 28th, 2024 / Raleigh, NC",
-    text: "I’m very pleased with the service I received from the A-Team, my credit was in terrible shape. Could not get a decent rate on anything. The transformation saved us thousands. I’m about to close on a house. The service is excellent and fast.",
+    image: '/src/components/asset/jack.svg',
+    name: 'Jack D',
+    date: 'August 28th, 2024 / Raleigh, NC',
+    text: 'I’m very pleased with the service I received from the A-Team, my credit was in terrible shape. Could not get a decent rate on anything. The transformation saved us thousands. I’m about to close on a house. The service is excellent and fast.',
   },
   {
-    image: "/src/components/asset/mathew.svg",
-    name: "Mathew S.",
-    date: "June 17, 2024 / Brooklyn, NY",
-    text: "I’m very pleased with the service I received from the A-Team, my credit was in terrible shape. Could not get a decent rate on anything. The transformation saved us thousands. I’m about to close on a house. The service is excellent and fast.",
+    image: '/src/components/asset/mathew.svg',
+    name: 'Mathew S.',
+    date: 'June 17, 2024 / Brooklyn, NY',
+    text: 'I’m very pleased with the service I received from the A-Team, my credit was in terrible shape. Could not get a decent rate on anything. The transformation saved us thousands. I’m about to close on a house. The service is excellent and fast.',
   },
   {
-    image: "/src/components/asset/susan.svg",
-    name: "Susan S.",
-    date: "July 10, 2024 / New York, NY",
-    text: "I’m very pleased with the service I received from the A-Team, my credit was in terrible shape. Could not get a decent rate on anything. The transformation saved us thousands. I’m about to close on a house. The service is excellent and fast.",
+    image: '/src/components/asset/susan.svg',
+    name: 'Susan S.',
+    date: 'July 10, 2024 / New York, NY',
+    text: 'I’m very pleased with the service I received from the A-Team, my credit was in terrible shape. Could not get a decent rate on anything. The transformation saved us thousands. I’m about to close on a house. The service is excellent and fast.',
   },
 ];
 
-export function Testinomial() {
+export function Testimonial() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    setCurrentIndex(prevIndex => (prevIndex + 1) % testimonials.length);
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
+    setCurrentIndex(prevIndex => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
   };
 
   return (
@@ -57,16 +55,12 @@ export function Testinomial() {
               <div className="flex flex-col justify-center items-center font-inter text-[#292929] space-y-1">
                 <img
                   src={
-                    testimonials[
-                      (currentIndex - 1 + testimonials.length) %
-                        testimonials.length
-                    ].image
+                    testimonials[(currentIndex - 1 + testimonials.length) % testimonials.length]
+                      .image
                   }
                   alt={
-                    testimonials[
-                      (currentIndex - 1 + testimonials.length) %
-                        testimonials.length
-                    ].name
+                    testimonials[(currentIndex - 1 + testimonials.length) % testimonials.length]
+                      .name
                   }
                   width={152}
                   height={165}
@@ -74,18 +68,14 @@ export function Testinomial() {
                 />
                 <p className="font-normal font-inter text-base leading-6 text-center px-3">
                   {
-                    testimonials[
-                      (currentIndex - 1 + testimonials.length) %
-                        testimonials.length
-                    ].name
+                    testimonials[(currentIndex - 1 + testimonials.length) % testimonials.length]
+                      .name
                   }
                 </p>
                 <p className="font-bold text-[9px] text-center leading-3">
                   {
-                    testimonials[
-                      (currentIndex - 1 + testimonials.length) %
-                        testimonials.length
-                    ].date
+                    testimonials[(currentIndex - 1 + testimonials.length) % testimonials.length]
+                      .date
                   }
                 </p>
               </div>
@@ -96,18 +86,12 @@ export function Testinomial() {
                   </div>
                   <p className="font-inter font-bold text-[11px] leading-4 text-center my-4">
                     {
-                      testimonials[
-                        (currentIndex - 1 + testimonials.length) %
-                          testimonials.length
-                      ].text
+                      testimonials[(currentIndex - 1 + testimonials.length) % testimonials.length]
+                        .text
                     }
                   </p>
                   <div className="w-full flex justify-end">
-                    <img
-                      src={comma}
-                      alt="Quote"
-                      className="w-5 h-5 ml-2 rotate-180"
-                    />
+                    <img src={comma} alt="Quote" className="w-5 h-5 ml-2 rotate-180" />
                   </div>
                 </div>
               </div>
@@ -143,11 +127,7 @@ export function Testinomial() {
                     {testimonials[currentIndex].text}
                   </p>
                   <div className="w-full flex justify-end">
-                    <img
-                      src={comma}
-                      alt="Quote"
-                      className="w-8 h-8 ml-2 rotate-180"
-                    />
+                    <img src={comma} alt="Quote" className="w-8 h-8 ml-2 rotate-180" />
                   </div>
                 </div>
               </div>
@@ -163,16 +143,12 @@ export function Testinomial() {
               <div className="flex flex-col justify-center items-center font-inter text-[#292929] space-y-1">
                 <img
                   src={
-                    testimonials[
-                      (currentIndex + 1 + testimonials.length) %
-                        testimonials.length
-                    ].image
+                    testimonials[(currentIndex + 1 + testimonials.length) % testimonials.length]
+                      .image
                   }
                   alt={
-                    testimonials[
-                      (currentIndex + 1 + testimonials.length) %
-                        testimonials.length
-                    ].name
+                    testimonials[(currentIndex + 1 + testimonials.length) % testimonials.length]
+                      .name
                   }
                   width={152}
                   height={165}
@@ -180,18 +156,14 @@ export function Testinomial() {
                 />
                 <p className="font-normal font-inter text-base leading-6 text-center px-3">
                   {
-                    testimonials[
-                      (currentIndex + 1 + testimonials.length) %
-                        testimonials.length
-                    ].name
+                    testimonials[(currentIndex + 1 + testimonials.length) % testimonials.length]
+                      .name
                   }
                 </p>
                 <p className="font-bold text-[9px] text-center leading-3">
                   {
-                    testimonials[
-                      (currentIndex + 1 + testimonials.length) %
-                        testimonials.length
-                    ].date
+                    testimonials[(currentIndex + 1 + testimonials.length) % testimonials.length]
+                      .date
                   }
                 </p>
               </div>
@@ -202,18 +174,12 @@ export function Testinomial() {
                   </div>
                   <p className="font-inter font-bold text-[11px] leading-4 text-center my-4">
                     {
-                      testimonials[
-                        (currentIndex + 1 + testimonials.length) %
-                          testimonials.length
-                      ].text
+                      testimonials[(currentIndex + 1 + testimonials.length) % testimonials.length]
+                        .text
                     }
                   </p>
                   <div className="w-full flex justify-end">
-                    <img
-                      src={comma}
-                      alt="Quote"
-                      className="w-5` h-5 ml-2 rotate-180"
-                    />
+                    <img src={comma} alt="Quote" className="w-5` h-5 ml-2 rotate-180" />
                   </div>
                 </div>
               </div>

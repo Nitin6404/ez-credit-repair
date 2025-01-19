@@ -1,46 +1,46 @@
-import { Footer } from "../common/Footer";
-import AboutUs from "../asset/AboutUsbackground.png";
-import searchFaq from "../asset/searchFaq.svg";
-import manOnFaq from "../asset/manOnFaq.svg";
-import { useState } from "react";
+import { Footer } from '../common/Footer';
+import AboutUs from '../asset/AboutUsbackground.png';
+import searchFaq from '../asset/searchFaq.svg';
+import manOnFaq from '../asset/manOnFaq.svg';
+import { useState } from 'react';
 
-export function FeQ() {
+export function FAQ() {
   const [selectedQuestion, setSelectedQuestion] = useState(null);
 
   const questions = [
     {
       id: 1,
-      question: "Can any credit be repaired?",
+      question: 'Can any credit be repaired?',
       answer:
-        "Credit repair involves resolving any questionable negative items that may be damaging your credit profile. If the credit bureaus or your creditors cannot provide proof that these items are fair, accurate, and verified, they are legally required to remove them.",
+        'Credit repair involves resolving any questionable negative items that may be damaging your credit profile. If the credit bureaus or your creditors cannot provide proof that these items are fair, accurate, and verified, they are legally required to remove them.',
     },
     {
       id: 2,
-      question: "How long can this process take?",
+      question: 'How long can this process take?',
       answer:
-        "The time varies depending on your unique credit situation, but results can often be seen within a few months.",
+        'The time varies depending on your unique credit situation, but results can often be seen within a few months.',
     },
     {
       id: 3,
-      question: "What type of items can be removed on my credit report?",
+      question: 'What type of items can be removed on my credit report?',
       answer:
-        "Items such as late payments, collections, charge-offs, and other inaccurate or unfair items may be disputed and removed if applicable.",
+        'Items such as late payments, collections, charge-offs, and other inaccurate or unfair items may be disputed and removed if applicable.',
     },
     {
       id: 4,
-      question: "If I just pay off my bills will that restore my good credit?",
+      question: 'If I just pay off my bills will that restore my good credit?',
       answer:
-        "Paying off bills can help, but removing negative items and building positive credit history are key for credit restoration.",
+        'Paying off bills can help, but removing negative items and building positive credit history are key for credit restoration.',
     },
     {
       id: 5,
-      question: "What is a good credit score?",
+      question: 'What is a good credit score?',
       answer:
-        "A good credit score typically ranges from 700 to 749, with higher scores reflecting better creditworthiness.",
+        'A good credit score typically ranges from 700 to 749, with higher scores reflecting better creditworthiness.',
     },
   ];
 
-  const handleQuestionClick = (id) => {
+  const handleQuestionClick = id => {
     setSelectedQuestion(id);
   };
   return (
@@ -69,24 +69,20 @@ export function FeQ() {
           </h1>
         </div>
         <div className="w-full flex justify-between items-center bg-[#E6E6E6] rounded-lg px-10 py-3">
-          <p className="font-inter font-bold text-xl leading-6">
-            Have any Questions?
-          </p>
+          <p className="font-inter font-bold text-xl leading-6">Have any Questions?</p>
           <img src={searchFaq} alt="Search Icon" />
         </div>
         <div className="flex space-x-6 my-10">
           <div className="w-1/3 mt-3 space-y-1 font-inter font-bold rounded-2xl">
-            {questions.map((q) => (
+            {questions.map(q => (
               <button
                 key={q.question}
                 onClick={() => handleQuestionClick(q.id)}
                 className={`block hover:bg-[#46CC02] w-full text-left p-4 ${
-                  selectedQuestion === q.id
-                    ? "bg-[#46CC02] font-bold text-white"
-                    : "bg-[#E3F9FF]"
+                  selectedQuestion === q.id ? 'bg-[#46CC02] font-bold text-white' : 'bg-[#E3F9FF]'
                 } 
-                ${q.id === 1 ? "rounded-t-2xl" : ""}
-                ${q.id === questions.length ? "rounded-b-2xl" : ""}
+                ${q.id === 1 ? 'rounded-t-2xl' : ''}
+                ${q.id === questions.length ? 'rounded-b-2xl' : ''}
                 `}
               >
                 {q.question}
@@ -94,7 +90,7 @@ export function FeQ() {
             ))}
           </div>
           <div className="w-2/3 p-4 mt-3 font-inter font-normal text-xl leading-6 bg-white rounded-2xl border-4 border-[#DCDCDC]">
-            <p>{questions.find((q) => q.id === selectedQuestion)?.answer}</p>
+            <p>{questions.find(q => q.id === selectedQuestion)?.answer}</p>
           </div>
         </div>
       </div>
@@ -111,11 +107,7 @@ export function FeQ() {
 
           {/* Right Side Image */}
           <div className="">
-            <img
-              src={manOnFaq}
-              alt="Placeholder"
-              className="w-full mb-[105px]"
-            />
+            <img src={manOnFaq} alt="Placeholder" className="w-full mb-[105px]" />
           </div>
         </div>
       </div>
