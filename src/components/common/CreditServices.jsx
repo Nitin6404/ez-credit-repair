@@ -1,48 +1,88 @@
-import pricingPageBoi from '../asset/pricingPageBoi.svg';
 import pricingPageBar from '../asset/pricingPageBar.svg';
 
 export function CreditServices() {
   const services = [
     {
-      title: 'Credit Line Recommendations:',
-      description: 'Guidance on securing credit lines that positively impact your score.',
+      title: 'Credit Bureau Disputes',
+      description: 'Expert handling of inaccuracies and errors on your credit report.',
     },
     {
-      title: 'Authorized User Tradelines:',
-      description: 'Add tradelines to your credit report for a quick boost.',
+      title: 'One-on-One Consultations',
+      description: 'Personalized guidance tailored to your unique credit situation.',
     },
     {
-      title: 'Credit Utilization Strategy:',
-      description: 'Tailored advice on managing credit limits for optimal score improvement.',
+      title: 'Score Tracker',
+      description: 'Stay informed with tools to monitor your credit score progress.',
     },
     {
-      title: 'Secured Credit Card Options:',
-      description: 'Access to secured credit cards to build positive credit history.',
+      title: '24/7 Access to Client Portal',
+      description: 'Convenient access to your credit repair journey at any time.',
     },
     {
-      title: 'Score Monitoring Tools:',
-      description: 'Ongoing monitoring services to track your credit score improvements.',
+      title: '45-Day Credit Updates',
+      description: 'Regular updates to keep you informed on your progress.',
+    },
+    {
+      title: 'Credit Builder Too',
+      description: 'Resources to help you establish and strengthen your credit profile.',
+    },
+    {
+      title: 'Debt Validation Letters',
+      description: 'Challenging the legitimacy of debts to ensure accuracy.',
+    },
+    {
+      title: 'Cease and Desist Letters',
+      description: 'Protect yourself from harassment by debt collectors.',
+    },
+    {
+      title: 'Personal Information Correction Letters',
+      description: 'Rectifying incorrect personal details on your credit report.',
+    },
+    {
+      title: 'Monthly Inquiry Disputes',
+      description: 'Addressing and disputing unnecessary credit inquiries each month.',
+    },
+    {
+      title: 'Creditor Interventions',
+      description: 'We negotiate and communicate directly with creditors on your behalf.',
     },
   ];
 
   return (
-    <div className="my-28 flex items-center justify-center">
-      <div className="flex h-[659px] w-[1260px] items-center space-x-2 bg-[url('/src/components/asset/pricingPageBg2.svg')]">
-        <div className="mb-8">
-          <img src={pricingPageBoi} alt="" />
+    <div className="my-16 flex items-center justify-center">
+      <div className="flex h-[658px] w-[1260px] flex-col items-center space-x-2 bg-[url('/src/components/asset/pricingPageBg2.svg')]">
+        <div className="my-7 w-full text-center">
+          <h1 className="font-inter text-[50px] font-bold text-white">
+            What's Included in Our Service
+          </h1>
         </div>
-        <div className="mb-20 space-y-4">
-          {services.map((service, index) => (
-            <div key={index} className="flex items-start">
-              <div className="mr-2 mt-1 text-2xl">
-                <img src={pricingPageBar} alt="" />
+        <div className="mx-16 mb-20 flex">
+          <div>
+            {services.slice(0, 6).map((service, index) => (
+              <div key={index} className="mb-3 ml-10 flex items-start">
+                <div className="mr-2 mt-1 text-2xl">
+                  <img src={pricingPageBar} alt="" />
+                </div>
+                <div className="font-inter text-white">
+                  <p className="text-3xl font-semibold leading-8">{service.title}</p>
+                  <p className="text-lg font-normal leading-6">{service.description}</p>
+                </div>
               </div>
-              <div className="font-inter font-bold text-white">
-                <p className="text-3xl leading-8">{service.title}</p>
-                <p className="text-xl leading-6">{service.description}</p>
+            ))}
+          </div>
+          <div>
+            {services.slice(6).map((service, index) => (
+              <div key={index} className="mb-3 flex items-start">
+                <div className="mr-2 mt-1 text-2xl">
+                  <img src={pricingPageBar} alt="" />
+                </div>
+                <div className="font-inter text-white">
+                  <p className="text-3xl font-semibold leading-8">{service.title}</p>
+                  <p className="text-lg font-normal leading-6">{service.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

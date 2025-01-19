@@ -1,8 +1,8 @@
 import AboutUs from '../asset/AboutUsbackground.png';
-import { Footer } from '../common/Footer';
-import { CreditServices } from '../common/CreditServices';
 import pricingPageAero from '../asset/pricingPageAero.svg';
 import pricingPageCircleBlue from '../asset/pricingPageCircleBlue.svg';
+import { CreditServices } from '../common/CreditServices';
+import { Footer } from '../common/Footer';
 
 export function Pricing() {
   return (
@@ -25,54 +25,64 @@ export function Pricing() {
         </div>
       </div>
       <div className="mx-16 mb-10 mt-20 flex justify-center text-center">
-        <div className="text-start font-inter text-2xl font-semibold leading-7 text-[#173455]">
-          At EzeCredit, we believe in transparency and results. We don’t nickel and dime you with
-          monthly fees for our services. Instead, we offer a straightforward, fixed price of $799
-          for the complete credit repair process. We work fast and efficiently to deliver real
-          improvements to your credit score without dragging out the process. No hidden costs, just
-          results you can count on.
+        <div className="w-[1300px] text-start font-inter text-2xl font-semibold leading-7">
+          <h1 className="font-inter text-5xl font-bold text-[#15549A]">
+            We only have 1 plan – A Comprehensive Service Plan
+          </h1>
+          <h4 className="font-inter text-[22px] font-medium text-[#173455]">
+            We are committed to providing you with the full support you need. When you come to us,
+            we understand that you're <br /> seeking the best possible assistance. That’s why we
+            never hold back we strive to ensure your satisfaction every step <br /> of the way.
+          </h4>
+          <h2 className="font-inter text-3xl font-bold text-[#04284F]">
+            Comprehensive Plan: $99/mo
+          </h2>
         </div>
       </div>
       <div className="flex h-[535px] w-full items-center justify-center bg-[url('/src/components/asset/pricingBg.svg')]">
         <div className="flex flex-col items-center text-center font-inter">
           <div className="w-full text-[40px] font-bold leading-[55px] text-white">
-            <p>Would you like to market our</p>
-            <p>credit repair service?</p>
+            <p>How Much Does</p>
+            <p>EzeCredit Repair Cost</p>
+            <p>($99/mo)</p>
           </div>
           <div className="my-4">
-            <div className="text-3xl font-normal leading-9 text-white">
+            <div className="text-[29px] font-normal leading-9 text-white">
               Find a solution that works for you
             </div>
           </div>
-          <div className="mt-4 flex w-full items-center justify-center px-10">
+          <div className="mt-1 flex w-full items-center justify-center px-10">
             <button className="rounded-xl bg-[#46CC02] px-4 py-2 text-2xl font-extrabold text-white">
               GET STARTED
             </button>
           </div>
-          <div className="mt-2 py-3">
-            <div className="text-xl font-normal leading-6 text-white">or sign up online »</div>
-          </div>
         </div>
       </div>
-      <div className="mx-16 my-10 flex items-center justify-center">
-        <div className="flex flex-col text-start font-inter font-bold">
-          <div className="text-5xl leading-[60px] text-[#15549A]">
-            Additional Services for Fast Credit Score Boost
+      <div className="relative mx-auto mt-10 w-full max-w-[1300px] overflow-visible bg-white">
+        <div className="flex items-start justify-between px-3">
+          <div className="max-w-[900px]">
+            <h2 className="mb-8 font-inter text-[50px] font-bold leading-[60px] text-[#15549A]">
+              At EzeCredit Repair, Transparency and Results Are Our Priority
+            </h2>
+            <p className="w-[740px] font-inter text-[22px] font-normal leading-[32px] text-[#173455]">
+              We don't believe in confusing monthly plans or piling on extra fees. Instead, we
+              provide every client with the same dedicated approach and unwavering effort. Our team
+              works quickly and efficiently to deliver tangible improvements to your credit score
+              without unnecessary delays. With EzeCredit Repair, there are no hidden costs just real
+              results you can trust.
+            </p>
           </div>
-          <div className="text-3xl leading-8 text-[#07284F]">
-            Once your credit is repaired, we offer additional services to help you quickly elevate
-            your score even further
-          </div>
-          <div className="mt-3 text-2xl font-semibold leading-7 text-[#173455]">
-            We start by assessing your current credit situation and identify the roadblocks
-            impacting your score. Each case is unique, but we specialize in spotting inaccuracies
-            and other factors that should not be in your report damaging to credit reputation.
-            Together, we’ll map out a plan to a better credit score.
+          <div className="relative h-[485px] w-[304px]">
+            <img
+              src="/src/components/asset/pricing-boi-with-transparency.svg"
+              alt="Pricing Representative"
+              className="absolute -top-16 right-0 h-full w-full object-contain"
+            />
           </div>
         </div>
       </div>
       <CreditServices />
-      <CreditRepairProcess />
+      {/* <CreditRepairProcess /> */}
       <LastHeading />
       <Footer />
     </div>
@@ -83,9 +93,9 @@ function LastHeading() {
   return (
     <div className="-mb-8 flex w-full items-center justify-center bg-[#46CC02] font-inter font-bold">
       <div className="mx-20 my-16">
-        <div className="lLastHeadingeading-9 px-56 text-center text-3xl text-white">
-          With our fast and efficient process, we guarantee results and a clearer path to financial
-          freedom.
+        <div className="heading-9 px-56 text-center text-3xl text-white">
+          With our fast and efficient process, we guarantee <br /> results and a clearer path to
+          financial freedom.
         </div>
       </div>
     </div>
