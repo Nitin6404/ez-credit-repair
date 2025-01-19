@@ -13,8 +13,8 @@ export function FAQSection({ className = '', showTitle = true, maxWidth = '4xl' 
       title: 'Can any credit be repaired?',
       content: (
         <>
-          <img src={about} alt="Recovery Icon" className="mb-4 w-[120px] h-[100px] absolute" />
-          <p className="ml-[140px] font-montserrat text-[22px] leading-[27px] font-semibold">
+          <img src={about} alt="Recovery Icon" className="absolute mb-4 h-[100px] w-[120px]" />
+          <p className="ml-[140px] font-montserrat text-[22px] font-semibold leading-[27px]">
             Credit repair involves resolving any questionable negative items that may be damaging
             your credit profile. If the credit bureaus or your creditors cannot provide proof that
             these items are fair, accurate, and verified, they are legally required to remove them.
@@ -47,25 +47,25 @@ export function FAQSection({ className = '', showTitle = true, maxWidth = '4xl' 
   return (
     <div className={`${className}`}>
       {showTitle && (
-        <div className={`max-w-${maxWidth} ml-[1px] p-6 mt-[10px]`}>
-          <h1 className="text-[42px] leading-[54px] font-inter font-[400] mb-4 text-[#15549A]">
+        <div className={`max-w-${maxWidth} ml-[1px] mt-[10px] p-6`}>
+          <h1 className="mb-4 font-inter text-[42px] font-[400] leading-[54px] text-[#15549A]">
             Frequently Asked Questions
           </h1>
         </div>
       )}
-      <div className="font-opensans flex justify-center font-[400] p-[10px]">
-        <div className="w-full max-w-[620px] mx-auto mt-[-20px] ml-[5px] overflow-hidden">
+      <div className="flex justify-center p-[10px] font-opensans font-[400]">
+        <div className="mx-auto ml-[5px] mt-[-20px] w-full max-w-[620px] overflow-hidden">
           {accordionData.map((item, index) => (
             <div key={index} className="p-2">
               <div
-                className="accordion-title flex justify-between items-center px-6 py-4 font-montserrat font-bold text-[20px] leading-[25px] cursor-pointer bg-white hover:bg-gray-200"
+                className="accordion-title flex cursor-pointer items-center justify-between bg-white px-6 py-4 font-montserrat text-[20px] font-bold leading-[25px] hover:bg-gray-200"
                 onClick={() => toggleAccordion(index)}
               >
                 {item.title}
                 <span className="plus-minus-icon">{openIndex === index ? '-' : '+'}</span>
               </div>
               <div className={`accordion-content px-6 py-4 ${openIndex === index ? '' : 'hidden'}`}>
-                <div className="font-montserrat text-[22px] leading-[27px] font-semibold">
+                <div className="font-montserrat text-[22px] font-semibold leading-[27px]">
                   {item.content}
                 </div>
               </div>
@@ -89,8 +89,8 @@ export function FaqAbout() {
       title: 'Can any credit be repaired?',
       content: (
         <>
-          <img src={about} alt="Recovery Icon" className="mb-4 w-[136px] h-[102px] absolute" />
-          <p className="ml-[170px] font-montserrat text-[22px] leading-[27px] font-semibold">
+          <img src={about} alt="Recovery Icon" className="absolute mb-4 h-[102px] w-[136px]" />
+          <p className="ml-[170px] font-montserrat text-[22px] font-semibold leading-[27px]">
             Credit repair involves resolving any questionable negative items that may be damaging
             your credit profile. If the credit bureaus or your creditors cannot provide proof that
             these items are fair, accurate, and verified, they are legally required to remove them.
@@ -121,19 +121,19 @@ export function FaqAbout() {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className=" flex text-center justify-center items-center p-6 mt-[20px]">
-        <h1 className="text-[50px] leading-[60px] font-bold font-inter mb-4 text-[#15549A]">
+    <div className="flex flex-col items-center justify-center">
+      <div className="mt-[20px] flex items-center justify-center p-6 text-center">
+        <h1 className="mb-4 font-inter text-[50px] font-bold leading-[60px] text-[#15549A]">
           Frequently Asked Questions
         </h1>
       </div>
-      <div className="bg-[#000000] w-[1300px] bg-opacity-[10%]">
-        <div className="font-opensans flex justify-center w-[1290px] font-[400] p-[20px]">
-          <div className="w-[1290px] mx-auto mt-[10px] ml-[5px] overflow-hidden">
+      <div className="w-[1300px] bg-[#000000] bg-opacity-[10%]">
+        <div className="flex w-[1290px] justify-center p-[20px] font-opensans font-[400]">
+          <div className="mx-auto ml-[5px] mt-[10px] w-[1290px] overflow-hidden">
             {accordionData.map((item, index) => (
-              <div key={index} className=" p-2">
+              <div key={index} className="p-2">
                 <div
-                  className="accordion-title flex justify-between items-center px-6 py-4  font-montserrat font-bold text-[20px] leading-[25px] cursor-pointer bg-white hover:bg-gray-100"
+                  className="accordion-title flex cursor-pointer items-center justify-between bg-white px-6 py-4 font-montserrat text-[20px] font-bold leading-[25px] hover:bg-gray-100"
                   onClick={() => toggleAccordion(index)}
                 >
                   {item.title}
@@ -142,7 +142,7 @@ export function FaqAbout() {
                 <div
                   className={`accordion-content px-6 py-4 ${openIndex === index ? '' : 'hidden'}`}
                 >
-                  <p className="font-montserrat text-[20px] leading-[25px] font-semibold">
+                  <p className="font-montserrat text-[20px] font-semibold leading-[25px]">
                     {item.content}
                   </p>
                 </div>

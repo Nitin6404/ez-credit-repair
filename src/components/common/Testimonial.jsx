@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import comma from '../asset/comma.png'; // Import the comma image
+import comma from '../asset/comma.png';
 
 const testimonials = [
   {
@@ -22,187 +22,122 @@ const testimonials = [
   },
 ];
 
-export function Testimonial() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+// Component for the testimonial image and user info
+function TestimonialProfile({ image, name, date, size = 'small' }) {
+  const imageSize = size === 'large' ? { width: 184, height: 220 } : { width: 152, height: 165 };
+  const nameSize = size === 'large' ? 'text-xl' : 'text-base';
 
-  const nextTestimonial = () => {
-    setCurrentIndex(prevIndex => (prevIndex + 1) % testimonials.length);
-  };
+  return (
+    <div className="flex flex-col items-center justify-center space-y-1 font-inter text-[#292929]">
+      <img src={image} alt={name} {...imageSize} className="rounded-3xl border-[#B8B8B8]" />
+      <p className={`px-3 text-center font-inter ${nameSize} font-normal leading-6`}>{name}</p>
+      <p className="text-center text-[9px] font-bold leading-3">{date}</p>
+    </div>
+  );
+}
 
-  const prevTestimonial = () => {
-    setCurrentIndex(prevIndex => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
+// Component for the testimonial text with quotes
+function TestimonialText({ text, size = 'small' }) {
+  const containerSize = size === 'large' ? 'h-[196px] w-[251px]' : 'h-[120px] w-[170px]';
+  const quoteSize = size === 'large' ? 'h-8 w-8' : 'h-5 w-5';
+  const textSize = size === 'large' ? 'text-sm' : 'text-[11px]';
+
+  return (
+    <div className="my-10">
+      <div className={`flex ${containerSize} flex-col items-center justify-center`}>
+        <div className="flex w-full justify-start">
+          <img src={comma} alt="Quote" className={`mr-2 ${quoteSize}`} />
+        </div>
+        <p className={`my-4 text-center font-inter ${textSize} font-bold leading-4`}>{text}</p>
+        <div className="flex w-full justify-end">
+          <img src={comma} alt="Quote" className={`ml-2 ${quoteSize} rotate-180`} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Component for a single testimonial card
+function TestimonialCard({ testimonial, position = 'center' }) {
+  const isCenter = position === 'center';
+  const dimensions = isCenter ? 'h-[527px] w-[543px] z-20' : 'h-[465px] w-[471px]';
+  const positioning = {
+    left: 'absolute left-36',
+    center: '',
+    right: 'absolute right-36',
   };
 
   return (
-    <div className="bg-white relative py-10 flex flex-col items-center">
+    <div
+      className={`${dimensions} ${positioning[position]} flex scale-110 transform items-center justify-center border-[10px] border-[#002464] bg-[#E2E3E3] transition-all duration-300`}
+      style={{ zIndex: isCenter ? 3 : 1 }}
+    >
+      <div className="flex justify-between space-x-5">
+        <TestimonialProfile {...testimonial} size={isCenter ? 'large' : 'small'} />
+        <TestimonialText text={testimonial.text} size={isCenter ? 'large' : 'small'} />
+      </div>
+    </div>
+  );
+}
+
+// Navigation buttons component
+function NavigationButtons({ onPrev, onNext }) {
+  return (
+    <div className="my-10 flex w-full justify-end gap-10 pr-20 pt-10">
+      <button
+        onClick={onPrev}
+        className="rounded bg-[#15549A] px-6 py-3 font-semibold text-white shadow transition-all hover:bg-[#003977]"
+      >
+        Previous
+      </button>
+      <button
+        onClick={onNext}
+        className="rounded bg-[#15549A] px-6 py-3 font-semibold text-white shadow transition-all hover:bg-[#003977]"
+      >
+        Next
+      </button>
+    </div>
+  );
+}
+
+export function Testimonial() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const getTestimonialIndex = offset => {
+    return (currentIndex + offset + testimonials.length) % testimonials.length;
+  };
+
+  const prevTestimonial = () => {
+    setCurrentIndex(prev => (prev === 0 ? testimonials.length - 1 : prev - 1));
+  };
+
+  const nextTestimonial = () => {
+    setCurrentIndex(prev => (prev + 1) % testimonials.length);
+  };
+
+  return (
+    <div className="relative flex flex-col items-center bg-white py-10">
       {/* Header Section */}
-      <div className="text-center mb-8">
-        <h2 className="text-[50px] leading-[60px] text-[#15549A] font-inter font-bold mb-[70px] mt-[-10px]">
+      <div className="mb-5 text-center">
+        <h2 className="mt-[-10px] font-inter text-[50px] font-bold leading-[60px] text-[#15549A]">
           What Our Customers Say?
         </h2>
       </div>
-      <div className="w-full h-[283px] bg-[#15549A] flex justify-center">
-        <div className="bg-white h-[410px] w-[1300px] rounded-3xl shadow-2xl mt-16"></div>
+
+      {/* Background Container */}
+      <div className="flex h-[283px] w-full justify-center bg-[#15549A]">
+        <div className="mt-16 h-[410px] w-[1300px] rounded-3xl bg-white shadow-2xl" />
       </div>
-      <div className="w-full flex flex-col -mt-32 mx-12">
-        <div className="relative flex justify-center items-center w-full">
-          {/* Left Testimonial */}
-          <div
-            className="absolute left-36 border-[10px] border-[#002464] bg-[#E2E3E3] w-[471px] h-[465px] flex items-center justify-center transform scale-110 transition-all duration-300"
-            style={{ zIndex: 1 }}
-          >
-            <div className="flex justify-between space-x-2">
-              <div className="flex flex-col justify-center items-center font-inter text-[#292929] space-y-1">
-                <img
-                  src={
-                    testimonials[(currentIndex - 1 + testimonials.length) % testimonials.length]
-                      .image
-                  }
-                  alt={
-                    testimonials[(currentIndex - 1 + testimonials.length) % testimonials.length]
-                      .name
-                  }
-                  width={152}
-                  height={165}
-                  className="rounded-3xl border-[#B8B8B8]"
-                />
-                <p className="font-normal font-inter text-base leading-6 text-center px-3">
-                  {
-                    testimonials[(currentIndex - 1 + testimonials.length) % testimonials.length]
-                      .name
-                  }
-                </p>
-                <p className="font-bold text-[9px] text-center leading-3">
-                  {
-                    testimonials[(currentIndex - 1 + testimonials.length) % testimonials.length]
-                      .date
-                  }
-                </p>
-              </div>
-              <div className="my-10">
-                <div className="flex flex-col justify-center items-center w-[170px] h-[120px]">
-                  <div className="w-full flex justify-start">
-                    <img src={comma} alt="Quote" className="w-5 h-w-5 mr-2" />
-                  </div>
-                  <p className="font-inter font-bold text-[11px] leading-4 text-center my-4">
-                    {
-                      testimonials[(currentIndex - 1 + testimonials.length) % testimonials.length]
-                        .text
-                    }
-                  </p>
-                  <div className="w-full flex justify-end">
-                    <img src={comma} alt="Quote" className="w-5 h-5 ml-2 rotate-180" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Center Testimonial */}
-          <div
-            className="border-[10px] border-[#002464] bg-[#E2E3E3] w-[543px] h-[527px] flex items-center justify-center transform scale-110 z-20 transition-all duration-300"
-            style={{ zIndex: 3 }}
-          >
-            <div className="flex justify-between space-x-5">
-              <div className="flex flex-col justify-center items-center font-inter text-[#292929] space-y-1">
-                <img
-                  src={testimonials[currentIndex].image}
-                  alt={testimonials[currentIndex].name}
-                  width={184}
-                  height={220}
-                  className="rounded-3xl border-[#B8B8B8]"
-                />
-                <p className="font-normal font-inter text-xl leading-6 text-center px-3">
-                  {testimonials[currentIndex].name}
-                </p>
-                <p className="font-bold text-xs text-center leading-3">
-                  {testimonials[currentIndex].date}
-                </p>
-              </div>
-              <div className="my-10">
-                <div className="flex flex-col justify-center items-center w-[251px] h-[196px]">
-                  <div className="w-full flex justify-start">
-                    <img src={comma} alt="Quote" className="w-8 h-8 mr-2" />
-                  </div>
-                  <p className="font-inter font-bold text-sm leading-4 text-center my-4">
-                    {testimonials[currentIndex].text}
-                  </p>
-                  <div className="w-full flex justify-end">
-                    <img src={comma} alt="Quote" className="w-8 h-8 ml-2 rotate-180" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          {/* Right Testimonial */}
-          <div
-            className="absolute right-36 border-[10px] border-[#002464] bg-[#E2E3E3] w-[471px] h-[465px] flex items-center justify-center transform scale-110 transition-all duration-300"
-            style={{ zIndex: 1 }}
-          >
-            <div className="flex justify-between space-x-5">
-              <div className="flex flex-col justify-center items-center font-inter text-[#292929] space-y-1">
-                <img
-                  src={
-                    testimonials[(currentIndex + 1 + testimonials.length) % testimonials.length]
-                      .image
-                  }
-                  alt={
-                    testimonials[(currentIndex + 1 + testimonials.length) % testimonials.length]
-                      .name
-                  }
-                  width={152}
-                  height={165}
-                  className="rounded-3xl border-[#B8B8B8]"
-                />
-                <p className="font-normal font-inter text-base leading-6 text-center px-3">
-                  {
-                    testimonials[(currentIndex + 1 + testimonials.length) % testimonials.length]
-                      .name
-                  }
-                </p>
-                <p className="font-bold text-[9px] text-center leading-3">
-                  {
-                    testimonials[(currentIndex + 1 + testimonials.length) % testimonials.length]
-                      .date
-                  }
-                </p>
-              </div>
-              <div className="my-10">
-                <div className="flex flex-col justify-center items-center w-[170px] h-[120px]">
-                  <div className="w-full flex justify-start">
-                    <img src={comma} alt="Quote" className="w-5` h-5 mr-2" />
-                  </div>
-                  <p className="font-inter font-bold text-[11px] leading-4 text-center my-4">
-                    {
-                      testimonials[(currentIndex + 1 + testimonials.length) % testimonials.length]
-                        .text
-                    }
-                  </p>
-                  <div className="w-full flex justify-end">
-                    <img src={comma} alt="Quote" className="w-5` h-5 ml-2 rotate-180" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* Testimonials Section */}
+      <div className="mx-12 -mt-32 flex w-full flex-col">
+        <div className="relative flex w-full items-center justify-center">
+          <TestimonialCard testimonial={testimonials[getTestimonialIndex(-1)]} position="left" />
+          <TestimonialCard testimonial={testimonials[currentIndex]} position="center" />
+          <TestimonialCard testimonial={testimonials[getTestimonialIndex(1)]} position="right" />
         </div>
 
-        <div className="w-full">
-          <div className="flex justify-end w-full gap-10 my-10 pr-20 pt-10">
-            <button
-              onClick={prevTestimonial}
-              className="bg-[#15549A] text-white px-6 py-3 rounded font-semibold shadow hover:bg-[#003977] transition-all"
-            >
-              Previous
-            </button>
-            <button
-              onClick={nextTestimonial}
-              className="bg-[#15549A] text-white px-6 py-3 rounded font-semibold shadow hover:bg-[#003977] transition-all"
-            >
-              Next
-            </button>
-          </div>
-        </div>
+        <NavigationButtons onPrev={prevTestimonial} onNext={nextTestimonial} />
       </div>
     </div>
   );

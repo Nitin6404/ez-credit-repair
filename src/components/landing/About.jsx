@@ -10,17 +10,17 @@ import { Testimonial } from '../common/Testimonial';
 export function About() {
   return (
     <div>
-      <div className="relative p-2 mt-3">
+      <div className="relative mt-3 p-2">
         {/* Background Image */}
         <img
           src={AboutUs}
           alt="About Us Background"
-          className="absolute inset-0 w-full h-full object-cover opacity-100 mt-[30px]"
+          className="absolute inset-0 mt-[30px] h-full w-full object-cover opacity-100"
         />
 
         {/* Inner Div with Background Image */}
-        <div className="relative text-white p-2 items-center flex h-[130px]">
-          <div className="flex max-w-screen-lg ml-[80px] mt-[50px] font-inter font-bold text-2xl leading-7">
+        <div className="relative flex h-[130px] items-center p-2 text-white">
+          <div className="ml-[80px] mt-[50px] flex max-w-screen-lg font-inter text-2xl font-bold leading-7">
             <span className="ml-10">Home</span>
             <span className="mx-1">|</span>
             <span>About Us</span>
@@ -28,10 +28,10 @@ export function About() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center bg-white mx-16">
+      <div className="mx-16 flex flex-col items-center justify-center bg-white">
         {/* Header Section */}
-        <div className="flex flex-col justify-center text-center items-center mt-[80px] w-[1300px]">
-          <p className="text-[#434343] font-inter font-normal text-2xl leading-7 w-full">
+        <div className="mt-[80px] flex w-[1300px] flex-col items-center justify-center text-center">
+          <p className="w-full font-inter text-2xl font-normal leading-7 text-[#434343]">
             For the past 15 years, we've been dedicated to helping thousands of individuals repair
             their credit and reclaim{' '}
             <div>
@@ -39,95 +39,95 @@ export function About() {
               fair, and substantiated credit report.
             </div>
           </p>
-          <h2 className="text-[50px] leading-[60px] font-bold font-inter mt-[50px] text-[#15549A]">
+          <h2 className="mt-[50px] font-inter text-[50px] font-bold leading-[60px] text-[#15549A]">
             Our Program
           </h2>
-          <p className="text-[#4B4B4B] font-inter font-bold text-[29px] leading-[35px] mt-2">
+          <p className="mt-2 font-inter text-[29px] font-bold leading-[35px] text-[#4B4B4B]">
             Progressive Corrective & Recovery Plan
           </p>
         </div>
 
         {/* Program Cards Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:space-x-8 mb-6 mt-[50px]">
+        <div className="mb-6 mt-[50px] flex flex-col items-start justify-between md:flex-row md:space-x-8">
           {/* Card 1 */}
           {/* Card 1 */}
-          <div className="bg-[#46CC02] text-white rounded-2xl flex-1 mb-4 md:mb-0 w-[410px]">
-            <div className="flex p-2 items-center">
-              <div className="bg-white text-[#15549A] font-montserrat text-[25px] leading-[30px] font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
+          <div className="mb-4 w-[410px] flex-1 rounded-2xl bg-[#46CC02] text-white md:mb-0">
+            <div className="flex items-center p-2">
+              <div className="mr-3 flex h-8 w-8 items-center justify-center rounded bg-white font-montserrat text-[25px] font-bold leading-[30px] text-[#15549A]">
                 01
               </div>
-              <h3 className="font-bold font-montserrat text-[25px] leading-[30px]">
+              <h3 className="font-montserrat text-[25px] font-bold leading-[30px]">
                 Credit Report Analysis
               </h3>
             </div>
 
             {/* Inner Card similar to Card 3 */}
-            <div className="bg-[#ECF6FF] text-[#9A9A9A] p-3 flex rounded-lg h-[150px] w-[410px] hover:bg-[#15549A] hover:text-white">
-              <div className="relative inline-block mr-3">
+            <div className="flex h-[150px] w-[410px] rounded-lg bg-[#ECF6FF] p-3 text-[#9A9A9A] hover:bg-[#15549A] hover:text-white">
+              <div className="relative mr-3 inline-block">
                 {/* Image for Credit Report */}
                 <img
                   src={credit}
                   alt="Credit Report Icon"
-                  className="inline-block w-[188px] h-[106px] ml-[10px]"
+                  className="ml-[10px] inline-block h-[106px] w-[188px]"
                 />
                 {/* Nested Image (if needed) */}
               </div>
-              <p className="font-montserrat font-bold text-[25px] leading-[30px] ml-[30px]">
+              <p className="ml-[30px] font-montserrat text-[25px] font-bold leading-[30px]">
                 Establish a plan to identify roadblocks and inaccuracies impacting your score
               </p>
             </div>
           </div>
 
           {/* Card 2 */}
-          <div className="bg-[#46CC02] text-white rounded-2xl w-[418px] flex-1 mb-4 md:mb-0 shadow-[0_4px_7px_rgba(0,0,0,0.7)]">
-            <div className="flex p-2 items-center">
-              <div className="bg-white text-[#15549A] font-montserrat  text-[25px] leading-[30px] font-bold rounded w-8 h-8 flex items-center justify-center mr-3 ">
+          <div className="mb-4 w-[418px] flex-1 rounded-2xl bg-[#46CC02] text-white shadow-[0_4px_7px_rgba(0,0,0,0.7)] md:mb-0">
+            <div className="flex items-center p-2">
+              <div className="mr-3 flex h-8 w-8 items-center justify-center rounded bg-white font-montserrat text-[25px] font-bold leading-[30px] text-[#15549A]">
                 02
               </div>
-              <h3 className="font-bold font-montserrat  text-[25px] leading-[30px] ml-[10px]">
+              <h3 className="ml-[10px] font-montserrat text-[25px] font-bold leading-[30px]">
                 Dispute & Escalations
               </h3>
             </div>
-            <div className="bg-[#ECF6FF] text-[#9A9A9A] p-3 flex rounded-lg w-[418px] h-[150px] hover:bg-[#15549A] hover:text-white">
+            <div className="flex h-[150px] w-[418px] rounded-lg bg-[#ECF6FF] p-3 text-[#9A9A9A] hover:bg-[#15549A] hover:text-white">
               <img
                 src={credit2}
                 alt="Dispute Icon"
-                className="inline-block ml-[20px] w-[96px] h-[100px] mt-[15px]"
+                className="ml-[20px] mt-[15px] inline-block h-[100px] w-[96px]"
               />
-              <p className="font-montserrat font-bold text-[20px] leading-[25px] ml-[20px] mt-[20px] ">
+              <p className="ml-[20px] mt-[20px] font-montserrat text-[20px] font-bold leading-[25px]">
                 Challenge and Dispute negative items until they are removed
               </p>
             </div>
           </div>
 
           {/* Card 3 */}
-          <div className="bg-[#46CC02] text-white rounded-2xl w-[410px] flex-1 mb-4 md:mb-0">
-            <div className="flex p-2 items-center">
-              <div className="bg-white text-[#15549A] font-montserrat  text-[25px] leading-[30px] font-bold rounded w-8 h-8 flex items-center justify-center mr-3">
+          <div className="mb-4 w-[410px] flex-1 rounded-2xl bg-[#46CC02] text-white md:mb-0">
+            <div className="flex items-center p-2">
+              <div className="mr-3 flex h-8 w-8 items-center justify-center rounded bg-white font-montserrat text-[25px] font-bold leading-[30px] text-[#15549A]">
                 03
               </div>
-              <h3 className="font-bold font-montserrat  text-[25px] leading-[30px] ml-[10px]">
+              <h3 className="ml-[10px] font-montserrat text-[25px] font-bold leading-[30px]">
                 Credit Recovery
               </h3>
             </div>
 
             {/* Similar Inner Card as Card 2 */}
-            <div className="bg-[#ECF6FF] text-[#9A9A9A] p-3 flex rounded-lg w-[410px] h-[150px] hover:text-[#FFFFFF] hover:bg-[#15549A]">
-              <div className="relative inline-block mr-3 ml-[10px]">
+            <div className="flex h-[150px] w-[410px] rounded-lg bg-[#ECF6FF] p-3 text-[#9A9A9A] hover:bg-[#15549A] hover:text-[#FFFFFF]">
+              <div className="relative ml-[10px] mr-3 inline-block">
                 {/* Image for Credit 3 */}
                 <img
                   src={credit3}
                   alt="Recovery Icon"
-                  className=" inline-block w-[185px] h-[84px] mt-[10px]"
+                  className="mt-[10px] inline-block h-[84px] w-[185px]"
                 />
                 {/* Image for Credit 4 inside Credit 3 */}
                 <img
                   src={credit4}
                   alt="Nested Icon"
-                  className="absolute w-[50px] h-[40px] top-[35px] left-[15px]"
+                  className="absolute left-[15px] top-[35px] h-[40px] w-[50px]"
                 />
               </div>
-              <p className="font-montserrat font-bold text-[20px] leading-[25px] mt-[15px]">
+              <p className="mt-[15px] font-montserrat text-[20px] font-bold leading-[25px]">
                 Take action to boost your credit score to reach your desired score range
               </p>
             </div>
@@ -135,12 +135,12 @@ export function About() {
         </div>
 
         {/* Dispute & Escalation Details */}
-        <h1 className="text-7xl mt-[-30px]">↓</h1>
-        <div className="bg-blue-100 py-6 px-5 border-[#4054B2] border-[1px] h-[209px] w-[1300px]">
-          <h4 className="text-[27px] leading-[32px] font-inter font-bold text-[#07284F] mb-2">
+        <h1 className="mt-[-30px] text-7xl">↓</h1>
+        <div className="h-[209px] w-[1300px] border-[1px] border-[#4054B2] bg-blue-100 px-5 py-6">
+          <h4 className="mb-2 font-inter text-[27px] font-bold leading-[32px] text-[#07284F]">
             Dispute & Escalation
           </h4>
-          <p className="text-[#173455] font-inter text-[25px] leading-[30px] font-semibold">
+          <p className="font-inter text-[25px] font-semibold leading-[30px] text-[#173455]">
             We start by assessing your current credit situation and identifying the roadblocks
             impacting your score. Each case is unique, but we specialize in spotting inaccuracies
             and other factors that should not be in your report damaging to credit reputation.

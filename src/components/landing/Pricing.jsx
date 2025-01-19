@@ -6,26 +6,26 @@ import pricingPageCircleBlue from '../asset/pricingPageCircleBlue.svg';
 
 export function Pricing() {
   return (
-    <div className="w-full flex flex-col">
-      <div className="relative p-2 mt-3">
+    <div className="flex w-full flex-col">
+      <div className="relative mt-3 p-2">
         {/* Background Image */}
         <img
           src={AboutUs}
           alt="About Us Background"
-          className="absolute inset-0 w-full h-full object-cover opacity-100 mt-[30px]"
+          className="absolute inset-0 mt-[30px] h-full w-full object-cover opacity-100"
         />
 
         {/* Inner Div with Background Image */}
-        <div className="relative text-white p-2 items-center flex h-[130px]">
-          <div className="flex max-w-screen-lg ml-[80px] mt-[50px] font-inter font-bold text-2xl leading-7">
+        <div className="relative flex h-[130px] items-center p-2 text-white">
+          <div className="ml-[80px] mt-[50px] flex max-w-screen-lg font-inter text-2xl font-bold leading-7">
             <span className="ml-10">Home</span>
             <span className="mx-1">|</span>
             <span>Pricing</span>
           </div>
         </div>
       </div>
-      <div className="mx-16 mt-20 mb-10 flex justify-center text-center">
-        <div className="font-inter font-semibold text-start text-2xl text-[#173455] leading-7">
+      <div className="mx-16 mb-10 mt-20 flex justify-center text-center">
+        <div className="text-start font-inter text-2xl font-semibold leading-7 text-[#173455]">
           At EzeCredit, we believe in transparency and results. We don’t nickel and dime you with
           monthly fees for our services. Instead, we offer a straightforward, fixed price of $799
           for the complete credit repair process. We work fast and efficiently to deliver real
@@ -33,37 +33,37 @@ export function Pricing() {
           results you can count on.
         </div>
       </div>
-      <div className="w-full h-[535px] flex justify-center items-center bg-[url('/src/components/asset/pricingBg.svg')]">
-        <div className="flex flex-col items-center font-inter text-center">
-          <div className="w-full leading-[55px] font-bold text-white text-[40px]">
+      <div className="flex h-[535px] w-full items-center justify-center bg-[url('/src/components/asset/pricingBg.svg')]">
+        <div className="flex flex-col items-center text-center font-inter">
+          <div className="w-full text-[40px] font-bold leading-[55px] text-white">
             <p>Would you like to market our</p>
             <p>credit repair service?</p>
           </div>
           <div className="my-4">
-            <div className="font-normal text-3xl text-white leading-9">
+            <div className="text-3xl font-normal leading-9 text-white">
               Find a solution that works for you
             </div>
           </div>
-          <div className="w-full mt-4 px-10 flex justify-center items-center">
-            <button className="px-4 py-2 bg-[#46CC02] font-extrabold text-2xl text-white rounded-xl ">
+          <div className="mt-4 flex w-full items-center justify-center px-10">
+            <button className="rounded-xl bg-[#46CC02] px-4 py-2 text-2xl font-extrabold text-white">
               GET STARTED
             </button>
           </div>
-          <div className="py-3 mt-2">
-            <div className="font-normal text-xl text-white leading-6">or sign up online »</div>
+          <div className="mt-2 py-3">
+            <div className="text-xl font-normal leading-6 text-white">or sign up online »</div>
           </div>
         </div>
       </div>
-      <div className="mx-16 my-10 flex justify-center items-center">
-        <div className="flex flex-col font-inter text-start font-bold">
-          <div className="text-5xl text-[#15549A] leading-[60px] ">
+      <div className="mx-16 my-10 flex items-center justify-center">
+        <div className="flex flex-col text-start font-inter font-bold">
+          <div className="text-5xl leading-[60px] text-[#15549A]">
             Additional Services for Fast Credit Score Boost
           </div>
           <div className="text-3xl leading-8 text-[#07284F]">
             Once your credit is repaired, we offer additional services to help you quickly elevate
             your score even further
           </div>
-          <div className="font-semibold text-[#173455] text-2xl leading-7 mt-3">
+          <div className="mt-3 text-2xl font-semibold leading-7 text-[#173455]">
             We start by assessing your current credit situation and identify the roadblocks
             impacting your score. Each case is unique, but we specialize in spotting inaccuracies
             and other factors that should not be in your report damaging to credit reputation.
@@ -81,9 +81,9 @@ export function Pricing() {
 
 function LastHeading() {
   return (
-    <div className="w-full -mb-8 bg-[#46CC02] flex justify-center items-center font-inter font-bold">
+    <div className="-mb-8 flex w-full items-center justify-center bg-[#46CC02] font-inter font-bold">
       <div className="mx-20 my-16">
-        <div className=" px-56 text-white text-3xl text-center lLastHeadingeading-9 ">
+        <div className="lLastHeadingeading-9 px-56 text-center text-3xl text-white">
           With our fast and efficient process, we guarantee results and a clearer path to financial
           freedom.
         </div>
@@ -136,14 +136,14 @@ function CreditRepairProcess() {
 
   return (
     <div className="mx-28 my-10">
-      <p className="text-5xl text-[#15549A] leading-[60px] font-normal text-center mb-8">
+      <p className="mb-8 text-center text-5xl font-normal leading-[60px] text-[#15549A]">
         EzeCredit Repair Service Recap
       </p>
       <div className="space-y-8">
         {steps.map((step, index) => (
-          <div key={index} className="bg-[#ECF6FF] rounded-b-2xl">
-            <div className="w-full bg-[#15549A] flex justify-start items-center space-x-5 font-inter text-3xl leading-9 py-2 px-2">
-              <div className="bg-white font-bold text-[#15549A] py-2 px-3  rounded-tl-[30px]">
+          <div key={index} className="rounded-b-2xl bg-[#ECF6FF]">
+            <div className="flex w-full items-center justify-start space-x-5 bg-[#15549A] px-2 py-2 font-inter text-3xl leading-9">
+              <div className="rounded-tl-[30px] bg-white px-3 py-2 font-bold text-[#15549A]">
                 Step {index + 1}
               </div>
               <div className="font-normal text-white">{step.title}</div>
@@ -151,7 +151,7 @@ function CreditRepairProcess() {
             <div className="px-10 py-5">
               <ul className="list-none space-y-3">
                 {step.description.map((desc, idx) => (
-                  <li key={idx} className="h-full flex items-start text-lg text-[#555]">
+                  <li key={idx} className="flex h-full items-start text-lg text-[#555]">
                     <img
                       src={pricingPageCircleBlue}
                       alt="Bullet"
@@ -164,9 +164,9 @@ function CreditRepairProcess() {
                       alt="Arrow"
                       width={22}
                       height={27}
-                      className="ml-3.5 mt-3 absolute"
+                      className="absolute ml-3.5 mt-3"
                     />
-                    <div className="w-full h-full flex items-center lg:mt-2 text-2xl text-[#1C2228] leading-7">
+                    <div className="flex h-full w-full items-center text-2xl leading-7 text-[#1C2228] lg:mt-2">
                       {desc}
                     </div>
                   </li>

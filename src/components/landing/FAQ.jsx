@@ -44,18 +44,18 @@ export function FAQ() {
     setSelectedQuestion(id);
   };
   return (
-    <div className="w-full flex flex-col ">
-      <div className="relative p-2 mt-3">
+    <div className="flex w-full flex-col">
+      <div className="relative mt-3 p-2">
         {/* Background Image */}
         <img
           src={AboutUs}
           alt="About Us Background"
-          className="absolute inset-0 w-full h-full object-cover opacity-100 mt-[30px]"
+          className="absolute inset-0 mt-[30px] h-full w-full object-cover opacity-100"
         />
 
         {/* Inner Div with Background Image */}
-        <div className="relative text-white p-2 items-center flex h-[130px]">
-          <div className="flex max-w-screen-lg ml-[80px] mt-[50px] font-inter font-bold text-2xl leading-7">
+        <div className="relative flex h-[130px] items-center p-2 text-white">
+          <div className="ml-[80px] mt-[50px] flex max-w-screen-lg font-inter text-2xl font-bold leading-7">
             <span className="ml-10">Home</span>
             <span className="mx-1">|</span>
             <span>Frequently Asked Questions</span>
@@ -64,50 +64,47 @@ export function FAQ() {
       </div>
       <div className="m-5 p-6">
         <div className="flex justify-center">
-          <h1 className="text-5xl leading-[60px] font-inter font-bold mb-4 text-[#15549A]">
+          <h1 className="mb-4 font-inter text-5xl font-bold leading-[60px] text-[#15549A]">
             Frequently Asked Questions
           </h1>
         </div>
-        <div className="w-full flex justify-between items-center bg-[#E6E6E6] rounded-lg px-10 py-3">
-          <p className="font-inter font-bold text-xl leading-6">Have any Questions?</p>
+        <div className="flex w-full items-center justify-between rounded-lg bg-[#E6E6E6] px-10 py-3">
+          <p className="font-inter text-xl font-bold leading-6">Have any Questions?</p>
           <img src={searchFaq} alt="Search Icon" />
         </div>
-        <div className="flex space-x-6 my-10">
-          <div className="w-1/3 mt-3 space-y-1 font-inter font-bold rounded-2xl">
+        <div className="my-10 flex space-x-6">
+          <div className="mt-3 w-1/3 space-y-1 rounded-2xl font-inter font-bold">
             {questions.map(q => (
               <button
                 key={q.question}
                 onClick={() => handleQuestionClick(q.id)}
-                className={`block hover:bg-[#46CC02] w-full text-left p-4 ${
+                className={`block w-full p-4 text-left hover:bg-[#46CC02] ${
                   selectedQuestion === q.id ? 'bg-[#46CC02] font-bold text-white' : 'bg-[#E3F9FF]'
-                } 
-                ${q.id === 1 ? 'rounded-t-2xl' : ''}
-                ${q.id === questions.length ? 'rounded-b-2xl' : ''}
-                `}
+                } ${q.id === 1 ? 'rounded-t-2xl' : ''} ${q.id === questions.length ? 'rounded-b-2xl' : ''} `}
               >
                 {q.question}
               </button>
             ))}
           </div>
-          <div className="w-2/3 p-4 mt-3 font-inter font-normal text-xl leading-6 bg-white rounded-2xl border-4 border-[#DCDCDC]">
+          <div className="mt-3 w-2/3 rounded-2xl border-4 border-[#DCDCDC] bg-white p-4 font-inter text-xl font-normal leading-6">
             <p>{questions.find(q => q.id === selectedQuestion)?.answer}</p>
           </div>
         </div>
       </div>
-      <div className="lg:w-[1437px] lg:h-[542px] mt-20 flex items-center justify-between bg-[url('/src/components/asset/areYouReadyToTakeActionBg.svg')] bg-cover">
-        <div className="w-full mx-10 flex items-center justify-evenly">
+      <div className="mt-20 flex items-center justify-between bg-[url('/src/components/asset/areYouReadyToTakeActionBg.svg')] bg-cover lg:h-[542px] lg:w-[1437px]">
+        <div className="mx-10 flex w-full items-center justify-evenly">
           {/* Left Side Text */}
-          <div className="font-inter font-bold text-white text-[50px] leading-[60px]">
+          <div className="font-inter text-[50px] font-bold leading-[60px] text-white">
             <p> Are You Ready to Take action?</p>
             <p>We Are Ready to Help.</p>
-            <button className="mt-5 px-4 py-2 text-3xl leading-8 bg-[#46CC02] text-white rounded-lg">
+            <button className="mt-5 rounded-lg bg-[#46CC02] px-4 py-2 text-3xl leading-8 text-white">
               SIGN UP NOW
             </button>
           </div>
 
           {/* Right Side Image */}
           <div className="">
-            <img src={manOnFaq} alt="Placeholder" className="w-full mb-[105px]" />
+            <img src={manOnFaq} alt="Placeholder" className="mb-[105px] w-full" />
           </div>
         </div>
       </div>

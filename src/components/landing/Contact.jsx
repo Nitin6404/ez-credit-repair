@@ -11,17 +11,17 @@ import socialLinks from '../asset/socialLinks.svg';
 export function Contact() {
   return (
     <div className="w-full">
-      <div className="relative p-2 mt-3">
+      <div className="relative mt-3 p-2">
         {/* Background Image */}
         <img
           src={AboutUs}
           alt="About Us Background"
-          className="absolute inset-0 w-full h-full object-cover opacity-100 mt-[30px]"
+          className="absolute inset-0 mt-[30px] h-full w-full object-cover opacity-100"
         />
 
         {/* Inner Div with Background Image */}
-        <div className="relative text-white p-2 items-center flex h-[130px]">
-          <div className="flex max-w-screen-lg mt-[50px] font-inter font-bold text-2xl leading-7">
+        <div className="relative flex h-[130px] items-center p-2 text-white">
+          <div className="mt-[50px] flex max-w-screen-lg font-inter text-2xl font-bold leading-7">
             <span className="ml-10">Home</span>
             <span className="mx-1">|</span>
             <span>Contact Us</span>
@@ -29,60 +29,60 @@ export function Contact() {
         </div>
       </div>
       {/* Apply credit0 as background */}
-      <div className="w-full flex justify-center">
-        <div className="flex justify-center mx-5 mt-20 w-[1375px] h-[705px] bg-[url('/src/components/asset/rctangle.svg')] ">
-          <div className="text-white w-full flex flex-col md:flex-row px-20 py-7">
+      <div className="flex w-full justify-center">
+        <div className="mx-5 mt-20 flex h-[705px] w-[1375px] justify-center bg-[url('/src/components/asset/rctangle.svg')]">
+          <div className="flex w-full flex-col px-20 py-7 text-white md:flex-row">
             <div className="w-1/2">
               {/* Left Section - Form */}
-              <div className="flex-1 md:mr-8 mt-[15px]">
-                <h2 className="text-5xl leading-[60px] w-[568px] font-inter font-bold">
+              <div className="mt-[15px] flex-1 md:mr-8">
+                <h2 className="w-[568px] font-inter text-5xl font-bold leading-[60px]">
                   We are here to help you
                 </h2>
-                <p className="my-5 font-montserrat font-normal text-lg leading-6 w-[513px]">
+                <p className="my-5 w-[513px] font-montserrat text-lg font-normal leading-6">
                   We specialize in helping individuals and families regain control of their finances
                   by repairing and improving their credit scores.
                 </p>
-                <form className="grid gap-3 mt-[30px]">
-                  <div className="grid grid-cols-2 gap-2 w-[513px]">
+                <form className="mt-[30px] grid gap-3">
+                  <div className="grid w-[513px] grid-cols-2 gap-2">
                     <input
                       type="text"
                       placeholder="First Name"
-                      className="p-2 text-[#052B3E h-12] bg-white "
+                      className="text-[#052B3E h-12] bg-white p-2"
                     />
                     <input
                       type="text"
                       placeholder="Last Name"
-                      className="p-2 text-[#052B3E h-12] bg-white"
+                      className="text-[#052B3E h-12] bg-white p-2"
                     />
                   </div>
-                  <div className="grid grid-cols-2 gap-2 w-[513px]">
+                  <div className="grid w-[513px] grid-cols-2 gap-2">
                     <input
                       type="text"
                       placeholder="Phone Number"
-                      className="p-2 text-[#052B3E h-12] bg-white "
+                      className="text-[#052B3E h-12] bg-white p-2"
                     />
                     <input
                       type="text"
                       placeholder="Subject"
-                      className="p-2 text-[#052B3E h-12] bg-white "
+                      className="text-[#052B3E h-12] bg-white p-2"
                     />
                   </div>
                   <input
                     type="text"
                     placeholder="Current Credit Score"
-                    className="p-2 gap-2 w-[513px] bg-white h-12 text-black"
+                    className="h-12 w-[513px] gap-2 bg-white p-2 text-black"
                   />
                   <input
                     type="text"
                     placeholder="Reason for Credit Repair"
-                    className="p-2 gap-2 w-[513px] bg-white h-12 text-black"
+                    className="h-12 w-[513px] gap-2 bg-white p-2 text-black"
                   />
                   <textarea
                     type="text"
                     placeholder="How Soon?"
-                    className="p-1 gap-2 w-[513px] bg-white text-black h-[120px]"
+                    className="h-[120px] w-[513px] gap-2 bg-white p-1 text-black"
                   />
-                  <button className="p-2 h-12 font-montserrat bg-[#46CC02] text-lg text-white font-normal w-[30%]">
+                  <button className="h-12 w-[30%] bg-[#46CC02] p-2 font-montserrat text-lg font-normal text-white">
                     Sign Up Now
                   </button>
                 </form>
@@ -91,18 +91,18 @@ export function Contact() {
 
             {/* Right Section - Contact Information */}
             <div className="flex flex-col">
-              <div className="md:w-[70%] mt-[20px] ml-[50px]">
-                <h2 className="text-5xl leading-[60px] font-inter font-bold mb-4">Contact Us</h2>
-                <ul className="space-y-8 font-montserrat font-normal text-3xl leading-9">
-                  <li className="flex items-center ">
-                    <img src={credit1} alt="Credit Report" className="mr-2 w-[40px] h-[40px]" />
+              <div className="ml-[50px] mt-[20px] md:w-[70%]">
+                <h2 className="mb-4 font-inter text-5xl font-bold leading-[60px]">Contact Us</h2>
+                <ul className="space-y-8 font-montserrat text-3xl font-normal leading-9">
+                  <li className="flex items-center">
+                    <img src={credit1} alt="Credit Report" className="mr-2 h-[40px] w-[40px]" />
                     0000-00-0000
                   </li>
                   <li className="flex items-center">
                     <img
                       src={credit2}
                       alt="Credit Report"
-                      className="inline-block mr-2 w-[33px] h-[25px]"
+                      className="mr-2 inline-block h-[25px] w-[33px]"
                     />
                     info@ezecreditrepair.com
                   </li>
@@ -110,7 +110,7 @@ export function Contact() {
                     <img
                       src={credit3}
                       alt="Credit Report"
-                      className="inline-block mr-2 w-[38px] h-[38px]"
+                      className="mr-2 inline-block h-[38px] w-[38px]"
                     />
                     ezecreditrepair.com
                   </li>
@@ -118,12 +118,12 @@ export function Contact() {
                     <img
                       src={credit4}
                       alt="Credit Report"
-                      className="inline-block mr-2 w-[31px] h-[51px]"
+                      className="mr-2 inline-block h-[51px] w-[31px]"
                     />
                     120 Double Street, Texas, Houston, USA
                   </li>
                 </ul>
-                <div className="flex space-x-4 mt-8 text-2xl">
+                <div className="mt-8 flex space-x-4 text-2xl">
                   <a href="#" className="text-white">
                     <i className="fab fa-facebook"></i>
                   </a>
@@ -139,7 +139,7 @@ export function Contact() {
                 </div>
               </div>
               <div>
-                <img src={socialLinks} alt="socialLinks" className=" ml-[50px]" />
+                <img src={socialLinks} alt="socialLinks" className="ml-[50px]" />
               </div>
             </div>
           </div>
@@ -147,15 +147,15 @@ export function Contact() {
       </div>
       <div className="flex flex-col space-y-1">
         <div className="mt-16 font-montserrat">
-          <div className="px-3 py-1 w-[260px] h-[93px] ml-[440px] mt-[295px] bg-white leading-6 text-lg text-black absolute">
+          <div className="absolute ml-[440px] mt-[295px] h-[93px] w-[260px] bg-white px-3 py-1 text-lg leading-6 text-black">
             <div className="font-bold">Eze Credit Repair</div>{' '}
             <div className="font-normal text-[#232323]">120 Double Street, Texas, Houston USA </div>
           </div>
-          <img src={credit10} alt="map" className=" mb-[30px]" />
+          <img src={credit10} alt="map" className="mb-[30px]" />
           <img
             src={credit11}
             alt="map"
-            className="ml-[550px] mt-[-450px] mb-[350px] w-[50px] h-[90px]"
+            className="mb-[350px] ml-[550px] mt-[-450px] h-[90px] w-[50px]"
           />
         </div>
         <Footer />

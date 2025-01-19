@@ -26,15 +26,15 @@ export function CreditServices() {
   ];
 
   return (
-    <div className="my-28 flex justify-center items-center">
-      <div className="w-[1260px] h-[659px] space-x-2 flex items-center bg-[url('/src/components/asset/pricingPageBg2.svg')]">
+    <div className="my-28 flex items-center justify-center">
+      <div className="flex h-[659px] w-[1260px] items-center space-x-2 bg-[url('/src/components/asset/pricingPageBg2.svg')]">
         <div className="mb-8">
           <img src={pricingPageBoi} alt="" />
         </div>
-        <div className="space-y-4 mb-20">
+        <div className="mb-20 space-y-4">
           {services.map((service, index) => (
             <div key={index} className="flex items-start">
-              <div className="text-2xl mr-2 mt-1">
+              <div className="mr-2 mt-1 text-2xl">
                 <img src={pricingPageBar} alt="" />
               </div>
               <div className="font-inter font-bold text-white">

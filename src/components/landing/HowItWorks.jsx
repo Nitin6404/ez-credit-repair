@@ -39,17 +39,17 @@ export function HowItWorks() {
 
   return (
     <div className="w-full">
-      <div className="relative p-2 mt-3">
+      <div className="relative mt-3 p-2">
         {/* Background Image */}
         <img
           src={AboutUs}
           alt="How It Works Background"
-          className="absolute inset-0 w-full h-full object-cover opacity-100 mt-[30px]"
+          className="absolute inset-0 mt-[30px] h-full w-full object-cover opacity-100"
         />
 
         {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto py-12">
-          <h1 className="text-4xl font-bold text-center text-[#15549A] mb-12">How It Works</h1>
+        <div className="relative z-10 mx-auto max-w-6xl py-12">
+          <h1 className="mb-12 text-center text-4xl font-bold text-[#15549A]">How It Works</h1>
 
           {/* Steps */}
           <div className="space-y-16">
@@ -61,15 +61,15 @@ export function HowItWorks() {
                 } items-center gap-12`}
               >
                 <div className="flex-1">
-                  <h3 className="text-[#4CAF50] font-bold mb-2">{step.number}</h3>
-                  <h2 className="text-2xl font-bold text-[#15549A] mb-4">{step.title}</h2>
-                  <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                  <h3 className="mb-2 font-bold text-[#4CAF50]">{step.number}</h3>
+                  <h2 className="mb-4 text-2xl font-bold text-[#15549A]">{step.title}</h2>
+                  <p className="leading-relaxed text-gray-600">{step.description}</p>
                 </div>
                 <div className="flex-1">
                   <img
                     src={step.image}
                     alt={step.title}
-                    className="w-full h-auto rounded-lg shadow-lg"
+                    className="h-auto w-full rounded-lg shadow-lg"
                   />
                 </div>
               </div>
@@ -77,13 +77,13 @@ export function HowItWorks() {
           </div>
 
           {/* Call to Action */}
-          <div className="text-center mt-16">
-            <h2 className="text-2xl font-bold text-[#15549A] mb-4">
+          <div className="mt-16 text-center">
+            <h2 className="mb-4 text-2xl font-bold text-[#15549A]">
               Are you ready to take action?
               <br />
               We are ready to help.
             </h2>
-            <button className="bg-[#4CAF50] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#45a049] transition-colors">
+            <button className="rounded-lg bg-[#4CAF50] px-8 py-3 font-semibold text-white transition-colors hover:bg-[#45a049]">
               GET STARTED
             </button>
           </div>
