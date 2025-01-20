@@ -52,8 +52,8 @@ export function MainNav() {
         </nav>
       </div>
       <div className="shadow-lg">
-        <div className="relative h-2 w-full bg-[#FFFFFF]"></div>
-        <div className="relative h-2 w-full bg-[#D2D3D4]"></div>
+        <div className="shadow-top relative h-2 w-full bg-[#FFFFFF]"></div>
+        {/* <div className="relative h-2 w-full bg-[#D2D3D4]"></div> */}
       </div>
     </div>
   );
