@@ -1,4 +1,3 @@
-import { Footer } from '../common/Footer';
 import AboutUs from '../asset/AboutUsbackground.png';
 import searchFaq from '../asset/searchFaq.svg';
 import manOnFaq from '../asset/manOnFaq.svg';
@@ -108,7 +107,6 @@ export function FAQ() {
           </div>
         </div>
       </div>
-      <Footer></Footer>
     </div>
   );
 }

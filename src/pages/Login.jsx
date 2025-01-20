@@ -1,5 +1,4 @@
 import React from 'react';
-import { Footer } from '../components/common/Footer';
 import { Navbar } from '../components/common/Navbar';
 
 export function Login() {
@@ -66,7 +65,6 @@ export function Login() {
           </form>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

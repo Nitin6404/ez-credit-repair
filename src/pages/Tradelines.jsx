@@ -1,5 +1,4 @@
 import React from 'react';
-import { Footer } from '../components/common/Footer';
 import { Navbar } from '../components/common/Navbar';
 
 export function Tradelines() {
@@ -96,7 +95,6 @@ export function Tradelines() {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

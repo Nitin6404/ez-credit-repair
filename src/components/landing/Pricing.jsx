@@ -2,7 +2,6 @@ import AboutUs from '../asset/AboutUsbackground.png';
 import pricingPageAero from '../asset/pricingPageAero.svg';
 import pricingPageCircleBlue from '../asset/pricingPageCircleBlue.svg';
 import { CreditServices } from '../common/CreditServices';
-import { Footer } from '../common/Footer';
 
 export function Pricing() {
   return (
@@ -84,7 +83,6 @@ export function Pricing() {
       <CreditServices />
       {/* <CreditRepairProcess /> */}
       <LastHeading />
-      <Footer />
     </div>
   );
 }

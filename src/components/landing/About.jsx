@@ -4,7 +4,6 @@ import credit2 from '../asset/Rectangle1.png';
 import credit4 from '../asset/Rectangle2.png';
 import credit3 from '../asset/Rectangle4.png';
 import { FaqAbout } from '../common/FAQSection';
-import { Footer } from '../common/Footer';
 import { Testimonial } from '../common/Testimonial';
 
 // Program cards data
@@ -161,7 +160,6 @@ export function About() {
       </div>
       <FaqAbout />
       <Testimonial />
-      <Footer />
     </div>
   );
 }

@@ -18,7 +18,6 @@ import rectangle2 from '../asset/Rectangle2.png';
 import rectangle4 from '../asset/Rectangle4.png';
 import tick from '../asset/whatwedotick.png';
 import { FAQSection } from '../common/FAQSection';
-import { Footer } from '../common/Footer';
 import { Testimonial } from '../common/Testimonial';
 
 export function Home() {
@@ -409,7 +408,6 @@ export function Home() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

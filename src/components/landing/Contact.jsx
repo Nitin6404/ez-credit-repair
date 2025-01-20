@@ -1,4 +1,3 @@
-import { Footer } from '../common/Footer';
 import credit1 from '../asset/phone.svg';
 import credit2 from '../asset/mail.png';
 import credit3 from '../asset/earth.png';
@@ -158,7 +157,6 @@ export function Contact() {
             className="mb-[350px] ml-[550px] mt-[-450px] h-[90px] w-[50px]"
           />
         </div>
-        <Footer />
       </div>
     </div>
   );

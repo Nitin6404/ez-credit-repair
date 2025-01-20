@@ -1,4 +1,3 @@
-import { Footer } from '../common/Footer';
 import AboutUs from '../asset/AboutUsbackground.png';
 import creditReportAnalysisServices from '../asset/creditReportAnalysisServices.svg';
 import Rectangle10 from '../asset/Rectangle10.png';
@@ -94,8 +93,7 @@ export function Services() {
           </div>
         </div>
       </div>
-      <Testinomial></Testinomial>
-      <Footer></Footer>
+      <Testinomial />
     </div>
   );
 }

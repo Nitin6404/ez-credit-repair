@@ -1,4 +1,3 @@
-import { Footer } from '../common/Footer';
 import AboutUs from '../asset/AboutUsbackground.png';
 import register from '../asset/register.png';
 import audit from '../asset/audit.png';
@@ -89,7 +88,6 @@ export function HowItWorks() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

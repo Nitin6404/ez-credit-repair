@@ -1,5 +1,4 @@
 import React from 'react';
-import { Footer } from '../components/common/Footer';
 import { Navbar } from '../components/common/Navbar';
 
 export function LearningCenter() {
@@ -59,7 +58,6 @@ export function LearningCenter() {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
