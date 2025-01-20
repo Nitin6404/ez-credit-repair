@@ -1,6 +1,6 @@
-import AboutUs from '../asset/AboutUsbackground.png';
-import searchFaq from '../asset/searchFaq.svg';
-import manOnFaq from '../asset/manOnFaq.svg';
+import AboutUs from '../components/asset/AboutUsbackground.png';
+import searchFaq from '../components/asset/searchFaq.svg';
+import manOnFaq from '../components/asset/manOnFaq.svg';
 import { useState } from 'react';
 
 export function FAQ() {

@@ -45,32 +45,36 @@ export function FAQSection({ className = '', showTitle = true, maxWidth = '4xl' 
   ];
 
   return (
-    <div className={`${className}`}>
-      {showTitle && (
-        <div className={`max-w-${maxWidth} ml-[1px] mt-[10px] p-6`}>
-          <h1 className="mb-4 font-inter text-[42px] font-[400] leading-[54px] text-[#15549A]">
-            Frequently Asked Questions
-          </h1>
-        </div>
-      )}
-      <div className="flex justify-center p-[10px] font-opensans font-[400]">
-        <div className="mx-auto ml-[5px] mt-[-20px] w-full max-w-[620px] overflow-hidden">
-          {accordionData.map((item, index) => (
-            <div key={index} className="p-2">
-              <div
-                className="accordion-title flex cursor-pointer items-center justify-between bg-white px-6 py-4 font-montserrat text-[20px] font-bold leading-[25px] hover:bg-gray-200"
-                onClick={() => toggleAccordion(index)}
-              >
-                {item.title}
-                <span className="plus-minus-icon">{openIndex === index ? '-' : '+'}</span>
-              </div>
-              <div className={`accordion-content px-6 py-4 ${openIndex === index ? '' : 'hidden'}`}>
-                <div className="font-montserrat text-[22px] font-semibold leading-[27px]">
-                  {item.content}
+    <div className="ml-[80px] h-[713px] w-[640px] bg-[#3F8FC4] bg-opacity-[10%]">
+      <div className={`${className}`}>
+        {showTitle && (
+          <div className={`max-w-${maxWidth} ml-[1px] mt-[10px] p-6`}>
+            <h1 className="mb-4 font-inter text-[42px] font-[400] leading-[54px] text-[#15549A]">
+              Frequently Asked Questions
+            </h1>
+          </div>
+        )}
+        <div className="flex justify-center p-[10px] font-opensans font-[400]">
+          <div className="mx-auto ml-[5px] mt-[-20px] w-full max-w-[620px] overflow-hidden">
+            {accordionData.map((item, index) => (
+              <div key={index} className="p-2">
+                <div
+                  className="accordion-title flex cursor-pointer items-center justify-between bg-white px-6 py-4 font-montserrat text-[20px] font-bold leading-[25px] hover:bg-gray-200"
+                  onClick={() => toggleAccordion(index)}
+                >
+                  {item.title}
+                  <span className="plus-minus-icon">{openIndex === index ? '-' : '+'}</span>
+                </div>
+                <div
+                  className={`accordion-content px-6 py-4 ${openIndex === index ? '' : 'hidden'}`}
+                >
+                  <div className="font-montserrat text-[22px] font-semibold leading-[27px]">
+                    {item.content}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

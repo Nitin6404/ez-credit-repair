@@ -1,10 +1,10 @@
-import AboutUs from '../asset/AboutUsbackground.png';
-import credit from '../asset/Rectangle.png';
-import credit2 from '../asset/Rectangle1.png';
-import credit4 from '../asset/Rectangle2.png';
-import credit3 from '../asset/Rectangle4.png';
-import { FaqAbout } from '../common/FAQSection';
-import { Testimonial } from '../common/Testimonial';
+import AboutUs from '../components/asset/AboutUsbackground.png';
+import credit from '../components/asset/Rectangle.png';
+import credit2 from '../components/asset/Rectangle1.png';
+import credit4 from '../components/asset/Rectangle2.png';
+import credit3 from '../components/asset/Rectangle4.png';
+import { FaqAbout } from '../components/common/FAQSection';
+import { Testimonial } from '../components/common/Testimonial';
 
 // Program cards data
 const programCards = [

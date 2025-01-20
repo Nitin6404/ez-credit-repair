@@ -1,17 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home } from './components/landing/Home';
-import { About } from './components/landing/About';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Footer } from './components/common/Footer';
-import { Contact } from './components/landing/Contact';
 import { MainNav } from './components/common/MainNav';
-import { FAQ } from './components/landing/FAQ';
-import { Services } from './components/landing/Services';
 import { Navbar } from './components/common/Navbar';
-import { Pricing } from './components/landing/Pricing';
+import { About } from './pages/About';
+import { Contact } from './pages/Contact';
+import { FAQ } from './pages/FAQ';
+import { Home } from './pages/HomePage';
 import { LearningCenter } from './pages/LearningCenter';
+import { Login } from './pages/Login';
+import { Pricing } from './pages/Pricing';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { RegistrationPage } from './pages/RegistrationPage';
-import { Login } from './pages/Login';
+import { Services } from './pages/Services';
 import { Tradelines } from './pages/Tradelines';
 
 function App() {

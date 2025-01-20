@@ -1,7 +1,7 @@
-import AboutUs from '../asset/AboutUsbackground.png';
-import pricingPageAero from '../asset/pricingPageAero.svg';
-import pricingPageCircleBlue from '../asset/pricingPageCircleBlue.svg';
-import { CreditServices } from '../common/CreditServices';
+import AboutUs from '../components/asset/AboutUsbackground.png';
+import pricingPageAero from '../components/asset/pricingPageAero.svg';
+import pricingPageCircleBlue from '../components/asset/pricingPageCircleBlue.svg';
+import { CreditServices } from '../components/common/CreditServices';
 
 export function Pricing() {
   return (

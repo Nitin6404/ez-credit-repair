@@ -1,11 +1,11 @@
-import credit1 from '../asset/phone.svg';
-import credit2 from '../asset/mail.png';
-import credit3 from '../asset/earth.png';
-import credit4 from '../asset/map.png';
-import credit10 from '../asset/map1.png';
-import credit11 from '../asset/sign.png';
-import AboutUs from '../asset/AboutUsbackground.png';
-import socialLinks from '../asset/socialLinks.svg';
+import credit1 from '../components/asset/phone.svg';
+import credit2 from '../components/asset/mail.png';
+import credit3 from '../components/asset/earth.png';
+import credit4 from '../components/asset/map.png';
+import credit10 from '../components/asset/map1.png';
+import credit11 from '../components/asset/sign.png';
+import AboutUs from '../components/asset/AboutUsbackground.png';
+import socialLinks from '../components/asset/socialLinks.svg';
 
 export function Contact() {
   return (

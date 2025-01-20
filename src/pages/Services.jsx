@@ -1,6 +1,6 @@
-import AboutUs from '../asset/AboutUsbackground.png';
-import creditReportAnalysisServices from '../asset/creditReportAnalysisServices.svg';
-import Rectangle10 from '../asset/Rectangle10.png';
+import AboutUs from '../components/asset/AboutUsbackground.png';
+import creditReportAnalysisServices from '../components/asset/creditReportAnalysisServices.svg';
+import Rectangle10 from '../components/asset/Rectangle10.png';
 
 export function Services() {
   return (
