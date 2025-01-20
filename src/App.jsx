@@ -10,7 +10,7 @@ import { Navbar } from './components/common/Navbar';
 import { Pricing } from './components/landing/Pricing';
 import { LearningCenter } from './pages/LearningCenter';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
-import { Register } from './pages/Register';
+import { RegistrationPage } from './pages/RegistrationPage';
 import { Login } from './pages/Login';
 import { Tradelines } from './pages/Tradelines';
 
@@ -30,7 +30,7 @@ function App() {
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/learning-center" element={<LearningCenter />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/register" element={<Register />} />
+            <Route path="/register" element={<RegistrationPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/tradelines" element={<Tradelines />} />
             {/* <Route path="/how-it-works" element={<HowItWorks />} /> */}

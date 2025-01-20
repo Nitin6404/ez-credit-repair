@@ -18,11 +18,11 @@ export function Navbar() {
             </div>
           </div>
           <div className="text-md flex justify-end gap-1 font-montserrat font-semibold">
-            <a href="/" className="hover:underline">
+            <a href="/login" className="hover:underline">
               LOGIN
             </a>
             <span>|</span>
-            <a href="/" className="hover:underline">
+            <a href="/register" className="hover:underline">
               REGISTER
             </a>
           </div>
