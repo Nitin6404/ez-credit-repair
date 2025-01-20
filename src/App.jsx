@@ -13,6 +13,7 @@ import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { RegistrationPage } from './pages/RegistrationPage';
 import { Services } from './pages/Services';
 import { Tradelines } from './pages/Tradelines';
+import { HowItWorks } from './pages/HowItWorks';
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
             <Route path="/register" element={<RegistrationPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/tradelines" element={<Tradelines />} />
-            {/* <Route path="/how-it-works" element={<HowItWorks />} /> */}
+            <Route path="/how-it-works" element={<HowItWorks />} />
           </Routes>
         </main>
         <Footer />
