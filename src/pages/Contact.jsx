@@ -41,29 +41,29 @@ export function Contact() {
                   We specialize in helping individuals and families regain control of their finances
                   by repairing and improving their credit scores.
                 </p>
-                <form className="mt-[30px] grid gap-3">
+                <form className="mt-[30px] grid gap-3 font-montserrat text-lg font-normal text-[#052B3E]">
                   <div className="grid w-[513px] grid-cols-2 gap-2">
                     <input
                       type="text"
                       placeholder="First Name"
-                      className="text-[#052B3E h-12] bg-white p-2"
+                      className="h-12 bg-white p-2 text-[#052B3E]"
                     />
                     <input
                       type="text"
                       placeholder="Last Name"
-                      className="text-[#052B3E h-12] bg-white p-2"
+                      className="h-12 bg-white p-2 text-[#052B3E]"
                     />
                   </div>
                   <div className="grid w-[513px] grid-cols-2 gap-2">
                     <input
                       type="text"
                       placeholder="Phone Number"
-                      className="text-[#052B3E h-12] bg-white p-2"
+                      className="h-12 bg-white p-2 text-[#052B3E]"
                     />
                     <input
                       type="text"
                       placeholder="Subject"
-                      className="text-[#052B3E h-12] bg-white p-2"
+                      className="h-12 bg-white p-2 text-[#052B3E]"
                     />
                   </div>
                   <input
@@ -79,7 +79,7 @@ export function Contact() {
                   <textarea
                     type="text"
                     placeholder="How Soon?"
-                    className="h-[120px] w-[513px] gap-2 bg-white p-1 text-black"
+                    className="h-[120px] w-[513px] gap-2 bg-white p-2 text-black"
                   />
                   <button className="h-12 w-[30%] bg-[#46CC02] p-2 font-montserrat text-lg font-normal text-white">
                     Sign Up Now
@@ -117,7 +117,7 @@ export function Contact() {
                     <img
                       src={credit4}
                       alt="Credit Report"
-                      className="mr-2 inline-block h-[51px] w-[31px]"
+                      className="mr-2 inline-block h-[51px] w-[31px] text-nowrap"
                     />
                     120 Double Street, Texas, Houston, USA
                   </li>
@@ -146,7 +146,7 @@ export function Contact() {
       </div>
       <div className="flex flex-col space-y-1">
         <div className="mt-16 font-montserrat">
-          <div className="absolute ml-[440px] mt-[295px] h-[93px] w-[260px] bg-white px-3 py-1 text-lg leading-6 text-black">
+          <div className="absolute ml-[440px] mt-[325px] h-[93px] w-[260px] bg-white px-3 py-1 text-lg leading-6 text-black">
             <div className="font-bold">Eze Credit Repair</div>{' '}
             <div className="font-normal text-[#232323]">120 Double Street, Texas, Houston USA </div>
           </div>

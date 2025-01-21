@@ -62,7 +62,7 @@ export function FAQ() {
         </div>
       </div>
       <div className="m-5 p-6">
-        <div className="flex justify-center">
+        <div className="flex justify-center pb-5 pt-10">
           <h1 className="mb-4 font-inter text-5xl font-bold leading-[60px] text-[#15549A]">
             Frequently Asked Questions
           </h1>
@@ -77,7 +77,7 @@ export function FAQ() {
               <button
                 key={q.question}
                 onClick={() => handleQuestionClick(q.id)}
-                className={`block w-full p-4 text-left hover:bg-[#46CC02] ${
+                className={`block w-full p-4 text-left text-base font-bold hover:bg-[#46CC02] ${
                   selectedQuestion === q.id ? 'bg-[#46CC02] font-bold text-white' : 'bg-[#E3F9FF]'
                 } ${q.id === 1 ? 'rounded-t-2xl' : ''} ${q.id === questions.length ? 'rounded-b-2xl' : ''} `}
               >
@@ -85,7 +85,7 @@ export function FAQ() {
               </button>
             ))}
           </div>
-          <div className="mt-3 w-2/3 rounded-2xl border-4 border-[#DCDCDC] bg-white p-4 font-inter text-xl font-normal leading-6">
+          <div className="mt-3 w-2/3 rounded-2xl border-4 border-[#DCDCDC] bg-white p-4 font-montserrat text-xl font-semibold leading-6">
             <p>{questions.find(q => q.id === selectedQuestion)?.answer}</p>
           </div>
         </div>
@@ -96,7 +96,7 @@ export function FAQ() {
           <div className="font-inter text-[50px] font-bold leading-[60px] text-white">
             <p> Are You Ready to Take action?</p>
             <p>We Are Ready to Help.</p>
-            <button className="mt-5 rounded-lg bg-[#46CC02] px-4 py-2 text-3xl leading-8 text-white">
+            <button className="mt-5 rounded-lg bg-[#46CC02] px-6 py-2 text-[27px] font-normal leading-8 text-white">
               SIGN UP NOW
             </button>
           </div>
