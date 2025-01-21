@@ -3,6 +3,8 @@ import credit from '../components/asset/Rectangle.png';
 import credit2 from '../components/asset/Rectangle1.png';
 import credit4 from '../components/asset/Rectangle2.png';
 import credit3 from '../components/asset/Rectangle4.png';
+import dispute from '../components/asset/dispute.svg';
+import disputeBg from '../components/asset/dispute-bg.svg';
 import { FaqAbout } from '../components/common/FAQSection';
 import { Testimonial } from '../components/common/Testimonial';
 
@@ -119,18 +121,14 @@ function ProgramSection() {
         <div className="relative h-[672px] w-[837px] overflow-hidden rounded-lg">
           {/* Background Image */}
           <img
-            src="/src/components/asset/dispute-bg.svg"
+            src={disputeBg}
             alt="Dispute Process Background"
             className="absolute inset-0 h-full w-full object-cover"
           />
           {/* Content Overlay */}
           <div className="relative z-10 pl-8 pt-3">
             {/* Top Image */}
-            <img
-              src="/src/components/asset/dispute.svg"
-              alt="Dispute Process"
-              className="h-[292px] w-[795px] object-cover"
-            />
+            <img src={dispute} alt="Dispute Process" className="h-[292px] w-[795px] object-cover" />
             <div className="pt-3">
               <h4 className="mb-6 font-inter text-[27px] font-bold leading-[32px] text-[#07284F]">
                 Dispute & Escalation

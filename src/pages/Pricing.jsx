@@ -1,6 +1,7 @@
 import AboutUs from '../components/asset/AboutUsbackground.png';
 import pricingPageAero from '../components/asset/pricingPageAero.svg';
 import pricingPageCircleBlue from '../components/asset/pricingPageCircleBlue.svg';
+import pricingBoiWithTransparency from '../components/asset/pricing-boi-with-transparency.svg';
 import { CreditServices } from '../components/common/CreditServices';
 
 export function Pricing() {
@@ -73,7 +74,7 @@ export function Pricing() {
           </div>
           <div className="relative h-[485px] w-[304px]">
             <img
-              src="/src/components/asset/pricing-boi-with-transparency.svg"
+              src={pricingBoiWithTransparency}
               alt="Pricing Representative"
               className="absolute -top-16 right-0 h-full w-full object-contain"
             />
