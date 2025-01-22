@@ -91,7 +91,7 @@ export function RegistrationPage() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex flex-col">
       {/* Hero Section with Background */}
       <div className="relative mt-3 p-2">
         <img
@@ -108,13 +108,15 @@ export function RegistrationPage() {
         </div>
       </div>
 
-      <main className="container mx-auto mb-8 mt-16 max-w-4xl px-4">
+      <main className="mb-8 mt-16 flex w-full flex-1 flex-col items-center justify-center gap-4 px-4">
         <ProgressSteps steps={steps} currentStep={currentStep} />
 
         {/* Form */}
-        <div className="bg-white p-8">
+        <div className="flex w-full flex-col items-center justify-center bg-white">
           {renderCurrentStep()}
-          <PricingPlan />
+          <div className="w-full overflow-hidden">
+            <PricingPlan />
+          </div>
           <CreditReportSection formData={formData} handleInputChange={handleInputChange} />
           <NavigationButtons
             currentStep={currentStep}

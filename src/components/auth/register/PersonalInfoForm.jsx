@@ -2,10 +2,10 @@ import React from 'react';
 
 export function PersonalInfoForm({ formData, handleInputChange }) {
   return (
-    <div className="space-y-6">
-      <div className="grid grid-cols-2 gap-6">
+    <div className="h-[802px] w-[1272px] space-y-6 px-4">
+      <div className="grid grid-cols-2 gap-8">
         <div>
-          <label className="mb-2 block font-inter text-[15px] font-bold uppercase tracking-wide text-[#04284F]">
+          <label className="mb-2 block font-inter text-[20px] font-bold text-[#04284F]">
             FIRST NAME
           </label>
           <input
@@ -14,11 +14,11 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
             value={formData.firstName}
             onChange={handleInputChange}
             placeholder="First name"
-            className="w-full rounded-[4px] bg-[#F8F8F8] p-3 text-[15px] text-gray-500 placeholder:text-gray-400 focus:outline-none"
+            className="h-[65px] w-[618px] rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
           />
         </div>
         <div>
-          <label className="mb-2 block font-inter text-[15px] font-bold uppercase tracking-wide text-[#04284F]">
+          <label className="mb-2 block font-inter text-[20px] font-bold text-[#04284F]">
             LAST NAME
           </label>
           <input
@@ -27,13 +27,13 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
             value={formData.lastName}
             onChange={handleInputChange}
             placeholder="Last Name"
-            className="w-full rounded-[4px] bg-[#F8F8F8] p-3 text-[15px] text-gray-500 placeholder:text-gray-400 focus:outline-none"
+            className="h-[65px] w-[618px] rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
           />
         </div>
       </div>
 
       <div>
-        <label className="mb-2 block font-inter text-[15px] font-bold uppercase tracking-wide text-[#04284F]">
+        <label className="mb-2 block font-inter text-[20px] font-bold text-[#04284F]">
           STREET ADDRESS
         </label>
         <input
@@ -42,7 +42,7 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
           value={formData.streetAddress}
           onChange={handleInputChange}
           placeholder="Street Address"
-          className="w-full rounded-[4px] bg-[#F8F8F8] p-3 text-[15px] text-gray-500 placeholder:text-gray-400 focus:outline-none"
+          className="h-[65px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
         />
       </div>
 
@@ -53,26 +53,24 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
           value={formData.aptUnit}
           onChange={handleInputChange}
           placeholder="Apt. Unit, Floor, Ect"
-          className="w-full rounded-[4px] bg-[#F8F8F8] p-3 text-[15px] text-gray-500 placeholder:text-gray-400 focus:outline-none"
+          className="h-[65px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
         />
       </div>
 
       <div className="grid grid-cols-3 gap-6">
         <div>
-          <label className="mb-2 block font-inter text-[15px] font-bold uppercase tracking-wide text-[#04284F]">
-            CITY
-          </label>
+          <label className="mb-2 block font-inter text-[20px] font-bold text-[#04284F]">CITY</label>
           <input
             type="text"
             name="city"
             value={formData.city}
             onChange={handleInputChange}
             placeholder="Select City"
-            className="w-full rounded-[4px] bg-[#F8F8F8] p-3 text-[15px] text-gray-500 placeholder:text-gray-400 focus:outline-none"
+            className="h-[65px] w-[407px] rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
           />
         </div>
         <div>
-          <label className="mb-2 block font-inter text-[15px] font-bold uppercase tracking-wide text-[#04284F]">
+          <label className="mb-2 block font-inter text-[20px] font-bold text-[#04284F]">
             State
           </label>
           <input
@@ -81,11 +79,11 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
             value={formData.state}
             onChange={handleInputChange}
             placeholder="Select State"
-            className="w-full rounded-[4px] bg-[#F8F8F8] p-3 text-[15px] text-gray-500 placeholder:text-gray-400 focus:outline-none"
+            className="h-[65px] w-[407px] rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
           />
         </div>
         <div>
-          <label className="mb-2 block font-inter text-[15px] font-bold uppercase tracking-wide text-[#04284F]">
+          <label className="mb-2 block font-inter text-[20px] font-bold text-[#04284F]">
             ZIP CODE
           </label>
           <input
@@ -94,14 +92,14 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
             value={formData.zipCode}
             onChange={handleInputChange}
             placeholder="Zip Code"
-            className="w-full rounded-[4px] bg-[#F8F8F8] p-3 text-[15px] text-gray-500 placeholder:text-gray-400 focus:outline-none"
+            className="h-[65px] w-[407px] rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
           />
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-2 gap-8">
         <div>
-          <label className="mb-2 block font-inter text-[15px] font-bold uppercase tracking-wide text-[#04284F]">
+          <label className="mb-2 block font-inter text-[20px] font-bold text-[#04284F]">
             MOBILE NUMBER
           </label>
           <input
@@ -110,11 +108,11 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
             value={formData.mobileNumber}
             onChange={handleInputChange}
             placeholder="Enter Mobile Num:"
-            className="w-full rounded-[4px] bg-[#F8F8F8] p-3 text-[15px] text-gray-500 placeholder:text-gray-400 focus:outline-none"
+            className="h-[65px] w-[618px] rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
           />
         </div>
         <div>
-          <label className="mb-2 block font-inter text-[15px] font-bold uppercase tracking-wide text-[#04284F]">
+          <label className="mb-2 block font-inter text-[20px] font-bold text-[#04284F]">
             EMAIL ADDRESS
           </label>
           <input
@@ -123,21 +121,39 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
             value={formData.emailAddress}
             onChange={handleInputChange}
             placeholder="Email ID"
-            className="w-full rounded-[4px] bg-[#F8F8F8] p-3 text-[15px] text-gray-500 placeholder:text-gray-400 focus:outline-none"
+            className="h-[65px] w-[618px] rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
           />
         </div>
       </div>
 
-      <div className="mt-4">
-        <label className="flex items-center">
-          <input
-            type="checkbox"
-            name="couplesMembership"
-            checked={formData.couplesMembership}
-            onChange={handleInputChange}
-            className="mr-2 h-4 w-4 rounded border-gray-300 text-[#04284F]"
-          />
-          <span className="text-sm text-gray-600">
+      {/* Security Notice */}
+      <div className="flex h-[148px] w-full items-center justify-center bg-[#04284F] px-8 py-6">
+        <div className="flex flex-col items-center justify-center text-center text-white">
+          <p className="font-inter text-[25px] font-semibold">
+            Your Information is Secure & Private.
+          </p>
+          <p className="font-inter text-[25px] font-semibold">
+            This site is Certified Secure. We never share your information.{' '}
+            <a href="/privacy-policy" className="underline hover:text-white/90">
+              Privacy Policy
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-8 flex">
+        <p className="mb-4 font-inter text-[31px] font-normal text-[#04284F]">Couples Membership</p>
+        <label className="mb-4 flex items-center justify-center">
+          <div className="relative ml-20 mr-4">
+            <input
+              type="checkbox"
+              name="couplesMembership"
+              checked={formData.couplesMembership}
+              onChange={handleInputChange}
+              className="h-8 w-8 appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2] text-[#04284F] checked:border-[#04284F] checked:bg-[#04284F] focus:ring-0"
+            />
+          </div>
+          <span className="font-inter text-[25px] font-normal text-[#04284F]">
             Yes, I would like to add a secondary member at just $60/month
           </span>
         </label>
