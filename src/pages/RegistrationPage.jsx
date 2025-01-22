@@ -1,23 +1,32 @@
 import React, { useState } from 'react';
 import AboutUs from '../components/asset/AboutUsbackground.png';
 import trustedSite from '../components/asset/trustedsite.svg';
-import { PersonalInfoForm } from '../components/auth/register/PersonalInfoForm';
 import { BillingInfoForm } from '../components/auth/register/BillingInfoForm';
-import { PricingPlan } from '../components/auth/register/PricingPlan';
 import { CreditReportSection } from '../components/auth/register/CreditReportSection';
 import { NavigationButtons } from '../components/auth/register/NavigationButtons';
+import { PersonalInfoForm } from '../components/auth/register/PersonalInfoForm';
+import { PricingPlan } from '../components/auth/register/PricingPlan';
 import { ProgressSteps } from '../components/ui/ProgressSteps';
 
 const steps = [
-  { id: 1, title: 'Your Info' },
-  { id: 2, title: 'Billing Info' },
-  { id: 3, title: 'Credit Report' },
+  {
+    id: 1,
+    title: 'Your Info',
+  },
+  {
+    id: 2,
+    title: 'Billing Info',
+  },
+  {
+    id: 3,
+    title: 'Credit Report',
+  },
 ];
 
 export function RegistrationPage() {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
-    // Personal Info
+    // Your Info
     firstName: '',
     lastName: '',
     streetAddress: '',
@@ -99,11 +108,11 @@ export function RegistrationPage() {
         </div>
       </div>
 
-      <main className="container mx-auto my-8 max-w-4xl px-4">
+      <main className="container mx-auto mb-8 mt-16 max-w-4xl px-4">
         <ProgressSteps steps={steps} currentStep={currentStep} />
 
         {/* Form */}
-        <div className="rounded-lg border bg-white p-8 shadow-lg">
+        <div className="bg-white p-8">
           {renderCurrentStep()}
           <PricingPlan />
           <CreditReportSection formData={formData} handleInputChange={handleInputChange} />
@@ -118,6 +127,41 @@ export function RegistrationPage() {
           <div className="mt-4 flex justify-center">
             <img src={trustedSite} alt="Trusted Site" className="h-12" />
           </div>
+
+          {/* Form Fields */}
+          <form className="space-y-6">
+            {/* Form fields will be conditionally rendered based on currentStep */}
+            {currentStep === 1 && (
+              <PersonalInfoForm formData={formData} handleInputChange={handleInputChange} />
+            )}
+            {currentStep === 2 && (
+              <BillingInfoForm formData={formData} handleInputChange={handleInputChange} />
+            )}
+            {currentStep === 3 && (
+              <CreditReportSection formData={formData} handleInputChange={handleInputChange} />
+            )}
+            {/* Navigation Buttons */}
+            <div className="mt-8 flex justify-between">
+              <button
+                type="button"
+                // onClick={handlePrevious}
+                className={`rounded-lg px-6 py-2 font-medium ${
+                  currentStep === 1
+                    ? 'invisible'
+                    : 'border-2 border-[#15549A] text-[#15549A] hover:bg-[#15549A] hover:text-white'
+                }`}
+              >
+                Previous
+              </button>
+              <button
+                type="button"
+                // onClick={handleNext}
+                className="rounded-lg bg-[#15549A] px-6 py-2 font-medium text-white hover:bg-[#15549A]/90"
+              >
+                {currentStep === steps.length ? 'Submit' : 'Next'}
+              </button>
+            </div>
+          </form>
         </div>
       </main>
     </div>

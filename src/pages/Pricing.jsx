@@ -82,7 +82,6 @@ export function Pricing() {
         </div>
       </div>
       <CreditServices />
-      {/* <CreditRepairProcess /> */}
       <LastHeading />
     </div>
   );
