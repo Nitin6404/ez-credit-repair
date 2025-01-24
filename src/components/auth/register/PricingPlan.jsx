@@ -24,14 +24,14 @@ export function PricingPlan() {
             <h2 className="mb-12 font-inter text-[50px] font-bold text-white">Our Plan</h2>
 
             {/* Inner box: 1230x395 with border */}
-            <div className="h-[395px] w-[1230px] rounded-[20px] border border-white bg-[#04284F] p-12">
+            <div className="h-[395px] w-[1230px] bg-[#04284F] p-4">
               {/* Header */}
-              <div className="flex items-start justify-between">
+              <div className="flex h-[360px] w-[1203px] items-start justify-between border-[3px] border-white">
                 <div>
-                  <h3 className="font-inter text-[40px] font-bold text-white">
+                  <h3 className="mb-4 font-inter text-[40px] font-bold text-white">
                     Individual Pricing
                   </h3>
-                  <div className="mt-2 h-0.5 w-[300px] bg-white"></div>
+                  <div className="h-[2px] w-[300px] bg-white"></div>
                 </div>
                 <div>
                   <p className="whitespace-nowrap font-inter text-[80px] font-bold text-white">
@@ -42,11 +42,11 @@ export function PricingPlan() {
               </div>
 
               {/* Features Grid */}
-              <div className="mt-12 grid grid-cols-3 gap-x-8 gap-y-6">
+              <div className="grid grid-cols-4 gap-x-8 gap-y-6">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <div className="h-2.5 w-2.5 shrink-0 rounded-full bg-white opacity-70"></div>
-                    <span className="font-inter text-[20px] text-white">{feature}</span>
+                    <div className="h-2 w-2 shrink-0 rounded-full bg-white opacity-70"></div>
+                    <span className="font-inter text-[16px] text-white">{feature}</span>
                   </div>
                 ))}
               </div>

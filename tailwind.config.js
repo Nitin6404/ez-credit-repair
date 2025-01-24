@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: {
         times: ['"Times New Roman"', 'Times', 'serif'],
-        inter: ['Inter', 'system-ui', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
         montserrat: ['Montserrat', 'system-ui', 'sans-serif'],
         opensans: ['"Open Sans"', 'system-ui', 'sans-serif'],
       },
