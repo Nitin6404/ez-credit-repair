@@ -26,7 +26,7 @@ const steps = [
 export function RegistrationPage() {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
-    // Your Info
+    // Personal Info fields
     firstName: '',
     lastName: '',
     streetAddress: '',
@@ -38,37 +38,28 @@ export function RegistrationPage() {
     emailAddress: '',
     couplesMembership: false,
     acceptTerms: false,
-    // Billing Info
+    // Billing Info fields
     cardNumber: '',
-    expiryDate: '',
+    expDate: '',
     cvv: '',
-    nameOnCard: '',
-    billingAddress: '',
-    billingApt: '',
-    billingCity: '',
-    billingState: '',
-    billingZip: '',
     sameAsPersonal: false,
+    addSecondaryMember: false,
   });
 
-  const handleInputChange = e => {
-    const { name, value, type, checked } = e.target;
+  const handleChange = e => {
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: value,
     }));
+  };
 
-    // If sameAsPersonal is checked, copy personal info to billing info
-    if (name === 'sameAsPersonal' && checked) {
-      setFormData(prev => ({
-        ...prev,
-        billingAddress: prev.streetAddress,
-        billingApt: prev.aptUnit,
-        billingCity: prev.city,
-        billingState: prev.state,
-        billingZip: prev.zipCode,
-      }));
-    }
+  const handleCheckboxChange = e => {
+    const { name, checked } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: checked,
+    }));
   };
 
   const handleContinue = () => {
@@ -79,12 +70,26 @@ export function RegistrationPage() {
     setCurrentStep(prev => prev - 1);
   };
 
-  const renderCurrentStep = () => {
+  const renderStep = () => {
     switch (currentStep) {
       case 1:
-        return <PersonalInfoForm formData={formData} handleInputChange={handleInputChange} />;
+        return (
+          <PersonalInfoForm
+            formData={formData}
+            handleChange={handleChange}
+            handleCheckboxChange={handleCheckboxChange}
+          />
+        );
       case 2:
-        return <BillingInfoForm formData={formData} handleInputChange={handleInputChange} />;
+        return (
+          <BillingInfoForm
+            formData={formData}
+            handleChange={handleChange}
+            handleCheckboxChange={handleCheckboxChange}
+          />
+        );
+      case 3:
+        return <CreditReportSection formData={formData} handleChange={handleChange} />;
       default:
         return null;
     }
@@ -113,57 +118,16 @@ export function RegistrationPage() {
 
         {/* Form */}
         <div className="flex w-full flex-col items-center justify-center bg-white">
-          {renderCurrentStep()}
+          {renderStep()}
           <div className="w-full overflow-hidden">
             <PricingPlan />
           </div>
-          <CreditReportSection formData={formData} handleInputChange={handleInputChange} />
           <NavigationButtons
             currentStep={currentStep}
             totalSteps={steps.length}
             onBack={handleBack}
             onContinue={handleContinue}
           />
-
-          {/* TrustedSite Logo */}
-          <div className="mt-4 flex justify-center">
-            <img src={trustedSite} alt="Trusted Site" className="h-12" />
-          </div>
-
-          {/* Form Fields */}
-          <form className="space-y-6">
-            {/* Form fields will be conditionally rendered based on currentStep */}
-            {currentStep === 1 && (
-              <PersonalInfoForm formData={formData} handleInputChange={handleInputChange} />
-            )}
-            {currentStep === 2 && (
-              <BillingInfoForm formData={formData} handleInputChange={handleInputChange} />
-            )}
-            {currentStep === 3 && (
-              <CreditReportSection formData={formData} handleInputChange={handleInputChange} />
-            )}
-            {/* Navigation Buttons */}
-            <div className="mt-8 flex justify-between">
-              <button
-                type="button"
-                // onClick={handlePrevious}
-                className={`rounded-lg px-6 py-2 font-medium ${
-                  currentStep === 1
-                    ? 'invisible'
-                    : 'border-2 border-[#15549A] text-[#15549A] hover:bg-[#15549A] hover:text-white'
-                }`}
-              >
-                Previous
-              </button>
-              <button
-                type="button"
-                // onClick={handleNext}
-                className="rounded-lg bg-[#15549A] px-6 py-2 font-medium text-white hover:bg-[#15549A]/90"
-              >
-                {currentStep === steps.length ? 'Submit' : 'Next'}
-              </button>
-            </div>
-          </form>
         </div>
       </main>
     </div>

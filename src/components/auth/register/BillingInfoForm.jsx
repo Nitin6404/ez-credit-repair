@@ -1,144 +1,93 @@
 import React from 'react';
 
-export function BillingInfoForm({ formData, handleInputChange }) {
+export const BillingInfoForm = ({ formData, handleChange, handleCheckboxChange }) => {
   return (
-    <div className="space-y-6">
-      <div>
-        <label className="mb-2 block text-sm font-medium uppercase text-gray-700">
-          Card Number
-        </label>
-        <input
-          type="text"
-          name="cardNumber"
-          value={formData.cardNumber}
-          onChange={handleInputChange}
-          className="w-full rounded-lg border border-gray-200 bg-gray-50 p-3 focus:border-[#15549A] focus:outline-none"
-          placeholder="Card Number"
-        />
-      </div>
+    <div className="billing-info-section mx-auto max-w-3xl">
+      {/* Card Details Section */}
+      <div className="card-section mb-8">
+        <h2 className="text-navy-800 mb-6 text-2xl">Your Credit or Debit Card</h2>
 
-      <div className="grid grid-cols-3 gap-6">
-        <div>
-          <label className="mb-2 block text-sm font-medium uppercase text-gray-700">
-            Expiry Date
-          </label>
+        <div className="mb-6">
+          <label className="text-navy-800 mb-2 block">Card Number</label>
           <input
             type="text"
-            name="expiryDate"
-            value={formData.expiryDate}
-            onChange={handleInputChange}
-            className="w-full rounded-lg border border-gray-200 bg-gray-50 p-3 focus:border-[#15549A] focus:outline-none"
-            placeholder="MM/YY"
+            name="cardNumber"
+            value={formData.cardNumber}
+            onChange={handleChange}
+            placeholder="0000-0000-0000-0000"
+            className="w-full rounded border border-gray-300 bg-gray-100 p-4"
           />
         </div>
-        <div>
-          <label className="mb-2 block text-sm font-medium uppercase text-gray-700">CVV</label>
-          <input
-            type="text"
-            name="cvv"
-            value={formData.cvv}
-            onChange={handleInputChange}
-            className="w-full rounded-lg border border-gray-200 bg-gray-50 p-3 focus:border-[#15549A] focus:outline-none"
-            placeholder="CVV"
-          />
-        </div>
-        <div>
-          <label className="mb-2 block text-sm font-medium uppercase text-gray-700">
-            Name on Card
-          </label>
-          <input
-            type="text"
-            name="nameOnCard"
-            value={formData.nameOnCard}
-            onChange={handleInputChange}
-            className="w-full rounded-lg border border-gray-200 bg-gray-50 p-3 focus:border-[#15549A] focus:outline-none"
-            placeholder="Name on Card"
-          />
-        </div>
-      </div>
 
-      <div className="flex items-center space-x-2">
-        <input
-          type="checkbox"
-          name="sameAsPersonal"
-          checked={formData.sameAsPersonal}
-          onChange={handleInputChange}
-          className="h-4 w-4 rounded border-gray-300"
-        />
-        <label className="text-sm text-gray-700">Billing address same as personal address</label>
-      </div>
-
-      {!formData.sameAsPersonal && (
-        <div className="space-y-4">
+        <div className="grid grid-cols-2 gap-6">
           <div>
-            <label className="mb-2 block text-sm font-medium uppercase text-gray-700">
-              Billing Address
-            </label>
+            <label className="text-navy-800 mb-2 block">Exp Date</label>
             <input
               type="text"
-              name="billingAddress"
-              value={formData.billingAddress}
-              onChange={handleInputChange}
-              className="w-full rounded-lg border border-gray-200 bg-gray-50 p-3 focus:border-[#15549A] focus:outline-none"
-              placeholder="Billing Address"
+              name="expDate"
+              value={formData.expDate}
+              onChange={handleChange}
+              placeholder="MM/YY"
+              className="w-full rounded border border-gray-300 bg-gray-100 p-4"
             />
           </div>
-
           <div>
-            <label className="mb-2 block text-sm font-medium uppercase text-gray-700">
-              Apt, Unit, Floor
-            </label>
+            <label className="text-navy-800 mb-2 block">CVV</label>
             <input
               type="text"
-              name="billingApt"
-              value={formData.billingApt}
-              onChange={handleInputChange}
-              className="w-full rounded-lg border border-gray-200 bg-gray-50 p-3 focus:border-[#15549A] focus:outline-none"
-              placeholder="Apt, Unit, Floor"
+              name="cvv"
+              value={formData.cvv}
+              onChange={handleChange}
+              placeholder="000"
+              className="w-full rounded border border-gray-300 bg-gray-100 p-4"
             />
           </div>
-
-          <div className="grid grid-cols-3 gap-6">
-            <div>
-              <label className="mb-2 block text-sm font-medium uppercase text-gray-700">City</label>
-              <input
-                type="text"
-                name="billingCity"
-                value={formData.billingCity}
-                onChange={handleInputChange}
-                className="w-full rounded-lg border border-gray-200 bg-gray-50 p-3 focus:border-[#15549A] focus:outline-none"
-                placeholder="City"
-              />
-            </div>
-            <div>
-              <label className="mb-2 block text-sm font-medium uppercase text-gray-700">
-                State
-              </label>
-              <input
-                type="text"
-                name="billingState"
-                value={formData.billingState}
-                onChange={handleInputChange}
-                className="w-full rounded-lg border border-gray-200 bg-gray-50 p-3 focus:border-[#15549A] focus:outline-none"
-                placeholder="State"
-              />
-            </div>
-            <div>
-              <label className="mb-2 block text-sm font-medium uppercase text-gray-700">
-                Zip Code
-              </label>
-              <input
-                type="text"
-                name="billingZip"
-                value={formData.billingZip}
-                onChange={handleInputChange}
-                className="w-full rounded-lg border border-gray-200 bg-gray-50 p-3 focus:border-[#15549A] focus:outline-none"
-                placeholder="Zip Code"
-              />
-            </div>
-          </div>
         </div>
-      )}
+      </div>
+
+      {/* Billing Address Section */}
+      <div className="billing-address mb-8">
+        <div className="mb-4 flex items-center">
+          <input
+            type="checkbox"
+            id="sameAsPersonal"
+            name="sameAsPersonal"
+            checked={formData.sameAsPersonal}
+            onChange={handleCheckboxChange}
+            className="mr-2 h-5 w-5"
+          />
+          <label htmlFor="sameAsPersonal" className="text-navy-800">
+            Billing address same as personal info
+          </label>
+        </div>
+      </div>
+
+      {/* Pricing Plans */}
+      <div className="pricing-plans space-y-4">
+        <div className="plan-card relative rounded bg-blue-600 p-6 text-white">
+          <div className="text-2xl font-bold">$99.00/per month</div>
+          <div>Individual Pricing Plan</div>
+        </div>
+
+        <div className="plan-card relative rounded bg-blue-600 p-6 text-white">
+          <div className="text-2xl font-bold">$149.00/per month</div>
+          <div>Couples Pricing Plan</div>
+        </div>
+
+        <div className="flex items-center">
+          <input
+            type="checkbox"
+            id="addSecondaryMember"
+            name="addSecondaryMember"
+            checked={formData.addSecondaryMember}
+            onChange={handleCheckboxChange}
+            className="mr-2 h-5 w-5"
+          />
+          <label htmlFor="addSecondaryMember" className="text-navy-800">
+            Yes, I would like to add a secondary member
+          </label>
+        </div>
+      </div>
     </div>
   );
-}
+};
