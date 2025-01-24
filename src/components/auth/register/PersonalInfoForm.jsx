@@ -2,7 +2,7 @@ import React from 'react';
 
 export function PersonalInfoForm({ formData, handleInputChange }) {
   return (
-    <div className="h-[802px] w-[1272px] space-y-6 px-4">
+    <div className="mb-20 h-[802px] w-[1272px] space-y-6 px-4">
       <div className="grid grid-cols-2 gap-8">
         <div>
           <label className="mb-2 block font-inter text-[20px] font-bold text-[#04284F]">
