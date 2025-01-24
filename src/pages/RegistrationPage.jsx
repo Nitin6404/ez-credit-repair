@@ -74,11 +74,17 @@ export function RegistrationPage() {
     switch (currentStep) {
       case 1:
         return (
-          <PersonalInfoForm
-            formData={formData}
-            handleChange={handleChange}
-            handleCheckboxChange={handleCheckboxChange}
-          />
+          <>
+            <PersonalInfoForm
+              formData={formData}
+              handleChange={handleChange}
+              handleCheckboxChange={handleCheckboxChange}
+            />
+
+            <div className="w-full overflow-hidden">
+              <PricingPlan />
+            </div>
+          </>
         );
       case 2:
         return (
@@ -119,9 +125,6 @@ export function RegistrationPage() {
         {/* Form */}
         <div className="flex w-full flex-col items-center justify-center bg-white">
           {renderStep()}
-          <div className="w-full overflow-hidden">
-            <PricingPlan />
-          </div>
           <NavigationButtons
             currentStep={currentStep}
             totalSteps={steps.length}
