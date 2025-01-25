@@ -25,6 +25,7 @@ const steps = [
 
 export function RegistrationPage() {
   const [currentStep, setCurrentStep] = useState(1);
+  const [showingContract, setShowingContract] = useState(false);
   const [formData, setFormData] = useState({
     // Personal Info fields
     firstName: '',
@@ -63,11 +64,30 @@ export function RegistrationPage() {
   };
 
   const handleContinue = () => {
-    setCurrentStep(prev => prev + 1);
+    // Validate current step before proceeding
+    if (currentStep === 1) {
+      // Validate personal info
+      if (!formData.firstName || !formData.lastName /* add other required fields */) {
+        alert('Please fill in all required fields');
+        return;
+      }
+    } else if (currentStep === 2) {
+      // Validate billing info
+      if (!formData.cardNumber || !formData.expDate || !formData.cvv) {
+        alert('Please fill in all required payment information');
+        return;
+      }
+    }
+
+    if (currentStep < steps.length) {
+      setCurrentStep(prev => prev + 1);
+    }
   };
 
   const handleBack = () => {
-    setCurrentStep(prev => prev - 1);
+    if (currentStep > 1) {
+      setCurrentStep(prev => prev - 1);
+    }
   };
 
   const renderStep = () => {
@@ -92,6 +112,7 @@ export function RegistrationPage() {
             formData={formData}
             handleChange={handleChange}
             handleCheckboxChange={handleCheckboxChange}
+            onShowContractChange={isShowing => setShowingContract(isShowing)}
           />
         );
       case 3:
@@ -125,12 +146,14 @@ export function RegistrationPage() {
         {/* Form */}
         <div className="flex w-full flex-col items-center justify-center bg-white">
           {renderStep()}
-          <NavigationButtons
-            currentStep={currentStep}
-            totalSteps={steps.length}
-            onBack={handleBack}
-            onContinue={handleContinue}
-          />
+          {!(currentStep === 2 && showingContract) && (
+            <NavigationButtons
+              currentStep={currentStep}
+              totalSteps={steps.length}
+              onBack={handleBack}
+              onContinue={handleContinue}
+            />
+          )}
         </div>
       </main>
     </div>

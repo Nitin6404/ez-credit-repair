@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function PersonalInfoForm({ formData, handleInputChange }) {
+export function PersonalInfoForm({ formData, handleChange }) {
   return (
     <div className="mb-20 h-[802px] w-[1272px] space-y-6 px-4">
       <div className="grid grid-cols-2 gap-8">
@@ -12,7 +12,7 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
             type="text"
             name="firstName"
             value={formData.firstName}
-            onChange={handleInputChange}
+            onChange={handleChange}
             placeholder="First name"
             className="h-[65px] w-[618px] rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
           />
@@ -25,7 +25,7 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
             type="text"
             name="lastName"
             value={formData.lastName}
-            onChange={handleInputChange}
+            onChange={handleChange}
             placeholder="Last Name"
             className="h-[65px] w-[618px] rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
           />
@@ -40,7 +40,7 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
           type="text"
           name="streetAddress"
           value={formData.streetAddress}
-          onChange={handleInputChange}
+          onChange={handleChange}
           placeholder="Street Address"
           className="h-[65px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
         />
@@ -51,7 +51,7 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
           type="text"
           name="aptUnit"
           value={formData.aptUnit}
-          onChange={handleInputChange}
+          onChange={handleChange}
           placeholder="Apt. Unit, Floor, Ect"
           className="h-[65px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
         />
@@ -64,7 +64,7 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
             type="text"
             name="city"
             value={formData.city}
-            onChange={handleInputChange}
+            onChange={handleChange}
             placeholder="Select City"
             className="h-[65px] w-[407px] rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
           />
@@ -77,7 +77,7 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
             type="text"
             name="state"
             value={formData.state}
-            onChange={handleInputChange}
+            onChange={handleChange}
             placeholder="Select State"
             className="h-[65px] w-[407px] rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
           />
@@ -90,7 +90,7 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
             type="text"
             name="zipCode"
             value={formData.zipCode}
-            onChange={handleInputChange}
+            onChange={handleChange}
             placeholder="Zip Code"
             className="h-[65px] w-[407px] rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
           />
@@ -106,7 +106,7 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
             type="tel"
             name="mobileNumber"
             value={formData.mobileNumber}
-            onChange={handleInputChange}
+            onChange={handleChange}
             placeholder="Enter Mobile Num:"
             className="h-[65px] w-[618px] rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
           />
@@ -119,7 +119,7 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
             type="email"
             name="emailAddress"
             value={formData.emailAddress}
-            onChange={handleInputChange}
+            onChange={handleChange}
             placeholder="Email ID"
             className="h-[65px] w-[618px] rounded-xl bg-[#F2F2F2] px-4 font-inter text-[20px] font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none"
           />
@@ -149,7 +149,7 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
               type="checkbox"
               name="couplesMembership"
               checked={formData.couplesMembership}
-              onChange={handleInputChange}
+              onChange={handleChange}
               className="h-8 w-8 appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2] text-[#04284F] checked:border-[#04284F] checked:bg-[#04284F] focus:ring-0"
             />
           </div>
