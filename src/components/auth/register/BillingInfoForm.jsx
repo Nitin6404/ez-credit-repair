@@ -18,27 +18,28 @@ export const BillingInfoForm = ({
   };
 
   return (
-    <div className="billing-info-section mx-auto w-full max-w-7xl px-4 font-inter sm:w-[1260px]">
+    <div className="billing-info-section mx-auto w-[1260px] max-w-7xl font-inter">
       {showContract ? (
         // Contract
         <div className="flex items-center justify-center">
-          <div className="relative w-full border-2 border-[#04284F] bg-white p-3 sm:border-4 sm:p-6">
+          <div className="relative w-full border-4 border-[#04284F] bg-white p-6">
             {/* Close Button */}
+
             <button
               onClick={handleContractClose}
-              className="absolute -right-4 -top-4 h-12 w-12 rounded-full bg-[#04284F] text-center font-montserrat text-2xl font-bold text-white sm:-right-8 sm:-top-8 sm:h-16 sm:w-16 sm:text-[40px]"
+              className="absolute -right-8 -top-8 h-16 w-16 rounded-full bg-[#04284F] text-center font-montserrat text-[40px] font-bold text-white"
             >
               X
             </button>
 
             {/* Contract Content */}
             <div className="">
-              <h2 className="mb-4 bg-[#15549A] p-2 text-xl font-bold text-white sm:p-4 sm:text-[32px]">
+              <h2 className="mb-4 bg-[#15549A] p-4 text-[32px] font-bold text-white">
                 Credit Repair Contract, Electronic Signature, & Limited Power of Attorney
               </h2>
 
-              <div className="space-y-3 text-[#04284F] sm:space-y-4">
-                <p className="text-base font-normal sm:text-lg">
+              <div className="space-y-4 text-[#04284F]">
+                <p className="text-lg font-normal">
                   Agreement Overview: You have engaged EzeCredit Repair ("EzeCredit") to provide
                   credit bureau dispute management services and credit score evaluation. This is a
                   month-to-month agreement with no long-term obligation. Services are billed
@@ -46,10 +47,10 @@ export const BillingInfoForm = ({
                   cancel at any time without further obligation or charges.
                 </p>
 
-                <h3 className="text-xl font-bold sm:text-2xl">
+                <h3 className="text-2xl font-bold">
                   Terms of Service In consideration of EzeCredit's services, you agree to:
                 </h3>
-                <ol className="list-decimal pl-4 text-lg font-bold sm:pl-6 sm:text-xl">
+                <ol className="list-decimal pl-6 text-xl font-bold">
                   <li>
                     Provide Credit Reports:{' '}
                     <p className="inline font-normal">
@@ -97,8 +98,8 @@ export const BillingInfoForm = ({
                   </li>
                 </ol>
 
-                <h3 className="text-xl font-extrabold sm:text-2xl">Service Details</h3>
-                <ol className="list-decimal pl-4 text-lg font-bold sm:pl-6 sm:text-xl">
+                <h3 className="text-2xl font-extrabold">Service Details</h3>
+                <ol className="list-decimal pl-6 text-xl font-bold">
                   <li>
                     Initial Review and First Work:{' '}
                     <p className="inline font-normal">
@@ -132,9 +133,9 @@ export const BillingInfoForm = ({
                 </ol>
 
                 {/* 90-Day Satisfaction Guarantee Box */}
-                <div className="my-4 w-full bg-[#15549A] p-2 sm:my-6">
-                  <div className="border-2 border-white bg-[#15549A] p-3 sm:border-4 sm:p-6">
-                    <p className="text-center text-base font-bold leading-tight text-white sm:text-[22px]">
+                <div className="my-6 w-full bg-[#15549A] p-2">
+                  <div className="border-4 border-white bg-[#15549A] p-6">
+                    <p className="text-center text-[22px] font-bold leading-tight text-white">
                       90-Day Satisfaction Guarantee If you are unsatisfied, notify EzeCredit within
                       90 days of enrollment for a refund. This guarantee applies only to services
                       rendered within the first 90 days and does not guarantee specific outcomes.
@@ -143,8 +144,8 @@ export const BillingInfoForm = ({
                   </div>
                 </div>
 
-                <h3 className="text-xl font-extrabold sm:text-2xl">State-Specific Disclosures</h3>
-                <ol className="list-decimal pl-4 text-lg font-bold sm:pl-6 sm:text-xl">
+                <h3 className="text-2xl font-extrabold">State-Specific Disclosures</h3>
+                <ol className="list-decimal pl-6 text-xl font-bold">
                   <li>
                     California:
                     <ul className="list-disc pl-8 font-normal">
@@ -170,9 +171,9 @@ export const BillingInfoForm = ({
                 </ol>
 
                 {/* Cancellation Policy Box */}
-                <div className="my-4 w-full bg-[#15549A] p-2 sm:my-6">
-                  <div className="border-2 border-white bg-[#15549A] p-3 sm:border-4 sm:p-6">
-                    <p className="text-center text-base font-bold leading-tight text-white sm:text-[22px]">
+                <div className="my-6 w-full bg-[#15549A] p-2">
+                  <div className="border-4 border-white bg-[#15549A] p-6">
+                    <p className="text-center text-[22px] font-bold leading-tight text-white">
                       Cancellation Policy You may cancel this agreement at any time without penalty
                       or restriction by notifying EzeCredit. You may also exercise your statutory
                       right to cancel before midnight of the fifth working day after signing this
@@ -182,11 +183,11 @@ export const BillingInfoForm = ({
                   </div>
                 </div>
 
-                <h3 className="text-lg font-bold sm:text-xl">
+                <h3 className="text-xl font-bold">
                   Electronic Signature & Limited Power of Attorney By checking the designated box on
                   our application form, you:
                 </h3>
-                <ol className="list-decimal pl-4 text-lg font-bold sm:pl-6 sm:text-xl">
+                <ol className="list-decimal pl-6 text-xl font-bold">
                   <li>
                     <p className="font-normal">Certify that you are at least 19 years old.</p>
                   </li>
@@ -210,10 +211,10 @@ export const BillingInfoForm = ({
                   </li>
                 </ol>
 
-                <h3 className="text-xl font-extrabold text-[#F40123] sm:text-2xl">
+                <h3 className="text-2xl font-extrabold text-[#F40123]">
                   Important Consumer Notices
                 </h3>
-                <ol className="list-decimal pl-4 text-lg font-bold sm:pl-6 sm:text-xl">
+                <ol className="list-decimal pl-6 text-xl font-bold">
                   <li>
                     Credit Report Access:{' '}
                     <span className="font-normal">Obtain a free annual credit report at </span>
@@ -254,6 +255,63 @@ export const BillingInfoForm = ({
                     </ul>
                   </li>
                 </ol>
+
+                <h3 className="mt-8 text-xl font-bold">Contact Information EzeCredit Repair:</h3>
+                <p className="mb-4 text-xl font-bold">
+                  _______________________ uthorized Agents for Service of Process:
+                </p>
+                <ol className="list-decimal pl-6 text-xl font-bold">
+                  <li>
+                    California:{' '}
+                    <p className="inline font-normal">
+                      Jay Rockey PC, 23586 Calabasas Road, Suite 200, Calabasas, CA 91302.
+                    </p>
+                  </li>
+                  <li>
+                    Pennsylvania:{' '}
+                    <p className="inline font-normal">
+                      Registered Agent, 502 W 7th St, Ste 100, Erie, PA 16502.
+                    </p>
+                  </li>
+                  <li>
+                    Virginia:{' '}
+                    <p className="inline font-normal">
+                      Registered Agents Inc., 4445 Corporation Ln, Ste 264, Virginia Beach, VA
+                      23462.
+                    </p>
+                  </li>
+                </ol>
+
+                <div className="pt-6">
+                  <h3 className="text-2xl font-bold text-[#F40123]">Notice of Cancellation</h3>
+                  <div className="text-[19px] font-bold">
+                    <p>
+                      You may cancel this contract without penalty before midnight of the fifth
+                      working day after signing.
+                    </p>
+                    <p>
+                      Submit a signed, dated cancellation notice to EzeCredit Repair at _____ within
+                      this period. Refunds will be processed within 10 days of receipt.
+                    </p>
+
+                    <div className="mt-4 flex space-x-2">
+                      <div className="flex gap-4">
+                        <span className="font-bold">Date: ____________________________</span>
+                      </div>
+                      <div className="flex gap-4">
+                        <span className="font-bold">Signature: _____________________________</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-24 flex h-[103.66px] w-full items-center justify-center bg-[#46CC02]">
+                <p className="text-center text-xl font-bold text-white">
+                  Acknowledgment By signing or electronically acknowledging this agreement,
+                  <br />
+                  you affirm understanding and acceptance of its terms and conditions.
+                </p>
               </div>
             </div>
           </div>

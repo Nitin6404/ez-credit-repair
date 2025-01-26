@@ -132,21 +132,19 @@ export function RegistrationPage() {
           className="absolute inset-0 mt-[30px] h-full w-full object-cover opacity-100"
         />
         <div className="relative flex h-[130px] items-center p-2 text-white">
-          <div className="ml-2 mt-[50px] flex max-w-screen-lg font-inter text-lg font-bold leading-7 sm:ml-[80px] sm:text-2xl">
-            <span className="ml-2 sm:ml-10">Home</span>
+          <div className="ml-[80px] mt-[50px] flex max-w-screen-lg font-inter text-2xl font-bold leading-7">
+            <span className="ml-10">Home</span>
             <span className="mx-1">|</span>
             <span>Registration</span>
           </div>
         </div>
       </div>
 
-      <main className="mb-4 mt-8 flex w-full flex-1 flex-col items-center justify-center gap-4 px-2 sm:mb-8 sm:mt-16 sm:px-4">
-        <div className="w-full max-w-[95%] sm:max-w-none">
-          <ProgressSteps steps={steps} currentStep={currentStep} />
-        </div>
+      <main className="mb-8 mt-16 flex w-full flex-1 flex-col items-center justify-center gap-4 px-4">
+        <ProgressSteps steps={steps} currentStep={currentStep} />
 
         {/* Form */}
-        <div className="flex w-full max-w-[95%] flex-col items-center justify-center bg-white sm:max-w-none">
+        <div className="flex w-full flex-col items-center justify-center bg-white">
           {renderStep()}
           {!(currentStep === 2 && showingContract) && (
             <NavigationButtons
