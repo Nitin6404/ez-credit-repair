@@ -11,7 +11,7 @@ import { HeroSection } from '../components/home/HeroSection';
 export function Home() {
   return (
     <div className="w-full overflow-x-hidden">
-      <div className="relative mx-auto max-w-[1440px]">
+      <div className="relative">
         <HeroSection />
         <GetStartedSection />
         <AboutSection />
