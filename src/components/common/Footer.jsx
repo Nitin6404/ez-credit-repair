@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+
 import layer191 from '../asset/Layer191.png';
 import credit0 from '../asset/logo.png';
 import mail from '../asset/mailfooter.png';
@@ -57,16 +58,18 @@ const NavigationLink = ({ path, label, isActive }) => (
 );
 
 const ContactSection = ({ icon, title, children }) => (
-  <div className="mb-4 flex items-center space-x-2 md:mb-0">
+  <div className="mb-4 flex flex-col items-center md:flex-row md:items-center md:space-x-2">
     <div className="flex items-center">
       <img
         src={icon}
         alt={`${title} Icon`}
-        className={icon === mail ? 'ml-[150px] h-[74px] w-[67px]' : 'h-[81px] w-[56px]'}
+        className={`${icon === mail ? 'h-[50px] w-[45px] md:ml-[150px] md:h-[74px] md:w-[67px]' : 'h-[50px] w-[40px] md:h-[81px] md:w-[56px]'}`}
       />
     </div>
-    <div>
-      <h3 className="font-montserrat text-[25px] font-bold leading-[30px]">{title}</h3>
+    <div className="text-center md:text-left">
+      <h3 className="font-montserrat text-[20px] font-bold leading-[30px] md:text-[25px]">
+        {title}
+      </h3>
       {children}
     </div>
   </div>
@@ -77,16 +80,16 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* Top Info Bar */}
       <div className="mb-[0px] mt-[40px] border-y bg-[#15549A] py-4 text-white">
-        <div className="container mx-auto flex flex-col items-center justify-between px-4 md:flex-row">
+        <div className="container mx-auto flex flex-col items-center px-4 md:flex-row md:justify-between">
           {/* Logo */}
           <div className="mb-4 flex items-center md:mb-0">
             <img
               src={credit0}
               alt="Eze Credit Repair Logo"
-              className="ml-[70px] h-[79px] w-[135px]"
+              className="h-[60px] w-[100px] md:ml-[70px] md:h-[79px] md:w-[135px]"
             />
           </div>
 
@@ -114,13 +117,13 @@ export function Footer() {
 
       {/* Main Footer */}
       <footer className="bg-[#15549a] py-[2px] text-white">
-        <div className="container mx-auto grid px-[0px] xl:grid-cols-3">
+        <div className="container mx-auto grid gap-8 px-4 md:grid-cols-1 lg:grid-cols-3">
           {/* Company Info */}
-          <div className="mt-[1px]">
-            <h2 className="font-montserrat text-[31px] font-bold leading-[88px]">
+          <div className="mt-[1px] hidden lg:block">
+            <h2 className="text-left font-montserrat text-[25px] font-bold leading-normal md:text-left md:text-[31px] md:leading-[88px] lg:text-center">
               EzeCreditRepair LLC.
             </h2>
-            <p className="mr-[50px] mt-2 font-montserrat text-[20px] font-[700] leading-[25px]">
+            <p className="mt-2 text-left font-montserrat text-[16px] font-[700] leading-[25px] md:text-left md:text-[20px] lg:text-center">
               EzeCredit Repair is your trusted guide to better credit, ensuring you're ready for
               every opportunity that comes your way. As the A-Team of credit repair, our fast-track
               process improves your credit for better rates, loans, and peace of mind.
@@ -128,14 +131,14 @@ export function Footer() {
           </div>
 
           {/* Navigation Section */}
-          <div className="relative border-x border-solid p-3">
-            <h3 className="mt-[10px] p-3 font-montserrat text-[31px] font-bold leading-[28px]">
+          <div className="relative border-y border-solid p-3 md:border-x md:border-y-0">
+            <h3 className="mt-[10px] p-3 text-left font-montserrat text-[25px] font-bold leading-[28px] md:text-left md:text-[31px] lg:text-center">
               Short Link
             </h3>
-            <div className="flex px-4">
+            <div className="flex flex-col px-4 md:flex-row">
               {/* Main Navigation */}
-              <div className="w-1/2">
-                <ul className="mt-[5px] space-y-1 font-montserrat">
+              <div className="w-full md:w-1/2">
+                <ul className="mt-[5px] space-y-1 text-left font-montserrat md:text-left lg:text-center">
                   {navigationLinks.map(link => (
                     <NavigationLink
                       key={link.path}
@@ -148,8 +151,8 @@ export function Footer() {
               </div>
 
               {/* Right-Aligned Links */}
-              <div className="w-1/2">
-                <ul className="mt-[5px] space-y-1 font-montserrat">
+              <div className="mt-2 w-full md:mt-[5px] md:w-1/2 lg:mt-4">
+                <ul className="space-y-1 text-left font-montserrat md:text-left lg:text-center">
                   {rightAlignedLinks.map(link => (
                     <NavigationLink
                       key={link.path}
@@ -164,19 +167,21 @@ export function Footer() {
           </div>
 
           {/* Newsletter and Social */}
-          <div className="ml-[20px] mt-[30px]">
-            <h3 className="font-montserrat text-[31px] font-bold leading-[38px]">Follow us</h3>
-            <div className="mt-4 flex flex-col space-y-2">
+          <div className="mt-[30px] px-4 md:ml-[20px] md:px-0">
+            <h3 className="text-left font-montserrat text-[25px] font-bold leading-[38px] md:text-left md:text-[31px] lg:text-center">
+              Follow us
+            </h3>
+            <div className="mt-4 flex flex-col items-center space-y-2 md:items-start">
               <input
                 type="email"
                 placeholder="Email address"
-                className="h-[50px] w-[348px] border-none bg-[#4476AE] px-4 py-2 font-montserrat text-[16px] font-bold leading-[20px] text-white placeholder-white"
+                className="h-[50px] w-full max-w-[348px] border-none bg-[#4476AE] px-4 py-2 font-montserrat text-[16px] font-bold leading-[20px] text-white placeholder-white"
               />
-              <button className="h-[50px] w-[348px] bg-[#46CC02] px-4 py-2 text-left font-montserrat text-[16px] font-[700] leading-[20px] text-white">
+              <button className="h-[50px] w-full max-w-[348px] bg-[#46CC02] px-4 py-2 text-center font-montserrat text-[16px] font-[700] leading-[20px] text-white md:text-left">
                 Subscribe Now
               </button>
             </div>
-            <div className="mt-4 flex space-x-4">
+            <div className="mt-4 flex justify-center md:justify-start">
               <img
                 src={layer191}
                 alt="Social Media Icons"
@@ -187,7 +192,7 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mb-[-5px] h-[50px] bg-[#46CC02] py-4 text-center font-inter text-[16px] font-bold leading-[20px] text-white">
+        <div className="h-[50px] bg-[#46CC02] py-4 text-center font-inter text-[14px] font-bold leading-[20px] text-white md:text-[16px]">
           All {currentYear} Copyrights Reserved by EzeCreditRepair.com
         </div>
       </footer>

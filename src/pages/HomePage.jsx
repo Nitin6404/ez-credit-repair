@@ -10,16 +10,18 @@ import { HeroSection } from '../components/home/HeroSection';
 
 export function Home() {
   return (
-    <>
-      <HeroSection />
-      <GetStartedSection />
-      <AboutSection />
-      <WhatWeDoSection />
-      <FAQSection />
-      <Contactform />
-      <Program />
-      <Testimonial />
-      <NewsAndBlog />
-    </>
+    <div className="w-full overflow-x-hidden">
+      <div className="relative mx-auto max-w-[1440px]">
+        <HeroSection />
+        <GetStartedSection />
+        <AboutSection />
+        <WhatWeDoSection />
+        <FAQSection />
+        <Contactform />
+        <Program />
+        <Testimonial />
+        <NewsAndBlog />
+      </div>
+    </div>
   );
 }
