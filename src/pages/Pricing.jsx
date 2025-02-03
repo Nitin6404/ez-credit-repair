@@ -12,62 +12,59 @@ export function Pricing() {
         <img
           src={AboutUs}
           alt="About Us Background"
-          className="absolute inset-0 mt-8 h-full w-full object-cover opacity-100"
+          className="absolute inset-0 mt-[30px] h-full w-full object-cover opacity-100"
         />
 
         {/* Inner Div with Background Image */}
-        <div className="relative flex h-32 items-center p-2 text-white">
-          <div className="ml-20 mt-12 flex max-w-screen-lg font-inter text-2xl font-bold leading-7">
-            <span>Home</span>
+        <div className="relative flex h-[130px] items-center p-2 text-white">
+          <div className="ml-[80px] mt-[50px] flex max-w-screen-lg font-inter text-2xl font-bold leading-7">
+            <span className="ml-10">Home</span>
             <span className="mx-1">|</span>
-            <span className="flex w-full items-center justify-center md:ml-3 md:w-auto">
-              Pricing
-            </span>
+            <span>Pricing</span>
           </div>
         </div>
       </div>
-      <div className="mx-4 mb-10 mt-20 flex justify-center text-center md:mx-16">
-        <div className="w-full max-w-5xl text-start font-inter text-2xl font-semibold leading-7">
-          <h1 className="font-inter text-3xl font-bold text-[#15549A] md:text-5xl">
+      <div className="mx-16 mb-10 mt-20 flex justify-center text-center">
+        <div className="w-[1300px] text-start font-inter text-2xl font-semibold leading-7">
+          <h1 className="font-inter text-5xl font-bold text-[#15549A]">
             We only have 1 plan – A Comprehensive Service Plan
           </h1>
-          <h4 className="font-inter text-lg font-medium text-[#173455] md:text-[22px]">
+          <h4 className="font-inter text-[22px] font-medium text-[#173455]">
             We are committed to providing you with the full support you need. When you come to us,
-            we understand that you're <br className="hidden md:block" /> seeking the best possible
-            assistance. That’s why we never hold back we strive to ensure your satisfaction every
-            step <br className="hidden md:block" /> of the way.
+            we understand that you're <br /> seeking the best possible assistance. That’s why we
+            never hold back we strive to ensure your satisfaction every step <br /> of the way.
           </h4>
-          <h2 className="font-inter text-xl font-bold text-[#04284F] md:text-3xl">
+          <h2 className="font-inter text-3xl font-bold text-[#04284F]">
             Comprehensive Plan: $99/mo
           </h2>
         </div>
       </div>
-      <div className="flex h-auto w-full items-center justify-center bg-[url('/src/components/asset/pricingBg.svg')] bg-cover bg-center py-10 md:h-[535px]">
+      <div className="flex h-[535px] w-full items-center justify-center bg-[url('/src/components/asset/pricingBg.svg')]">
         <div className="flex flex-col items-center text-center font-inter">
-          <div className="w-full text-2xl font-bold leading-[35px] text-white md:text-[40px] md:leading-[55px]">
+          <div className="w-full text-[40px] font-bold leading-[55px] text-white">
             <p>How Much Does</p>
             <p>EzeCredit Repair Cost</p>
             <p>($99/mo)</p>
           </div>
           <div className="my-4">
-            <div className="text-lg font-normal leading-7 text-white md:text-[29px] md:leading-9">
+            <div className="text-[29px] font-normal leading-9 text-white">
               Find a solution that works for you
             </div>
           </div>
-          <div className="mt-1 flex w-full items-center justify-center px-4 md:px-10">
-            <button className="rounded-xl bg-[#46CC02] px-4 py-2 text-lg font-extrabold text-white md:text-2xl">
+          <div className="mt-1 flex w-full items-center justify-center px-10">
+            <button className="rounded-xl bg-[#46CC02] px-4 py-2 text-2xl font-extrabold text-white">
               GET STARTED
             </button>
           </div>
         </div>
       </div>
-      <div className="relative mx-auto mt-10 w-full max-w-5xl overflow-visible bg-white px-4 md:px-0">
-        <div className="flex flex-col items-start justify-between md:flex-row md:px-3">
-          <div className="max-w-full md:max-w-3xl">
-            <h2 className="mb-8 font-inter text-3xl font-bold leading-[40px] text-[#15549A] md:text-[50px] md:leading-[60px]">
+      <div className="relative mx-auto mt-10 w-full max-w-[1300px] overflow-visible bg-white">
+        <div className="flex items-start justify-between px-3">
+          <div className="max-w-[900px]">
+            <h2 className="mb-8 font-inter text-[50px] font-bold leading-[60px] text-[#15549A]">
               At EzeCredit Repair, Transparency and Results Are Our Priority
             </h2>
-            <p className="w-full font-inter text-lg font-normal leading-7 text-[#173455] md:w-[740px] md:text-[22px] md:leading-[32px]">
+            <p className="w-[740px] font-inter text-[22px] font-normal leading-[32px] text-[#173455]">
               We don't believe in confusing monthly plans or piling on extra fees. Instead, we
               provide every client with the same dedicated approach and unwavering effort. Our team
               works quickly and efficiently to deliver tangible improvements to your credit score
@@ -75,7 +72,7 @@ export function Pricing() {
               results you can trust.
             </p>
           </div>
-          <div className="relative mt-16 h-72 w-full md:mt-0 md:h-[485px] md:w-[304px]">
+          <div className="relative h-[485px] w-[304px]">
             <img
               src={pricingBoiWithTransparency}
               alt="Pricing Representative"
@@ -93,10 +90,10 @@ export function Pricing() {
 function LastHeading() {
   return (
     <div className="-mb-8 flex w-full items-center justify-center bg-[#46CC02] font-inter font-bold">
-      <div className="mx-4 my-16 md:mx-20">
-        <div className="heading-9 text-center text-xl text-white md:px-56 md:text-3xl">
-          With our fast and efficient process, we guarantee <br className="hidden md:block" />{' '}
-          results and a clearer path to financial freedom.
+      <div className="mx-20 my-16">
+        <div className="heading-9 px-56 text-center text-3xl text-white">
+          With our fast and efficient process, we guarantee <br /> results and a clearer path to
+          financial freedom.
         </div>
       </div>
     </div>
@@ -146,41 +143,38 @@ function CreditRepairProcess() {
   ];
 
   return (
-    <div className="mx-4 my-10 md:mx-28">
-      <p className="mb-8 text-center text-3xl font-normal leading-[40px] text-[#15549A] md:text-5xl md:leading-[60px]">
+    <div className="mx-28 my-10">
+      <p className="mb-8 text-center text-5xl font-normal leading-[60px] text-[#15549A]">
         EzeCredit Repair Service Recap
       </p>
       <div className="space-y-8">
         {steps.map((step, index) => (
           <div key={index} className="rounded-b-2xl bg-[#ECF6FF]">
-            <div className="flex w-full flex-col items-start justify-start space-y-2 bg-[#15549A] px-2 py-2 font-inter text-xl leading-7 md:flex-row md:items-center md:space-x-5 md:space-y-0 md:text-3xl md:leading-9">
+            <div className="flex w-full items-center justify-start space-x-5 bg-[#15549A] px-2 py-2 font-inter text-3xl leading-9">
               <div className="rounded-tl-[30px] bg-white px-3 py-2 font-bold text-[#15549A]">
                 Step {index + 1}
               </div>
               <div className="font-normal text-white">{step.title}</div>
             </div>
-            <div className="px-4 py-5 md:px-10">
+            <div className="px-10 py-5">
               <ul className="list-none space-y-3">
                 {step.description.map((desc, idx) => (
-                  <li
-                    key={idx}
-                    className="flex h-full items-start text-base text-[#555] md:text-lg"
-                  >
+                  <li key={idx} className="flex h-full items-start text-lg text-[#555]">
                     <img
                       src={pricingPageCircleBlue}
                       alt="Bullet"
-                      width={30}
-                      height={30}
-                      className="mr-2 md:mr-4 md:h-[47px] md:w-[47px]"
+                      width={47}
+                      height={47}
+                      className="mr-2"
                     />
                     <img
                       src={pricingPageAero}
                       alt="Arrow"
-                      width={15}
-                      height={18}
-                      className="absolute ml-2 mt-2 md:ml-3.5 md:mt-3"
+                      width={22}
+                      height={27}
+                      className="absolute ml-3.5 mt-3"
                     />
-                    <div className="flex h-full w-full items-center text-lg leading-7 text-[#1C2228] md:text-2xl md:leading-7 lg:mt-2">
+                    <div className="flex h-full w-full items-center text-2xl leading-7 text-[#1C2228] lg:mt-2">
                       {desc}
                     </div>
                   </li>

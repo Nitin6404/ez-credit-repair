@@ -42,11 +42,9 @@ function AboutHeader() {
       />
       <div className="relative flex h-[130px] items-center p-2 text-white">
         <div className="ml-[80px] mt-[50px] flex max-w-screen-lg font-inter text-2xl font-bold leading-7">
-          <span className="">Home</span>
+          <span className="ml-10">Home</span>
           <span className="mx-1">|</span>
-          <span className="flex w-full items-center justify-center md:ml-3 md:w-auto">
-            About Us
-          </span>
+          <span>About Us</span>
         </div>
       </div>
     </div>
@@ -56,7 +54,7 @@ function AboutHeader() {
 // Introduction section component
 function IntroSection() {
   return (
-    <div className="mt-[80px] flex w-full max-w-[1300px] flex-col items-center justify-center px-4 text-center">
+    <div className="mt-[80px] flex w-[1300px] flex-col items-center justify-center text-center">
       <p className="w-full font-inter text-[22px] font-normal leading-7 text-[#434343]">
         For the past 15 years, we've been dedicated to helping thousands of individuals repair their
         credit and reclaim{' '}
@@ -80,7 +78,7 @@ function ProgramCard({ number, title, image, description, nestedImage }) {
   return (
     <div className="mb-4 hover:shadow-lg">
       {/* Header */}
-      <div className="h-[56.48px] w-full max-w-[407px] bg-[#46CC02] text-white">
+      <div className="h-[56.48px] w-[407px] bg-[#46CC02] text-white">
         <div className="flex items-center p-2">
           <div className="mr-3 flex h-11 w-11 items-center justify-center rounded-lg bg-white font-montserrat text-[25px] font-bold leading-[30px] text-[#15549A]">
             {number.padStart(2, '0')}
@@ -110,9 +108,9 @@ function ProgramCard({ number, title, image, description, nestedImage }) {
 // Program section with cards and details
 function ProgramSection() {
   return (
-    <div className="mt-12 flex w-full max-w-[1300px] flex-col gap-8 px-4 lg:flex-row">
+    <div className="mt-12 flex w-[1300px] gap-8">
       {/* Left side - Program Cards */}
-      <div className="flex w-full flex-col lg:w-[407px]">
+      <div className="flex w-[407px] flex-col">
         {programCards.map(card => (
           <ProgramCard key={card.number} {...card} />
         ))}
@@ -120,7 +118,7 @@ function ProgramSection() {
 
       {/* Right side - Details with Image */}
       <div className="flex-1">
-        <div className="relative h-[672px] w-full max-w-[837px] overflow-hidden rounded-lg">
+        <div className="relative h-[672px] w-[837px] overflow-hidden rounded-lg">
           {/* Background Image */}
           <img
             src={disputeBg}
@@ -130,7 +128,7 @@ function ProgramSection() {
           {/* Content Overlay */}
           <div className="relative z-10 pl-8 pt-3">
             {/* Top Image */}
-            <img src={dispute} alt="Dispute Process" className="h-[292px] w-full object-cover" />
+            <img src={dispute} alt="Dispute Process" className="h-[292px] w-[795px] object-cover" />
             <div className="pt-3">
               <h4 className="mb-6 font-inter text-[27px] font-bold leading-[32px] text-[#07284F]">
                 Dispute & Escalation
@@ -154,7 +152,7 @@ export function About() {
   return (
     <div>
       <AboutHeader />
-      <div className="mx-4 flex flex-col items-center justify-center bg-white lg:mx-16">
+      <div className="mx-16 flex flex-col items-center justify-center bg-white">
         <IntroSection />
         <ProgramSection />
       </div>

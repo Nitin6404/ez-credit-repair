@@ -50,34 +50,34 @@ export function CreditServices() {
 
   return (
     <div className="my-16 flex items-center justify-center">
-      <div className="flex flex-col items-center space-x-2 bg-[url('/src/components/asset/pricingPageBg2.svg')] bg-cover bg-center px-4 py-10 md:px-16">
+      <div className="flex h-[658px] w-[1260px] flex-col items-center space-x-2 bg-[url('/src/components/asset/pricingPageBg2.svg')]">
         <div className="my-7 w-full text-center">
-          <h1 className="font-inter text-3xl font-bold text-white md:text-[50px]">
+          <h1 className="font-inter text-[50px] font-bold text-white">
             What's Included in Our Service
           </h1>
         </div>
-        <div className="mb-20 flex flex-col md:flex-row">
-          <div className="flex flex-col space-y-3">
+        <div className="mx-16 mb-20 flex">
+          <div>
             {services.slice(0, 6).map((service, index) => (
-              <div key={index} className="flex items-start space-x-2">
-                <div className="text-2xl">
+              <div key={index} className="mb-3 ml-10 flex items-start">
+                <div className="mr-2 mt-1 text-2xl">
                   <img src={pricingPageBar} alt="" />
                 </div>
                 <div className="font-inter text-white">
-                  <p className="text-xl font-semibold leading-8 md:text-3xl">{service.title}</p>
+                  <p className="text-3xl font-semibold leading-8">{service.title}</p>
                   <p className="text-lg font-normal leading-6">{service.description}</p>
                 </div>
               </div>
             ))}
           </div>
-          <div className="mt-10 flex flex-col space-y-3 md:ml-10 md:mt-0">
+          <div>
             {services.slice(6).map((service, index) => (
-              <div key={index} className="flex items-start space-x-2">
-                <div className="text-2xl">
+              <div key={index} className="mb-3 flex items-start">
+                <div className="mr-2 mt-1 text-2xl">
                   <img src={pricingPageBar} alt="" />
                 </div>
                 <div className="font-inter text-white">
-                  <p className="text-xl font-semibold leading-8 md:text-3xl">{service.title}</p>
+                  <p className="text-3xl font-semibold leading-8">{service.title}</p>
                   <p className="text-lg font-normal leading-6">{service.description}</p>
                 </div>
               </div>

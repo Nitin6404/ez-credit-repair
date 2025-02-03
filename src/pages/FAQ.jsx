@@ -63,16 +63,16 @@ export function FAQ() {
       </div>
       <div className="m-5 p-6">
         <div className="flex justify-center pb-5 pt-10">
-          <h1 className="mb-4 text-center font-inter text-5xl font-bold leading-[60px] text-[#15549A]">
+          <h1 className="mb-4 font-inter text-5xl font-bold leading-[60px] text-[#15549A]">
             Frequently Asked Questions
           </h1>
         </div>
-        <div className="flex w-full flex-col items-center justify-between rounded-lg bg-[#E6E6E6] px-10 py-3 md:flex-row">
+        <div className="flex w-full items-center justify-between rounded-lg bg-[#E6E6E6] px-10 py-3">
           <p className="font-inter text-xl font-bold leading-6">Have any Questions?</p>
-          <img src={searchFaq} alt="Search Icon" className="mt-4 md:mt-0" />
+          <img src={searchFaq} alt="Search Icon" />
         </div>
-        <div className="my-10 flex flex-col space-x-0 md:flex-row md:space-x-6">
-          <div className="mt-3 w-full space-y-1 rounded-2xl font-inter font-bold md:w-1/3">
+        <div className="my-10 flex space-x-6">
+          <div className="mt-3 w-1/3 space-y-1 rounded-2xl font-inter font-bold">
             {questions.map(q => (
               <button
                 key={q.question}
@@ -85,15 +85,15 @@ export function FAQ() {
               </button>
             ))}
           </div>
-          <div className="mt-3 w-full rounded-2xl border-4 border-[#DCDCDC] bg-white p-4 font-montserrat text-xl font-semibold leading-6 md:w-2/3">
+          <div className="mt-3 w-2/3 rounded-2xl border-4 border-[#DCDCDC] bg-white p-4 font-montserrat text-xl font-semibold leading-6">
             <p>{questions.find(q => q.id === selectedQuestion)?.answer}</p>
           </div>
         </div>
       </div>
-      <div className="mt-20 flex flex-col items-center justify-between bg-[url('/src/components/asset/areYouReadyToTakeActionBg.svg')] bg-cover lg:h-[542px] lg:w-[1437px] lg:flex-row">
-        <div className="mx-10 flex w-full flex-col items-center justify-evenly lg:flex-row">
+      <div className="mt-20 flex items-center justify-between bg-[url('/src/components/asset/areYouReadyToTakeActionBg.svg')] bg-cover lg:h-[542px] lg:w-[1437px]">
+        <div className="mx-10 flex w-full items-center justify-evenly">
           {/* Left Side Text */}
-          <div className="text-center font-inter text-[50px] font-bold leading-[60px] text-white lg:text-left">
+          <div className="font-inter text-[50px] font-bold leading-[60px] text-white">
             <p> Are You Ready to Take action?</p>
             <p>We Are Ready to Help.</p>
             <button className="mt-5 rounded-lg bg-[#46CC02] px-6 py-2 text-[27px] font-normal leading-8 text-white">
@@ -102,7 +102,7 @@ export function FAQ() {
           </div>
 
           {/* Right Side Image */}
-          <div className="mt-10 lg:mt-0">
+          <div className="">
             <img src={manOnFaq} alt="Placeholder" className="mb-[105px] w-full" />
           </div>
         </div>
