@@ -3,8 +3,10 @@ import rectangle1 from '../asset/Rectangle1.png';
 import rectangle2 from '../asset/Rectangle2.png';
 import rectangle4 from '../asset/Rectangle4.png';
 import { MoveDown } from 'lucide-react';
-import { useState } from 'react';
-
+import { useState, useRef, useEffect } from 'react';
+import ArrowImage from '../asset/arrow.svg';
+import arrow from '../asset/Arrow2.svg';
+import KeyboardDoubleArrowUpOutlinedIcon from '@mui/icons-material/KeyboardDoubleArrowUpOutlined';
 function ProgramCard({ number, title, image, description, nestedImage, onClick }) {
   return (
     <div className="mb-6 w-full hover:shadow-lg md:mb-0 md:flex-1" onClick={onClick}>
@@ -91,7 +93,11 @@ export function Program() {
 
         {/* Down Arrow - Hidden on mobile */}
         <h1 className="ml-[600px] hidden text-7xl md:block">
-          <MoveDown size={70} className="p-2" />
+          {/* <MoveDown size={70} className="p-2" /> */}
+          <KeyboardDoubleArrowUpOutlinedIcon
+            style={{ width: '78px', height: '58px' }}
+            className="w-12"
+          />
         </h1>
 
         {/* Dispute & Escalation Details */}
