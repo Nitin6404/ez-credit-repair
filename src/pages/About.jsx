@@ -7,6 +7,8 @@ import dispute from '../components/asset/dispute.svg';
 import disputeBg from '../components/asset/dispute-bg.svg';
 import { FaqAbout } from '../components/common/FAQSection';
 import { Testimonial } from '../components/common/Testimonial';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 // Program cards data
 const programCards = [
@@ -15,12 +17,16 @@ const programCards = [
     title: 'Credit Report Analysis',
     image: credit,
     description: 'Establish a plan to identify roadblocks and inaccuracies impacting your score',
+    details:
+      'We begin by evaluating your current credit situation and identifying the obstacles affecting your score. To ensure nothing is overlooked, we obtain your credit reports from all three major bureaus. Each case is unique, but our expertise lies in detecting inaccuracies and other harmful factors that shouldn’t be on your report. Together, well create a customized plan to improve your credit score.',
   },
   {
     number: '2',
     title: 'Dispute & Escalations',
     image: credit2,
     description: 'Challenge and Dispute negative items until they are removed',
+    details:
+      'Like the A-Team, we will be your advocates, challenging inaccuracies and disputing negative items until they are removed. Our EzeCredit experts understand your rights and are dedicated to eliminating incorrect information, Inquiries, late payments, collections, and other factors that unfairly impact your score.',
   },
   {
     number: '3',
@@ -28,6 +34,8 @@ const programCards = [
     image: credit3,
     nestedImage: credit4,
     description: 'Take action to boost your credit score to reach your desired score range',
+    details:
+      'Derogatory information will prevent your score from going up.  However, after we remove the negatives, more may be needed to build your score to be able to utilize your credit to its full potential.  We then create a path to get you beyond the 700 range which will impact to the level needed Removing all of the derogatory will only get us haft way there.',
   },
 ];
 
@@ -41,8 +49,10 @@ function AboutHeader() {
         className="absolute inset-0 mt-[30px] h-full w-full object-cover opacity-100"
       />
       <div className="relative flex h-[130px] items-center p-2 text-white">
-        <div className="ml-[80px] mt-[50px] flex max-w-screen-lg font-inter text-2xl font-bold leading-7">
-          <span className="ml-10">Home</span>
+        <div className="ml-5 mt-[50px] flex max-w-screen-lg font-inter text-lg font-bold leading-7 sm:ml-[80px] sm:text-2xl">
+          <span className="ml-3 sm:ml-10">
+            <Link to="/">Home</Link>
+          </span>
           <span className="mx-1">|</span>
           <span>About Us</span>
         </div>
@@ -54,8 +64,8 @@ function AboutHeader() {
 // Introduction section component
 function IntroSection() {
   return (
-    <div className="mt-[80px] flex w-[1300px] flex-col items-center justify-center text-center">
-      <p className="w-full font-inter text-[22px] font-normal leading-7 text-[#434343]">
+    <div className="mt-[80px] flex w-full max-w-[1300px] flex-col items-center justify-center px-4 text-center">
+      <p className="w-full text-start font-inter text-[22px] font-normal leading-7 text-[#434343]">
         For the past 15 years, we've been dedicated to helping thousands of individuals repair their
         credit and reclaim{' '}
         <div>
@@ -78,12 +88,12 @@ function ProgramCard({ number, title, image, description, nestedImage }) {
   return (
     <div className="mb-4 hover:shadow-lg">
       {/* Header */}
-      <div className="h-[56.48px] w-[407px] bg-[#46CC02] text-white">
-        <div className="flex items-center p-2">
-          <div className="mr-3 flex h-11 w-11 items-center justify-center rounded-lg bg-white font-montserrat text-[25px] font-bold leading-[30px] text-[#15549A]">
+      <div className="p- h-[56.48px] w-full max-w-[430px] bg-[#46CC02] text-white">
+        <div className="flex items-center">
+          <div className="ml-2 mr-3 mt-2 flex h-11 w-11 items-center justify-center rounded-lg bg-white font-montserrat text-[25px] font-bold leading-[30px] text-[#15549A]">
             {number.padStart(2, '0')}
           </div>
-          <h3 className="font-montserrat text-[25px] font-bold leading-[30px]">{title}</h3>
+          <h3 className="font-montserrat text-[21px] font-bold leading-[30px]">{title}</h3>
         </div>
       </div>
 
@@ -107,18 +117,22 @@ function ProgramCard({ number, title, image, description, nestedImage }) {
 
 // Program section with cards and details
 function ProgramSection() {
+  const [selectedCard, setSelectedCard] = useState(null);
+
   return (
-    <div className="mt-12 flex w-[1300px] gap-8">
+    <div className="mt-12 flex w-full max-w-[1300px] flex-col gap-8 px-4 lg:flex-row">
       {/* Left side - Program Cards */}
-      <div className="flex w-[407px] flex-col">
+      <div className="flex w-full flex-col lg:w-[407px]">
         {programCards.map(card => (
-          <ProgramCard key={card.number} {...card} />
+          <div key={card.number} onClick={() => setSelectedCard(card)}>
+            <ProgramCard {...card} />
+          </div>
         ))}
       </div>
 
       {/* Right side - Details with Image */}
       <div className="flex-1">
-        <div className="relative h-[672px] w-[837px] overflow-hidden rounded-lg">
+        <div className="relative h-[672px] w-full max-w-[837px] overflow-hidden rounded-lg">
           {/* Background Image */}
           <img
             src={disputeBg}
@@ -128,16 +142,15 @@ function ProgramSection() {
           {/* Content Overlay */}
           <div className="relative z-10 pl-8 pt-3">
             {/* Top Image */}
-            <img src={dispute} alt="Dispute Process" className="h-[292px] w-[795px] object-cover" />
+            <img src={dispute} alt="Dispute Process" className="h-[292px] w-full object-cover" />
             <div className="pt-3">
               <h4 className="mb-6 font-inter text-[27px] font-bold leading-[32px] text-[#07284F]">
-                Dispute & Escalation
+                {selectedCard ? selectedCard.title : 'Dispute & Escalation'}
               </h4>
-              <p className="max-w-[600px] font-inter text-[22px] font-normal leading-[30px] text-[#173455]">
-                We start by assessing your current credit situation and identifying the roadblocks
-                impacting your score. Each case is unique, but we specialize in spotting
-                inaccuracies and other factors that should not be in your report damaging to credit
-                reputation. Together, we'll map out a plan to a better credit score.
+              <p className="m-3 mb-3 max-w-[600px] font-inter text-[22px] font-normal leading-[30px] text-[#173455]">
+                {selectedCard
+                  ? selectedCard.details
+                  : "We start by assessing your current credit situation and identifying the roadblocks impacting your score. Each case is unique, but we specialize in spotting inaccuracies and other factors that should not be in your report damaging to credit reputation. Together, we'll map out a plan to a better credit score."}
               </p>
             </div>
           </div>
@@ -152,7 +165,7 @@ export function About() {
   return (
     <div>
       <AboutHeader />
-      <div className="mx-16 flex flex-col items-center justify-center bg-white">
+      <div className="mx-4 flex flex-col items-center justify-center bg-white lg:mx-16">
         <IntroSection />
         <ProgramSection />
       </div>

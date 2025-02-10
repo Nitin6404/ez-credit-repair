@@ -3,7 +3,8 @@ import comma from '../asset/comma.png';
 import jack from '../asset/jack.svg';
 import mathew from '../asset/mathew.svg';
 import susan from '../asset/susan.svg';
-
+import { ChevronRight } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 const testimonials = [
   {
     image: jack,
@@ -94,18 +95,20 @@ function TestimonialCard({ testimonial, position = 'center' }) {
 // Navigation buttons component
 function NavigationButtons({ onPrev, onNext }) {
   return (
-    <div className="my-6 flex w-full justify-center gap-4 px-4 pt-4 md:my-10 md:justify-end md:gap-10 md:pr-20 md:pt-10">
+    <div className="my-6 flex w-full justify-center gap-4 px-4 pt-4 md:my-10 md:gap-10 md:pt-10">
       <button
         onClick={onPrev}
-        className="rounded bg-[#15549A] px-4 py-2 text-sm font-semibold text-white shadow transition-all hover:bg-[#003977] md:px-6 md:py-3 md:text-base"
+        className="flex items-center rounded bg-[#15549A] px-4 py-2 text-sm font-semibold text-white shadow transition-all hover:bg-[#003977] md:px-6 md:py-3 md:text-base"
       >
-        Previous
+        <ChevronLeft />
+        <span className="ml-2">Previous</span>
       </button>
       <button
         onClick={onNext}
-        className="rounded bg-[#15549A] px-4 py-2 text-sm font-semibold text-white shadow transition-all hover:bg-[#003977] md:px-6 md:py-3 md:text-base"
+        className="flex items-center rounded bg-[#15549A] px-4 py-2 text-sm font-semibold text-white shadow transition-all hover:bg-[#003977] md:px-6 md:py-3 md:text-base"
       >
-        Next
+        <span className="mr-2">Next</span>
+        <ChevronRight />
       </button>
     </div>
   );
@@ -127,7 +130,7 @@ export function Testimonial() {
   };
 
   return (
-    <div className="relative flex flex-col items-center bg-white py-6 md:py-10">
+    <div className="md:py- relative flex flex-col items-center bg-white py-6">
       {/* Header Section */}
       <div className="mb-4 px-4 text-center md:mb-5 md:px-0">
         <h2 className="mt-2 font-inter text-[32px] font-bold leading-[40px] text-[#15549A] md:mt-[-10px] md:text-[50px] md:leading-[60px]">

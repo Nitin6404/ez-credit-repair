@@ -123,7 +123,7 @@ export function RegistrationPage() {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex min-h-screen flex-col bg-white p-4 sm:p-8 lg:p-16">
       {/* Hero Section with Background */}
       <div className="relative mt-3 p-2">
         <img
@@ -132,8 +132,8 @@ export function RegistrationPage() {
           className="absolute inset-0 mt-[30px] h-full w-full object-cover opacity-100"
         />
         <div className="relative flex h-[130px] items-center p-2 text-white">
-          <div className="ml-[80px] mt-[50px] flex max-w-screen-lg font-inter text-2xl font-bold leading-7">
-            <span className="ml-10">Home</span>
+          <div className="ml-5 mt-[50px] flex max-w-screen-lg font-inter text-lg font-bold leading-7 sm:ml-[80px] sm:text-2xl">
+            <span className="ml-3 sm:ml-10">Home</span>
             <span className="mx-1">|</span>
             <span>Registration</span>
           </div>
@@ -144,7 +144,7 @@ export function RegistrationPage() {
         <ProgressSteps steps={steps} currentStep={currentStep} />
 
         {/* Form */}
-        <div className="flex w-full flex-col items-center justify-center bg-white">
+        <div className="flex w-full flex-col items-center justify-center bg-white px-4 sm:px-8 lg:px-16">
           {renderStep()}
           {!(currentStep === 2 && showingContract) && (
             <NavigationButtons

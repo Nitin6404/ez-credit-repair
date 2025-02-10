@@ -18,7 +18,7 @@ export const BillingInfoForm = ({
   };
 
   return (
-    <div className="billing-info-section mx-auto w-[1260px] max-w-7xl font-inter">
+    <div className="billing-info-section mx-auto w-full max-w-7xl px-4 font-inter sm:px-6 lg:px-8">
       {showContract ? (
         // Contract
         <div className="flex items-center justify-center">
@@ -38,7 +38,7 @@ export const BillingInfoForm = ({
                 Credit Repair Contract, Electronic Signature, & Limited Power of Attorney
               </h2>
 
-              <div className="space-y-4 text-[#04284F]">
+              <div className="space-y-4 text-sm text-[#04284F] sm:text-base">
                 <p className="text-lg font-normal">
                   Agreement Overview: You have engaged EzeCredit Repair ("EzeCredit") to provide
                   credit bureau dispute management services and credit score evaluation. This is a
@@ -307,7 +307,7 @@ export const BillingInfoForm = ({
               </div>
 
               <div className="mt-24 flex h-[103.66px] w-full items-center justify-center bg-[#46CC02]">
-                <p className="text-center text-xl font-bold text-white">
+                <p className="text-center text-sm font-bold text-white sm:text-xl">
                   Acknowledgment By signing or electronically acknowledging this agreement,
                   <br />
                   you affirm understanding and acceptance of its terms and conditions.
@@ -320,14 +320,16 @@ export const BillingInfoForm = ({
         <>
           {/* Header Section */}
           <div className="w-full bg-[#03284E] p-4">
-            <h2 className="text-[37px] font-bold text-white">Your Credit or Debit Card</h2>
+            <h2 className="text-[24px] font-bold text-white sm:text-[37px]">
+              Your Credit or Debit Card
+            </h2>
           </div>
 
           {/* Form Content */}
           <div className="py-6">
-            <div className="flex justify-between">
+            <div className="flex flex-col justify-between lg:flex-row">
               {/* Card Details Section */}
-              <div className="mb-8">
+              <div className="mb-8 w-full lg:w-2/3">
                 <div className="mb-4">
                   <label className="mb-2 block text-xl font-extrabold text-[#04284F]">
                     CARD NUMBER
@@ -338,11 +340,11 @@ export const BillingInfoForm = ({
                     value={formData.cardNumber}
                     onChange={handleChange}
                     placeholder="0000-0000-0000-0000"
-                    className="h-[65px] w-[672px] bg-[#F2F2F2] p-3 text-xl font-normal"
+                    className="h-[65px] w-full bg-[#F2F2F2] p-3 text-xl font-normal"
                   />
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex flex-col gap-4 sm:flex-row">
                   <div className="flex-1">
                     <label className="mb-2 block text-xl font-extrabold text-[#04284F]">
                       EXP DATE
@@ -353,7 +355,7 @@ export const BillingInfoForm = ({
                       value={formData.expDate}
                       onChange={handleChange}
                       placeholder="MM/YY"
-                      className="h-[65px] w-[327px] bg-[#F2F2F2] p-3 text-xl font-normal"
+                      className="h-[65px] w-full bg-[#F2F2F2] p-3 text-xl font-normal"
                     />
                   </div>
                   <div className="flex-1">
@@ -364,25 +366,25 @@ export const BillingInfoForm = ({
                       value={formData.cvv}
                       onChange={handleChange}
                       placeholder="000"
-                      className="h-[65px] w-[327px] bg-[#F2F2F2] p-3 text-xl font-normal"
+                      className="h-[65px] w-full bg-[#F2F2F2] p-3 text-xl font-normal"
                     />
                   </div>
                 </div>
               </div>
 
               {/* Pricing Plans - Positioned Absolutely */}
-              <div className="relative w-full">
-                <div className="absolute right-0">
-                  <div className="mb-2 h-[114px] w-[408px] bg-[#15549A] p-2 text-start">
+              <div className="relative mt-8 w-full lg:mt-0 lg:w-1/3">
+                <div className="relative flex flex-col items-start gap-4">
+                  <div className="h-auto w-full bg-[#15549A] p-2 text-start">
                     <div className="border-4 border-white bg-[#15549A] px-2 py-1 text-white">
-                      <p className="text-[33px] font-bold">$99.00/per month</p>
-                      <p className="text-[22px] font-bold">Individual Pricing Plan</p>
+                      <p className="text-xl font-bold sm:text-[28px]">$99.00/per month</p>
+                      <p className="text-lg font-bold sm:text-[20px]">Individual Pricing Plan</p>
                     </div>
                   </div>
-                  <div className="h-[114px] w-[408px] bg-[#15549A] p-2 text-start">
+                  <div className="h-auto w-full bg-[#15549A] p-2 text-start">
                     <div className="border-4 border-white bg-[#15549A] px-2 py-1 text-white">
-                      <p className="text-[33px] font-bold">$149.00/per month</p>
-                      <p className="text-[22px] font-bold">Couples Pricing Plan</p>
+                      <p className="text-xl font-bold sm:text-[28px]">$149.00/per month</p>
+                      <p className="text-lg font-bold sm:text-[20px]">Couples Pricing Plan</p>
                     </div>
                   </div>
                 </div>
@@ -391,22 +393,23 @@ export const BillingInfoForm = ({
 
             {/* Billing Info Checkbox */}
             <div className="mb-4">
-              <h3 className="mb-2 text-[31px] font-extrabold text-[#04284F]">
+              <h3 className="mb-2 text-[24px] font-extrabold text-[#04284F] sm:text-[31px]">
                 BILLING INFO SAME AS PERSONAL INFO
               </h3>
               <div className="border-4 border-[#767676] p-4">
-                <div className="w-[1228px] bg-[#F1F1F1]">
+                <div className="w-full bg-[#F1F1F1]">
                   <label className="flex items-center py-4 text-2xl font-normal text-black">
                     <input
                       type="checkbox"
                       name="addSecondaryMember"
                       checked={formData.addSecondaryMember}
                       onChange={handleCheckboxChange}
-                      className="mx-2 h-8 w-8 appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2] fill-blue-500"
+                      className="mx-2 hidden h-8 w-8 appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2] fill-blue-500 sm:block"
                     />
+
                     <span>Yes, I would like to add a secondary member at just $50/month.</span>
                   </label>
-                  <p className="ml-12 pb-10 pt-7 text-2xl font-bold text-[#04284F]">
+                  <p className="pb-10 pt-7 text-2xl font-bold text-[#04284F] md:ml-12">
                     Test address, 110 SE 6th Street, Florida FL, 33301
                   </p>
                 </div>
@@ -415,10 +418,10 @@ export const BillingInfoForm = ({
 
             {/* SSN and DOB Section */}
             <div className="mb-12">
-              <h3 className="mb-4 text-[37px] font-bold">
+              <h3 className="mb-4 text-[24px] font-bold sm:text-[37px]">
                 Your Social Security Number and Date of Birth
               </h3>
-              <div className="mb-2 flex w-[936px] gap-4">
+              <div className="mb-2 flex w-full flex-col gap-4 sm:flex-row">
                 <div className="flex-1 text-xl font-extrabold text-[#04284F]">
                   <label className="mb-2 block">Social Security Number</label>
                   <input
@@ -449,28 +452,29 @@ export const BillingInfoForm = ({
             </div>
 
             {/* Legal Section */}
-            <div className="flex w-full items-center justify-between bg-[#03284E] px-4 py-3">
-              <h3 className="text-4xl font-bold text-white">
+            <div className="flex w-full flex-col items-center justify-between bg-[#03284E] px-4 py-3 lg:flex-row">
+              <h3 className="text-[24px] font-bold text-white sm:text-4xl">
                 Contract, Information Statement, and Legal Disclosures
               </h3>
               <button
                 onClick={() => setShowContract(true)}
-                className="bg-[#15549A] px-7 py-4 text-[29px] font-bold text-white"
+                className="mt-4 bg-[#15549A] px-7 py-4 text-[20px] font-bold text-white sm:text-[29px] lg:mt-0"
               >
                 Click to Read
               </button>
             </div>
 
             {/* Disclaimer for Contract */}
-            <div className="mx-10 my-5 w-full">
-              <h3 className="mb-4 text-2xl font-normal text-[#04284F]">
+            <div className="mx-10 my-5 w-full text-start">
+              <h3 className="mb-4 text-start text-2xl font-normal text-[#04284F]">
                 Please Check the Box Below:
               </h3>
               <div className="flex items-center gap-4">
                 <input
                   type="checkbox"
-                  className="peer relative h-9 w-9 cursor-pointer appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2] checked:bg-[#04284F]"
+                  className="peer relative h-7 w-7 cursor-pointer appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2] checked:bg-[#04284F] sm:h-9 sm:w-9"
                 />
+
                 <p>By checking this box you agree to statement</p>
               </div>
             </div>

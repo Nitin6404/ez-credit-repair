@@ -30,7 +30,11 @@ export function MainNav() {
 
           {/* Mobile Menu Button */}
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-[#15549A] md:hidden">
-            {isMenuOpen ? <X /> : <Menu />}
+            {isMenuOpen ? (
+              <X className="h-10 w-10 sm:h-14 sm:w-14" />
+            ) : (
+              <Menu className="h-10 w-10 sm:h-14 sm:w-14" />
+            )}
           </button>
 
           {/* Desktop Navigation */}
@@ -116,7 +120,6 @@ export function MainNav() {
       </div>
       <div className="shadow-lg">
         <div className="shadow-top relative h-2 w-full bg-[#FFFFFF]"></div>
-        {/* <div className="relative h-2 w-full bg-[#D2D3D4]"></div> */}
       </div>
     </div>
   );

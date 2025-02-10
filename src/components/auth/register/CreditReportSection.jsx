@@ -4,29 +4,29 @@ export function CreditReportSection({ formData, handleInputChange }) {
   return (
     <div className="w-full">
       {/* Blue background */}
-      <div className="h-[283px] w-full bg-[#15549A]">
+      <div className="h-auto w-full bg-[#15549A] py-8 md:h-[283px]">
         <div className="mx-auto max-w-[1439px] px-4 py-8">
           {/* Title */}
-          <h2 className="mb-3 text-center text-[50px] font-bold text-white">
+          <h2 className="mb-3 text-center text-[30px] font-bold text-white md:text-[50px]">
             Getting Your Credit Reports
           </h2>
 
           {/* Description */}
-          <p className="mx-auto mb-8 max-w-[984px] text-center text-xl font-normal text-white">
+          <p className="mx-auto mb-8 max-w-[984px] text-center text-base font-normal text-white md:text-xl">
             Upon signup we will assist you in getting your free credit reports. Credit reports are
             from third-party providers, and getting them will never harm your scores.
           </p>
 
           {/* Checkbox Container */}
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <input
               type="checkbox"
-              name="acceptTerms"
-              checked={formData.acceptTerms}
-              onChange={handleInputChange}
-              className="h-9 w-9 appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2]"
+              name="addSecondaryMember"
+              checked={formData.addSecondaryMember}
+              className="mx-2 hidden h-8 w-8 appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2] fill-blue-500 sm:block"
             />
-            <label className="text-2xl font-semibold text-white">
+
+            <label className="text-lg font-semibold text-white md:text-2xl">
               Yes, I understand I am required to obtain my credit reports to begin the process.
             </label>
           </div>

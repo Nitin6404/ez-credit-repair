@@ -147,8 +147,8 @@ export function PersonalInfoForm({ formData, handleChange }) {
         <p className="mb-2 font-inter text-xl font-normal text-[#04284F] sm:mb-4 sm:text-[31px]">
           Couples Membership
         </p>
-        <label className="mb-4 flex flex-col items-start sm:flex-row sm:items-center">
-          <div className="relative ml-0 mr-2 mt-2 sm:ml-20 sm:mr-4 sm:mt-0">
+        <label className="mb-4 flex items-center sm:flex-row">
+          <div className="relative ml-0 mr-2 mt-0 flex sm:ml-20 sm:mr-4">
             <input
               type="checkbox"
               name="couplesMembership"
