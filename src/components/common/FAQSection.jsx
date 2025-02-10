@@ -29,27 +29,26 @@ export function FAQSection({ className = '', showTitle = true, maxWidth = '4xl' 
     {
       title: 'How long can this process take?',
       content:
-        'The length of the credit repair process varies depending on the number of items disputed and the responsiveness of the creditors or credit bureaus.',
+        'Opportunities often arise unexpectedly, requiring timely action. Unfortunately, theres no way to predict exactly how long credit repair will take without understanding the specific roadblocks affecting your score. However, we work quickly to position you for success, often within 30 to 90 days.',
     },
     {
       title: 'What type of items can be removed on my credit report?',
       content:
-        'Items such as late payments, charge-offs, collections, and foreclosures can potentially be removed if they are found to be inaccurate, unverifiable, or unfair.',
+        'Any negative item that is inaccurate, unfair, or unverified can be disputed with the credit bureaus and your creditors. This includes collections, late payments, charge-offs, liens, bankruptcies, repossessions, and more',
     },
     {
       title: 'If I just pay off my bills will that restore my good credit?',
       content:
-        'Paying off bills is important, but it may not immediately improve your credit score. Credit repair may still be necessary for inaccurate items.',
+        'Paying off your bills doesn’t automatically boost your credit score. Once the damage is done, further action is required to improve it. You’re history will be marked as a paid delinquency, charge-off, or collection. If your goal is to repair your credit, paying debts alone won’t be enough. Credit repair is a challenge for many, but we’re here to help. We offer a proven path to recovery and will teach you how to maintain your score once you reach your target.',
     },
     {
       title: 'What is a good credit score?',
-      content:
-        'A good credit score generally ranges from 670 to 739. Higher scores reflect better creditworthiness.',
+      content: 'Credit bureaus typically consider a good credit score to be anything above 650.',
     },
   ];
 
   return (
-    <div className="mx-4 min-h-[500px] w-full bg-[#3F8FC4] bg-opacity-[10%] md:ml-[80px] md:h-[713px] md:w-[640px]">
+    <div className="min-h-[500px] w-full bg-[#3F8FC4] bg-opacity-[10%] md:ml-[80px] md:h-[713px] md:w-[640px]">
       <div className={`${className}`}>
         {showTitle && (
           <div className={`max-w-${maxWidth} mt-[10px] p-4 md:ml-[1px] md:p-6`}>
@@ -113,22 +112,21 @@ export function FaqAbout() {
     {
       title: 'How long can this process take?',
       content:
-        'The length of the credit repair process varies depending on the number of items disputed and the responsiveness of the creditors or credit bureaus.',
+        'Opportunities often arise unexpectedly, requiring timely action. Unfortunately, theres no way to predict exactly how long credit repair will take without understanding the specific roadblocks affecting your score. However, we work quickly to position you for success, often within 30 to 90 days.',
     },
     {
       title: 'What type of items can be removed on my credit report?',
       content:
-        'Items such as late payments, charge-offs, collections, and foreclosures can potentially be removed if they are found to be inaccurate, unverifiable, or unfair.',
+        'Any negative item that is inaccurate, unfair, or unverified can be disputed with the credit bureaus and your creditors. This includes collections, late payments, charge-offs, liens, bankruptcies, repossessions, and more.',
     },
     {
       title: 'If I just pay off my bills will that restore my good credit?',
       content:
-        'Paying off bills is important, but it may not immediately improve your credit score. Credit repair may still be necessary for inaccurate items.',
+        'Paying off your bills doesn’t automatically boost your credit score. Once the damage is done, further action is required to improve it. You’re history will be marked as a paid delinquency, charge-off, or collection. If your goal is to repair your credit, paying debts alone won’t be enough. Credit repair is a challenge for many, but we’re here to help. We offer a proven path to recovery and will teach you how to maintain your score once you reach your target.',
     },
     {
       title: 'What is a good credit score?',
-      content:
-        'A good credit score generally ranges from 670 to 739. Higher scores reflect better creditworthiness.',
+      content: 'Credit bureaus typically consider a good credit score to be anything above 650.',
     },
   ];
 
@@ -139,20 +137,23 @@ export function FaqAbout() {
           Frequently Asked Questions
         </h1>
       </div>
-      <div className="w-full bg-[#000000] bg-opacity-[10%] px-4 md:w-[1300px] md:px-0">
-        <div className="flex w-full justify-center p-[10px] font-opensans font-[400] md:w-[1290px] md:p-[20px]">
-          <div className="mx-auto mt-[10px] w-full overflow-hidden md:ml-[5px] md:w-[1290px]">
+      <div className="w-full bg-[#000000] bg-opacity-[10%] px-4 md:px-0">
+        <div className="flex w-full justify-center p-[10px] font-opensans font-[400] md:p-[20px]">
+          <div className="mx-auto mt-[10px] w-full overflow-hidden md:w-full md:max-w-[1290px]">
             {accordionData.map((item, index) => (
               <div key={index} className="p-2">
+                {/* Accordion Title - Centered with Equal Space */}
                 <div
-                  className="accordion-title flex cursor-pointer items-center justify-between bg-white px-3 py-3 font-montserrat text-[16px] font-bold leading-[20px] hover:bg-gray-100 md:px-6 md:py-4 md:text-[20px] md:leading-[25px]"
+                  className="accordion-title flex cursor-pointer items-center justify-between bg-white px-6 py-3 font-montserrat text-[16px] font-bold leading-[20px] hover:bg-gray-100 md:px-8 md:py-4 md:text-[20px] md:leading-[25px]"
                   onClick={() => toggleAccordion(index)}
                 >
-                  {item.title}
-                  <span className="plus-minus-icon">{openIndex === index ? '-' : '+'}</span>
+                  <span className="flex-1">{item.title}</span>
+                  <span className="ml-4">{openIndex === index ? '-' : '+'}</span>
                 </div>
+
+                {/* Accordion Content */}
                 <div
-                  className={`accordion-content px-3 py-3 md:px-6 md:py-4 ${openIndex === index ? '' : 'hidden'}`}
+                  className={`accordion-content px-6 py-3 md:px-8 md:py-4 ${openIndex === index ? '' : 'hidden'}`}
                 >
                   <p className="font-montserrat text-[16px] font-semibold leading-[22px] md:text-[20px] md:leading-[25px]">
                     {item.content}

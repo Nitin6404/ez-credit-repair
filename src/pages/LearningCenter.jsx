@@ -105,11 +105,11 @@ const courses = [
 
 function CourseCard({ title, description, image, duration }) {
   return (
-    <div className="group relative h-[378px] w-[300px] transform cursor-pointer overflow-hidden rounded-[20px] border-2 border-[#6E6E6E] bg-white shadow-sm transition-colors duration-300 hover:bg-[#04284F]">
+    <div className="group relative h-[378px] w-full transform cursor-pointer overflow-hidden rounded-[20px] border-2 border-[#6E6E6E] bg-white shadow-sm transition-colors duration-300 hover:bg-[#04284F] sm:w-[300px]">
       {/* Image Container with padding */}
       <div className="h-[187px] w-full overflow-hidden p-1 pt-2">
         {/* Image wrapper with exact dimensions */}
-        <div className="mx-auto h-[176px] w-[268px] overflow-hidden bg-[#F1F1F1] p-1">
+        <div className="mx-auto h-[176px] w-full overflow-hidden bg-[#F1F1F1] p-1 sm:w-[268px]">
           <img src={image} alt={title} className="h-full w-full object-cover" />
         </div>
       </div>
@@ -162,11 +162,9 @@ export function LearningCenter() {
           className="absolute inset-0 mt-[30px] h-full w-full object-cover opacity-100"
         />
         <div className="relative flex h-[130px] items-center p-2 text-white">
-          <div className="ml-[80px] mt-[50px] flex max-w-screen-lg font-inter text-2xl font-bold leading-7">
-            <span className="ml-10">
-              <Link to="/" className="hover:text-[#15549A]">
-                Home
-              </Link>
+          <div className="ml-5 mt-[50px] flex max-w-screen-lg font-inter text-lg font-bold leading-7 sm:ml-[80px] sm:text-2xl">
+            <span className="ml-3 sm:ml-10">
+              <Link to="/">Home</Link>
             </span>
             <span className="mx-1">|</span>
             <span>Learning Center</span>
@@ -176,21 +174,24 @@ export function LearningCenter() {
 
       {/* Search and Sort Section */}
       <div className="mx-auto mb-8 mt-20 max-w-7xl px-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-col items-start justify-start gap-4 md:flex-row">
+          {/* Sort By Button (Aligned to Start) */}
+          <div className="flex w-full flex-col items-start">
             <button className="flex h-[54px] w-[210px] items-center justify-between rounded-full border-2 border-[#6E6E6E] px-6 hover:border-[#04284F]">
-              <span className="flex items-center text-xl font-normal text-[#242424]">Short By</span>
+              <span className="flex items-center text-xl font-normal text-[#242424]">Sort By</span>
               <LayoutGrid size={25} fill="#9C9C9C" className="text-[#9C9C9C]" />
             </button>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="relative">
+
+          {/* Search Input and Go Button */}
+          <div className="flex w-full flex-col items-start gap-3 sm:flex-row sm:justify-start">
+            <div className="relative w-full sm:w-[398px]">
               <input
                 type="text"
                 placeholder="Search"
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                className="flex h-[53px] w-[398px] items-center rounded-full border-2 border-[#6E6E6E] px-6 text-xl font-normal leading-none text-[#242424] placeholder:text-[#242424] focus:border-[#04284F] focus:outline-none"
+                className="flex h-[53px] w-full items-center rounded-full border-2 border-[#6E6E6E] px-6 text-xl font-normal leading-none text-[#242424] placeholder:text-[#242424] focus:border-[#04284F] focus:outline-none"
               />
             </div>
             <button className="flex h-[53px] w-[78px] items-center justify-center rounded-full border-2 border-[#6E6E6E]/80 bg-[#6E6E6E]/80 text-xl font-normal leading-none text-white">
@@ -210,7 +211,7 @@ export function LearningCenter() {
       </div>
 
       {/* Pagination */}
-      <div className="mx-auto mb-16 mt-8 flex max-w-7xl justify-center space-x-2 px-4">
+      <div className="mx-auto mt-8 flex max-w-7xl justify-center space-x-2 px-4">
         <div className="flex items-center space-x-2">
           <button className="flex h-8 w-8 items-center justify-center rounded-full text-gray-600 hover:bg-gray-200">
             1
@@ -225,28 +226,28 @@ export function LearningCenter() {
       </div>
 
       {/* Bottom Image Section */}
-      <div className="relative h-[444px] w-full overflow-hidden">
+      <div className="relative hidden h-[444px] w-full overflow-hidden md:block">
         <div
           className="h-full w-full bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${badCredits})` }}
         >
           <div className="relative h-full w-full">
             {/* Bad */}
-            <div className="absolute right-[510px] top-[105px]">
-              <h2 className="font-inter text-[90px] font-bold text-[#013044] [transform:rotate(-5deg)]">
+            <div className="absolute right-[10%] top-[10%] hidden md:right-[30%] md:top-[20%] md:block lg:right-[35%]">
+              <h2 className="font-inter text-[60px] font-bold text-[#013044] [transform:rotate(-5deg)] md:text-[90px]">
                 Bad
               </h2>
             </div>
             {/* CREDIT? */}
-            <div className="absolute right-[92px] top-[110px]">
-              <h1 className="font-inter text-[142px] font-extrabold uppercase text-[#013044] [transform:rotate(-5deg)]">
+            <div className="absolute right-[5%] top-[15%] hidden md:right-[10%] md:top-[25%] md:block lg:right-[15%]">
+              <h1 className="font-inter text-[80px] font-extrabold uppercase text-[#013044] [transform:rotate(-5deg)] md:text-[142px]">
                 Credit
-                <span className="ml-4 text-[170px]">?</span>
+                <span className="ml-4 text-[100px] md:text-[170px]">?</span>
               </h1>
             </div>
             {/* We can help! */}
-            <div className="absolute right-[300px] top-[300px]">
-              <p className="font-inter text-[57px] font-bold text-[#013044] [transform:rotate(-4deg)]">
+            <div className="absolute right-[20%] top-[60%] hidden md:right-[25%] md:top-[70%] md:block lg:right-[30%]">
+              <p className="font-inter text-[40px] font-bold text-[#013044] [transform:rotate(-4deg)] md:text-[57px]">
                 we can help!
               </p>
             </div>

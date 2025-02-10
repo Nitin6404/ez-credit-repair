@@ -4,20 +4,20 @@ import PrivacyPolicyBg1 from '../components/asset/privacy-policy-bg-1.svg';
 import PrivacyPolicyHero from '../components/asset/privacy-policy-hero-image.svg';
 import PrivacyPolicyBg2 from '../components/asset/privacy-policy-bg-2.svg';
 import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom';
 // Update the CollapsibleSection component
 function CollapsibleSection({ title, children, isActive, onClick }) {
   return (
     <div className="mb-4">
       <button
         onClick={onClick}
-        className={`flex w-[641px] items-center justify-between rounded-xl bg-white p-4 text-left transition-all hover:bg-[#F4F4F4] ${
-          isActive ? 'h-[170px]' : 'h-[68px]'
+        className={`flex w-full flex-col items-center justify-between rounded-xl bg-white p-4 text-left transition-all hover:bg-[#F4F4F4] md:w-[641px] md:flex-row ${
+          isActive ? 'h-auto md:h-[170px]' : 'h-auto md:h-[68px]'
         }`}
       >
         <div className="flex-1">
           <div className="flex items-center justify-between">
-            <h3 className="text-3xl font-bold text-[#04080C]">{title}</h3>
+            <h3 className="text-xl font-bold text-[#04080C] md:text-3xl">{title}</h3>
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#04284F]">
               <ArrowDown
                 className={`h-6 w-6 flex-shrink-0 transform text-white transition-transform ${
@@ -29,7 +29,7 @@ function CollapsibleSection({ title, children, isActive, onClick }) {
           {isActive && (
             <>
               <div className="my-4 h-0.5 w-full bg-[#535353]"></div>
-              <p className="text-md font-bold text-[#04080C]">{children}</p>
+              <p className="md:text-md text-sm font-bold text-[#04080C]">{children}</p>
             </>
           )}
         </div>
@@ -48,13 +48,15 @@ CollapsibleSection.propTypes = {
 // Card Component
 function SecurityCard({ icon: Icon, title, description }) {
   return (
-    <div className="flex h-[620px] w-[390px] flex-1 flex-col items-center bg-[#F5F8FF] p-4 text-center drop-shadow-lg">
+    <div className="flex h-auto w-full flex-1 flex-col items-center bg-[#F5F8FF] p-4 text-center drop-shadow-lg md:h-[620px] md:w-[390px]">
       <div className="mx-auto mb-2 mt-10">
-        <Icon className="h-32 w-32 text-[#04284F]" />
+        <Icon className="h-16 w-16 text-[#04284F] md:h-32 md:w-32" />
       </div>
-      <h3 className="mb-10 text-2xl font-bold text-[#04080C]">{title}</h3>
-      <div className="mb-2 h-0.5 w-[330px] bg-[#535353]"></div>
-      <p className="text-start text-[19px] font-medium leading-10 text-[#04080C]">{description}</p>
+      <h3 className="mb-10 text-xl font-bold text-[#04080C] md:text-2xl">{title}</h3>
+      <div className="mb-2 h-0.5 w-full bg-[#535353] md:w-[330px]"></div>
+      <p className="text-start text-sm font-medium leading-10 text-[#04080C] md:text-[19px]">
+        {description}
+      </p>
     </div>
   );
 }
@@ -117,21 +119,21 @@ export function PrivacyPolicy() {
           <img src={PrivacyPolicyBg1} alt="" className="h-[560px] w-full object-cover" />
         </div>
 
-        <div className="relative z-10 mx-20 max-w-[1263px]">
+        <div className="relative z-10 mx-4 max-w-[1263px] md:mx-20">
           {/* Navigation Links */}
-          <div className="mb-8">
-            <nav className="flex items-center space-x-2 text-[22px] font-bold text-white">
-              <a href="/" className="hover:text-white">
-                Home
-              </a>
-              <span>|</span>
-              <span className="text-white">Privacy Policy</span>
-            </nav>
+          <div className="mb-8 text-white">
+            <div className="ml-5 mt-[50px] flex max-w-screen-lg font-inter text-lg font-bold leading-7 sm:ml-[80px] sm:text-2xl">
+              <span className="ml-3 sm:ml-10">
+                <Link to="/">Home</Link>
+              </span>
+              <span className="mx-1">|</span>
+              <span>Privacy Policy</span>
+            </div>
           </div>
 
           <div className="flex flex-wrap justify-between">
             <div className="w-full lg:w-1/2">
-              <h1 className="mb-4 mt-16 text-6xl font-normal text-white">
+              <h1 className="mb-4 mt-16 text-4xl font-normal text-white md:text-6xl">
                 Secure Connection and Your Data
               </h1>
             </div>
@@ -139,7 +141,7 @@ export function PrivacyPolicy() {
               <img
                 src={PrivacyPolicyHero}
                 alt="Privacy Hero"
-                className="ml-32 h-[524px] w-[551px]"
+                className="ml-0 h-[300px] w-full md:ml-32 md:h-[524px] md:w-[551px]"
               />
             </div>
           </div>
@@ -161,13 +163,13 @@ export function PrivacyPolicy() {
       </div>
 
       {/* Privacy Policy Section with Background */}
-      <div className="relative mt-20 h-[622px] w-full">
+      <div className="relative mt-20 h-auto w-full md:h-[622px]">
         <div className="absolute inset-0 z-0">
           <img src={PrivacyPolicyBg2} alt="" className="h-full w-full object-cover" />
         </div>
 
-        <div className="relative z-10 mx-20 max-w-[1200px] px-4 pb-28 pt-[72px]">
-          <h2 className="mb-12 text-5xl font-bold text-white">Privacy Policy</h2>
+        <div className="relative z-10 mx-4 max-w-[1200px] px-4 pb-28 pt-[72px] md:mx-20">
+          <h2 className="mb-12 text-3xl font-bold text-white md:text-5xl">Privacy Policy</h2>
 
           <div className="max-w-[800px] space-y-4">
             {faqData.map((faq, index) => (
@@ -187,10 +189,12 @@ export function PrivacyPolicy() {
       {/* Additional Information */}
       <div className="w-full">
         {/* Information We Collect Section */}
-        <div className="-px-16 mx-auto w-full pt-16">
+        <div className="mx-auto w-full pt-16">
           <div className="mb-12 text-center">
-            <h2 className="mb-2 text-5xl font-bold text-[#010810]">Information We Collect</h2>
-            <p className="text-[22px] font-bold text-[#04284F]">
+            <h2 className="mb-2 text-3xl font-bold text-[#010810] md:text-5xl">
+              Information We Collect
+            </h2>
+            <p className="text-lg font-bold text-[#04284F] md:text-[22px]">
               EzeCredit gathers two types of information
             </p>
           </div>
@@ -198,23 +202,23 @@ export function PrivacyPolicy() {
           {/* Information You Provide */}
           <div className="space-y-8">
             <div className="overflow-hidden">
-              <div className="flex items-center bg-[#04284F] p-4 px-24 text-white">
+              <div className="flex items-center bg-[#04284F] p-4 text-white md:px-24">
                 <div className="mr-3 rounded-full border-[5px] border-white bg-[#04284F]">
                   <span className="flex h-8 w-8 items-center justify-center text-[31px] font-bold text-white">
                     1
                   </span>
                 </div>
-                <h3 className="text-[33px] font-bold">Information You Provide</h3>
+                <h3 className="text-xl font-bold md:text-[33px]">Information You Provide</h3>
               </div>
-              <div className="bg-white px-24 pb-6 pt-3">
-                <p className="text-[22px] font-bold text-[#04080C]">
+              <div className="bg-white px-4 pb-6 pt-3 md:px-24">
+                <p className="text-lg font-bold text-[#04080C] md:text-[22px]">
                   This includes details provided through our website, such as the Enrollment Form,
                   Free Consultation Form, or Customer Account Interface (EzeCredit Portal).
                 </p>
-                <p className="mb-2 text-[22px] font-bold text-[#04080C]">
+                <p className="mb-2 text-lg font-bold text-[#04080C] md:text-[22px]">
                   Collected data may include:
                 </p>
-                <div className="grid grid-cols-2 text-xl font-semibold text-[#04080C] md:grid-cols-3">
+                <div className="grid grid-cols-1 text-lg font-semibold text-[#04080C] md:grid-cols-2 md:text-xl">
                   <div className="flex items-center">
                     <span className="mr-2">1.</span>
                     <span>Name</span>
@@ -245,16 +249,18 @@ export function PrivacyPolicy() {
 
             {/* Information From Usage Tracking */}
             <div className="overflow-hidden">
-              <div className="flex items-center bg-[#04284F] p-4 px-24 text-white">
+              <div className="flex items-center bg-[#04284F] p-4 text-white md:px-24">
                 <div className="mr-3 rounded-full border-[5px] border-white bg-[#04284F]">
                   <span className="flex h-8 w-8 items-center justify-center text-[31px] font-bold text-white">
                     2
                   </span>
                 </div>
-                <h3 className="text-[33px] font-bold">Information From Usage Tracking</h3>
+                <h3 className="text-xl font-bold md:text-[33px]">
+                  Information From Usage Tracking
+                </h3>
               </div>
-              <div className="bg-white px-24 pb-6 pt-3">
-                <p className="mb-8 ml-10 w-[1116px] text-[22px] font-bold text-[#04080C]">
+              <div className="bg-white px-4 pb-6 pt-3 md:px-24">
+                <p className="text-lg font-bold text-[#04080C] md:text-[22px]">
                   We monitor page views and user interactions on our website to improve content and
                   understand our audience&apos;s needs. This data is aggregated and not linked to
                   individual users
@@ -263,8 +269,10 @@ export function PrivacyPolicy() {
                 {/* Usage Tracking */}
                 <div className="mb-6 rounded-xl bg-[#666767] pb-2">
                   <div className="rounded-lg bg-[#F4F4F4] p-6">
-                    <h4 className="mb-3 text-[33px] font-bold text-[#04284F]">Usage Tracking</h4>
-                    <p className="text-[22px] font-medium text-[#02152B]">
+                    <h4 className="mb-3 text-xl font-bold text-[#04284F] md:text-[33px]">
+                      Usage Tracking
+                    </h4>
+                    <p className="text-lg font-medium text-[#02152B] md:text-[22px]">
                       We monitor page views and user interactions on our website to improve content
                       and understand our audience&apos;s needs. This data is aggregated and not
                       linked to individual users
@@ -275,8 +283,10 @@ export function PrivacyPolicy() {
                 {/* Cookies */}
                 <div className="mb-6 rounded-xl bg-[#666767] pb-2">
                   <div className="rounded-lg bg-[#F4F4F4] p-6">
-                    <h4 className="mb-3 text-[33px] font-bold text-[#04284F]">Cookies</h4>
-                    <p className="text-[22px] font-medium text-[#02152B]">
+                    <h4 className="mb-3 text-xl font-bold text-[#04284F] md:text-[33px]">
+                      Cookies
+                    </h4>
+                    <p className="text-lg font-medium text-[#02152B] md:text-[22px]">
                       We may use cookies, which are small text files stored on your computer, to
                       track traffic patterns and improve site functionality. These cookies do not
                       contain personal information and cannot access data on your device. You can
@@ -289,8 +299,10 @@ export function PrivacyPolicy() {
                 {/* Your Consent */}
                 <div className="mb-6 rounded-xl bg-[#666767] pb-2">
                   <div className="rounded-lg bg-[#F4F4F4] p-6">
-                    <h4 className="mb-3 text-[33px] font-bold text-[#04284F]">Your Consent</h4>
-                    <p className="text-[22px] font-medium text-[#02152B]">
+                    <h4 className="mb-3 text-xl font-bold text-[#04284F] md:text-[33px]">
+                      Your Consent
+                    </h4>
+                    <p className="text-lg font-medium text-[#02152B] md:text-[22px]">
                       By using EzeCreditRepair.com, you consent to the collection and use of your
                       information as outlined in this policy. Any updates to our privacy practices
                       will be reflected on this page, ensuring you remain informed of how we handle
@@ -302,10 +314,10 @@ export function PrivacyPolicy() {
                 {/* Public Safety and Legal Compliance */}
                 <div className="mb-6 rounded-xl bg-[#666767] pb-2">
                   <div className="rounded-lg bg-[#F4F4F4] p-6">
-                    <h4 className="mb-3 text-[33px] font-bold text-[#04284F]">
+                    <h4 className="mb-3 text-xl font-bold text-[#04284F] md:text-[33px]">
                       Public Safety and Legal Compliance
                     </h4>
-                    <p className="text-[22px] font-medium text-[#02152B]">
+                    <p className="text-lg font-medium text-[#02152B] md:text-[22px]">
                       EzeCredit will only disclose user information to third parties when required
                       to comply with applicable laws, legal processes, or to protect the safety of
                       our users and the public.

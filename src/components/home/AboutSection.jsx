@@ -18,11 +18,17 @@ export function AboutSection() {
         <h1 className="font-inter text-[32px] font-bold leading-[40px] text-[#15549A] md:text-[50.04px] md:leading-[60.57px]">
           About Us
         </h1>
-        <p className="font-inter text-[16px] font-bold leading-[22px] text-[#2E2F31] md:text-[22.92px] md:leading-[27.73px]">
+        <p className="font-inter text-[16px] leading-[22px] text-[#2E2F31] md:text-[22.92px] md:leading-[27.73px]">
           For the past 15 years, we've been dedicated to helping thousands of individuals repair
-          their credit and reclaim financial control. At <strong>EzeCredit</strong>, we fight for
-          every consumer's right to an accurate, fair, and substantiated credit report.
+          their credit and reclaim financial control. At EzeCredit, we fight for every consumer's
+          right to an accurate, fair, and substantiated credit report.
         </p>
+        {/* Image Placeholder for Mobile View */}
+        <div className="mt-8 flex w-full justify-center md:hidden">
+          <div className="flex h-[300px] w-[300px] items-center justify-center rounded-lg">
+            <img src={creditImprove} alt="Recovery Icon" className="h-full w-full object-contain" />
+          </div>
+        </div>
 
         <h2 className="font-Montserrat mt-4 text-[22px] font-bold leading-[28px] text-[#529400] md:text-[29px] md:leading-[35px]">
           Target Area
@@ -50,7 +56,7 @@ export function AboutSection() {
             </div>
           </li>
           <li>
-            <div className="flex h-full w-full items-start">
+            <div className="flex h-full w-full items-center">
               <div className="mr-1.5 pt-1.5">
                 <img height={20} width={20} src={layer} alt="Layer Icon" />
               </div>
@@ -92,14 +98,10 @@ export function AboutSection() {
         </div>
       </div>
 
-      {/* Image Placeholder */}
-      <div className="mt-8 flex flex-1 items-center justify-center md:mt-[50px] md:justify-end md:pl-6">
-        <div className="flex h-[300px] w-[300px] items-center justify-center rounded-lg text-sm italic md:h-[459px] md:w-[474px]">
-          <img
-            src={creditImprove}
-            alt="Recovery Icon"
-            className="md:object-contained h-full w-full object-contain md:mr-2 md:inline-block"
-          />
+      {/* Image Placeholder for Desktop View */}
+      <div className="mt-8 hidden w-full justify-center md:mt-[50px] md:flex md:justify-end md:pl-6">
+        <div className="flex h-[300px] w-[300px] items-center justify-center rounded-lg md:h-[459px] md:w-[474px]">
+          <img src={creditImprove} alt="Recovery Icon" className="h-full w-full object-contain" />
         </div>
       </div>
     </div>

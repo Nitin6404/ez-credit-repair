@@ -104,8 +104,8 @@ export function ShoppingCart({ items = [], onClose }) {
         />
 
         <div className="relative flex h-[130px] items-center p-2 text-white">
-          <div className="ml-[80px] mt-[50px] flex max-w-screen-lg font-inter text-2xl font-bold leading-7">
-            <span className="ml-10 cursor-pointer hover:underline" onClick={onClose}>
+          <div className="ml-5 mt-[50px] flex max-w-screen-lg font-inter text-lg font-bold leading-7 sm:ml-[80px] sm:text-2xl">
+            <span className="ml-3 cursor-pointer hover:underline sm:ml-10" onClick={onClose}>
               Home
             </span>
             <span className="mx-1">|</span>
@@ -119,20 +119,22 @@ export function ShoppingCart({ items = [], onClose }) {
       </div>
 
       {/* Main content */}
-      <div className="mx-auto mt-20 w-full max-w-[1250px]">
+      <div className="mx-auto mt-20 w-full max-w-[1250px] px-4 md:px-0">
         <h1 className="mb-6 text-2xl font-bold text-[#04284F]">Shopping Cart</h1>
 
-        <div className="w-full">
-          <CustomTable
-            data={cartData}
-            columns={columns}
-            currentPage={1}
-            totalPages={1}
-            onPageChange={() => {}}
-          />
+        <div className="w-full overflow-x-auto">
+          <div className="max-h-[500px] overflow-y-auto">
+            <CustomTable
+              data={cartData}
+              columns={columns}
+              currentPage={1}
+              totalPages={1}
+              onPageChange={() => {}}
+            />
+          </div>
 
-          <div className="mt-6 flex items-center justify-between">
-            <div className="flex gap-4">
+          <div className="mt-6 flex flex-col items-center justify-between gap-4 md:flex-row">
+            <div className="flex flex-col gap-4 md:flex-row">
               <input type="text" placeholder="Coupon Code" className="bg-[#E4E4E4] px-4 py-2" />
               <button className="bg-[#E32636] px-8 py-2 text-white">Apply Coupon</button>
               <button className="bg-[#04284F] px-8 py-2 text-white">Update Cart</button>
