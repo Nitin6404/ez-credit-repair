@@ -111,10 +111,10 @@ export function Program() {
                 Dispute & Escalation
               </h4>
               <p className="font-opensans text-[16px] font-bold leading-[24px] text-[#173455] md:text-[24px] md:leading-[32px]">
-                We start by assessing your current credit situation and identifying the roadblocks
-                impacting your score. Each case is unique, but we specialize in spotting
-                inaccuracies and other factors that should not be in your report damaging to credit
-                reputation. Together, we'll map out a plan to a better credit score.
+                Like the A-Team, well be your advocates, challenging inaccuracies and disputing
+                negative items until they re removed. Our EzeCredit experts understand your rights
+                and are dedicated to eliminating incorrect information, Inquiries, late payments,
+                collections, and other factors that unfairly impact your score.
               </p>
             </div>
           )}
