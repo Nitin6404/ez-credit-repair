@@ -9,7 +9,7 @@ export function HeroSection() {
         {/* Text content section */}
         <div className="relative z-20 w-full px-4 pt-8 md:w-3/5 md:pl-8 md:pt-16 lg:pl-32">
           <div className="text-center md:text-left">
-            <h1 className="font-inter text-[22px] font-bold leading-[28px] text-[#15549A] md:text-[26px] md:leading-[32px]">
+            <h1 className="font-inter text-[22px] font-medium leading-[28px] text-[#15549A] md:text-[26px] md:leading-[32px]">
               YOUR PATH TO BETTER CREDIT,
             </h1>
             {/* Image section - Visible on mobile */}
@@ -27,17 +27,17 @@ export function HeroSection() {
               Let's Fix Your Credit and Raise Your Score
             </p>
             <div className="mt-4 text-center md:space-y-0 md:text-left">
-              <p className="text-start font-inter text-[12px] font-normal leading-[22px] text-black md:text-[20px] md:leading-[28px]">
+              <p className="text-start font-inter text-[12px] font-medium leading-[22px] text-[#737373] md:text-[20px] md:leading-[25px]">
                 Unlock financial freedom with a better credit score.
               </p>
-              <p className="text-start font-inter text-[12px] font-normal leading-[22px] text-black md:text-[20px] md:leading-[28px]">
+              <p className="text-start font-inter text-[12px] font-medium leading-[22px] text-[#737373] md:text-[20px] md:leading-[25px]">
                 Our easy-to-follow approach helps you improve your
               </p>
-              <p className="mb-4 text-start font-inter text-[12px] font-normal leading-[22px] text-black md:mb-6 md:text-[20px] md:leading-[28px]">
+              <p className="mb-4 text-start font-inter text-[12px] font-medium leading-[22px] text-[#737373] md:mb-6 md:text-[20px] md:leading-[25px]">
                 credit for better rates, loans and peace of mind.
               </p>
             </div>
-            <button className="mb-4 mt-5 h-[40px] w-[180px] rounded-lg bg-[#15549A] px-1 py-1 font-inter text-xl font-normal text-white transition-colors duration-300 hover:bg-[#1a65b8] md:h-[47px] md:w-[220px] md:text-2xl">
+            <button className="mb-4 mt-5 h-[40px] w-[180px] rounded-lg bg-[#15549A] px-1 py-1 font-inter text-xl font-bold text-white transition-colors duration-300 hover:bg-[#1a65b8] md:h-[47px] md:w-[220px] md:text-2xl">
               SIGN UP NOW
             </button>
           </div>
