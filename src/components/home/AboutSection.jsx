@@ -1,6 +1,7 @@
 import React from 'react';
 import creditImprove from '../asset/improvecs3.png';
 import layer from '../asset/Layer 1002 copy.png';
+import { ArrowRight } from 'lucide-react';
 
 export function AboutSection() {
   const targetAreas = [
@@ -30,10 +31,10 @@ export function AboutSection() {
           </div>
         </div>
 
-        <h2 className="font-Montserrat mt-4 text-[22px] font-bold leading-[28px] text-[#529400] md:text-[29px] md:leading-[35px]">
+        <h2 className="font-Montserrat mt-4 text-[22px] font-bold leading-[28px] text-[#529400] md:mb-3 md:text-[29px] md:leading-[35px]">
           Target Area
         </h2>
-        <ul className="w-full list-none space-y-3 pl-0 font-inter text-[16px] font-bold leading-[20px] tracking-tight text-[#2E2F31] md:w-[736px] md:space-y-4 md:text-[22.91px] md:leading-[27.73px]">
+        <ul className="w-full list-none space-y-3 pl-0 font-inter text-[16px] font-medium leading-[20px] tracking-tight text-[#2E2F31] md:w-[736px] md:space-y-4 md:text-[22.91px] md:leading-[27.73px]">
           <li>
             <div className="flex h-full w-full items-start">
               <div className="mr-1.5 pt-1.5">
@@ -88,12 +89,12 @@ export function AboutSection() {
             </div>
           </li>
         </ul>
-        <div className="group flex">
-          <button className="mt-6 flex h-[40px] w-[150px] items-center justify-center rounded-l-lg bg-[#15549A] p-[8px] text-center font-inter text-[20px] font-normal leading-[24px] text-white md:h-[51px] md:w-[200px] md:p-[10px] md:text-[27px] md:leading-[32px]">
+        <div className="group flex font-bold">
+          <button className="mt-6 flex h-[40px] w-[150px] items-center justify-center rounded-l-lg bg-[#15549A] p-[8px] text-center font-inter text-[20px] leading-[24px] text-white md:h-[51px] md:w-[200px] md:p-[10px] md:text-[27px] md:leading-[32px]">
             READ MORE
           </button>
-          <span className="ml-[2px] mt-[24px] flex h-[40px] w-[35px] items-center justify-center rounded-r-lg bg-[#15549A] text-center text-[25px] text-white md:h-[51px] md:w-[45px] md:text-[35px]">
-            →
+          <span className="ml-[2px] mt-[24px] flex h-[40px] w-[35px] items-center justify-center rounded-r-lg bg-[#15549A] text-center text-[25px] text-white md:h-[51px] md:w-[45px] md:text-[45px]">
+            <ArrowRight className="h-8 w-8" />
           </span>
         </div>
       </div>
