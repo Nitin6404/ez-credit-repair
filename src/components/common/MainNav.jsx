@@ -38,7 +38,7 @@ export function MainNav() {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden font-montserrat text-[#7A7A7A] md:flex md:space-x-4 md:text-base lg:space-x-8 lg:text-lg">
+          <div className="hidden font-montserrat font-semibold text-[#7A7A7A] md:flex md:space-x-4 md:text-base lg:ml-[88px] lg:space-x-8 lg:text-lg">
             <NavLink to="/" className={getLinkClass}>
               Home
             </NavLink>
@@ -68,7 +68,7 @@ export function MainNav() {
           {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="absolute left-0 right-0 top-full z-50 bg-white shadow-lg md:hidden">
-              <div className="flex flex-col space-y-3 p-4 font-montserrat text-[#7A7A7A]">
+              <div className="flex flex-col space-y-3 p-4 font-montserrat font-semibold text-[#7A7A7A]">
                 <NavLink to="/" className={getLinkClass} onClick={() => setIsMenuOpen(false)}>
                   Home
                 </NavLink>
