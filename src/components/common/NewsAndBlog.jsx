@@ -18,7 +18,8 @@ export function NewsAndBlog() {
       <div className="grid w-full grid-cols-1 bg-[#15549A] bg-opacity-[10%] p-2 lg:grid-cols-[1fr_auto_1fr]">
         {/* Credit Repair Section */}
         <div className="ml-0 mt-[10px] space-y-4 p-2 md:ml-[50px] md:p-5">
-          <h2 className="ml-0 font-inter text-[20px] font-bold leading-[25px] text-[#15549A] md:ml-[20px] md:text-[25px] md:leading-[30px]">
+          {/* Credit Repair Section Heading */}
+          <h2 className="ml-0 font-inter text-[20px] font-bold leading-[25px] text-[#15549A] md:text-[25px] md:leading-[30px]">
             Credit Repair:
             <span className="font-inter text-[16px] font-bold leading-[20px] md:text-[20px] md:leading-[25px]">
               {' '}
@@ -40,19 +41,21 @@ export function NewsAndBlog() {
             </div>
           </div>
 
-          {/* Credit Repair Card 2 */}
-          <h2 className="ml-0 font-inter text-[20px] font-bold leading-[25px] text-[#15549A] md:ml-[20px] md:text-[25px] md:leading-[30px]">
+          {/* Credit Repair Section Heading for Card 2 */}
+          <h2 className="ml-0 font-inter text-[20px] font-bold leading-[25px] text-[#15549A] md:text-[25px] md:leading-[30px]">
             Credit Repair:{' '}
             <span className="font-inter text-[16px] font-bold leading-[20px] md:text-[20px] md:leading-[25px]">
               {' '}
               How Credit Repair Works{' '}
             </span>
           </h2>
+
+          {/* Credit Repair Card 2 */}
           <div className="relative h-[160px] w-full overflow-hidden rounded-lg md:h-[191px] md:w-[540px]">
             <img
               src={mobile}
               alt="Credit Repair 2"
-              className="mt-0 h-[160px] w-full rounded-lg object-cover md:mt-[-20px] md:h-[189px] md:w-[535px]"
+              className="h-[160px] w-full object-cover md:h-[191px] md:w-[540px]"
             />
             <div className="absolute inset-0 flex flex-col justify-end p-4">
               <span className="absolute left-2 top-2 h-[25px] w-[93px] rounded-lg border-2 border-white bg-[#059C4B] px-1 py-1 text-center font-inter text-[10px] font-[400] leading-[12px] text-white">
@@ -66,13 +69,13 @@ export function NewsAndBlog() {
         <div className="mx-4 mt-[50px] hidden h-[500px] w-[1px] bg-gray-300 lg:block"></div>
 
         {/* Related Articles Section */}
-        <div className="mr-0 space-y-4 rounded-lg p-4 md:mr-[20px] md:space-y-6 md:p-6">
+        <div className="mr-0 space-y-4 rounded-lg p-4 md:mr-[10px] md:space-y-6 md:p-6">
           <h2 className="font-inter text-[24px] font-bold leading-[30px] text-[#4B4B4B] md:text-[29px] md:leading-[35px]">
             Related Articles
           </h2>
 
           {/* Article 1 */}
-          <div className="flex flex-col items-start space-y-2 pb-4 md:flex-row md:space-x-4 md:space-y-0">
+          <div className="flex flex-col items-start space-y-2 md:flex-row md:space-x-4 md:space-y-0">
             <img
               src={woman}
               alt="Common Things"
@@ -90,8 +93,10 @@ export function NewsAndBlog() {
             </div>
           </div>
 
+          <div className="hidden h-[1px] w-full bg-gray-300 lg:block"></div>
+
           {/* Article 2 */}
-          <div className="flex flex-col items-start space-y-2 pb-4 md:flex-row md:space-x-4 md:space-y-0">
+          <div className="flex flex-col items-start space-y-2 md:flex-row md:space-x-4 md:space-y-0">
             <img
               src={rectangle3}
               alt="Average Outstanding Balance"
@@ -109,8 +114,10 @@ export function NewsAndBlog() {
             </div>
           </div>
 
+          <div className="hidden h-[1px] w-full bg-gray-300 lg:block"></div>
+
           {/* Article 3 */}
-          <div className="flex flex-col items-start space-y-2 pb-4 md:flex-row md:space-x-4 md:space-y-0">
+          <div className="flex flex-col items-start space-y-2 md:flex-row md:space-x-4 md:space-y-0">
             <img
               src={consultant}
               alt="What is a Secured Credit Card?"
