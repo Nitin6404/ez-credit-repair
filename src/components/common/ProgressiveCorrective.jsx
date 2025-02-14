@@ -7,7 +7,8 @@ import { useState, useRef, useEffect } from 'react';
 import ArrowImage from '../asset/arrow.svg';
 import arrow from '../asset/Arrow2.svg';
 import KeyboardDoubleArrowUpOutlinedIcon from '@mui/icons-material/KeyboardDoubleArrowUpOutlined';
-function ProgramCard({ number, title, image, description, nestedImage, onClick }) {
+
+function ProgramCard({ number, title, image, description, nestedImage, onClick, isActive }) {
   return (
     <div className="mb-6 w-full hover:shadow-lg md:mb-0 md:flex-1" onClick={onClick}>
       {/* Header */}
@@ -23,7 +24,9 @@ function ProgramCard({ number, title, image, description, nestedImage, onClick }
       </div>
 
       {/* Content */}
-      <div className="flex min-h-[120px] items-center justify-center rounded-b-lg bg-[#ECF6FF] p-3 text-[#9A9A9A] transition-colors hover:bg-[#15549A] hover:text-white md:h-[150px]">
+      <div
+        className={`flex min-h-[120px] items-center justify-center rounded-b-lg p-3 text-[#9A9A9A] transition-colors hover:bg-[#15549A] hover:text-white md:h-[100px] ${isActive ? 'bg-[#15549A] text-white' : 'bg-[#ECF6FF]'}`}
+      >
         <div className="relative mr-[10px] inline-block md:mr-[20px]">
           <img
             src={image}
@@ -47,7 +50,13 @@ function ProgramCard({ number, title, image, description, nestedImage, onClick }
 }
 
 export function Program() {
-  const [selectedCard, setSelectedCard] = useState(null);
+  const [selectedCard, setSelectedCard] = useState({
+    number: '2',
+    title: 'Dispute & Escalations',
+    image: rectangle1,
+    description: 'Challenge and Dispute negative items until they are removed',
+    data: 'Like the A-Team, well be your advocates, challenging inaccuracies and disputing negative items until they re removed. Our EzeCredit experts understand your rights and are dedicated to eliminating incorrect information, Inquiries, late payments, collections, and other factors that unfairly impact your score.',
+  });
 
   const programCards = [
     {
@@ -87,13 +96,17 @@ export function Program() {
         {/* Program Cards Section */}
         <div className="flex flex-col items-center md:flex-row md:items-start md:space-x-5">
           {programCards.map(card => (
-            <ProgramCard key={card.number} {...card} onClick={() => setSelectedCard(card)} />
+            <ProgramCard
+              key={card.number}
+              {...card}
+              onClick={() => setSelectedCard(card)}
+              isActive={selectedCard.number === card.number}
+            />
           ))}
         </div>
 
         {/* Down Arrow - Hidden on mobile */}
         <h1 className="ml-[600px] hidden text-7xl md:block">
-          {/* <MoveDown size={70} className="p-2" /> */}
           <KeyboardDoubleArrowUpOutlinedIcon
             style={{ width: '78px', height: '58px' }}
             className="w-12"
@@ -101,7 +114,7 @@ export function Program() {
         </h1>
 
         {/* Dispute & Escalation Details */}
-        <div className="mt-6 min-h-[208px] w-full border-[1px] border-[#4054B2] bg-blue-100 px-4 py-4 md:mt-[10px] md:w-[1230px] md:py-6">
+        <div className="mt-6 min-h-[208px] w-full border-[1px] border-[#4054B2] bg-blue-100 px-4 py-4 md:mt-[10px] md:w-[1260px] md:py-6">
           {selectedCard ? (
             <>
               <h4 className="mb-2 font-inter text-[22px] font-bold leading-[28px] text-[#07284F] md:text-[27px] md:leading-[32px]">
