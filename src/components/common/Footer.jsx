@@ -120,10 +120,10 @@ export function Footer() {
         <div className="container mx-auto grid gap-8 px-4 md:grid-cols-1 lg:grid-cols-3">
           {/* Company Info */}
           <div className="mt-[1px] hidden lg:block">
-            <h2 className="text-left font-montserrat text-[25px] font-bold leading-normal md:text-left md:text-[31px] md:leading-[88px] lg:text-center">
+            <h2 className="text-left font-montserrat text-[25px] font-bold leading-normal md:text-left md:text-[31px] md:leading-[88px]">
               EzeCreditRepair LLC.
             </h2>
-            <p className="mt-2 text-left font-montserrat text-[16px] font-[700] leading-[25px] md:text-left md:text-[20px] lg:text-center">
+            <p className="mt-2 text-left font-montserrat text-[16px] font-[700] leading-[25px] md:text-left md:text-[20px]">
               EzeCredit Repair is your trusted guide to better credit, ensuring you're ready for
               every opportunity that comes your way. As the A-Team of credit repair, our fast-track
               process improves your credit for better rates, loans, and peace of mind.
