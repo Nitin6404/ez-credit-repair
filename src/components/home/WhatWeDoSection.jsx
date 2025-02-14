@@ -32,7 +32,7 @@ export function WhatWeDoSection() {
             </p>
 
             {/* Services Header */}
-            <div className="mb-4 flex flex-row items-center space-x-3 md:flex-row md:items-center md:space-x-3">
+            <div className="mb-4 flex flex-row items-center space-x-3 md:flex-row md:items-center md:space-x-8">
               {/* Placeholder for Logo Image */}
               <div className="flex h-8 w-20 items-center justify-center rounded md:h-10 md:w-24 md:justify-start">
                 <img
@@ -82,7 +82,7 @@ export function WhatWeDoSection() {
             </ul>
 
             {/* Get Started Button */}
-            <button className="flex h-[40px] w-[200px] items-center justify-center gap-3 rounded-2xl bg-[#46CC02] font-semibold text-white md:h-[52px] md:w-[244px]">
+            <button className="flex h-[40px] w-[200px] items-center justify-center gap-3 rounded-xl bg-[#46CC02] font-semibold text-white md:h-[52px] md:w-[244px]">
               <span className="font-inter text-[20px] font-bold leading-[24px] md:text-[27px] md:leading-[32px]">
                 GET STARTED
               </span>
