@@ -35,7 +35,7 @@ const programCards = [
     nestedImage: credit4,
     description: 'Take action to boost your credit score to reach your desired score range',
     details:
-      'Derogatory information will prevent your score from going up.  However, after we remove the negatives, more may be needed to build your score to be able to utilize your credit to its full potential.  We then create a path to get you beyond the 700 range which will impact to the level needed Removing all of the derogatory will only get us haft way there.',
+      'Derogatory information will prevent your score from going up. However, after we remove the negatives, more may be needed to build your score to be able to utilize your credit to its full potential. We then create a path to get you beyond the 700 range which will impact to the level needed Removing all of the derogatory will only get us half way there.',
   },
 ];
 
@@ -67,11 +67,8 @@ function IntroSection() {
     <div className="mt-[80px] flex w-full max-w-[1300px] flex-col items-center justify-center px-4 text-center">
       <p className="w-full text-start font-inter text-[22px] font-normal leading-7 text-[#434343]">
         For the past 15 years, we've been dedicated to helping thousands of individuals repair their
-        credit and reclaim{' '}
-        <div>
-          financial control. At EzeCredit, we fight for every consumer's right to an accurate, fair,
-          and substantiated credit report.
-        </div>
+        credit and reclaim financial control. At EzeCredit, we fight for every consumer's right to
+        an accurate, fair, and substantiated credit report.
       </p>
       <h2 className="mt-[50px] font-inter text-[50px] font-bold leading-[60px] text-[#15549A]">
         Our Program
@@ -84,11 +81,11 @@ function IntroSection() {
 }
 
 // Single program card component
-function ProgramCard({ number, title, image, description, nestedImage }) {
+function ProgramCard({ number, title, image, description, nestedImage, isActive, onClick }) {
   return (
-    <div className="mb-4 hover:shadow-lg">
+    <div className="mb-6 cursor-pointer hover:shadow-lg" onClick={onClick}>
       {/* Header */}
-      <div className="p- h-[56.48px] w-full max-w-[430px] bg-[#46CC02] text-white">
+      <div className="h-[56.48px] w-full max-w-[430px] bg-[#46CC02] text-white">
         <div className="flex items-center">
           <div className="ml-2 mr-3 mt-2 flex h-11 w-11 items-center justify-center rounded-lg bg-white font-montserrat text-[25px] font-bold leading-[30px] text-[#15549A]">
             {number.padStart(2, '0')}
@@ -98,7 +95,11 @@ function ProgramCard({ number, title, image, description, nestedImage }) {
       </div>
 
       {/* Content */}
-      <div className="flex h-[150px] items-center justify-center rounded-b-lg bg-[#ECF6FF] p-3 text-[#9A9A9A] transition-colors hover:bg-[#15549A] hover:text-white">
+      <div
+        className={`flex h-[150px] items-center justify-center rounded-b-lg p-3 transition-colors ${
+          isActive ? 'bg-[#15549A] text-white' : 'bg-[#ECF6FF] text-[#9A9A9A]'
+        }`}
+      >
         <div className="relative mr-[20px] inline-block">
           <img src={image} alt={`${title} Icon`} className="inline-block" />
           {nestedImage && (
@@ -117,40 +118,42 @@ function ProgramCard({ number, title, image, description, nestedImage }) {
 
 // Program section with cards and details
 function ProgramSection() {
-  const [selectedCard, setSelectedCard] = useState(null);
+  const [selectedCard, setSelectedCard] = useState(programCards[1]); // Default active card
 
   return (
     <div className="mt-12 flex w-full max-w-[1300px] flex-col gap-8 px-4 lg:flex-row">
       {/* Left side - Program Cards */}
       <div className="flex w-full flex-col lg:w-[407px]">
         {programCards.map(card => (
-          <div key={card.number} onClick={() => setSelectedCard(card)}>
-            <ProgramCard {...card} />
-          </div>
+          <ProgramCard
+            key={card.number}
+            isActive={selectedCard.number === card.number}
+            onClick={() => setSelectedCard(card)}
+            {...card}
+          />
         ))}
       </div>
 
       {/* Right side - Details with Image */}
       <div className="flex-1">
-        <div className="relative h-[672px] w-full max-w-[837px] overflow-hidden rounded-lg">
-          {/* Background Image */}
+        <div className="relative h-[672px] w-full max-w-[837px] overflow-hidden md:w-[837px]">
           <img
             src={disputeBg}
             alt="Dispute Process Background"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          {/* Content Overlay */}
-          <div className="relative z-10 pl-8 pt-3">
-            {/* Top Image */}
-            <img src={dispute} alt="Dispute Process" className="h-[292px] w-full object-cover" />
+          <div className="relative z-10 pl-8 pt-3 md:pl-8 md:pt-4">
+            <img
+              src={dispute}
+              alt="Dispute Process"
+              className="h-[292px] w-full object-cover md:w-[795px]"
+            />
             <div className="pt-3">
               <h4 className="mb-6 font-inter text-[27px] font-bold leading-[32px] text-[#07284F]">
-                {selectedCard ? selectedCard.title : 'Dispute & Escalation'}
+                {selectedCard.title}
               </h4>
               <p className="m-3 mb-3 max-w-[600px] font-inter text-[22px] font-normal leading-[30px] text-[#173455]">
-                {selectedCard
-                  ? selectedCard.details
-                  : "We start by assessing your current credit situation and identifying the roadblocks impacting your score. Each case is unique, but we specialize in spotting inaccuracies and other factors that should not be in your report damaging to credit reputation. Together, we'll map out a plan to a better credit score."}
+                {selectedCard.details}
               </p>
             </div>
           </div>

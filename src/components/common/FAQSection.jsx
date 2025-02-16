@@ -85,7 +85,7 @@ export function FAQSection({ className = '', showTitle = true, maxWidth = '4xl' 
 }
 
 export function FaqAbout() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
 
   const toggleAccordion = index => {
     setOpenIndex(openIndex === index ? null : index);
