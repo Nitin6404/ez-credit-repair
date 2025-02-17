@@ -1,5 +1,5 @@
 import { Clock, LayoutGrid } from 'lucide-react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AboutUs from '../components/asset/AboutUsbackground.png';
 import badCredits from '../components/asset/badCredits.svg';
@@ -10,7 +10,8 @@ const courses = [
     title: 'Algebra Skills Enhance Course',
     description:
       'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-    image: badCredits,
+    image:
+      'https://fastly.picsum.photos/id/1060/200/300.jpg?hmac=xYtFmeYcfydIF3-Qybnra-tMwklX69T52EtGd-bacBI',
     duration: '30Hrs 45 Mins',
   },
   {
@@ -18,7 +19,8 @@ const courses = [
     title: 'Atmospheric Chemistry Courses',
     description:
       'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-    image: badCredits,
+    image:
+      'https://fastly.picsum.photos/id/1060/200/300.jpg?hmac=xYtFmeYcfydIF3-Qybnra-tMwklX69T52EtGd-bacBI',
     duration: '30Hrs 45 Mins',
   },
   {
@@ -26,7 +28,8 @@ const courses = [
     title: 'Biomathematics Courses',
     description:
       'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-    image: badCredits,
+    image:
+      'https://fastly.picsum.photos/id/1060/200/300.jpg?hmac=xYtFmeYcfydIF3-Qybnra-tMwklX69T52EtGd-bacBI',
     duration: '30Hrs 45 Mins',
   },
   {
@@ -34,7 +37,8 @@ const courses = [
     title: 'Biological Chemistry Courses',
     description:
       'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-    image: badCredits,
+    image:
+      'https://fastly.picsum.photos/id/1060/200/300.jpg?hmac=xYtFmeYcfydIF3-Qybnra-tMwklX69T52EtGd-bacBI',
     duration: '30Hrs 45 Mins',
   },
   {
@@ -42,7 +46,8 @@ const courses = [
     title: 'Course With Featured Video',
     description:
       'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-    image: badCredits,
+    image:
+      'https://fastly.picsum.photos/id/1060/200/300.jpg?hmac=xYtFmeYcfydIF3-Qybnra-tMwklX69T52EtGd-bacBI',
     duration: '30Hrs 45 Mins',
   },
   {
@@ -50,7 +55,8 @@ const courses = [
     title: 'Data Analysis Course',
     description:
       'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-    image: badCredits,
+    image:
+      'https://fastly.picsum.photos/id/1060/200/300.jpg?hmac=xYtFmeYcfydIF3-Qybnra-tMwklX69T52EtGd-bacBI',
     duration: '30Hrs 45 Mins',
   },
   {
@@ -58,7 +64,8 @@ const courses = [
     title: 'Data Science Courses',
     description:
       'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-    image: badCredits,
+    image:
+      'https://fastly.picsum.photos/id/1060/200/300.jpg?hmac=xYtFmeYcfydIF3-Qybnra-tMwklX69T52EtGd-bacBI',
     duration: '30Hrs 45 Mins',
   },
   {
@@ -66,7 +73,8 @@ const courses = [
     title: 'Digital Marketing Course',
     description:
       'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-    image: badCredits,
+    image:
+      'https://fastly.picsum.photos/id/1060/200/300.jpg?hmac=xYtFmeYcfydIF3-Qybnra-tMwklX69T52EtGd-bacBI',
     duration: '30Hrs 45 Mins',
   },
   {
@@ -74,7 +82,8 @@ const courses = [
     title: 'General Chemistry Courses',
     description:
       'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-    image: badCredits,
+    image:
+      'https://fastly.picsum.photos/id/1060/200/300.jpg?hmac=xYtFmeYcfydIF3-Qybnra-tMwklX69T52EtGd-bacBI',
     duration: '30Hrs 45 Mins',
   },
   {
@@ -82,7 +91,8 @@ const courses = [
     title: 'GIS Specialist',
     description:
       'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-    image: badCredits,
+    image:
+      'https://fastly.picsum.photos/id/1060/200/300.jpg?hmac=xYtFmeYcfydIF3-Qybnra-tMwklX69T52EtGd-bacBI',
     duration: '30Hrs 45 Mins',
   },
   {
@@ -90,7 +100,8 @@ const courses = [
     title: 'Holistic Health Courses',
     description:
       'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-    image: badCredits,
+    image:
+      'https://fastly.picsum.photos/id/1060/200/300.jpg?hmac=xYtFmeYcfydIF3-Qybnra-tMwklX69T52EtGd-bacBI',
     duration: '30Hrs 45 Mins',
   },
   {
@@ -98,14 +109,15 @@ const courses = [
     title: 'Math Fundamentals Course',
     description:
       'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-    image: badCredits,
+    image:
+      'https://fastly.picsum.photos/id/1060/200/300.jpg?hmac=xYtFmeYcfydIF3-Qybnra-tMwklX69T52EtGd-bacBI',
     duration: '30Hrs 45 Mins',
   },
 ];
 
 function CourseCard({ title, description, image, duration }) {
   return (
-    <div className="group relative h-[378px] w-full transform cursor-pointer overflow-hidden rounded-[20px] border-2 border-[#6E6E6E] bg-white shadow-sm transition-colors duration-300 hover:bg-[#04284F] sm:w-[300px]">
+    <div className="group relative h-[378px] w-full transform cursor-pointer overflow-hidden rounded-[10px] border-2 border-[#6E6E6E] bg-white shadow-sm transition-colors duration-300 hover:bg-[#04284F] sm:w-[300px]">
       {/* Image Container with padding */}
       <div className="h-[187px] w-full overflow-hidden p-1 pt-2">
         {/* Image wrapper with exact dimensions */}
@@ -137,21 +149,6 @@ function CourseCard({ title, description, image, duration }) {
 
 export function LearningCenter() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [currentPage, setCurrentPage] = useState(1);
-  const coursesPerPage = 8;
-
-  // Filter courses based on search term
-  const filteredCourses = courses.filter(course =>
-    course.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  // Get current courses for pagination
-  const indexOfLastCourse = currentPage * coursesPerPage;
-  const indexOfFirstCourse = indexOfLastCourse - coursesPerPage;
-  const currentCourses = filteredCourses.slice(indexOfFirstCourse, indexOfLastCourse);
-
-  // Calculate total pages
-  const totalPages = Math.ceil(filteredCourses.length / coursesPerPage);
 
   return (
     <div className="min-h-screen pt-8">
@@ -184,7 +181,7 @@ export function LearningCenter() {
           </div>
 
           {/* Search Input and Go Button */}
-          <div className="flex w-full flex-col items-start gap-3 sm:flex-row sm:justify-start">
+          <div className="flex w-full flex-col items-start gap-3 sm:flex-row sm:justify-start md:justify-end">
             <div className="relative w-full sm:w-[398px]">
               <input
                 type="text"
@@ -202,26 +199,11 @@ export function LearningCenter() {
       </div>
 
       {/* Course Grid */}
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="mx-auto mb-10 max-w-7xl px-4">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {currentCourses.map(course => (
+          {courses.map(course => (
             <CourseCard key={course.id} {...course} />
           ))}
-        </div>
-      </div>
-
-      {/* Pagination */}
-      <div className="mx-auto mt-8 flex max-w-7xl justify-center space-x-2 px-4">
-        <div className="flex items-center space-x-2">
-          <button className="flex h-8 w-8 items-center justify-center rounded-full text-gray-600 hover:bg-gray-200">
-            1
-          </button>
-          <button className="flex h-8 w-8 items-center justify-center rounded-full text-gray-600 hover:bg-gray-200">
-            2
-          </button>
-          <button className="flex items-center justify-center text-gray-600 hover:text-gray-800">
-            &gt;&gt;
-          </button>
         </div>
       </div>
 
