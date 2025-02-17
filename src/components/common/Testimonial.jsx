@@ -3,8 +3,8 @@ import comma from '../asset/comma.png';
 import jack from '../asset/jack.svg';
 import mathew from '../asset/mathew.svg';
 import susan from '../asset/susan.svg';
-import { ChevronRight } from 'lucide-react';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronRight, ChevronLeft } from 'lucide-react';
+
 const testimonials = [
   {
     image: jack,
@@ -26,44 +26,55 @@ const testimonials = [
   },
 ];
 
-// Component for the testimonial image and user info
-function TestimonialProfile({ image, name, date, size = 'small' }) {
-  const imageSize = size === 'large' ? { width: 184, height: 220 } : { width: 152, height: 165 };
-
-  const mobileImageSize =
-    size === 'large' ? { width: 120, height: 144 } : { width: 100, height: 120 };
+// Component for testimonial image and user info
+function TestimonialProfile({ image, name, date, size }) {
+  const isLarge = size === 'large';
 
   return (
     <div className="flex flex-col items-center justify-center space-y-1 font-inter text-[#292929]">
       <img
         src={image}
-        alt={name}
-        className="h-[120px] w-[100px] rounded-3xl border-[#B8B8B8] md:h-[165px] md:w-[152px] lg:h-[220px] lg:w-[184px]"
+        alt={`${name}'s testimonial image`}
+        className={`h-[120px] w-[100px] rounded-3xl border-[#B8B8B8] md:h-[165px] md:w-[152px] ${isLarge ? 'lg:h-[200px] lg:w-[164px]' : 'lg:h-[150px] lg:w-[110px]'} `}
       />
-      <p className="px-3 text-center font-inter text-[14px] font-normal leading-6 md:text-base lg:text-xl">
+      <p
+        className={`px-3 text-center font-inter text-[14px] font-normal leading-6 md:text-base ${isLarge ? 'lg:text-xl' : 'lg:text-lg'}`}
+      >
         {name}
       </p>
-      <p className="text-center text-[8px] font-bold leading-3 md:text-[9px]">{date}</p>
+      <p
+        className={`text-center ${isLarge ? 'text-[8px]' : 'text-[4px]'} font-bold leading-3 md:text-[9px]`}
+      >
+        {date}
+      </p>
     </div>
   );
 }
 
-// Component for the testimonial text with quotes
-function TestimonialText({ text, size = 'small' }) {
+// Component for testimonial text with quotes
+function TestimonialText({ text, size }) {
+  const isLarge = size === 'large';
+
   return (
     <div className="my-4 md:my-10">
       <div className="flex h-auto w-full flex-col items-center justify-center md:h-[120px] md:w-[170px] lg:h-[196px] lg:w-[251px]">
         <div className="flex w-full justify-start">
-          <img src={comma} alt="Quote" className="mr-2 h-4 w-4 md:h-5 md:w-5 lg:h-8 lg:w-8" />
+          <img
+            src={comma}
+            alt="Opening quote"
+            className={`mr-2 h-4 w-4 md:h-5 md:w-5 ${isLarge ? 'lg:h-8 lg:w-8' : 'lg:h-6 lg:w-6'}`}
+          />
         </div>
-        <p className="my-2 px-2 text-center font-inter text-[10px] font-bold leading-4 md:my-4 md:px-0 md:text-[11px] lg:text-sm">
+        <p
+          className={`my-2 px-2 text-center font-inter text-[10px] font-bold leading-4 md:my-4 md:px-0 md:text-[11px] ${isLarge ? 'lg:text-sm' : 'lg:text-[12px]'}`}
+        >
           {text}
         </p>
         <div className="flex w-full justify-end">
           <img
             src={comma}
-            alt="Quote"
-            className="ml-2 h-4 w-4 rotate-180 md:h-5 md:w-5 lg:h-8 lg:w-8"
+            alt="Closing quote"
+            className={`ml-2 h-4 w-4 rotate-180 md:h-5 md:w-5 ${isLarge ? 'lg:h-8 lg:w-8' : 'lg:h-6 lg:w-6'}`}
           />
         </div>
       </div>
@@ -74,63 +85,63 @@ function TestimonialText({ text, size = 'small' }) {
 // Component for a single testimonial card
 function TestimonialCard({ testimonial, position = 'center' }) {
   const isCenter = position === 'center';
+  let size = 'large';
+  if (position !== 'center') {
+    size = 'small';
+  }
 
   return (
     <div
-      className={` ${
+      className={`${
         isCenter
           ? 'z-20 h-[400px] w-[300px] md:h-[465px] md:w-[471px] lg:h-[527px] lg:w-[543px]'
           : 'hidden h-[465px] w-[471px] md:flex'
-      } ${position === 'left' ? 'md:absolute md:left-36' : ''} ${position === 'right' ? 'md:absolute md:right-36' : ''} flex scale-100 transform items-center justify-center border-[5px] border-[#002464] bg-[#E2E3E3] transition-all duration-300 md:scale-110 md:border-[10px]`}
+      } ${position === 'left' ? 'md:absolute md:left-48' : ''} ${position === 'right' ? 'md:absolute md:right-48' : ''} flex items-center justify-center border-[5px] border-[#002464] bg-[#E2E3E3] transition-all duration-300 md:scale-110 md:border-[10px]`}
       style={{ zIndex: isCenter ? 3 : 1 }}
     >
       <div className="flex flex-col justify-between space-y-2 p-2 md:flex-row md:space-x-5 md:space-y-0 md:p-0">
-        <TestimonialProfile {...testimonial} size={isCenter ? 'large' : 'small'} />
-        <TestimonialText text={testimonial.text} size={isCenter ? 'large' : 'small'} />
+        <TestimonialProfile {...testimonial} size={size} />
+        <TestimonialText text={testimonial.text} size={size} />
       </div>
     </div>
   );
 }
 
 // Navigation buttons component
-function NavigationButtons({ onPrev, onNext }) {
-  return (
-    <div className="my-6 flex w-full justify-center gap-4 px-4 pt-4 md:my-10 md:gap-10 md:pt-10">
-      <button
-        onClick={onPrev}
-        className="flex items-center rounded bg-[#15549A] px-4 py-2 text-sm font-semibold text-white shadow transition-all hover:bg-[#003977] md:px-6 md:py-3 md:text-base"
-      >
-        <ChevronLeft />
-        <span className="ml-2">Previous</span>
-      </button>
-      <button
-        onClick={onNext}
-        className="flex items-center rounded bg-[#15549A] px-4 py-2 text-sm font-semibold text-white shadow transition-all hover:bg-[#003977] md:px-6 md:py-3 md:text-base"
-      >
-        <span className="mr-2">Next</span>
-        <ChevronRight />
-      </button>
-    </div>
-  );
-}
+// function NavigationButtons({ onPrev, onNext }) {
+//   return (
+//     <div className="my-6 flex w-full justify-center gap-4 px-4 pt-4 md:my-10 md:gap-10 md:pt-10">
+//       <button
+//         onClick={onPrev}
+//         className="flex items-center rounded bg-[#15549A] px-4 py-2 text-sm font-semibold text-white shadow transition-all hover:bg-[#003977] md:px-6 md:py-3 md:text-base"
+//       >
+//         <ChevronLeft />
+//         <span className="ml-2">Previous</span>
+//       </button>
+//       <button
+//         onClick={onNext}
+//         className="flex items-center rounded bg-[#15549A] px-4 py-2 text-sm font-semibold text-white shadow transition-all hover:bg-[#003977] md:px-6 md:py-3 md:text-base"
+//       >
+//         <span className="mr-2">Next</span>
+//         <ChevronRight />
+//       </button>
+//     </div>
+//   );
+// }
 
 export function Testimonial() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const getTestimonialIndex = offset => {
-    return (currentIndex + offset + testimonials.length) % testimonials.length;
-  };
+  const getTestimonialIndex = offset =>
+    (currentIndex + offset + testimonials.length) % testimonials.length;
 
-  const prevTestimonial = () => {
+  const prevTestimonial = () =>
     setCurrentIndex(prev => (prev === 0 ? testimonials.length - 1 : prev - 1));
-  };
 
-  const nextTestimonial = () => {
-    setCurrentIndex(prev => (prev + 1) % testimonials.length);
-  };
+  const nextTestimonial = () => setCurrentIndex(prev => (prev + 1) % testimonials.length);
 
   return (
-    <div className="md:py- relative flex flex-col items-center bg-white py-6">
+    <div className="relative flex flex-col items-center bg-white py-6 md:py-6">
       {/* Header Section */}
       <div className="mb-4 px-4 text-center md:mb-5 md:px-0">
         <h2 className="mt-2 font-inter text-[32px] font-bold leading-[40px] text-[#15549A] md:mt-[-10px] md:text-[50px] md:leading-[60px]">
@@ -151,7 +162,7 @@ export function Testimonial() {
           <TestimonialCard testimonial={testimonials[getTestimonialIndex(1)]} position="right" />
         </div>
 
-        <NavigationButtons onPrev={prevTestimonial} onNext={nextTestimonial} />
+        {/*<NavigationButtons onPrev={prevTestimonial} onNext={nextTestimonial} />*/}
       </div>
     </div>
   );
