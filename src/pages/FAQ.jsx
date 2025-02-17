@@ -4,7 +4,7 @@ import manOnFaq from '../components/asset/manOnFaq.svg';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 export function FAQ() {
-  const [selectedQuestion, setSelectedQuestion] = useState(null);
+  const [selectedQuestion, setSelectedQuestion] = useState(1);
 
   const questions = [
     {
