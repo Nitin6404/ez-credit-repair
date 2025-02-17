@@ -23,7 +23,8 @@ export function CreditReportSection({ formData, handleInputChange }) {
               type="checkbox"
               name="addSecondaryMember"
               checked={formData.addSecondaryMember}
-              className="mx-2 hidden h-8 w-8 appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2] fill-blue-500 sm:block"
+              onChange={handleInputChange}
+              className="mx-2 h-8 w-8 cursor-pointer appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2] checked:border-[#767676] checked:bg-black sm:block"
             />
 
             <label className="text-lg font-semibold text-white md:text-2xl">

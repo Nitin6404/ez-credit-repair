@@ -81,7 +81,15 @@ export function RegistrationPage() {
   const renderCurrentStep = () => {
     switch (currentStep) {
       case 1:
-        return <PersonalInfoForm formData={formData} handleInputChange={handleInputChange} />;
+        return (
+          <>
+            <PersonalInfoForm formData={formData} handleInputChange={handleInputChange} />
+            <div className="w-screen overflow-hidden">
+              <PricingPlan />
+            </div>
+            <CreditReportSection formData={formData} handleInputChange={handleInputChange} />
+          </>
+        );
       case 2:
         return <BillingInfoForm formData={formData} handleInputChange={handleInputChange} />;
       default:
@@ -112,11 +120,7 @@ export function RegistrationPage() {
 
         {/* Form */}
         <div className="flex w-full flex-col items-center justify-center bg-white">
-          {renderCurrentStep()}
-          <div className="w-screen overflow-hidden">
-            <PricingPlan />
-          </div>
-          <CreditReportSection formData={formData} handleInputChange={handleInputChange} />
+          {renderCurrentStep()};
           <NavigationButtons
             currentStep={currentStep}
             totalSteps={steps.length}
