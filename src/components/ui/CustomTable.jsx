@@ -92,7 +92,7 @@ export function CustomTable({ data, onSort, currentPage, totalPages, onPageChang
 
       {/* Body */}
       <div>
-        {data.slice((currentPage - 1) * 10, currentPage * 10).map((row, index) => (
+        {data.map((row, index) => (
           <div
             key={row.id}
             className={`grid h-[80px] grid-cols-[340px_180px_200px_195px_150px_160px] ${
@@ -162,13 +162,6 @@ export function CustomTable({ data, onSort, currentPage, totalPages, onPageChang
           </div>
         ))}
       </div>
-
-      {/* Pagination */}
-      <TablePagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={onPageChange}
-      />
     </div>
   );
 }

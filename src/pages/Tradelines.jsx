@@ -246,7 +246,7 @@ export function Tradelines() {
   });
 
   return (
-    <div className="flex min-h-screen w-full flex-col bg-white">
+    <div className="flex w-full flex-col">
       {!showShoppingCart ? (
         <>
           <div className="relative mt-3 p-2">
@@ -255,24 +255,25 @@ export function Tradelines() {
               alt="About Us Background"
               className="absolute inset-0 mt-[30px] h-full w-full object-cover opacity-100"
             />
+
             <div className="relative flex h-[130px] items-center p-2 text-white">
-              <div className="ml-5 mt-[50px] flex max-w-screen-lg font-inter text-lg font-bold leading-7 sm:ml-[80px] sm:text-2xl">
-                <span className="ml-3 sm:ml-10">Home</span>
+              <div className="ml-[80px] mt-[50px] flex max-w-screen-lg font-inter text-2xl font-bold leading-7">
+                <span className="ml-10">Home</span>
                 <span className="mx-1">|</span>
                 <span>Tradelines</span>
               </div>
             </div>
           </div>
 
-          <div className="mt-10 w-full bg-[#15549A] px-6 py-12 text-start font-inter text-white md:px-24">
-            <h1 className="mb-3 font-inter text-3xl font-bold md:text-5xl">Tradeline Inventory</h1>
-            <p className="mb-3 text-base font-normal md:text-xl">
+          <div className="mt-20 w-full bg-[#15549A] px-24 py-12 text-start font-inter text-white">
+            <h1 className="mb-3 font-inter text-5xl font-bold">Tradeline Inventory</h1>
+            <p className="mb-3 text-xl font-normal">
               Tradeline orders must be processed at least 5 days before the reporting date, except
               for American Express, which requires a <b>minimum of 10 days</b>. If the reporting
               date has already passed, the tradeline's first reporting date will shift to the
               following month.
             </p>
-            <p className="text-base font-normal md:text-xl">
+            <p className="text-xl font-normal">
               Note: Once an order is placed, we will verify tradeline availability and notify you
               when the tradeline order has been accepted. If the requested tradelines are
               unavailable, alternative options will be added to your user account for you to select
@@ -281,57 +282,53 @@ export function Tradelines() {
             </p>
           </div>
 
-          {/* Responsive Checkout Button */}
-          <div className="mt-4 flex justify-end px-6 md:px-24">
-            <button className="flex h-10 w-36 items-center justify-center bg-blue-500 font-semibold text-white">
-              Go to check Out
-            </button>
-          </div>
-
-          {/* Centered Form & Table Section */}
-          <div className="mx-auto mb-14 mt-0 flex w-full flex-col px-4 md:w-[1250px]">
-            <div className="flex w-full flex-col items-center text-center font-inter">
-              <span className="mb-1 hidden whitespace-nowrap text-lg font-normal text-[#04284F] md:block md:text-2xl">
-                Select Desired Tradeline and Reporting Date on your order:
-              </span>
-
-              {/* Centered Form */}
-              <div className="mx-auto mt-5 flex w-full max-w-3xl flex-col gap-4 md:flex-row md:items-center md:justify-center">
-                {/* Select Institution */}
-                <div className="relative w-full md:max-w-md">
-                  <select
-                    className="w-full appearance-none border bg-[#E3E3E3] px-4 py-2 text-[#173455] md:text-lg"
-                    value={selectedInstitution}
-                    onChange={e => setSelectedInstitution(e.target.value)}
-                  >
-                    <option className="text-lg font-normal text-[#122F6D]">
-                      Select Institution
-                    </option>
-                    {tradelineData.map(item => (
-                      <option key={item.id} value={item.institution}>
-                        {item.institution}
+          <div className="mx-auto mb-14 mt-20 flex flex-col lg:w-[1250px]">
+            <div className="mb-6 flex flex-col items-center justify-end text-center font-inter">
+              <div className="flex w-full justify-end">
+                <button
+                  className="flex items-center bg-[#04284F] px-5 py-2.5 text-lg font-normal text-white"
+                  onClick={() => setShowShoppingCart(true)}
+                >
+                  <span>Go to Checkout</span>
+                </button>
+              </div>
+              <div className="mx-auto mt-5 flex flex-col items-center gap-4 rounded-none">
+                <span className="mb-1 text-2xl font-normal text-[#04284F] md:whitespace-nowrap">
+                  Select Desired Tradeline and Reporting Date on your order:
+                </span>
+                <div className="flex w-full gap-4">
+                  <div className="relative flex-1">
+                    <select
+                      className="w-full appearance-none border bg-[#E3E3E3] px-4 py-2 text-[#173455]"
+                      value={selectedInstitution}
+                      onChange={e => setSelectedInstitution(e.target.value)}
+                    >
+                      <option className="text-lg font-normal text-[#122F6D]">
+                        Select Institution
                       </option>
-                    ))}
-                  </select>
-                  <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 text-[#04284F]" />
-                </div>
-
-                {/* Search Field */}
-                <div className="relative w-full md:w-64">
-                  <input
-                    type="text"
-                    placeholder="Find Tradeline"
-                    value={searchQuery}
-                    onChange={e => setSearchQuery(e.target.value)}
-                    className="w-full appearance-none border bg-[#E3E3E3] px-4 py-2 pl-10 text-[#173455]"
-                  />
-                  <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#04284F]" />
+                      {tradelineData.map(item => (
+                        <option key={item.id} value={item.institution}>
+                          {item.institution}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 text-[#04284F]" />
+                  </div>
+                  <div className="relative w-64">
+                    <input
+                      type="text"
+                      placeholder="Find Tradeline"
+                      value={searchQuery}
+                      onChange={e => setSearchQuery(e.target.value)}
+                      className="appearance-none border bg-[#E3E3E3] px-4 py-2 pl-10 text-[#173455] placeholder:text-[#04284F] lg:w-full"
+                    />
+                    <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#04284F]" />
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Data Table */}
-            <div className="mt-8 w-full overflow-x-auto">
+            <div className="hidden lg:block">
               <CustomTable
                 columns={columns}
                 data={filteredData}
