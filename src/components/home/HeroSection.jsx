@@ -3,7 +3,7 @@ import rectangle11 from '../asset/Rectangle11.png';
 import HeroSectionBg from '../asset/HeroSectionBg.png';
 export function HeroSection() {
   return (
-    <div className="relative min-h-[350px] w-full overflow-hidden bg-[#ECF5FF] bg-[url('../asset/HeroSectionBg.png')] bg-cover bg-center md:h-[462px] md:bg-none">
+    <div className="relative min-h-[350px] w-full overflow-hidden bg-[#ECF5FF] bg-[url('../asset/HeroSectionBg.png')] bg-cover bg-center md:h-[462px] md:bg-none lg:overflow-visible">
       {/* Main content container */}
       <div className="relative mx-auto h-full max-w-[1440px]">
         {/* Text content section */}
@@ -44,11 +44,11 @@ export function HeroSection() {
         </div>
 
         {/* Image section - Hidden on mobile */}
-        <div className="absolute right-0 top-[300px] z-30 mb-5 hidden h-[509px] w-[398px] pt-8 md:right-[140px] md:top-0 md:block md:h-[509px] md:w-[398px]">
+        <div className="absolute right-0 top-[300px] z-30 mb-5 hidden h-[509px] w-[398px] pt-8 md:right-[140px] md:top-0 md:block md:h-[550px] md:w-[440px]">
           <img
             src={rectangle11}
             alt="Eze Credit Repair Logo"
-            className="h-full w-full object-contain pb-14"
+            className="z-[1000] h-full w-full object-contain pb-14"
           />
         </div>
 

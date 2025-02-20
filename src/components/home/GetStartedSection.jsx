@@ -5,7 +5,7 @@ import pauseIcon from '../asset/pauseIcon.svg';
 
 export function GetStartedSection() {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full">
       {/* Background image */}
       <img
         src={creditRepair}
@@ -14,7 +14,7 @@ export function GetStartedSection() {
       />
 
       {/* Center image - Hidden on mobile */}
-      <div className="absolute left-1/2 top-[230px] hidden h-[530px] w-[997px] -translate-x-1/2 -translate-y-1/2 transform rounded-md md:block">
+      <div className="absolute left-1/2 top-[230px] hidden h-[545px] w-[1009px] -translate-x-1/2 -translate-y-1/2 transform rounded-md md:block">
         <img
           src={rectangle10}
           alt="Eze Credit Repair Logo"
