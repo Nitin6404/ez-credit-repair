@@ -83,6 +83,19 @@ export function Program() {
     },
   ];
 
+  const trainglePosition = () => {
+    switch (selectedCard.number) {
+      case '1':
+        return '-left-[400px]'; // Adjust this as per your design
+      case '2':
+        return 'left-10'; // Adjust this as per your design
+      case '3':
+        return 'left-[470px]'; // Adjust this as per your design
+      default:
+        return 'left-[350px]';
+    }
+  };
+
   return (
     <div className="px-4 md:px-0">
       <div className="mx-auto max-w-screen-xl rounded bg-white p-4 md:p-6">
@@ -106,11 +119,14 @@ export function Program() {
         </div>
 
         {/* Down Arrow - Hidden on mobile */}
-        <h1 className="ml-[600px] hidden text-7xl md:block">
-          <KeyboardDoubleArrowUpOutlinedIcon
-            style={{ width: '78px', height: '58px' }}
-            className="w-12"
-          />
+        <h1 className="ml-[600px] hidden text-7xl md:relative md:mt-10 md:block">
+          {/*<KeyboardDoubleArrowUpOutlinedIcon*/}
+          {/*  style={{ width: '78px', height: '58px' }}*/}
+          {/*  className="w-12"*/}
+          {/*/>*/}
+          <div
+            className={`absolute -top-2 ${trainglePosition()} z-50 h-6 w-6 -translate-x-1/2 -translate-y-1 rotate-45 border-l border-t border-[#4054B2] bg-blue-100`}
+          ></div>
         </h1>
 
         {/* Dispute & Escalation Details */}
