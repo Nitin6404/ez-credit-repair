@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AboutUs from '../components/asset/AboutUsbackground.png';
 import badCredits from '../components/asset/badCredits.svg';
+import badCreditLatest from '../components/asset/badCreditLatest.jpg';
 
 const courses = [
   {
@@ -211,29 +212,29 @@ export function LearningCenter() {
       <div className="relative hidden h-[444px] w-full overflow-hidden md:block">
         <div
           className="h-full w-full bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${badCredits})` }}
+          style={{ backgroundImage: `url(${badCreditLatest})` }}
         >
-          <div className="relative h-full w-full">
-            {/* Bad */}
-            <div className="absolute right-[10%] top-[10%] hidden md:right-[30%] md:top-[20%] md:block lg:right-[35%]">
-              <h2 className="font-inter text-[60px] font-bold text-[#013044] [transform:rotate(-5deg)] md:text-[90px]">
-                Bad
-              </h2>
-            </div>
-            {/* CREDIT? */}
-            <div className="absolute right-[5%] top-[15%] hidden md:right-[10%] md:top-[25%] md:block lg:right-[15%]">
-              <h1 className="font-inter text-[80px] font-extrabold uppercase text-[#013044] [transform:rotate(-5deg)] md:text-[142px]">
-                Credit
-                <span className="ml-4 text-[100px] md:text-[170px]">?</span>
-              </h1>
-            </div>
-            {/* We can help! */}
-            <div className="absolute right-[20%] top-[60%] hidden md:right-[25%] md:top-[70%] md:block lg:right-[30%]">
-              <p className="font-inter text-[40px] font-bold text-[#013044] [transform:rotate(-4deg)] md:text-[57px]">
-                we can help!
-              </p>
-            </div>
-          </div>
+          {/*<div className="relative h-full w-full">*/}
+          {/*  /!* Bad *!/*/}
+          {/*  <div className="absolute right-[10%] top-[10%] hidden md:right-[30%] md:top-[20%] md:block lg:right-[35%]">*/}
+          {/*    <h2 className="font-inter text-[60px] font-bold text-[#013044] [transform:rotate(-5deg)] md:text-[90px]">*/}
+          {/*      Bad*/}
+          {/*    </h2>*/}
+          {/*  </div>*/}
+          {/*  /!* CREDIT? *!/*/}
+          {/*  <div className="absolute right-[5%] top-[15%] hidden md:right-[10%] md:top-[25%] md:block lg:right-[15%]">*/}
+          {/*    <h1 className="font-inter text-[80px] font-extrabold uppercase text-[#013044] [transform:rotate(-5deg)] md:text-[142px]">*/}
+          {/*      Credit*/}
+          {/*      <span className="ml-4 text-[100px] md:text-[170px]">?</span>*/}
+          {/*    </h1>*/}
+          {/*  </div>*/}
+          {/*  /!* We can help! *!/*/}
+          {/*  <div className="absolute right-[20%] top-[60%] hidden md:right-[25%] md:top-[70%] md:block lg:right-[30%]">*/}
+          {/*    <p className="font-inter text-[40px] font-bold text-[#013044] [transform:rotate(-4deg)] md:text-[57px]">*/}
+          {/*      we can help!*/}
+          {/*    </p>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
         </div>
       </div>
     </div>
