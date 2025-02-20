@@ -79,7 +79,7 @@ export function Pricing() {
             <img
               src={pricingBoiWithTransparency}
               alt="Pricing Representative"
-              className="absolute -top-16 right-0 h-full w-full object-contain"
+              className="absolute -top-3 right-0 h-full w-full overflow-visible object-contain lg:-top-16 lg:left-10 lg:object-cover"
             />
           </div>
         </div>
