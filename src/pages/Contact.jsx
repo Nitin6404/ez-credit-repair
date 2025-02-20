@@ -154,7 +154,7 @@ export function Contact() {
       </div>
       <div className="flex flex-col space-y-1">
         <div className="relative mt-16 font-montserrat">
-          <div className="absolute left-1/2 h-[93px] w-[260px] -translate-x-1/2 transform bg-white px-3 py-1 text-lg leading-6 text-black md:ml-[440px] md:mt-[325px]">
+          <div className="absolute left-36 h-[93px] w-[260px] -translate-x-1/2 transform bg-white px-3 py-1 text-lg leading-6 text-black md:ml-[440px] md:mt-[325px]">
             <div className="font-bold">Eze Credit Repair</div>{' '}
             <div className="font-normal text-[#232323]">120 Double Street, Texas, Houston USA </div>
           </div>
