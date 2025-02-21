@@ -52,10 +52,10 @@ function ProgramCard({ number, title, image, description, nestedImage, onClick, 
 export function Program() {
   const [selectedCard, setSelectedCard] = useState({
     number: '2',
-    title: 'Dispute & Escalations',
+    title: 'Dispute & Escalation',
     image: rectangle1,
-    description: 'Challenge and Dispute negative items until they are removed',
-    data: 'Like the A-Team, well be your advocates, challenging inaccuracies and disputing negative items until they re removed. Our EzeCredit experts understand your rights and are dedicated to eliminating incorrect information, Inquiries, late payments, collections, and other factors that unfairly impact your score.',
+    description: 'Challenge and Dispute negative items until they are removed.',
+    data: "Like the A-Team, we'll be your advocates, challenging inaccuracies and disputing negative items until they're removed. Our EzeCredit experts understand your rights and are dedicated to eliminating incorrect information, Inquiries, late payments, collections, and other factors that unfairly impact your score.",
   });
 
   const programCards = [
@@ -63,22 +63,22 @@ export function Program() {
       number: '1',
       title: 'Credit Report Analysis',
       image: rectangle,
-      description: 'Establish a plan to identify roadblocks and inaccuracies impacting your score',
+      description: 'Establish plan to Identify Roadblocks and Inaccuracies impacting your Score',
       data: 'We start by assessing your current credit situation and identify the roadblocks impacting your score. Each case is unique, but we specialize in spotting inaccuracies and other factors that should not be in your report damaging to credit reputation. Together, we’ll map out a plan to a better credit score.',
     },
     {
       number: '2',
-      title: 'Dispute & Escalations',
+      title: 'Dispute & Escalation',
       image: rectangle1,
-      description: 'Challenge and Dispute negative items until they are removed',
-      data: 'Like the A-Team, well be your advocates, challenging inaccuracies and disputing negative items until they re removed. Our EzeCredit experts understand your rights and are dedicated to eliminating incorrect information, Inquiries, late payments, collections, and other factors that unfairly impact your score.',
+      description: 'Challenge and Dispute negative items until they are removed.',
+      data: "Like the A-Team, we'll be your advocates, challenging inaccuracies and disputing negative items until they're removed. Our EzeCredit experts understand your rights and are dedicated to eliminating incorrect information, Inquiries, late payments, collections, and other factors that unfairly impact your score.",
     },
     {
       number: '3',
       title: 'Credit Recovery',
       image: rectangle4,
       nestedImage: rectangle2,
-      description: 'Take action to boost your credit score to reach your desired score range',
+      description: 'Take action to Boost your credit score to reach your desired Score Range',
       data: 'Derogatory information will prevent your score from going up.  However, after we remove the negatives, more may be needed to build your score to be able to utilize your credit to its full potential.  We then create a path to get you beyond the 700 range which will impact to the level needed Removing all of the derogatory will only get us haft way there.',
     },
   ];
