@@ -29,12 +29,12 @@ export function FAQSection({ className = '', showTitle = true, maxWidth = '4xl' 
     {
       title: 'How long can this process take?',
       content:
-        'Opportunities often arise unexpectedly, requiring timely action. Unfortunately, theres no way to predict exactly how long credit repair will take without understanding the specific roadblocks affecting your score. However, we work quickly to position you for success, often within 30 to 90 days.',
+        "Opportunities often arise unexpectedly, requiring timely action. Unfortunately, there's no way to predict exactly how long credit repair will take without understanding the specific roadblocks affecting your score. However, we work quickly to position you for success, often within 30 to 90 days.",
     },
     {
       title: 'What type of items can be removed on my credit report?',
       content:
-        'Any negative item that is inaccurate, unfair, or unverified can be disputed with the credit bureaus and your creditors. This includes collections, late payments, charge-offs, liens, bankruptcies, repossessions, and more',
+        'Any negative item that is inaccurate, unfair, or unverified can be disputed with the credit bureaus and your creditors. This includes collections, late payments, charge-offs, liens, bankruptcies, repossessions, and more.',
     },
     {
       title: 'If I just pay off my bills will that restore my good credit?',
