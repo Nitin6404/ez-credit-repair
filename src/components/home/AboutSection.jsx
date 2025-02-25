@@ -1,17 +1,8 @@
-import React from 'react';
 import creditImprove from '../asset/improvecs3.png';
 import layer from '../asset/Layer 1002 copy.png';
 import { ArrowRight } from 'lucide-react';
 
 export function AboutSection() {
-  const targetAreas = [
-    'Like the A-Team, we become your trusted advocates, challenging inaccuracies and disputing negative items until they are removed.',
-    'Credit Evaluation - In-depth assessment of your credit report',
-    'Unlimited Disputes: We challenge any number of inaccuracies',
-    'Debt & Inquiry Verification and Removal: We verify and dispute',
-    'Escalation of Disputes for Fast Removal: We escalate disputes when necessary Recommendations to Boost Score: Personalized strategies fo help raise your credit score.',
-  ];
-
   return (
     <div className="flex flex-col items-start justify-center px-4 py-4 font-sans md:flex-row md:py-8 md:pl-20 md:pr-14">
       {/* Text Content */}
@@ -20,9 +11,9 @@ export function AboutSection() {
           About Us
         </h1>
         <p className="font-inter text-[16px] leading-[22px] text-[#2E2F31] md:text-[22.92px] md:leading-[27.73px]">
-          For the past 15 years, we've been dedicated to helping thousands of individuals repair
-          their credit and reclaim financial control. At EzeCredit, we fight for every consumer's
-          right to an accurate, fair, and substantiated credit report.
+          For the past 15 years, we&apos;ve been dedicated to helping thousands of individuals
+          repair their credit and reclaim financial control. At EzeCredit, we fight for every
+          consumer&apos;s right to an accurate, fair, and substantiated credit report.
         </p>
         {/* Image Placeholder for Mobile View */}
         <div className="mt-8 flex w-full justify-center md:hidden">
