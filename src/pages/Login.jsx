@@ -1,4 +1,3 @@
-import React from 'react';
 import { Navbar } from '../components/common/Navbar';
 
 export function Login() {
@@ -57,7 +56,7 @@ export function Login() {
             </button>
 
             <p className="text-center text-sm text-gray-600">
-              Don't have an account?{' '}
+              Don&apos;t have an account?{' '}
               <a href="/register" className="text-[#15549A] hover:underline">
                 Sign up
               </a>

@@ -1,6 +1,6 @@
 import AboutUs from '../components/asset/AboutUsbackground.png';
-import pricingPageAero from '../components/asset/pricingPageAero.svg';
-import pricingPageCircleBlue from '../components/asset/pricingPageCircleBlue.svg';
+// import pricingPageAero from '../components/asset/pricingPageAero.svg';
+// import pricingPageCircleBlue from '../components/asset/pricingPageCircleBlue.svg';
 import pricingBoiWithTransparency from '../components/asset/pricing-boi-with-transparency.svg';
 import { CreditServices } from '../components/common/CreditServices';
 import { Link } from 'react-router-dom';
@@ -33,9 +33,9 @@ export function Pricing() {
           </h1>
           <h4 className="font-inter text-lg font-medium text-[#173455] md:text-[22px]">
             We are committed to providing you with the full support you need. When you come to us,
-            we understand that you're <br className="hidden md:block" /> seeking the best possible
-            assistance. That’s why we never hold back we strive to ensure your satisfaction every
-            step <br className="hidden md:block" /> of the way.
+            we understand that you&apos;re <br className="hidden md:block" /> seeking the best
+            possible assistance. That’s why we never hold back we strive to ensure your satisfaction
+            every step <br className="hidden md:block" /> of the way.
           </h4>
           <h2 className="font-inter text-xl font-bold text-[#04284F] md:text-3xl">
             Comprehensive Plan: $99/mo
@@ -68,7 +68,7 @@ export function Pricing() {
               At EzeCredit Repair, Transparency and Results Are Our Priority
             </h2>
             <p className="w-full font-inter text-lg font-normal leading-7 text-[#173455] md:w-[740px] md:text-[22px] md:leading-[32px]">
-              We don't believe in confusing monthly plans or piling on extra fees. Instead, we
+              We don&apos;t believe in confusing monthly plans or piling on extra fees. Instead, we
               provide every client with the same dedicated approach and unwavering effort. Our team
               works quickly and efficiently to deliver tangible improvements to your credit score
               without unnecessary delays. With EzeCredit Repair, there are no hidden costs just real
@@ -103,93 +103,93 @@ function LastHeading() {
   );
 }
 
-function CreditRepairProcess() {
-  const steps = [
-    {
-      title: 'Credit Assessment & Target Identification',
-      description: [
-        'We begin by pulling your credit report from all three major bureaus—TransUnion, Experian, and Equifax.',
-        'Our experts conduct a comprehensive assessment to identify all negative and derogatory items impacting your score.',
-        'These identified issues are detailed in our service agreement, ensuring transparency and clarity on the items we will target for removal.',
-        'We also provide your current FICO and Vantage Score as part of this report.',
-      ],
-    },
-    {
-      title: 'Item Removal Process',
-      description: [
-        'Once the service agreement is finalized, we go to work on removing the negative items.',
-        'We focus on inaccuracies, unverified information, late payments, collections, and other derogatory items listed in your agreement.',
-        'We handle all disputes and interventions with the bureaus and creditors to ensure your credit report is cleaned up as quickly as possible.',
-      ],
-    },
-    {
-      title: 'Timely Progress Updates',
-      description: [
-        'Throughout the process, you’ll receive timely updates as each negative item is removed from your credit profile.',
-        'Our member dashboard allows you to track real-time progress and view the improvements on all three credit reports.',
-      ],
-    },
-    {
-      title: 'Post-Cleanup Score Boost Options',
-      description: [
-        'Once all targeted items are removed, we’ll provide options to help boost your score further.',
-        'This may include credit line recommendations, secured credit cards, or other strategies to help you reach your desired FICO score range.',
-      ],
-    },
-    {
-      title: 'Ongoing Monitoring & Maintenance',
-      description: [
-        'To ensure long-term success, we offer ongoing credit monitoring services.',
-        'We’ll track your credit score improvements, helping you maintain a strong credit standing.',
-      ],
-    },
-  ];
+// function CreditRepairProcess() {
+//   const steps = [
+//     {
+//       title: 'Credit Assessment & Target Identification',
+//       description: [
+//         'We begin by pulling your credit report from all three major bureaus—TransUnion, Experian, and Equifax.',
+//         'Our experts conduct a comprehensive assessment to identify all negative and derogatory items impacting your score.',
+//         'These identified issues are detailed in our service agreement, ensuring transparency and clarity on the items we will target for removal.',
+//         'We also provide your current FICO and Vantage Score as part of this report.',
+//       ],
+//     },
+//     {
+//       title: 'Item Removal Process',
+//       description: [
+//         'Once the service agreement is finalized, we go to work on removing the negative items.',
+//         'We focus on inaccuracies, unverified information, late payments, collections, and other derogatory items listed in your agreement.',
+//         'We handle all disputes and interventions with the bureaus and creditors to ensure your credit report is cleaned up as quickly as possible.',
+//       ],
+//     },
+//     {
+//       title: 'Timely Progress Updates',
+//       description: [
+//         'Throughout the process, you’ll receive timely updates as each negative item is removed from your credit profile.',
+//         'Our member dashboard allows you to track real-time progress and view the improvements on all three credit reports.',
+//       ],
+//     },
+//     {
+//       title: 'Post-Cleanup Score Boost Options',
+//       description: [
+//         'Once all targeted items are removed, we’ll provide options to help boost your score further.',
+//         'This may include credit line recommendations, secured credit cards, or other strategies to help you reach your desired FICO score range.',
+//       ],
+//     },
+//     {
+//       title: 'Ongoing Monitoring & Maintenance',
+//       description: [
+//         'To ensure long-term success, we offer ongoing credit monitoring services.',
+//         'We’ll track your credit score improvements, helping you maintain a strong credit standing.',
+//       ],
+//     },
+//   ];
 
-  return (
-    <div className="mx-4 my-10 md:mx-28">
-      <p className="mb-8 text-center text-3xl font-normal leading-[40px] text-[#15549A] md:text-5xl md:leading-[60px]">
-        EzeCredit Repair Service Recap
-      </p>
-      <div className="space-y-8">
-        {steps.map((step, index) => (
-          <div key={index} className="rounded-b-2xl bg-[#ECF6FF]">
-            <div className="flex w-full flex-col items-start justify-start space-y-2 bg-[#15549A] px-2 py-2 font-inter text-xl leading-7 md:flex-row md:items-center md:space-x-5 md:space-y-0 md:text-3xl md:leading-9">
-              <div className="rounded-tl-[30px] bg-white px-3 py-2 font-bold text-[#15549A]">
-                Step {index + 1}
-              </div>
-              <div className="font-normal text-white">{step.title}</div>
-            </div>
-            <div className="px-4 py-5 md:px-10">
-              <ul className="list-none space-y-3">
-                {step.description.map((desc, idx) => (
-                  <li
-                    key={idx}
-                    className="flex h-full items-start text-base text-[#555] md:text-lg"
-                  >
-                    <img
-                      src={pricingPageCircleBlue}
-                      alt="Bullet"
-                      width={30}
-                      height={30}
-                      className="mr-2 md:mr-4 md:h-[47px] md:w-[47px]"
-                    />
-                    <img
-                      src={pricingPageAero}
-                      alt="Arrow"
-                      width={15}
-                      height={18}
-                      className="absolute ml-2 mt-2 md:ml-3.5 md:mt-3"
-                    />
-                    <div className="flex h-full w-full items-center text-lg leading-7 text-[#1C2228] md:text-2xl md:leading-7 lg:mt-2">
-                      {desc}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+//   return (
+//     <div className="mx-4 my-10 md:mx-28">
+//       <p className="mb-8 text-center text-3xl font-normal leading-[40px] text-[#15549A] md:text-5xl md:leading-[60px]">
+//         EzeCredit Repair Service Recap
+//       </p>
+//       <div className="space-y-8">
+//         {steps.map((step, index) => (
+//           <div key={index} className="rounded-b-2xl bg-[#ECF6FF]">
+//             <div className="flex w-full flex-col items-start justify-start space-y-2 bg-[#15549A] px-2 py-2 font-inter text-xl leading-7 md:flex-row md:items-center md:space-x-5 md:space-y-0 md:text-3xl md:leading-9">
+//               <div className="rounded-tl-[30px] bg-white px-3 py-2 font-bold text-[#15549A]">
+//                 Step {index + 1}
+//               </div>
+//               <div className="font-normal text-white">{step.title}</div>
+//             </div>
+//             <div className="px-4 py-5 md:px-10">
+//               <ul className="list-none space-y-3">
+//                 {step.description.map((desc, idx) => (
+//                   <li
+//                     key={idx}
+//                     className="flex h-full items-start text-base text-[#555] md:text-lg"
+//                   >
+//                     <img
+//                       src={pricingPageCircleBlue}
+//                       alt="Bullet"
+//                       width={30}
+//                       height={30}
+//                       className="mr-2 md:mr-4 md:h-[47px] md:w-[47px]"
+//                     />
+//                     <img
+//                       src={pricingPageAero}
+//                       alt="Arrow"
+//                       width={15}
+//                       height={18}
+//                       className="absolute ml-2 mt-2 md:ml-3.5 md:mt-3"
+//                     />
+//                     <div className="flex h-full w-full items-center text-lg leading-7 text-[#1C2228] md:text-2xl md:leading-7 lg:mt-2">
+//                       {desc}
+//                     </div>
+//                   </li>
+//                 ))}
+//               </ul>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }

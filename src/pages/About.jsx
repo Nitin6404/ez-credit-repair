@@ -4,8 +4,6 @@ import { IntroSection } from '../components/about/IntroSection';
 import { AboutHeader } from '../components/about/AboutHeader';
 import { ProgramSection } from '../components/about/ProgramSection';
 
-// Program section with cards and details
-
 // Main About component
 export function About() {
   return (
