@@ -1,4 +1,4 @@
-import { FAQSection } from '../components/common/FAQSection';
+import { FAQSection } from '../components/faq/FaqSection';
 import { NewsAndBlog } from '../components/common/NewsAndBlog';
 import { Program } from '../components/common/ProgressiveCorrective';
 import { Testimonial } from '../components/common/Testimonial';

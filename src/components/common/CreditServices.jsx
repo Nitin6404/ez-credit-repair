@@ -1,59 +1,13 @@
 import pricingPageBar from '../asset/pricingPageBar.svg';
+import { services } from '../../data/creditServiceData';
 
 export function CreditServices() {
-  const services = [
-    {
-      title: 'Credit Bureau Disputes',
-      description: 'Expert handling of inaccuracies and errors on your credit report.',
-    },
-    {
-      title: 'One-on-One Consultations',
-      description: 'Personalized guidance tailored to your unique credit situation.',
-    },
-    {
-      title: 'Score Tracker',
-      description: 'Stay informed with tools to monitor your credit score progress.',
-    },
-    {
-      title: '24/7 Access to Client Portal',
-      description: 'Convenient access to your credit repair journey at any time.',
-    },
-    {
-      title: '45-Day Credit Updates',
-      description: 'Regular updates to keep you informed on your progress.',
-    },
-    {
-      title: 'Credit Builder Too',
-      description: 'Resources to help you establish and strengthen your credit profile.',
-    },
-    {
-      title: 'Debt Validation Letters',
-      description: 'Challenging the legitimacy of debts to ensure accuracy.',
-    },
-    {
-      title: 'Cease and Desist Letters',
-      description: 'Protect yourself from harassment by debt collectors.',
-    },
-    {
-      title: 'Personal Information Correction Letters',
-      description: 'Rectifying incorrect personal details on your credit report.',
-    },
-    {
-      title: 'Monthly Inquiry Disputes',
-      description: 'Addressing and disputing unnecessary credit inquiries each month.',
-    },
-    {
-      title: 'Creditor Interventions',
-      description: 'We negotiate and communicate directly with creditors on your behalf.',
-    },
-  ];
-
   return (
     <div className="mb-0 flex items-center justify-center md:mb-16">
       <div className="flex flex-col items-center space-x-2 bg-[url('/src/components/asset/pricingPageBg2.svg')] bg-cover bg-center px-4 py-10 md:px-16">
         <div className="my-7 w-full text-center">
           <h1 className="font-inter text-3xl font-bold text-white md:text-[50px]">
-            What's Included in Our Service
+            What&apos;s Included in Our Service
           </h1>
         </div>
         <div className="flex flex-col md:mb-20 md:flex-row">
