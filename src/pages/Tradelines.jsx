@@ -1,24 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Search, ChevronDown } from 'lucide-react';
 import AboutUs from '../components/asset/AboutUsbackground.png';
 import { CustomTable } from '../components/ui/CustomTable';
 import { ShoppingCart } from '../components/ui/ShoppingCart';
-
-// Import bank logos
-const bankLogos = {
-  amex: new URL('../images/banks/american-express.svg', import.meta.url).href,
-  bofa: new URL('../images/banks/bank-of-america.svg', import.meta.url).href,
-  chase: new URL('../images/banks/chase-bank.svg', import.meta.url).href,
-  citi: new URL('../images/banks/citi-bank.svg', import.meta.url).href,
-  discover: new URL('../images/banks/discover-bank.svg', import.meta.url).href,
-  elan: new URL('../images/banks/elan-credit-card.svg', import.meta.url).href,
-  fidelity: new URL('../images/banks/fidelity.svg', import.meta.url).href,
-  penfed: new URL('../images/banks/penfed-credit-un.svg', import.meta.url).href,
-  td: new URL('../images/banks/td-bank.svg', import.meta.url).href,
-  us: new URL('../images/banks/us-bank.svg', import.meta.url).href,
-  jp: new URL('../images/banks/jp-morgan-bank.svg', import.meta.url).href,
-  capitalOne: new URL('../images/banks/capital-one-bank.svg', import.meta.url).href,
-};
+import { tradelineData } from '../data/tradelinesData';
 
 export function Tradelines() {
   const [selectedInstitution, setSelectedInstitution] = useState('Select Institution');
@@ -27,148 +12,7 @@ export function Tradelines() {
   const [sortDirection, setSortDirection] = useState('asc');
   const [searchQuery, setSearchQuery] = useState('');
   const [showShoppingCart, setShowShoppingCart] = useState(false);
-  const [cartItems, setCartItems] = useState([
-    {
-      logo: bankLogos.amex,
-      date: 'Jan 2016',
-      originalPrice: '475.00',
-      price: '427.00',
-      quantity: 1,
-      subtotal: '00,000',
-    },
-    {
-      logo: bankLogos.bofa,
-      date: 'May 2015',
-      originalPrice: '475.00',
-      price: '427.00',
-      quantity: 1,
-      subtotal: '00,000',
-    },
-    // Add more items as needed
-  ]);
-
-  const tradelineData = [
-    {
-      id: 1,
-      logo: bankLogos.amex,
-      institution: 'American Express',
-      monthYear: 'June 1976',
-      creditAmount: '$2,499.00',
-      reportingDate: '19th',
-      price: '$17,000',
-      status: 'Select',
-    },
-    {
-      id: 2,
-      logo: bankLogos.bofa,
-      institution: 'Bank of America',
-      monthYear: 'June 1994',
-      creditAmount: '$60,000.00',
-      reportingDate: '24th',
-      price: '$23,000',
-      status: 'Added',
-    },
-    {
-      id: 3,
-      logo: bankLogos.chase,
-      institution: 'Chase Bank',
-      monthYear: 'Nov 2015',
-      creditAmount: '$1,949.00',
-      reportingDate: '19th',
-      price: '$18,000',
-      status: 'Select',
-    },
-    {
-      id: 4,
-      logo: bankLogos.discover,
-      institution: 'Discover Bank',
-      monthYear: 'Apr 1993',
-      creditAmount: '$1,199.00',
-      reportingDate: '24th',
-      price: '$20,000',
-      status: 'Select',
-    },
-    {
-      id: 5,
-      logo: bankLogos.capitalOne,
-      institution: 'Capital One Bank',
-      monthYear: 'May 2011',
-      creditAmount: '$2,499.00',
-      reportingDate: '19th',
-      price: '$11,000',
-      status: 'Added',
-    },
-    {
-      id: 6,
-      logo: bankLogos.citi,
-      institution: 'Citi Bank',
-      monthYear: 'Aug 1998',
-      creditAmount: '$1,150.00',
-      reportingDate: '24th',
-      price: '$122,000',
-      status: 'Select',
-    },
-    {
-      id: 7,
-      logo: bankLogos.elan,
-      institution: 'Elan Credit Card',
-      monthYear: 'Aug 2013',
-      creditAmount: '$1,099.00',
-      reportingDate: '24th',
-      price: '$19,000',
-      status: 'Select',
-    },
-    {
-      id: 8,
-      logo: bankLogos.fidelity,
-      institution: 'Fidelity',
-      monthYear: 'June 1994',
-      creditAmount: '$1,149.00',
-      reportingDate: '24th',
-      price: '$22,000',
-      status: 'Select',
-    },
-    {
-      id: 9,
-      logo: bankLogos.penfed,
-      institution: 'PenFed Credit Un.',
-      monthYear: 'July 2017',
-      creditAmount: '$975.00',
-      reportingDate: '24th',
-      price: '$39,000',
-      status: 'Select',
-    },
-    {
-      id: 10,
-      logo: bankLogos.td,
-      institution: 'TD Bank',
-      monthYear: 'June 1994',
-      creditAmount: '$950.00',
-      reportingDate: '24th',
-      price: '$35,000',
-      status: 'Select',
-    },
-    {
-      id: 11,
-      logo: bankLogos.us,
-      institution: 'US Bank',
-      monthYear: 'Feb 2008',
-      creditAmount: '$600.00',
-      reportingDate: '24th',
-      price: '$15,000',
-      status: 'Select',
-    },
-    {
-      id: 12,
-      logo: bankLogos.jp,
-      institution: 'JP Morgan Bank',
-      monthYear: 'June 2020',
-      creditAmount: '$200.00',
-      reportingDate: '24th',
-      price: '$45,000',
-      status: 'Select',
-    },
-  ];
+  const [cartItems] = useState([]);
 
   const columns = [
     {
@@ -270,7 +114,7 @@ export function Tradelines() {
             <p className="mb-3 text-xl font-normal">
               Tradeline orders must be processed at least 5 days before the reporting date, except
               for American Express, which requires a <b>minimum of 10 days</b>. If the reporting
-              date has already passed, the tradeline's first reporting date will shift to the
+              date has already passed, the tradeline&apos;s first reporting date will shift to the
               following month.
             </p>
             <p className="text-xl font-normal">
