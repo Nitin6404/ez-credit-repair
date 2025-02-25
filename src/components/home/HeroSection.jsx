@@ -1,6 +1,5 @@
-import React from 'react';
 import rectangle11 from '../asset/Rectangle11.png';
-import HeroSectionBg from '../asset/HeroSectionBg.png';
+
 export function HeroSection() {
   return (
     <div className="relative min-h-[350px] w-full overflow-hidden bg-[#ECF5FF] bg-[url('../asset/HeroSectionBg.png')] bg-cover bg-center md:h-[462px] md:bg-none lg:overflow-visible">
@@ -24,16 +23,16 @@ export function HeroSection() {
               MADE EASY
             </p>
             <p className="mt-2 font-inter text-[15px] font-bold leading-[26px] text-[#737373] md:text-[26px] md:leading-[31px]">
-              Let's Fix Your Credit and Raise Your Score
+              Let&apos;s Fix Your Credit and Raise Your Score
             </p>
             <div className="mt-4 text-center md:space-y-0 md:text-left">
-              <p className="text-start font-inter text-[12px] font-medium leading-[22px] text-[#737373] md:text-[20px] md:leading-[25px]">
+              <p className="text-center font-inter text-[12px] font-medium leading-[22px] text-[#737373] md:text-start md:text-[20px] md:leading-[25px]">
                 Unlock financial freedom with a better credit score.
               </p>
-              <p className="text-start font-inter text-[12px] font-medium leading-[22px] text-[#737373] md:text-[20px] md:leading-[25px]">
+              <p className="text-center font-inter text-[12px] font-medium leading-[22px] text-[#737373] md:text-start md:text-[20px] md:leading-[25px]">
                 Our easy-to-follow approach helps you improve your
               </p>
-              <p className="mb-4 text-start font-inter text-[12px] font-medium leading-[22px] text-[#737373] md:mb-6 md:text-[20px] md:leading-[25px]">
+              <p className="mb-4 text-center font-inter text-[12px] font-medium leading-[22px] text-[#737373] md:mb-6 md:text-start md:text-[20px] md:leading-[25px]">
                 credit for better rates, loans and peace of mind.
               </p>
             </div>
