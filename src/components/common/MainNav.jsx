@@ -2,15 +2,28 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../asset/672-6724074_transparent-tm-logo-png-logo-trademark-symbol-png.png';
 import { Menu, X } from 'lucide-react';
+import { routes } from '../../data/navigationData';
 
 export function MainNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Helper function for active class styling
   const getLinkClass = ({ isActive }) =>
     isActive
       ? 'text-[#04284F] underline font-bold decoration-[9px] decoration-[#15549A] lg:underline-offset-[39px] md:underline-offset-[33px] z-10'
       : 'text-[#7A7A7A]';
+
+  const navigationItems = routes.filter(route =>
+    [
+      'Home',
+      'About',
+      'Pricing',
+      'How It Works',
+      'Tradelines',
+      'FAQ',
+      'Learning Center',
+      'Contact',
+    ].includes(route.element)
+  );
 
   return (
     <div>
@@ -39,80 +52,39 @@ export function MainNav() {
 
           {/* Desktop Navigation */}
           <div className="hidden font-montserrat font-semibold text-[#7A7A7A] md:flex md:space-x-4 md:text-base lg:ml-[88px] lg:space-x-8 lg:text-lg">
-            <NavLink to="/" className={getLinkClass}>
-              Home
-            </NavLink>
-            <NavLink to="/about" className={getLinkClass}>
-              About Us
-            </NavLink>
-            <NavLink to="/pricing" className={getLinkClass}>
-              Pricing
-            </NavLink>
-            <NavLink to="/how-it-works" className={getLinkClass}>
-              How it works
-            </NavLink>
-            <NavLink to="/tradelines" className={getLinkClass}>
-              Tradelines
-            </NavLink>
-            <NavLink to="/faq" className={getLinkClass}>
-              FAQ
-            </NavLink>
-            <NavLink to="/learning-center" className={getLinkClass}>
-              Learning Center
-            </NavLink>
-            <NavLink to="/contact" className={getLinkClass}>
-              Contact us
-            </NavLink>
+            {navigationItems.map(route => (
+              <NavLink key={route.path} to={route.path} className={getLinkClass}>
+                {route.element === 'About'
+                  ? 'About Us'
+                  : route.element === 'Contact'
+                    ? 'Contact us'
+                    : route.element === 'How It Works'
+                      ? 'How it works'
+                      : route.element}
+              </NavLink>
+            ))}
           </div>
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="absolute left-0 right-0 top-full z-50 bg-white shadow-lg md:hidden">
               <div className="flex flex-col space-y-3 p-4 font-montserrat font-semibold text-[#7A7A7A]">
-                <NavLink to="/" className={getLinkClass} onClick={() => setIsMenuOpen(false)}>
-                  Home
-                </NavLink>
-                <NavLink to="/about" className={getLinkClass} onClick={() => setIsMenuOpen(false)}>
-                  About Us
-                </NavLink>
-                <NavLink
-                  to="/pricing"
-                  className={getLinkClass}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Pricing
-                </NavLink>
-                <NavLink
-                  to="/how-it-works"
-                  className={getLinkClass}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  How it works
-                </NavLink>
-                <NavLink
-                  to="/tradelines"
-                  className={getLinkClass}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Tradelines
-                </NavLink>
-                <NavLink to="/faq" className={getLinkClass} onClick={() => setIsMenuOpen(false)}>
-                  FAQ
-                </NavLink>
-                <NavLink
-                  to="/learning-center"
-                  className={getLinkClass}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Learning Center
-                </NavLink>
-                <NavLink
-                  to="/contact"
-                  className={getLinkClass}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Contact us
-                </NavLink>
+                {navigationItems.map(route => (
+                  <NavLink
+                    key={route.path}
+                    to={route.path}
+                    className={getLinkClass}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {route.element === 'About'
+                      ? 'About Us'
+                      : route.element === 'Contact'
+                        ? 'Contact us'
+                        : route.element === 'How It Works'
+                          ? 'How it works'
+                          : route.element}
+                  </NavLink>
+                ))}
               </div>
             </div>
           )}
