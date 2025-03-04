@@ -2,6 +2,7 @@ import { useState } from 'react';
 import AboutUs from '../components/asset/AboutUsbackground.png';
 import { BillingInfoForm } from '../components/auth/register/BillingInfoForm';
 import { CreditReportSection } from '../components/auth/register/CreditReportSection';
+import { CreditReportUpload } from '../components/auth/register/CreditReportUpload';
 import { NavigationButtons } from '../components/auth/register/NavigationButtons';
 import { PersonalInfoForm } from '../components/auth/register/PersonalInfoForm';
 import { PricingPlan } from '../components/auth/register/PricingPlan';
@@ -18,7 +19,7 @@ const steps = [
   },
   {
     id: 3,
-    title: 'Credit Report',
+    title: 'Documents',
   },
 ];
 
@@ -74,10 +75,6 @@ export function RegistrationPage() {
     setCurrentStep(prev => prev + 1);
   };
 
-  const handleBack = () => {
-    setCurrentStep(prev => prev - 1);
-  };
-
   const renderCurrentStep = () => {
     switch (currentStep) {
       case 1:
@@ -92,6 +89,8 @@ export function RegistrationPage() {
         );
       case 2:
         return <BillingInfoForm formData={formData} handleInputChange={handleInputChange} />;
+      case 3:
+        return <CreditReportUpload formData={formData} handleInputChange={handleInputChange} />;
       default:
         return null;
     }
@@ -120,13 +119,14 @@ export function RegistrationPage() {
 
         {/* Form */}
         <div className="flex w-full flex-col items-center justify-center bg-white">
-          {renderCurrentStep()};
-          <NavigationButtons
-            currentStep={currentStep}
-            totalSteps={steps.length}
-            onBack={handleBack}
-            onContinue={handleContinue}
-          />
+          {renderCurrentStep()}
+          {currentStep !== 3 && (
+            <NavigationButtons
+              currentStep={currentStep}
+              totalSteps={steps.length}
+              handleContinue={handleContinue}
+            />
+          )}
         </div>
       </main>
     </div>

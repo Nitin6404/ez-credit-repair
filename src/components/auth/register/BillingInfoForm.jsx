@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 export const BillingInfoForm = ({
   formData,
-  handleChange,
+  handleInputChange,
   handleCheckboxChange,
   onShowContractChange,
 }) => {
@@ -40,15 +41,15 @@ export const BillingInfoForm = ({
 
               <div className="space-y-4 text-sm text-[#04284F] sm:text-base">
                 <p className="text-lg font-normal">
-                  Agreement Overview: You have engaged EzeCredit Repair ("EzeCredit") to provide
-                  credit bureau dispute management services and credit score evaluation. This is a
-                  month-to-month agreement with no long-term obligation. Services are billed
-                  immediately after the initial review and at the end of each service month. You may
-                  cancel at any time without further obligation or charges.
+                  Agreement Overview: You have engaged EzeCredit Repair (&quot;EzeCredit&quot;) to
+                  provide credit bureau dispute management services and credit score evaluation.
+                  This is a month-to-month agreement with no long-term obligation. Services are
+                  billed immediately after the initial review and at the end of each service month.
+                  You may cancel at any time without further obligation or charges.
                 </p>
 
                 <h3 className="text-2xl font-bold">
-                  Terms of Service In consideration of EzeCredit's services, you agree to:
+                  Terms of Service In consideration of EzeCredit&apos;s services, you agree to:
                 </h3>
                 <ol className="list-decimal pl-6 text-xl font-bold">
                   <li>
@@ -127,7 +128,7 @@ export const BillingInfoForm = ({
                   <ul className="list-disc pl-6 font-normal">
                     <li>Adding a secondary member changes pricing to couples rates.</li>
                     <li>
-                      Termination of one member's services reverts pricing to individual rates.
+                      Termination of one member&apos;s services reverts pricing to individual rates.
                     </li>
                   </ul>
                 </ol>
@@ -163,7 +164,7 @@ export const BillingInfoForm = ({
                     Florida, North Carolina, Pennsylvania, Texas, Virginia:
                     <ul className="list-disc pl-8 font-normal">
                       <li>
-                        Details on your right to proceed against EzeCredit's Surety Bond for
+                        Details on your right to proceed against EzeCredit&apos;s Surety Bond for
                         violations of applicable state law.
                       </li>
                     </ul>
@@ -245,7 +246,7 @@ export const BillingInfoForm = ({
                     Complaints:
                     <ul className="list-disc pl-8 font-normal">
                       <li>
-                        California residents may contact the Attorney General's office for
+                        California residents may contact the Attorney General&apos;s office for
                         assistance.
                       </li>
                       <li>
@@ -338,7 +339,7 @@ export const BillingInfoForm = ({
                     type="text"
                     name="cardNumber"
                     value={formData.cardNumber}
-                    onChange={handleChange}
+                    onChange={handleInputChange}
                     placeholder="0000-0000-0000-0000"
                     className="h-[65px] w-full bg-[#F2F2F2] p-3 text-xl font-normal"
                   />
@@ -353,7 +354,7 @@ export const BillingInfoForm = ({
                       type="text"
                       name="expDate"
                       value={formData.expDate}
-                      onChange={handleChange}
+                      onChange={handleInputChange}
                       placeholder="MM/YY"
                       className="h-[65px] w-full bg-[#F2F2F2] p-3 text-xl font-normal"
                     />
@@ -364,7 +365,7 @@ export const BillingInfoForm = ({
                       type="text"
                       name="cvv"
                       value={formData.cvv}
-                      onChange={handleChange}
+                      onChange={handleInputChange}
                       placeholder="000"
                       className="h-[65px] w-full bg-[#F2F2F2] p-3 text-xl font-normal"
                     />
@@ -404,7 +405,7 @@ export const BillingInfoForm = ({
                       name="addSecondaryMember"
                       checked={formData.addSecondaryMember}
                       onChange={handleCheckboxChange}
-                      className="mx-2 hidden h-8 w-8 appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2] fill-blue-500 sm:block"
+                      className="mx-2 hidden h-8 w-8 appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2] checked:border-[#04284F] checked:bg-[#04284F] sm:block"
                     />
 
                     <span>Yes, I would like to add a secondary member at just $50/month.</span>
@@ -428,7 +429,7 @@ export const BillingInfoForm = ({
                     type="text"
                     name="ssn"
                     value={formData.ssn}
-                    onChange={handleChange}
+                    onChange={handleInputChange}
                     placeholder="__ | __ | __"
                     className="w-full rounded-[10px] bg-[#F2F2F2] p-5 font-normal"
                   />
@@ -439,7 +440,7 @@ export const BillingInfoForm = ({
                     type="text"
                     name="dob"
                     value={formData.dob}
-                    onChange={handleChange}
+                    onChange={handleInputChange}
                     placeholder="MM/DD/YY"
                     className="w-full rounded-[10px] bg-[#F2F2F2] p-5 font-normal"
                   />
@@ -483,4 +484,11 @@ export const BillingInfoForm = ({
       )}
     </div>
   );
+};
+
+BillingInfoForm.propTypes = {
+  formData: PropTypes.object.isRequired,
+  handleInputChange: PropTypes.func.isRequired,
+  handleCheckboxChange: PropTypes.func.isRequired,
+  onShowContractChange: PropTypes.func.isRequired,
 };

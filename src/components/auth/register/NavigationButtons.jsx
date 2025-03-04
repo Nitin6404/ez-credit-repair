@@ -1,7 +1,7 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import TrustedSiteLogo from '../../../components/asset/trustedsite.svg';
 
-export function NavigationButtons({ currentStep, totalSteps, onBack, onContinue }) {
+export function NavigationButtons({ currentStep, totalSteps, handleContinue }) {
   return (
     <>
       <div className="relative mt-6 w-full px-4 md:hidden">
@@ -10,7 +10,7 @@ export function NavigationButtons({ currentStep, totalSteps, onBack, onContinue 
           {/* Green button container */}
           <div className="bg-[#80C600] p-6 sm:absolute sm:left-0 sm:flex sm:h-full sm:w-[70%] sm:items-center sm:justify-center sm:p-0 md:w-1/4">
             <button
-              onClick={onContinue}
+              onClick={handleContinue}
               className="w-full text-[22px] font-semibold text-white sm:w-[200px] sm:px-4 sm:text-[29px]"
             >
               {currentStep === totalSteps ? 'Submit' : 'Continue'}
@@ -34,7 +34,7 @@ export function NavigationButtons({ currentStep, totalSteps, onBack, onContinue 
           {/* Green button container */}
           <div className="absolute left-0 h-full w-[331.03px] bg-[#80C600]">
             <button
-              onClick={onContinue}
+              onClick={handleContinue}
               className="absolute left-[93.72px] top-[18.35px] text-[29px] font-normal text-white"
             >
               {currentStep === totalSteps ? 'Submit' : 'Continue'}
@@ -50,3 +50,9 @@ export function NavigationButtons({ currentStep, totalSteps, onBack, onContinue 
     </>
   );
 }
+
+NavigationButtons.propTypes = {
+  currentStep: PropTypes.number.isRequired,
+  totalSteps: PropTypes.number.isRequired,
+  handleContinue: PropTypes.func.isRequired,
+};

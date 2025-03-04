@@ -1,6 +1,6 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
-export function PersonalInfoForm({ formData, handleChange }) {
+export function PersonalInfoForm({ formData, handleInputChange }) {
   return (
     <div className="mb-8 w-full max-w-[95%] space-y-4 px-2 sm:mb-20 sm:w-[1272px] sm:space-y-6 sm:px-4">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8">
@@ -12,7 +12,7 @@ export function PersonalInfoForm({ formData, handleChange }) {
             type="text"
             name="firstName"
             value={formData.firstName}
-            onChange={handleChange}
+            onChange={handleInputChange}
             placeholder="First name"
             className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[618px] sm:text-[20px]"
           />
@@ -25,7 +25,7 @@ export function PersonalInfoForm({ formData, handleChange }) {
             type="text"
             name="lastName"
             value={formData.lastName}
-            onChange={handleChange}
+            onChange={handleInputChange}
             placeholder="Last Name"
             className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[618px] sm:text-[20px]"
           />
@@ -40,7 +40,7 @@ export function PersonalInfoForm({ formData, handleChange }) {
           type="text"
           name="streetAddress"
           value={formData.streetAddress}
-          onChange={handleChange}
+          onChange={handleInputChange}
           placeholder="Street Address"
           className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:text-[20px]"
         />
@@ -51,7 +51,7 @@ export function PersonalInfoForm({ formData, handleChange }) {
           type="text"
           name="aptUnit"
           value={formData.aptUnit}
-          onChange={handleChange}
+          onChange={handleInputChange}
           placeholder="Apt. Unit, Floor, Ect"
           className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:text-[20px]"
         />
@@ -66,7 +66,7 @@ export function PersonalInfoForm({ formData, handleChange }) {
             type="text"
             name="city"
             value={formData.city}
-            onChange={handleChange}
+            onChange={handleInputChange}
             placeholder="Select City"
             className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[407px] sm:text-[20px]"
           />
@@ -79,7 +79,7 @@ export function PersonalInfoForm({ formData, handleChange }) {
             type="text"
             name="state"
             value={formData.state}
-            onChange={handleChange}
+            onChange={handleInputChange}
             placeholder="Select State"
             className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[407px] sm:text-[20px]"
           />
@@ -92,7 +92,7 @@ export function PersonalInfoForm({ formData, handleChange }) {
             type="text"
             name="zipCode"
             value={formData.zipCode}
-            onChange={handleChange}
+            onChange={handleInputChange}
             placeholder="Zip Code"
             className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[407px] sm:text-[20px]"
           />
@@ -108,7 +108,7 @@ export function PersonalInfoForm({ formData, handleChange }) {
             type="tel"
             name="mobileNumber"
             value={formData.mobileNumber}
-            onChange={handleChange}
+            onChange={handleInputChange}
             placeholder="Enter Mobile Num:"
             className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[618px] sm:text-[20px]"
           />
@@ -121,7 +121,7 @@ export function PersonalInfoForm({ formData, handleChange }) {
             type="email"
             name="emailAddress"
             value={formData.emailAddress}
-            onChange={handleChange}
+            onChange={handleInputChange}
             placeholder="Email ID"
             className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[618px] sm:text-[20px]"
           />
@@ -153,7 +153,7 @@ export function PersonalInfoForm({ formData, handleChange }) {
               type="checkbox"
               name="couplesMembership"
               checked={formData.couplesMembership}
-              onChange={handleChange}
+              onChange={handleInputChange}
               className="h-6 w-6 appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2] text-[#04284F] checked:border-[#04284F] checked:bg-[#04284F] focus:ring-0 sm:h-8 sm:w-8"
             />
           </div>
@@ -165,3 +165,8 @@ export function PersonalInfoForm({ formData, handleChange }) {
     </div>
   );
 }
+
+PersonalInfoForm.propTypes = {
+  formData: PropTypes.object.isRequired,
+  handleInputChange: PropTypes.func.isRequired,
+};

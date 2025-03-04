@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 export function CreditReportSection({ formData, handleInputChange }) {
   return (
@@ -36,3 +36,8 @@ export function CreditReportSection({ formData, handleInputChange }) {
     </div>
   );
 }
+
+CreditReportSection.propTypes = {
+  formData: PropTypes.object.isRequired,
+  handleInputChange: PropTypes.func.isRequired,
+};
