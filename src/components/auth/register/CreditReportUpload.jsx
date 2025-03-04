@@ -98,20 +98,30 @@ export function CreditReportUpload({ formData, handleInputChange }) {
             </p>
           </div>
           <div className="w-full rounded-lg bg-[#F2F2F2] px-5 py-7 text-[#04284F]">
-            <h3 className="text-2xl font-bold">Upload Your Credit Reports and Identification</h3>
-            <p className="mt-4 text-lg">
-              Your credit Report privacy Starts Today - Upload Your Credit Report & ID to Begin
-            </p>
+            <h3 className="text-2xl font-bold">Upload Your Reports to Our System</h3>
+            <ul className="mt-3 text-lg">
+              <li className="mb-2 flex items-start">
+                <span className="mr-2">•</span>
+                <span>
+                  Once you&apos;ve obtained your credit reports, upload them to our secure system
+                  using the upload feature below.
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>A minimum of 2 reports are required to start the assessment process</span>
+              </li>
+            </ul>
 
             {/* Upload boxes */}
             <div className="mt-6 space-y-4">
               {/* Experian Upload */}
-              <div className="flex w-full items-center rounded-lg bg-white p-3 shadow-sm">
-                <div className="flex w-24 items-center">
+              <div className="flex w-1/2 items-center rounded-lg bg-[#E4E4E4] shadow-sm">
+                <div className="flex w-1/3 items-center p-3">
                   <span className="font-semibold text-[#04284F]">Upload</span>
                   <img src={ExperianLogo} alt="Experian" className="ml-2 h-6" />
                 </div>
-                <div className="ml-4 flex-1">
+                <div className="ml-4 w-2/3 flex-1 bg-[#F5F5F5]">
                   <input
                     type="file"
                     accept=".pdf,.jpg,.jpeg,.png"
@@ -120,7 +130,7 @@ export function CreditReportUpload({ formData, handleInputChange }) {
                     id="experian-upload"
                   />
                   <label htmlFor="experian-upload" className="flex cursor-pointer items-center">
-                    <span className="flex items-center rounded border border-gray-300 bg-[#F5F5F5] px-4 py-2">
+                    <span className="flex items-center rounded border border-gray-300 px-4 py-2">
                       <svg
                         className="mr-2 h-5 w-5"
                         fill="none"
@@ -144,8 +154,8 @@ export function CreditReportUpload({ formData, handleInputChange }) {
               </div>
 
               {/* Equifax Upload */}
-              <div className="flex w-full items-center rounded-lg bg-white p-3 shadow-sm">
-                <div className="flex w-24 items-center">
+              <div className="flex w-1/2 items-center rounded-lg bg-[#E4E4E4] p-2.5 shadow-sm">
+                <div className="flex items-center">
                   <span className="font-semibold text-[#04284F]">Upload</span>
                   <img src={EquifaxLogo} alt="Equifax" className="ml-2 h-6" />
                 </div>
@@ -182,8 +192,8 @@ export function CreditReportUpload({ formData, handleInputChange }) {
               </div>
 
               {/* TransUnion Upload */}
-              <div className="flex w-full items-center rounded-lg bg-white p-3 shadow-sm">
-                <div className="flex w-24 items-center">
+              <div className="flex w-1/2 items-center rounded-lg bg-[#E4E4E4] p-2.5 shadow-sm">
+                <div className="flex items-center">
                   <span className="font-semibold text-[#04284F]">Upload</span>
                   <img src={TransunionLogo} alt="TransUnion" className="ml-2 h-6" />
                 </div>
