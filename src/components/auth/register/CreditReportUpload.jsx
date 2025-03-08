@@ -6,6 +6,8 @@ import EquifaxLogo from '../../asset/equifax copy.svg';
 import ExperianLogo from '../../asset/experian copy.svg';
 import idFrontPlaceholder from '../../asset/id-front-placeholder.svg';
 import idBackPlaceholder from '../../asset/id-back-placeholder.svg';
+import fileIcon from '../../asset/file-icon.svg';
+import { X } from 'lucide-react';
 
 export function CreditReportUpload({ formData, handleInputChange }) {
   const [uploadedFiles, setUploadedFiles] = useState({
@@ -101,14 +103,14 @@ export function CreditReportUpload({ formData, handleInputChange }) {
             <h3 className="text-2xl font-bold">Upload Your Reports to Our System</h3>
             <ul className="mt-3 text-lg">
               <li className="mb-2 flex items-start">
-                <span className="mr-2">•</span>
+                <span className="mr-2 text-2xl">•</span>
                 <span>
                   Once you&apos;ve obtained your credit reports, upload them to our secure system
                   using the upload feature below.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="mr-2">•</span>
+                <span className="mr-2 text-2xl">•</span>
                 <span>A minimum of 2 reports are required to start the assessment process</span>
               </li>
             </ul>
@@ -116,12 +118,12 @@ export function CreditReportUpload({ formData, handleInputChange }) {
             {/* Upload boxes */}
             <div className="mt-6 space-y-4">
               {/* Experian Upload */}
-              <div className="flex w-1/2 items-center rounded-lg bg-[#E4E4E4] shadow-sm">
-                <div className="flex w-1/3 items-center p-3">
-                  <span className="font-semibold text-[#04284F]">Upload</span>
-                  <img src={ExperianLogo} alt="Experian" className="ml-2 h-6" />
+              <div className="flex w-[550px] rounded-lg border-2 border-[#15549A] bg-[#E4E4E4]">
+                <div className="flex w-1/2 items-center p-3">
+                  <span className="text-xl font-semibold text-[#04284F]">Upload</span>
+                  <img src={ExperianLogo} alt="Experian" className="ml-4 h-10" />
                 </div>
-                <div className="ml-4 w-2/3 flex-1 bg-[#F5F5F5]">
+                <div className="w-1/2 rounded-lg bg-[#F5F5F5]">
                   <input
                     type="file"
                     accept=".pdf,.jpg,.jpeg,.png"
@@ -129,24 +131,15 @@ export function CreditReportUpload({ formData, handleInputChange }) {
                     className="hidden"
                     id="experian-upload"
                   />
-                  <label htmlFor="experian-upload" className="flex cursor-pointer items-center">
-                    <span className="flex items-center rounded border border-gray-300 px-4 py-2">
-                      <svg
-                        className="mr-2 h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                        />
-                      </svg>
-                      Browse
+                  <label
+                    htmlFor="experian-upload"
+                    className="flex h-full cursor-pointer items-center"
+                  >
+                    <span className="flex items-center rounded px-2 py-2">
+                      <img src={fileIcon} alt="File Icon" className="h-6 px-2" />
+                      <p className="text-xl">Browse</p>
                     </span>
-                    <span className="ml-3 text-gray-500">
+                    <span className="ml-3 text-base text-gray-500">
                       {uploadedFiles.experian ? uploadedFiles.experian.name : 'File name....'}
                     </span>
                   </label>
@@ -154,12 +147,12 @@ export function CreditReportUpload({ formData, handleInputChange }) {
               </div>
 
               {/* Equifax Upload */}
-              <div className="flex w-1/2 items-center rounded-lg bg-[#E4E4E4] p-2.5 shadow-sm">
-                <div className="flex items-center">
-                  <span className="font-semibold text-[#04284F]">Upload</span>
-                  <img src={EquifaxLogo} alt="Equifax" className="ml-2 h-6" />
+              <div className="flex w-[550px] rounded-lg border-2 border-[#15549A] bg-[#E4E4E4]">
+                <div className="flex w-1/2 items-center p-3">
+                  <span className="text-xl font-semibold text-[#04284F]">Upload</span>
+                  <img src={EquifaxLogo} alt="Equifax" className="ml-4 h-9" />
                 </div>
-                <div className="ml-4 flex-1">
+                <div className="w-1/2 rounded-lg bg-[#F5F5F5]">
                   <input
                     type="file"
                     accept=".pdf,.jpg,.jpeg,.png"
@@ -167,24 +160,15 @@ export function CreditReportUpload({ formData, handleInputChange }) {
                     className="hidden"
                     id="equifax-upload"
                   />
-                  <label htmlFor="equifax-upload" className="flex cursor-pointer items-center">
-                    <span className="flex items-center rounded border border-gray-300 bg-[#F5F5F5] px-4 py-2">
-                      <svg
-                        className="mr-2 h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                        />
-                      </svg>
-                      Browse
+                  <label
+                    htmlFor="equifax-upload"
+                    className="flex h-full cursor-pointer items-center"
+                  >
+                    <span className="flex items-center rounded px-2 py-2">
+                      <img src={fileIcon} alt="File Icon" className="h-6 px-2" />
+                      <p className="text-xl">Browse</p>
                     </span>
-                    <span className="ml-3 text-gray-500">
+                    <span className="ml-3 text-base text-gray-500">
                       {uploadedFiles.equifax ? uploadedFiles.equifax.name : 'File name....'}
                     </span>
                   </label>
@@ -192,12 +176,12 @@ export function CreditReportUpload({ formData, handleInputChange }) {
               </div>
 
               {/* TransUnion Upload */}
-              <div className="flex w-1/2 items-center rounded-lg bg-[#E4E4E4] p-2.5 shadow-sm">
-                <div className="flex items-center">
-                  <span className="font-semibold text-[#04284F]">Upload</span>
-                  <img src={TransunionLogo} alt="TransUnion" className="ml-2 h-6" />
+              <div className="flex w-[550px] rounded-lg border-2 border-[#15549A] bg-[#E4E4E4]">
+                <div className="flex w-1/2 items-center p-3">
+                  <span className="text-xl font-semibold text-[#04284F]">Upload</span>
+                  <img src={TransunionLogo} alt="TransUnion" className="ml-4 h-10" />
                 </div>
-                <div className="ml-4 flex-1">
+                <div className="w-1/2 rounded-lg bg-[#F5F5F5]">
                   <input
                     type="file"
                     accept=".pdf,.jpg,.jpeg,.png"
@@ -205,102 +189,152 @@ export function CreditReportUpload({ formData, handleInputChange }) {
                     className="hidden"
                     id="transunion-upload"
                   />
-                  <label htmlFor="transunion-upload" className="flex cursor-pointer items-center">
-                    <span className="flex items-center rounded border border-gray-300 bg-[#F5F5F5] px-4 py-2">
-                      <svg
-                        className="mr-2 h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                        />
-                      </svg>
-                      Browse
+                  <label
+                    htmlFor="transunion-upload"
+                    className="flex h-full cursor-pointer items-center"
+                  >
+                    <span className="flex items-center rounded px-2 py-2">
+                      <img src={fileIcon} alt="File Icon" className="h-6 px-2" />
+                      <p className="text-xl">Browse</p>
                     </span>
-                    <span className="ml-3 text-gray-500">
+                    <span className="ml-3 text-base text-gray-500">
                       {uploadedFiles.transunion ? uploadedFiles.transunion.name : 'File name....'}
                     </span>
                   </label>
                 </div>
               </div>
+
               {/* ID Upload */}
-              <div className="mt-8 rounded-lg bg-white p-6">
-                <h4 className="mb-4 text-xl font-semibold text-[#04284F]">
+              <div className="mt-8">
+                <h4 className="mb-4 text-3xl text-[#04284F]">
                   Upload your driving license for your identity
                 </h4>
-                <div className="grid gap-6 md:grid-cols-2">
-                  {/* Front Side Upload */}
-                  <div className="flex flex-col space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[#04284F]">Upload Front Side</span>
-                      <input
-                        type="file"
-                        accept=".pdf,.jpg,.jpeg,.png"
-                        onChange={e => handleFileUpload(e, 'identificationFront')}
-                        className="hidden"
-                        id="id-front-upload"
-                      />
-                      <label
-                        htmlFor="id-front-upload"
-                        className="flex cursor-pointer items-center rounded border border-gray-300 bg-[#F5F5F5] px-4 py-2"
-                      >
-                        Browse
-                      </label>
-                    </div>
-                    <div className="relative h-40 w-full overflow-hidden rounded-lg border-2 border-dashed border-[#15549A] bg-gray-50">
-                      {uploadedFiles.identificationFront ? (
-                        <img
-                          src={URL.createObjectURL(uploadedFiles.identificationFront)}
-                          alt="ID Front Preview"
-                          className="h-full w-full object-contain"
-                        />
-                      ) : (
-                        <div className="flex h-full items-center justify-center">
+
+                <div className="flex gap-8">
+                  {/* Upload Inputs Section */}
+                  <div className="mt-5 flex-1 items-center justify-center space-x-4">
+                    <input
+                      type="file"
+                      accept=".pdf,.jpg,.jpeg,.png"
+                      onChange={e => handleFileUpload(e, 'identificationFront')}
+                      className="w-2/5 rounded-lg border border-[#15549A] bg-white p-3"
+                      placeholder="Upload Front Side"
+                    />
+                    <input
+                      type="file"
+                      accept=".pdf,.jpg,.jpeg,.png"
+                      onChange={e => handleFileUpload(e, 'identificationBack')}
+                      className="ml-2 w-2/5 rounded-lg border border-[#15549A] bg-white p-3"
+                      placeholder="Upload Back Side"
+                    />
+                  </div>
+                  {/* Preview Images Section */}
+                  <div className="flex gap-8">
+                    <div className="w-[180px]">
+                      <div className="h-[118px] w-[177px] overflow-hidden rounded-lg border border-[#15549A] bg-white">
+                        {uploadedFiles.identificationFront ? (
+                          <img
+                            src={URL.createObjectURL(uploadedFiles.identificationFront)}
+                            alt="ID Front Preview"
+                            className="h-full w-full object-contain"
+                          />
+                        ) : (
                           <img
                             src={idFrontPlaceholder}
                             alt="ID Front Sample"
-                            className="h-32 w-auto opacity-50"
+                            className="h-full w-full"
                           />
-                        </div>
-                      )}
+                        )}
+                      </div>
+                      <button className="mt-2 h-[39px] w-[180px] rounded-[5px] border border-[#15549A] bg-[#15549A] text-sm text-white">
+                        Click here to Preview
+                      </button>
+                    </div>
+                    <div className="w-[180px]">
+                      <div className="h-[118px] w-[177px] overflow-hidden rounded-lg border border-[#15549A] bg-white">
+                        {uploadedFiles.identificationBack ? (
+                          <img
+                            src={URL.createObjectURL(uploadedFiles.identificationBack)}
+                            alt="ID Back Preview"
+                            className="h-full w-full object-contain"
+                          />
+                        ) : (
+                          <img
+                            src={idBackPlaceholder}
+                            alt="ID Back Sample"
+                            className="h-full w-full"
+                          />
+                        )}
+                      </div>
+                      <button className="mt-2 h-[39px] w-[180px] rounded-[5px] border border-[#15549A] bg-[#15549A] text-sm text-white">
+                        Click here to Preview
+                      </button>
                     </div>
                   </div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <input
+                    type="checkbox"
+                    className="peer relative mt-1 h-6 w-6 cursor-pointer appearance-none rounded-full border-4 border-[#04284F] bg-[#F2F2F2] checked:bg-[#04284F]"
+                  />
+                  <p className="text-xl text-[#04284F]">
+                    By selecting here are consenting to the term and agreement for <br />{' '}
+                    EZECreditRepair to represent and work for you
+                    <span className="ml-1 cursor-pointer font-bold text-[#15549A] underline underline-offset-4">
+                      Read More
+                    </span>
+                  </p>
+                </div>
+                {/* Consent Section */}
+                <div className="mt-8 w-full">
+                  <div className="flex items-center justify-center bg-[#15549A] px-6 py-4 text-center text-white">
+                    <h3 className="text-2xl font-bold">CONSENT & LIMITED POWER OF ATTORNEY</h3>
+                    <button className="absolute right-44 flex h-9 w-9 items-center justify-center rounded-full bg-white text-center text-3xl font-bold text-[#15549A]">
+                      <X />
+                    </button>
+                  </div>
 
-                  {/* Back Side Upload */}
-                  <div className="flex flex-col space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[#04284F]">Upload Back Side</span>
-                      <input
-                        type="file"
-                        accept=".pdf,.jpg,.jpeg,.png"
-                        onChange={e => handleFileUpload(e, 'identificationBack')}
-                        className="hidden"
-                        id="id-back-upload"
-                      />
-                      <label
-                        htmlFor="id-back-upload"
-                        className="flex cursor-pointer items-center rounded border border-gray-300 bg-[#F5F5F5] px-4 py-2"
-                      >
-                        Browse
-                      </label>
+                  <div className="mt-4 text-lg">
+                    <p className="mb-2 text-center text-2xl font-semibold text-[#333333]">
+                      By checking the box on our application form that states:
+                    </p>
+
+                    <div className="mb-4 text-[#333333]">
+                      &quot;By checking this box, I certify that I am at least 19 years of age,
+                      acknowledge that I have read the provided Contract, Information Statement, and
+                      Legal Disclosures, and give my Electronic Signature and Limited Power of
+                      Attorney to EzeCredit Repair to perform work on my behalf.&quot;
                     </div>
-                    <div className="relative h-40 w-full overflow-hidden rounded-lg border-2 border-dashed border-[#15549A] bg-gray-50">
-                      {uploadedFiles.identificationBack ? (
-                        <img
-                          src={URL.createObjectURL(uploadedFiles.identificationBack)}
-                          alt="ID Back Preview"
-                          className="h-full w-full object-contain"
-                        />
-                      ) : (
-                        <div className="flex h-full items-center justify-center">
-                          <img src={idBackPlaceholder} alt="ID Back Sample" className="" />
-                        </div>
-                      )}
+
+                    <p className="mb-4 text-[#333333]">
+                      you are representing and agreeing that you accept all terms and conditions as
+                      if you had physically provided your signature.
+                    </p>
+
+                    <div className="mb-4">
+                      <h4 className="font-bold text-[#333333]">LIMITED POWER OF ATTORNEY</h4>
+                      <p className="text-[#333333]">
+                        This Limited Power of Attorney grants EzeCredit Repair permission to act as
+                        your authorized agent for the sole purpose of assisting in your credit
+                        repair process. This includes writing, signing, and submitting
+                        correspondence to credit bureaus, creditors, or other relevant entities as
+                        deemed necessary under this agreement.
+                      </p>
+                    </div>
+
+                    <p className="mb-6 text-[#333333]">
+                      You may revoke your Electronic Signature and Limited Power of Attorney at any
+                      time by sending EzeCredit Repair an email stating your intent to withdraw your
+                      authorization. Upon revocation, EzeCredit Repair will no longer have the
+                      authority to represent you, and this agreement will be considered terminated.
+                    </p>
+
+                    <div className="pt-4">
+                      <input
+                        type="text"
+                        placeholder="Your Signature"
+                        className="w-1/4 rounded-lg border border-[#15549A] bg-white p-3"
+                      />
                     </div>
                   </div>
                 </div>
@@ -309,14 +343,32 @@ export function CreditReportUpload({ formData, handleInputChange }) {
           </div>
         </div>
       </div>
-      {/* Step 3 - Consent */}
-      <div className="mb-8">
-        <div className="flex items-center gap-4">
-          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#15549A] text-2xl font-bold text-white">
-            3
+      {/* Step 3 - Why This Is Important */}
+      <div className="flex">
+        <div className="flex items-start justify-center gap-4 pt-3">
+          <div className="relative h-full">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#15549A] text-2xl font-bold text-white">
+              3
+            </div>
+            <div className="absolute left-5 top-11 h-[calc(100%-2.75rem)] w-[2px] bg-[#15549A]"></div>
           </div>
-          <h3 className="text-xl font-bold text-[#04284F]">CONSENT & LIMITED POWER OF ATTORNEY</h3>
         </div>
+        <div className="mb-8 ml-6 w-full rounded-lg bg-[#F2F2F2] px-5 py-7 text-[#04284F]">
+          <h3 className="text-2xl font-bold">Why This Is Important</h3>
+          <p className="mt-4 text-lg">
+            By analyzing your credit reports, we can establish a baseline and identify any
+            inaccuracies or questionable items. This step is essential to crafting your personalized
+            credit repair strategy.
+          </p>
+        </div>
+      </div>
+      {/* Consent Section - Separate from steps */}
+      <div className="mt-8 w-full">
+        <div className="rounded-lg bg-[#04284F] px-6 py-4 text-white">
+          <h3 className="text-xl font-bold">CONSENT & LIMITED POWER OF ATTORNEY</h3>
+        </div>
+
+        <div className="mt-4 rounded-lg bg-[#F2F2F2] p-6">{/* Rest of the consent content */}</div>
         <div className="ml-16 mt-4">
           <div className="flex items-start gap-4">
             <input

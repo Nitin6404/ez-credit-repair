@@ -1,5 +1,3 @@
-import React from 'react';
-
 const features = [
   'Three-bureau reports and scores',
   'Credit Bureaus Disputes',
