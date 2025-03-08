@@ -86,7 +86,7 @@ export function CreditReportUpload({ formData, handleInputChange }) {
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#15549A] text-2xl font-bold text-white">
               2
             </div>
-            <div className="absolute left-5 top-11 h-[calc(100%-2.75rem)] w-[2px] bg-[#15549A]"></div>
+            <div className="absolute left-5 top-11 h-[calc(100%+0.5rem)] w-[2px] bg-[#15549A]"></div>
           </div>
         </div>
 
@@ -350,16 +350,20 @@ export function CreditReportUpload({ formData, handleInputChange }) {
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#15549A] text-2xl font-bold text-white">
               3
             </div>
-            <div className="absolute left-5 top-11 h-[calc(100%-2.75rem)] w-[2px] bg-[#15549A]"></div>
           </div>
         </div>
-        <div className="mb-8 ml-6 w-full rounded-lg bg-[#F2F2F2] px-5 py-7 text-[#04284F]">
-          <h3 className="text-2xl font-bold">Why This Is Important</h3>
-          <p className="mt-4 text-lg">
-            By analyzing your credit reports, we can establish a baseline and identify any
-            inaccuracies or questionable items. This step is essential to crafting your personalized
-            credit repair strategy.
-          </p>
+        <div className="mb-8 ml-6 w-full rounded-lg bg-[#F2F2F2] px-5 py-7">
+          <div className="flex items-center gap-2">
+            <h3 className="text-2xl font-bold text-[#04284F]">Why This is Important</h3>
+          </div>
+          <div className="mt-4 flex items-start gap-2">
+            <span className="text-[#04284F]">•</span>
+            <p className="text-lg text-[#04284F]">
+              By analyzing your credit reports, we can establish a baseline and identify any
+              inaccuracies or questionable items. This step is essential to crafting your
+              personalized credit repair strategy.
+            </p>
+          </div>
         </div>
       </div>
       {/* Consent Section - Separate from steps */}
