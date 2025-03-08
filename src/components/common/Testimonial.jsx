@@ -3,7 +3,7 @@ import comma from '../asset/comma.png';
 import jack from '../asset/jack.svg';
 import mathew from '../asset/mathew.svg';
 import susan from '../asset/susan.svg';
-import { ChevronRight, ChevronLeft } from 'lucide-react';
+import PropTypes from 'prop-types';
 
 const testimonials = [
   {
@@ -51,6 +51,13 @@ function TestimonialProfile({ image, name, date, size }) {
   );
 }
 
+TestimonialProfile.propTypes = {
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  size: PropTypes.oneOf(['small', 'large']),
+};
+
 // Component for testimonial text with quotes
 function TestimonialText({ text, size }) {
   const isLarge = size === 'large';
@@ -82,6 +89,11 @@ function TestimonialText({ text, size }) {
   );
 }
 
+TestimonialText.propTypes = {
+  text: PropTypes.string.isRequired,
+  size: PropTypes.oneOf(['small', 'large']),
+};
+
 // Component for a single testimonial card
 function TestimonialCard({ testimonial, position = 'center' }) {
   const isCenter = position === 'center';
@@ -106,6 +118,16 @@ function TestimonialCard({ testimonial, position = 'center' }) {
     </div>
   );
 }
+
+TestimonialCard.PropTypes = {
+  testimonial: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  }).isRequired,
+  position: PropTypes.oneOf(['left', 'center', 'right']),
+};
 
 // Navigation buttons component
 // function NavigationButtons({ onPrev, onNext }) {

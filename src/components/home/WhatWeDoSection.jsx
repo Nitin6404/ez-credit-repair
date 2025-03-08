@@ -1,4 +1,3 @@
-import React from 'react';
 import logo from '../asset/logo.png';
 import tick from '../asset/whatwedotick.png';
 import pauseIcon from '../asset/pauseIcon.svg';
@@ -14,9 +13,9 @@ export function WhatWeDoSection() {
       {/* What we do section*/}
       <div className="flex min-h-[695px] w-full flex-col items-start border-2 border-b-[#E8EEF5] bg-[#15549A] p-4 font-sans text-white md:p-6">
         {/* Main Container with Flex */}
-        <div className="flex w-full flex-col items-start justify-center space-y-8 md:flex-row md:space-x-10 md:space-y-0">
+        <div className="flex w-full flex-col items-start justify-center space-y-8 md:flex-row md:space-y-0">
           {/* Left Side - What We Do Section */}
-          <div className="flex w-full flex-col items-start space-y-4 px-4 text-left md:ml-[20px] md:w-auto md:items-start md:text-left">
+          <div className="flex w-full flex-col items-start space-y-4 px-4 text-left md:ml-[50px] md:w-auto md:items-start md:text-left">
             {/* Main Title */}
             <h1 className="mt-[20px] font-inter text-[32px] font-bold leading-[40px] text-[#78B6F6] md:text-[50px] md:leading-[60px]">
               What We Do
@@ -107,7 +106,7 @@ export function WhatWeDoSection() {
             </div>
             {/* Text beside the Basketball Image */}
             <p className="mt-4 text-left font-inter text-[18px] font-[400] leading-[24px] md:mt-[30px] md:text-left md:text-[26.36px] md:leading-[31.9px]">
-              Don't Let Your Credit Block Opportunities
+              Don&apos;t Let Your Credit Block Opportunities
               <span className="mt-2 block font-inter text-[18px] font-[400] leading-[24px] md:ml-[30px] md:text-[26.36px] md:leading-[31.9px]">
                 Start Building a Better Score Today!
               </span>

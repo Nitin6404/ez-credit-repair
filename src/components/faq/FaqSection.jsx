@@ -10,7 +10,7 @@ export function FAQSection({ className = '', showTitle = true, maxWidth = '4xl' 
   };
 
   return (
-    <div className="min-h-[500px] w-full bg-[#3F8FC4] bg-opacity-[10%] md:ml-[80px] md:h-[800px] md:w-[640px]">
+    <div className="min-h-[500px] w-full bg-[#3F8FC4] bg-opacity-[10%] md:ml-[130px] md:h-[800px] md:w-[640px]">
       <div className={`${className}`}>
         {showTitle && (
           <div className={`max-w-${maxWidth} mt-[10px] p-4 md:ml-[1px] md:p-6`}>

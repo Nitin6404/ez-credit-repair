@@ -2,11 +2,8 @@ import rectangle from '../asset/Rectangle.png';
 import rectangle1 from '../asset/Rectangle1.png';
 import rectangle2 from '../asset/Rectangle2.png';
 import rectangle4 from '../asset/Rectangle4.png';
-import { MoveDown } from 'lucide-react';
-import { useState, useRef, useEffect } from 'react';
-import ArrowImage from '../asset/arrow.svg';
-import arrow from '../asset/Arrow2.svg';
-import KeyboardDoubleArrowUpOutlinedIcon from '@mui/icons-material/KeyboardDoubleArrowUpOutlined';
+import { useState } from 'react';
+import PropType from 'prop-types';
 
 function ProgramCard({ number, title, image, description, nestedImage, onClick, isActive }) {
   return (
@@ -158,3 +155,13 @@ export function Program() {
     </div>
   );
 }
+
+ProgramCard.propTypes = {
+  number: PropType.string,
+  title: PropType.string,
+  image: PropType.string,
+  description: PropType.string,
+  nestedImage: PropType.string,
+  onClick: PropType.func,
+  isActive: PropType.bool,
+};

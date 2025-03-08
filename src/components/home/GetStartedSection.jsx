@@ -1,4 +1,3 @@
-import React from 'react';
 import rectangle10 from '../asset/Rectangle10.png';
 import creditRepair from '../asset/creditrapiring.jpg';
 import pauseIcon from '../asset/pauseIcon.svg';
@@ -31,9 +30,9 @@ export function GetStartedSection() {
             </div>
             <div className="mt-4 leading-tight md:leading-normal">
               Achieving a better credit score is key to unlocking finan- cial freedom and accessing
-              life's biggest opportunities. With our EzeCredit Repair Program, our services will
-              change your path to a brighter and improving credit profile, so you can secure better
-              rates, loans, and finan- cial peace of mind.
+              life&apos;s biggest opportunities. With our EzeCredit Repair Program, our services
+              will change your path to a brighter and improving credit profile, so you can secure
+              better rates, loans, and finan- cial peace of mind.
             </div>
           </div>
         </div>
