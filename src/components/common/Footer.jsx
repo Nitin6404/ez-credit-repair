@@ -1,6 +1,5 @@
-import React from 'react';
 import { useLocation } from 'react-router-dom';
-
+import PropTypes from 'prop-types';
 import layer191 from '../asset/Layer191.png';
 import credit0 from '../asset/logo.png';
 import mail from '../asset/mailfooter.png';
@@ -57,8 +56,16 @@ const NavigationLink = ({ path, label, isActive }) => (
   </li>
 );
 
+NavigationLink.propTypes = {
+  path: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  isActive: PropTypes.bool,
+};
+
 const ContactSection = ({ icon, title, children }) => (
-  <div className="mb-4 flex flex-col items-center md:flex-row md:items-center md:space-x-2">
+  <div
+    className={`mb-4 flex flex-col items-center md:flex-row md:items-center md:space-x-2 ${icon === mail ? 'md:ml-[170px]' : 'md:ml-5'} `}
+  >
     <div className="flex items-center">
       <img
         src={icon}
@@ -75,6 +82,12 @@ const ContactSection = ({ icon, title, children }) => (
   </div>
 );
 
+ContactSection.propTypes = {
+  icon: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
 export function Footer() {
   const { pathname } = useLocation();
   const currentYear = new Date().getFullYear();
@@ -89,7 +102,7 @@ export function Footer() {
             <img
               src={credit0}
               alt="Eze Credit Repair Logo"
-              className="h-[60px] w-[100px] md:ml-[70px] md:h-[79px] md:w-[135px]"
+              className="h-[60px] w-[100px] md:ml-[20px] md:h-[79px] md:w-[135px]"
             />
           </div>
 
@@ -104,14 +117,17 @@ export function Footer() {
           </ContactSection>
 
           {/* Address */}
-          <ContactSection icon={office} title="Office Address, USA">
-            <p className="font-montserrat text-[22px] font-normal leading-[27px]">
-              {contactInfo.address.line1}
-            </p>
-            <p className="font-montserrat text-[22px] font-normal leading-[27px]">
-              {contactInfo.address.line2}
-            </p>
-          </ContactSection>
+
+          <div className="w-1/3">
+            <ContactSection icon={office} title="Office Address, USA">
+              <p className="font-montserrat text-[22px] font-normal leading-[27px]">
+                {contactInfo.address.line1}
+              </p>
+              <p className="font-montserrat text-[22px] font-normal leading-[27px]">
+                {contactInfo.address.line2}
+              </p>
+            </ContactSection>
+          </div>
         </div>
       </div>
 
@@ -119,22 +135,22 @@ export function Footer() {
       <footer className="bg-[#15549a] py-[2px] text-white">
         <div className="container mx-auto grid gap-8 px-4 md:grid-cols-1 lg:grid-cols-3">
           {/* Company Info */}
-          <div className="mt-[1px] hidden lg:block">
+          <div className="mt-[1px] hidden md:ml-5 lg:block">
             <h2 className="text-left font-montserrat text-[25px] font-bold leading-normal md:text-left md:text-[31px] md:leading-[88px]">
               EzeCreditRepair LLC.
             </h2>
             <p className="mt-2 text-left font-montserrat text-[16px] font-[700] leading-[25px] md:text-left md:text-[20px]">
-              EzeCredit Repair is your trusted guide to better credit, ensuring you're ready for
-              every opportunity that comes your way. As the A-Team of credit repair, our fast-track
-              process improves your credit for better rates, loans, and peace of mind.
+              EzeCredit Repair is your trusted guide to better credit, ensuring you&apos;re ready
+              for every opportunity that comes your way. As the A-Team of credit repair, our
+              fast-track process improves your credit for better rates, loans, and peace of mind.
             </p>
           </div>
 
           {/* Navigation Section */}
-          <div className="relative border-y border-solid p-3 md:border-x md:border-y-0">
-            <h3 className="mt-[10px] p-3 text-left font-montserrat text-[25px] font-bold leading-[28px] md:text-left md:text-[31px] lg:text-center">
+          <div className="relative border-y border-solid md:border-x md:border-y-0">
+            <h2 className="text-left font-montserrat text-[25px] font-bold leading-normal md:ml-5 md:text-left md:text-[31px] md:leading-[88px]">
               Short Link
-            </h3>
+            </h2>
             <div className="flex flex-col px-4 md:flex-row">
               {/* Main Navigation */}
               <div className="w-full md:w-1/2">
@@ -167,11 +183,11 @@ export function Footer() {
           </div>
 
           {/* Newsletter and Social */}
-          <div className="mt-[30px] px-4 md:ml-[20px] md:px-0">
-            <h3 className="text-left font-montserrat text-[25px] font-bold leading-[38px] md:text-left md:text-[31px] lg:text-center">
-              Follow us
-            </h3>
-            <div className="mt-4 flex flex-col items-center space-y-2 md:items-start">
+          <div className="mt-[30px] px-4 md:mt-0 md:px-0">
+            <h2 className="-ml-3 text-left font-montserrat text-[25px] font-bold leading-normal md:text-left md:text-[31px] md:leading-[88px]">
+              Follow Us
+            </h2>
+            <div className="mt-4 flex flex-col items-center space-y-2 md:-ml-3 md:mt-1 md:items-start">
               <input
                 type="email"
                 placeholder="Email address"
@@ -185,7 +201,7 @@ export function Footer() {
               <img
                 src={layer191}
                 alt="Social Media Icons"
-                className="mb-[40px] h-[45px] w-[211px]"
+                className="mb-[40px] h-[45px] w-[211px] md:-ml-3"
               />
             </div>
           </div>
