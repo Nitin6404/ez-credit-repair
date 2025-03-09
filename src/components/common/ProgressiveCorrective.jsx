@@ -97,7 +97,7 @@ export function Program() {
     <div className="px-4 md:px-0">
       <div className="mx-auto max-w-screen-xl rounded bg-white p-4 md:p-6">
         {/* Header Section */}
-        <div className="mb-6 text-center md:mb-8">
+        <div className="mb-6 mt-24 text-center md:mb-8">
           <p className="mt-4 font-inter text-[32px] font-bold leading-[40px] text-[#15549A] md:mt-[-240px] md:text-[50px] md:leading-[60px]">
             Progressive Corrective & Recovery Plan
           </p>
