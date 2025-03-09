@@ -81,7 +81,7 @@ export function WhatWeDoSection() {
             </ul>
 
             {/* Get Started Button */}
-            <button className="flex h-[40px] w-[200px] items-center justify-center gap-3 rounded-xl bg-[#46CC02] font-semibold text-white md:h-[52px] md:w-[244px]">
+            <button className="flex h-[40px] w-[200px] items-center justify-center gap-3 rounded-xl bg-[#46CC02] font-semibold text-white md:ml-5 md:h-[52px] md:w-[244px]">
               <span className="font-inter text-[20px] font-bold leading-[24px] md:text-[27px] md:leading-[32px]">
                 GET STARTED
               </span>
@@ -97,7 +97,7 @@ export function WhatWeDoSection() {
           {/* Right Side - Basketball Image and Text */}
           <div className="z-10 mt-6 flex w-full flex-col items-start justify-center md:mt-[50px] md:w-1/2">
             {/* Basketball Image Placeholder */}
-            <div className="mb-4 flex w-full max-w-[300px] justify-center md:max-w-[506px] md:items-center">
+            <div className="mt-10 flex w-full max-w-[300px] justify-center md:max-w-[506px] md:items-center">
               <img
                 src={rectangle0}
                 alt="Eze Credit Repair Logo"
