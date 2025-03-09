@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 export function AboutSection() {
   return (
-    <div className="flex flex-col items-start justify-center px-4 py-4 font-sans md:flex-row md:py-8 md:pl-20 md:pr-14">
+    <div className="flex flex-col items-start justify-center px-4 py-4 font-sans md:flex-row md:py-8 md:pl-24 md:pr-14">
       {/* Text Content */}
       <div className="flex-1">
         <h1 className="font-inter text-[32px] font-bold leading-[40px] text-[#15549A] md:text-[50.04px] md:leading-[60.57px]">
@@ -91,7 +91,7 @@ export function AboutSection() {
       </div>
 
       {/* Image Placeholder for Desktop View */}
-      <div className="mt-8 hidden w-full justify-center md:mt-[50px] md:flex md:justify-end md:pl-6">
+      <div className="mt-8 hidden w-full justify-center md:mt-[50px] md:flex md:justify-center md:pl-6">
         <div className="flex h-[300px] w-[300px] items-center justify-center rounded-lg md:h-[459px] md:w-[474px]">
           <img src={creditImprove} alt="Recovery Icon" className="h-full w-full object-contain" />
         </div>
