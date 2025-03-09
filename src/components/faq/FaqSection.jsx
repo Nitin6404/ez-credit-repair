@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { accordionDataFaqSection } from '../../data/faqData';
 
 export function FAQSection({ className = '', showTitle = true, maxWidth = '4xl' }) {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(2);
 
   const toggleAccordion = index => {
     setOpenIndex(openIndex === index ? null : index);
@@ -33,7 +33,7 @@ export function FAQSection({ className = '', showTitle = true, maxWidth = '4xl' 
                 <div
                   className={`accordion-content px-3 py-3 md:px-6 md:py-4 ${openIndex === index ? '' : 'hidden'}`}
                 >
-                  <div className="font-montserrat text-[16px] font-semibold leading-[22px] md:text-[22px] md:leading-[27px]">
+                  <div className="font-montserrat text-[16px] font-semibold leading-[22px] md:text-[18px] md:leading-[27px]">
                     {item.content}
                   </div>
                 </div>

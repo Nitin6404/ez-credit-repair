@@ -1,4 +1,3 @@
-import rectangle10 from '../asset/Rectangle10.png';
 import creditRepair from '../asset/creditrapiring.jpg';
 import pauseIcon from '../asset/pauseIcon.svg';
 
@@ -12,12 +11,14 @@ export function GetStartedSection() {
         alt="Credit Repair Background"
       />
 
-      {/* Center image - Hidden on mobile */}
-      <div className="absolute left-1/2 top-[230px] hidden h-[545px] w-[1009px] -translate-x-1/2 -translate-y-1/2 transform rounded-md md:block">
-        <img
-          src={rectangle10}
-          alt="Eze Credit Repair Logo"
-          className="h-full w-full object-cover"
+      {/* YouTube Video - Hidden on mobile */}
+      <div className="absolute left-1/2 top-[230px] hidden h-[545px] w-[1009px] -translate-x-1/2 -translate-y-1/2 transform overflow-hidden rounded-md md:block">
+        <iframe
+          src="https://www.youtube.com/embed/Ts-qq_0qtbg"
+          title="EzeCredit Repair Video"
+          className="h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
         />
       </div>
 
