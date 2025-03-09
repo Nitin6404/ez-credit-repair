@@ -95,7 +95,8 @@ TestimonialText.propTypes = {
 };
 
 // Component for a single testimonial card
-function TestimonialCard({ testimonial, position = 'center' }) {
+// In TestimonialCard component, add onClick prop
+function TestimonialCard({ testimonial, position = 'center', onClick }) {
   const isCenter = position === 'center';
   let size = 'large';
   if (position !== 'center') {
@@ -104,10 +105,11 @@ function TestimonialCard({ testimonial, position = 'center' }) {
 
   return (
     <div
+      onClick={onClick}
       className={`${
         isCenter
           ? 'z-20 h-[400px] w-[300px] md:h-[465px] md:w-[471px] lg:h-[527px] lg:w-[543px]'
-          : 'hidden h-[465px] w-[471px] md:flex'
+          : 'hidden h-[465px] w-[471px] cursor-pointer hover:scale-105 md:flex'
       } ${position === 'left' ? 'md:absolute md:left-48' : ''} ${position === 'right' ? 'md:absolute md:right-48' : ''} flex items-center justify-center border-[5px] border-[#002464] bg-[#E2E3E3] transition-all duration-300 md:scale-110 md:border-[10px]`}
       style={{ zIndex: isCenter ? 3 : 1 }}
     >
@@ -118,8 +120,8 @@ function TestimonialCard({ testimonial, position = 'center' }) {
     </div>
   );
 }
-
-TestimonialCard.PropTypes = {
+// Fix PropTypes validation
+TestimonialCard.propTypes = {
   testimonial: PropTypes.shape({
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -127,40 +129,23 @@ TestimonialCard.PropTypes = {
     text: PropTypes.string.isRequired,
   }).isRequired,
   position: PropTypes.oneOf(['left', 'center', 'right']),
+  onClick: PropTypes.func,
 };
 
-// Navigation buttons component
-// function NavigationButtons({ onPrev, onNext }) {
-//   return (
-//     <div className="my-6 flex w-full justify-center gap-4 px-4 pt-4 md:my-10 md:gap-10 md:pt-10">
-//       <button
-//         onClick={onPrev}
-//         className="flex items-center rounded bg-[#15549A] px-4 py-2 text-sm font-semibold text-white shadow transition-all hover:bg-[#003977] md:px-6 md:py-3 md:text-base"
-//       >
-//         <ChevronLeft />
-//         <span className="ml-2">Previous</span>
-//       </button>
-//       <button
-//         onClick={onNext}
-//         className="flex items-center rounded bg-[#15549A] px-4 py-2 text-sm font-semibold text-white shadow transition-all hover:bg-[#003977] md:px-6 md:py-3 md:text-base"
-//       >
-//         <span className="mr-2">Next</span>
-//         <ChevronRight />
-//       </button>
-//     </div>
-//   );
-// }
-
+// In the Testimonial component, update the testimonials section
 export function Testimonial() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const getTestimonialIndex = offset =>
     (currentIndex + offset + testimonials.length) % testimonials.length;
 
-  const prevTestimonial = () =>
-    setCurrentIndex(prev => (prev === 0 ? testimonials.length - 1 : prev - 1));
-
-  const nextTestimonial = () => setCurrentIndex(prev => (prev + 1) % testimonials.length);
+  const handleCardClick = position => {
+    if (position === 'left') {
+      setCurrentIndex(prev => (prev === 0 ? testimonials.length - 1 : prev - 1));
+    } else if (position === 'right') {
+      setCurrentIndex(prev => (prev + 1) % testimonials.length);
+    }
+  };
 
   return (
     <div className="relative flex flex-col items-center bg-white py-6 md:py-6">
@@ -179,12 +164,18 @@ export function Testimonial() {
       {/* Testimonials Section */}
       <div className="mx-4 -mt-[250px] flex w-full flex-col md:mx-12 md:-mt-32">
         <div className="relative flex w-full items-center justify-center">
-          <TestimonialCard testimonial={testimonials[getTestimonialIndex(-1)]} position="left" />
+          <TestimonialCard
+            testimonial={testimonials[getTestimonialIndex(-1)]}
+            position="left"
+            onClick={() => handleCardClick('left')}
+          />
           <TestimonialCard testimonial={testimonials[currentIndex]} position="center" />
-          <TestimonialCard testimonial={testimonials[getTestimonialIndex(1)]} position="right" />
+          <TestimonialCard
+            testimonial={testimonials[getTestimonialIndex(1)]}
+            position="right"
+            onClick={() => handleCardClick('right')}
+          />
         </div>
-
-        {/*<NavigationButtons onPrev={prevTestimonial} onNext={nextTestimonial} />*/}
       </div>
     </div>
   );

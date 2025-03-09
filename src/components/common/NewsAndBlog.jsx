@@ -17,7 +17,7 @@ export function NewsAndBlog() {
       {/* Main Content Grid */}
       <div className="grid w-full grid-cols-1 bg-[#15549A] bg-opacity-[10%] p-2 lg:grid-cols-[1fr_auto_1fr]">
         {/* Credit Repair Section */}
-        <div className="ml-0 mt-[10px] space-y-4 p-2 md:ml-[50px] md:p-5">
+        <div className="ml-0 mt-[10px] space-y-4 p-2 md:ml-[90px] md:p-5">
           {/* Credit Repair Section Heading */}
           <h2 className="ml-0 font-inter text-[20px] font-bold leading-[25px] text-[#15549A] md:text-[25px] md:leading-[30px]">
             Credit Repair:
@@ -66,10 +66,10 @@ export function NewsAndBlog() {
         </div>
 
         {/* Vertical Divider - Hidden on mobile */}
-        <div className="mx-4 mt-[50px] hidden h-[500px] w-[1px] bg-gray-300 lg:block"></div>
+        <div className="mx-4 mr-14 mt-[50px] hidden h-[500px] w-[1px] bg-gray-300 lg:block"></div>
 
         {/* Related Articles Section */}
-        <div className="mr-0 space-y-4 rounded-lg p-4 md:mr-[10px] md:space-y-6 md:p-6">
+        <div className="mr-0 space-y-4 rounded-lg p-4 md:mr-[40px] md:space-y-6 md:p-6">
           <h2 className="font-inter text-[24px] font-bold leading-[30px] text-[#4B4B4B] md:text-[29px] md:leading-[35px]">
             Related Articles
           </h2>
