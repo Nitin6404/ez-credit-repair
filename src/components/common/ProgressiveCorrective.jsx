@@ -97,7 +97,7 @@ export function Program() {
     <div className="px-4 md:px-0">
       <div className="mx-auto max-w-screen-xl rounded bg-white p-4 md:p-6">
         {/* Header Section */}
-        <div className="mb-6 mt-24 text-center md:mb-8">
+        <div className="mb-6 mt-16 text-center md:mb-8">
           <p className="mt-4 font-inter text-[32px] font-bold leading-[40px] text-[#15549A] md:mt-[-240px] md:text-[50px] md:leading-[60px]">
             Progressive Corrective & Recovery Plan
           </p>
@@ -133,7 +133,7 @@ export function Program() {
               <h4 className="mb-2 font-inter text-[22px] font-bold leading-[28px] text-[#07284F] md:text-[27px] md:leading-[32px]">
                 {selectedCard.title}
               </h4>
-              <p className="font-opensans text-[16px] font-bold leading-[24px] text-[#173455] md:text-[24px] md:leading-[32px]">
+              <p className="font-opensans text-[16px] font-bold leading-[24px] text-[#173455] md:text-[18px] md:leading-[32px]">
                 {selectedCard.data}
               </p>
             </>
@@ -142,7 +142,7 @@ export function Program() {
               <h4 className="mb-2 font-inter text-[22px] font-bold leading-[28px] text-[#07284F] md:text-[27px] md:leading-[32px]">
                 Dispute & Escalation
               </h4>
-              <p className="font-opensans text-[16px] font-bold leading-[24px] text-[#173455] md:text-[24px] md:leading-[32px]">
+              <p className="font-opensans text-[16px] font-bold leading-[24px] text-[#173455] md:text-[18px] md:leading-[32px]">
                 Like the A-Team, well be your advocates, challenging inaccuracies and disputing
                 negative items until they re removed. Our EzeCredit experts understand your rights
                 and are dedicated to eliminating incorrect information, Inquiries, late payments,
