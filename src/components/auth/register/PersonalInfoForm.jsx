@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 
-export function PersonalInfoForm({ formData, handleInputChange }) {
+const cities = ['Mumbai', 'Pune', 'Delhi', 'Bangalore', 'Chennai'];
+const states = ['Maharashtra', 'Karnataka', 'Delhi', 'Tamil Nadu', 'Gujarat'];
+function PersonalInfoForm({ formData, handleInputChange }) {
   return (
     <div className="mb-8 w-full max-w-[95%] space-y-4 px-2 sm:mb-20 sm:w-[1272px] sm:space-y-6 sm:px-4">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8">
@@ -62,27 +64,41 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
           <label className="mb-2 block font-inter text-base font-bold text-[#04284F] sm:text-[20px]">
             CITY
           </label>
-          <input
-            type="text"
+          <select
             name="city"
             value={formData.city}
             onChange={handleInputChange}
-            placeholder="Select City"
-            className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[407px] sm:text-[20px]"
-          />
+            className="bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22 fill=%22gray%22><path fill-rule=%22evenodd%22 d=%22M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z%22 clip-rule=%22evenodd%22/></svg>')] h-[50px] w-full appearance-none rounded-xl bg-[#F2F2F2] bg-left bg-no-repeat px-4 pl-10 pl-8 pr-10 font-inter text-base font-normal text-gray-700 focus:outline-none sm:h-[65px] sm:w-[407px] sm:text-[20px]"
+          >
+            <option value="" disabled>
+              Select City
+            </option>
+            {cities.map((city, index) => (
+              <option key={index} value={city}>
+                {city}
+              </option>
+            ))}
+          </select>
         </div>
         <div>
           <label className="mb-2 block font-inter text-base font-bold text-[#04284F] sm:text-[20px]">
             State
           </label>
-          <input
-            type="text"
+          <select
             name="state"
             value={formData.state}
             onChange={handleInputChange}
-            placeholder="Select State"
-            className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[407px] sm:text-[20px]"
-          />
+            className="bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22 fill=%22gray%22><path fill-rule=%22evenodd%22 d=%22M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z%22 clip-rule=%22evenodd%22/></svg>')] h-[50px] w-full appearance-none rounded-xl bg-[#F2F2F2] bg-left bg-no-repeat px-4 pl-10 pr-10 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[407px] sm:text-[20px]"
+          >
+            <option value="" disabled>
+              Select State
+            </option>
+            {states.map((state, index) => (
+              <option key={index} value={state}>
+                {state}
+              </option>
+            ))}
+          </select>
         </div>
         <div>
           <label className="mb-2 block font-inter text-base font-bold text-[#04284F] sm:text-[20px]">
@@ -165,6 +181,8 @@ export function PersonalInfoForm({ formData, handleInputChange }) {
     </div>
   );
 }
+
+export { PersonalInfoForm };
 
 PersonalInfoForm.propTypes = {
   formData: PropTypes.object.isRequired,
