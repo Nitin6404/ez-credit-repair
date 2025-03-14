@@ -440,13 +440,16 @@ export const BillingInfoForm = ({
               <div className="ml-3 flex-1 md:mt-8">
                 <div className="relative mt-8 w-full lg:mt-0">
                   <div className="relative flex flex-col items-start gap-4">
-                    <div className="h-auto w-full bg-[#15549A] p-2 text-start">
+                    {/* Individual Pricing Plan */}
+                    <div className="h-auto w-full bg-[#15549A] p-2 text-center">
                       <div className="border-4 border-white bg-[#15549A] px-2 py-1 text-white">
                         <p className="text-xl font-bold sm:text-[28px]">$99.00/per month</p>
                         <p className="text-lg font-bold sm:text-[20px]">Individual Pricing Plan</p>
                       </div>
                     </div>
-                    <div className="h-auto w-full bg-[#15549A] p-2 text-start">
+
+                    {/* Couples Pricing Plan */}
+                    <div className="h-auto w-full bg-[#15549A] p-2 text-center">
                       <div className="border-4 border-white bg-[#15549A] px-2 py-1 text-white">
                         <p className="text-xl font-bold sm:text-[28px]">$149.00/per month</p>
                         <p className="text-lg font-bold sm:text-[20px]">Couples Pricing Plan</p>
