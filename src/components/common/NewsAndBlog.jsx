@@ -6,9 +6,9 @@ import consultant from '../asset/chingchong.png';
 
 export function NewsAndBlog() {
   return (
-    <div className="mt-[40px] w-full px-4 md:px-0">
+    <div className="mt-[40px] w-full px-4 md:mt-0 md:px-0">
       {/* Main Content Header */}
-      <div className="mb-4 text-center md:mb-5">
+      <div className="mb-4 text-center md:mb-8 md:mt-16">
         <h1 className="font-inter text-[32px] font-bold leading-[40px] text-[#15549A] md:text-[50px] md:leading-[60px]">
           News & Blog
         </h1>
