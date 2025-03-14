@@ -148,10 +148,10 @@ export function Testimonial() {
   };
 
   return (
-    <div className="relative flex flex-col items-center bg-white py-6 md:py-6">
+    <div className="relative flex flex-col items-center bg-white py-6 md:py-5">
       {/* Header Section */}
-      <div className="mb-4 px-4 text-center md:mb-5 md:px-0">
-        <h2 className="mt-2 font-inter text-[32px] font-bold leading-[40px] text-[#15549A] md:mt-[-10px] md:text-[50px] md:leading-[60px]">
+      <div className="mb-4 px-4 text-center md:mb-0 md:p-6">
+        <h2 className="mt-2 font-inter text-[32px] font-bold leading-[40px] text-[#15549A] md:mb-4 md:mt-0 md:text-[50px] md:leading-[60px]">
           What Our Customers Say?
         </h2>
       </div>

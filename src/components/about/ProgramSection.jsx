@@ -48,7 +48,7 @@ export function ProgramSection() {
           <div className="pb-6">
             <img src={dispute} alt="dispute box image" />
           </div>
-          <h4 className="mb-3 font-inter text-[27px] font-bold leading-[32px] text-[#07284F]">
+          <h4 className="mb-1 font-inter text-[27px] font-bold leading-[32px] text-[#07284F]">
             {selectedCard.title}
           </h4>
           <p className="font-inter text-lg font-normal leading-[22px] text-[#173455]">

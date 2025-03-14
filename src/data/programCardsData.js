@@ -1,7 +1,7 @@
-import credit from '../components/asset/Rectangle.png';
-import credit2 from '../components/asset/Rectangle1.png';
-import credit4 from '../components/asset/Rectangle2.png';
-import credit3 from '../components/asset/Rectangle4.png';
+import credit from '../components/asset/RectangleNew.png';
+import credit2 from '../components/asset/Rectangle1New.png';
+// import credit4 from '../components/asset/Rectangle2.png';
+import credit3 from '../components/asset/disputeNew.png';
 
 // Program cards data
 export const programCards = [
@@ -25,7 +25,7 @@ export const programCards = [
     number: '3',
     title: 'Credit Recovery',
     image: credit3,
-    nestedImage: credit4,
+    // nestedImage: credit4,
     description: 'Take action to Boost your credit score to reach your desired Score Range',
     details:
       'Derogatory information will prevent your score from going up.  However, after we remove the negatives, more may be needed to build your score to be able to utilize your credit to its full potential.  We then create a path to get you beyond the 700 range which will impact to the level needed Removing all of the derogatory will only get us haft way there.',
