@@ -1,7 +1,7 @@
 export function Contactform() {
   return (
     <div className="w-full md:w-auto">
-      <div className="flex justify-center px-4 py-8 md:mb-[300px] md:ml-[745px] md:mt-[-700px] md:py-0">
+      <div className="flex justify-center px-4 py-8 md:mb-48 md:ml-[745px] md:mt-[-620px] md:py-0">
         <div className="flex h-auto w-full flex-col bg-[url('/src/components/asset/faqbg.png')] bg-cover bg-center p-4 md:h-full md:w-[533px] md:p-6">
           <div className="mt-0 flex-1 md:mt-[-10px]">
             <h2 className="text-center font-inter text-[32px] font-[400] leading-[40px] text-[#FFFFFF] md:text-left md:text-[45px] md:leading-[54.46px]">

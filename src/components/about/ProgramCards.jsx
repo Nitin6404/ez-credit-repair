@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 
 export function ProgramCard({ number, title, image, description, nestedImage, isActive, onClick }) {
   return (
-    <div className="mb-6 cursor-pointer hover:shadow-lg" onClick={onClick}>
+    <div className="cursor-pointer hover:shadow-lg" onClick={onClick}>
       {/* Header */}
-      <div className="h-[56.48px] w-full max-w-[430px] bg-[#46CC02] text-white">
+      <div className="h-[56px] w-full max-w-[430px] bg-[#46CC02] text-white">
         <div className="flex items-center">
-          <div className="ml-2 mr-3 mt-2 flex h-11 w-11 items-center justify-center rounded-lg bg-white font-montserrat text-[25px] font-bold leading-[30px] text-[#15549A]">
+          <div className="my-1.5 ml-2 mr-3 flex h-11 w-11 items-center justify-center rounded-lg bg-white font-montserrat text-[25px] font-bold leading-[30px] text-[#15549A]">
             {number.padStart(2, '0')}
           </div>
           <h3 className="font-montserrat text-[21px] font-bold leading-[30px]">{title}</h3>
@@ -15,7 +15,7 @@ export function ProgramCard({ number, title, image, description, nestedImage, is
 
       {/* Content */}
       <div
-        className={`flex h-[150px] items-center justify-center rounded-b-lg p-3 transition-colors ${
+        className={`flex h-[100px] items-center justify-center rounded-b-lg px-3 transition-colors ${
           isActive ? 'bg-[#15549A] text-white' : 'bg-[#ECF6FF] text-[#9A9A9A]'
         }`}
       >
@@ -29,7 +29,7 @@ export function ProgramCard({ number, title, image, description, nestedImage, is
             />
           )}
         </div>
-        <p className="font-montserrat text-[20px] font-bold leading-[25px]">{description}</p>
+        <p className="font-montserrat text-lg font-extrabold leading-[25px]">{description}</p>
       </div>
     </div>
   );

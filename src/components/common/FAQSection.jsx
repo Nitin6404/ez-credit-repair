@@ -10,8 +10,8 @@ export function FaqAbout() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="mt-[10px] flex items-center justify-center p-4 text-center md:mt-[20px] md:p-6">
-        <h1 className="mb-4 font-inter text-[32px] font-bold leading-[40px] text-[#15549A] md:text-[50px] md:leading-[60px]">
+      <div className="mb-4 mt-6 flex items-center justify-center text-center md:mb-8 md:mt-12 md:p-0">
+        <h1 className="font-inter text-[32px] font-bold leading-[40px] text-[#15549A] md:text-[50px] md:leading-[60px]">
           Frequently Asked Questions
         </h1>
       </div>

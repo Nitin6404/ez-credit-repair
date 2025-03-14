@@ -1,9 +1,6 @@
-import { Navbar } from '../components/common/Navbar';
-
 export function Login() {
   return (
     <div className="flex min-h-screen flex-col">
-      <Navbar />
       <main className="flex flex-1 items-center justify-center bg-gray-50 py-16">
         <div className="w-full max-w-[420px] rounded-2xl bg-white p-8 shadow-lg">
           <h1 className="mb-6 text-center text-3xl font-bold text-[#15549A]">Welcome Back</h1>

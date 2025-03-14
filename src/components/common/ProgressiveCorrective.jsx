@@ -95,9 +95,9 @@ export function Program() {
 
   return (
     <div className="px-4 md:px-0">
-      <div className="mx-auto max-w-screen-xl rounded bg-white p-4 md:p-6">
+      <div className="mx-auto max-w-screen-xl rounded bg-white px-4 pt-4 md:px-6 md:pt-6">
         {/* Header Section */}
-        <div className="mb-6 text-center md:mb-8 md:mt-16">
+        <div className="mb-6 text-center md:mb-8 md:mt-20">
           <p className="mt-4 font-inter text-[32px] font-bold leading-[40px] text-[#15549A] md:mt-[-240px] md:text-[50px] md:leading-[60px]">
             Progressive Corrective & Recovery Plan
           </p>

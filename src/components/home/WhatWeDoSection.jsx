@@ -97,7 +97,7 @@ export function WhatWeDoSection() {
           {/* Right Side - Basketball Image and Text */}
           <div className="z-10 mt-6 flex w-full flex-col items-start justify-center md:mt-[50px] md:w-1/2">
             {/* Basketball Image Placeholder */}
-            <div className="mt-10 flex w-full max-w-[300px] justify-center md:max-w-[506px] md:items-center">
+            <div className="mt-10 flex w-full justify-center md:max-w-[506px] md:items-center">
               <img
                 src={rectangle0}
                 alt="Eze Credit Repair Logo"
@@ -105,7 +105,7 @@ export function WhatWeDoSection() {
               />
             </div>
             {/* Text beside the Basketball Image */}
-            <p className="mt-4 text-left font-inter text-[18px] font-[400] leading-[24px] md:mt-[30px] md:text-left md:text-[26.36px] md:leading-[31.9px]">
+            <p className="mt-4 w-full text-center font-inter text-[18px] font-[400] leading-[24px] md:mt-[30px] md:text-left md:text-[26.36px] md:leading-[31.9px]">
               Don&apos;t Let Your Credit Block Opportunities
               <span className="mt-2 block font-inter text-[18px] font-[400] leading-[24px] md:ml-[30px] md:text-[26.36px] md:leading-[31.9px]">
                 Start Building a Better Score Today!
