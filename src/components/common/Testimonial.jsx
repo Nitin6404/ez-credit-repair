@@ -157,7 +157,7 @@ export function Testimonial() {
       </div>
 
       {/* Background Container */}
-      <div className="mt-8 flex h-[200px] w-full justify-center bg-[#15549A] md:h-[283px]">
+      <div className="mt-8 flex h-[200px] w-full justify-center bg-[#15549A] md:mt-0 md:h-[283px]">
         <div className="mx-4 mt-8 h-[350px] w-full rounded-xl bg-white shadow-2xl md:mx-0 md:mt-16 md:h-[410px] md:w-[1300px] md:rounded-3xl" />
       </div>
 

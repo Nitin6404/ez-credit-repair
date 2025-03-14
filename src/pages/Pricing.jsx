@@ -26,16 +26,15 @@ export function Pricing() {
           </div>
         </div>
       </div>
-      <div className="mx-4 mb-10 mt-20 flex justify-center text-center md:mx-16">
+      <div className="mx-4 mb-10 mt-20 flex justify-center text-center md:mx-16 md:mb-8">
         <div className="w-full max-w-7xl text-start font-inter text-2xl font-semibold leading-7">
           <h1 className="font-inter text-3xl font-bold text-[#15549A] md:text-5xl md:leading-[60px]">
             We only have 1 plan – A Comprehensive Service Plan
           </h1>
-          <h4 className="font-inter text-lg font-medium text-[#173455] md:text-[22px]">
+          <h4 className="font-inter text-lg font-medium leading-[22px] text-[#173455] md:text-[16px]">
             We are committed to providing you with the full support you need. When you come to us,
-            we understand that you&apos;re <br className="hidden md:block" /> seeking the best
-            possible assistance. That’s why we never hold back we strive to ensure your satisfaction
-            every step <br className="hidden md:block" /> of the way.
+            we understand that you&apos;re seeking the best possible assistance. That’s why we never
+            hold back we strive to ensure your satisfaction every step of the way.
           </h4>
           <h2 className="font-inter text-xl font-bold text-[#04284F] md:text-3xl">
             Comprehensive Plan: $99/mo
@@ -61,25 +60,27 @@ export function Pricing() {
           </div>
         </div>
       </div>
-      <div className="relative mx-auto mt-10 w-full max-w-5xl overflow-visible bg-white px-4 md:px-0">
-        <div className="flex flex-col items-start justify-between md:flex-row md:px-3">
-          <div className="max-w-full md:max-w-3xl">
-            <h2 className="mb-8 font-inter text-3xl font-bold leading-[40px] text-[#15549A] md:text-[50px] md:leading-[60px]">
-              At EzeCredit Repair, Transparency and Results Are Our Priority
-            </h2>
-            <p className="w-full font-inter text-lg font-normal leading-7 text-[#173455] md:w-[740px] md:text-[22px] md:leading-[32px]">
-              We don&apos;t believe in confusing monthly plans or piling on extra fees. Instead, we
-              provide every client with the same dedicated approach and unwavering effort. Our team
-              works quickly and efficiently to deliver tangible improvements to your credit score
-              without unnecessary delays. With EzeCredit Repair, there are no hidden costs just real
-              results you can trust.
-            </p>
+      <div className="relative mx-auto mt-10 w-full overflow-visible bg-white px-4 md:mt-0 md:px-0">
+        <div className="flex flex-col items-start justify-center md:flex-row md:px-3">
+          <div className="h-full max-w-full md:h-[485px] md:max-w-4xl">
+            <div className="flex h-full w-full flex-col justify-center">
+              <h2 className="mb-8 font-inter text-3xl font-bold leading-[40px] text-[#15549A] md:text-[50px] md:leading-[60px]">
+                At EzeCredit Repair, Transparency and Results Are Our Priority
+              </h2>
+              <p className="w-full font-inter text-lg font-normal leading-7 text-[#173455] md:w-[740px] md:text-[22px] md:leading-[32px]">
+                We don&apos;t believe in confusing monthly plans or piling on extra fees. Instead,
+                we provide every client with the same dedicated approach and unwavering effort. Our
+                team works quickly and efficiently to deliver tangible improvements to your credit
+                score without unnecessary delays. With EzeCredit Repair, there are no hidden costs
+                just real results you can trust.
+              </p>
+            </div>
           </div>
           <div className="relative mt-16 h-72 w-full md:mt-0 md:h-[485px] md:w-[304px]">
             <img
               src={pricingBoiWithTransparency}
               alt="Pricing Representative"
-              className="absolute -top-3 right-0 h-full w-full overflow-visible object-contain lg:-top-16 lg:left-10 lg:object-cover"
+              className="absolute -top-3 right-0 h-full w-full overflow-visible object-contain lg:-top-0 lg:left-10 lg:object-cover"
             />
           </div>
         </div>
@@ -92,7 +93,7 @@ export function Pricing() {
 
 function LastHeading() {
   return (
-    <div className="-mb-8 flex w-full items-center justify-center bg-[#46CC02] font-inter font-bold">
+    <div className="-mb-2 flex w-full items-center justify-center bg-[#46CC02] font-inter font-bold">
       <div className="mx-4 my-16 md:mx-20">
         <div className="heading-9 text-center text-xl text-white md:px-56 md:text-3xl">
           With our fast and efficient process, we guarantee <br className="hidden md:block" />{' '}

@@ -3,14 +3,14 @@ import { services } from '../../data/creditServiceData';
 
 export function CreditServices() {
   return (
-    <div className="mb-0 flex items-center justify-center md:mb-16">
-      <div className="flex flex-col items-center space-x-2 bg-[url('/src/components/asset/pricingPageBg2.svg')] bg-cover bg-center px-4 py-10 md:px-16">
-        <div className="my-7 w-full text-center">
+    <div className="mb-8 flex items-center justify-center">
+      <div className="flex flex-col items-center space-x-2 rounded-lg bg-[url('/src/components/asset/pricingPageBg2.svg')] bg-cover bg-center px-4 py-10 md:px-16">
+        <div className="mb-7 w-full text-center">
           <h1 className="font-inter text-3xl font-bold text-white md:text-[50px]">
             What&apos;s Included in Our Service
           </h1>
         </div>
-        <div className="flex flex-col md:mb-20 md:flex-row">
+        <div className="flex flex-col md:mb-0 md:flex-row">
           <div className="flex flex-col space-y-3">
             {services.slice(0, 6).map((service, index) => (
               <div key={index} className="flex items-start space-x-2">
