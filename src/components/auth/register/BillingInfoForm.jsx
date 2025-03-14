@@ -527,7 +527,7 @@ export const BillingInfoForm = ({
               </h3>
               <button
                 onClick={() => setShowContract(true)}
-                className="mt-4 bg-[#15549A] px-7 py-4 text-[20px] font-bold text-white sm:text-[29px] lg:mt-0"
+                className="mt-4 rounded-xl bg-[#15549A] px-7 py-4 text-[20px] font-bold text-white sm:text-[29px] lg:mt-0"
               >
                 Click to Read
               </button>
