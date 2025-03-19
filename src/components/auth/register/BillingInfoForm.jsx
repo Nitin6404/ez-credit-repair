@@ -461,7 +461,7 @@ export const BillingInfoForm = ({
             </div>
 
             {/* Billing Info Checkbox */}
-            <div className="mb-4">
+            <div className="mb-4 mt-6">
               <h3 className="mb-2 text-[24px] font-extrabold text-[#04284F] sm:text-[31px]">
                 BILLING INFO SAME AS PERSONAL INFO
               </h3>
@@ -534,7 +534,7 @@ export const BillingInfoForm = ({
             </div>
 
             {/* Disclaimer for Contract */}
-            <div className="mx-10 my-5 w-full text-start">
+            <div className="my-5 w-full text-start">
               <h3 className="mb-4 text-start text-2xl font-normal text-[#04284F]">
                 Please Check the Box Below:
               </h3>

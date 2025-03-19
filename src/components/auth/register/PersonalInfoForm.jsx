@@ -125,7 +125,7 @@ function PersonalInfoForm({ formData, handleInputChange }) {
             name="mobileNumber"
             value={formData.mobileNumber}
             onChange={handleInputChange}
-            placeholder="Enter Mobile Num:"
+            placeholder="Enter Mobile Number"
             className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[618px] sm:text-[20px]"
           />
         </div>

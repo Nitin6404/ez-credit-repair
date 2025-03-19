@@ -31,13 +31,13 @@ export function PricingPlan() {
             <div className="mb-6 sm:mb-12">
               <div className="flex flex-col items-center justify-between sm:flex-row sm:items-start">
                 <div className="mb-4 text-center sm:mb-0 sm:text-left">
-                  <h3 className="mb-2 text-2xl font-bold text-white sm:mb-4 sm:text-[50px]">
+                  <h3 className="-center mb-2 flex items-center text-2xl font-bold text-white sm:mb-4 sm:text-[50px]">
                     Individual Pricing
                   </h3>
                   <div className="h-[3px] w-[200px] bg-white sm:h-[7px] sm:w-[471px]" />
                 </div>
                 <div className="text-center sm:text-right">
-                  <p className="font-inter text-5xl font-bold leading-none text-white sm:text-[100px]">
+                  <p className="font-inter text-4xl font-bold leading-none text-white sm:text-[100px]">
                     <span className="text-6xl sm:text-[120px]">$99/m</span>
                   </p>
                 </div>
