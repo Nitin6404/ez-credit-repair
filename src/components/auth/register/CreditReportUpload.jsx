@@ -34,11 +34,11 @@ export function CreditReportUpload({ handleInputChange }) {
   return (
     <>
       <div className="w-full max-w-[1300px] px-4 py-6">
-        <div className="mb-8 bg-[#04284F] px-24 py-10 text-white">
-          <h2 className="mb-2 text-center text-5xl font-bold">
+        <div className="mb-8 bg-[#04284F] px-6 py-6 text-white sm:px-12 sm:py-8 md:px-16 md:py-10 lg:px-24">
+          <h2 className="mb-2 text-center text-3xl font-bold sm:text-4xl md:text-5xl">
             Obtain current copy of Your Credit Reports
           </h2>
-          <p className="text-center text-2xl">
+          <p className="text-center text-lg sm:text-xl md:text-2xl">
             To help us with your personalized Credit Report review, please follow these simple
             steps:
           </p>
