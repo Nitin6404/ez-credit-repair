@@ -1,7 +1,10 @@
 import { ProgramCard } from './ProgramCards';
 import { useState } from 'react';
 import { programCards } from '../../data/programCardsData';
+import report from '../asset/report.jpg';
 import dispute from '../asset/dispute.svg';
+import recovery from '../asset/recovery.jpg';
+
 // import disputeBg from '../asset/dispute-bg.svg';
 
 export function ProgramSection() {
@@ -46,7 +49,10 @@ export function ProgramSection() {
         {/* Content Box */}
         <div className="min-h-[500px] w-full border-[1px] border-[#4054B2] bg-blue-100 px-8 py-6">
           <div className="pb-6">
-            <img src={dispute} alt="dispute box image" />
+            <img
+              src={`${selectedCard.number === '1' ? report : selectedCard.number === '2' ? dispute : recovery}`}
+              alt="dispute box image"
+            />
           </div>
           <h4 className="mb-1 font-inter text-[27px] font-bold leading-[32px] text-[#07284F]">
             {selectedCard.title}

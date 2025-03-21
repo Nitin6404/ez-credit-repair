@@ -1,7 +1,13 @@
+import { useState } from 'react';
 import creditRepair from '../asset/creditrapiring.jpg';
 import pauseIcon from '../asset/pauseIcon.svg';
 
 export function GetStartedSection() {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  const handleVideoToggle = () => {
+    setIsVideoPlaying(!isVideoPlaying);
+  };
   return (
     <div className="relative w-full">
       {/* Background image */}
@@ -13,13 +19,27 @@ export function GetStartedSection() {
 
       {/* YouTube Video - Hidden on mobile */}
       <div className="absolute left-1/2 top-[230px] hidden h-[545px] w-[1009px] -translate-x-1/2 -translate-y-1/2 transform overflow-hidden rounded-md md:block">
-        <iframe
-          src="https://www.youtube.com/embed/Ts-qq_0qtbg"
-          title="EzeCredit Repair Video"
-          className="h-full w-full"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+        {isVideoPlaying ? (
+          <div className="relative h-full w-full">
+            <iframe
+              src="https://www.youtube.com/embed/Ts-qq_0qtbg"
+              title="EzeCredit Repair Video"
+              className="h-full w-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        ) : (
+          <button onClick={handleVideoToggle}>
+            <div className="flex items-center justify-center gap-2">
+              <img
+                src="https://img.youtube.com/vi/Ts-qq_0qtbg/maxresdefault.jpg"
+                alt="EzeCredit Repair Video"
+                className="h-full w-full"
+              />
+            </div>
+          </button>
+        )}
       </div>
 
       {/* Bottom content section */}

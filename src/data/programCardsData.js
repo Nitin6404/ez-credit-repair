@@ -1,7 +1,7 @@
-import credit from '../components/asset/RectangleNew.png';
-import credit2 from '../components/asset/Rectangle1New.png';
+import credit from '../components/asset/Rectangle.png';
+import credit2 from '../components/asset/Rectangle1.png';
 // import credit4 from '../components/asset/Rectangle2.png';
-import credit3 from '../components/asset/disputeNew.png';
+import credit3 from '../components/asset/disputeNew1.png';
 
 // Program cards data
 export const programCards = [
