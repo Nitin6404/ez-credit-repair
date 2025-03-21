@@ -331,6 +331,70 @@ export const BillingInfoForm = ({
             <div className="flex flex-col justify-between lg:flex-row">
               {/* Card Details Section */}
               <div className="mb-8 w-full lg:w-2/3">
+                {/* <div className="mb-4">
+                  <label className="mb-2 block text-xl font-extrabold text-[#04284F]">
+                    CARD NUMBER
+                  </label>
+                  <input
+                    type="text"
+                    name="cardNumber"
+                    value={formData.cardNumber}
+                    onChange={handleInputChange}
+                    placeholder="0000-0000-0000-0000"
+                    className="mr-4 h-[65px] w-full bg-[#F2F2F2] p-3 pr-3 text-xl font-normal"
+                  />
+                </div> */}
+
+                {/* <div className="flex flex-col gap-4 sm:flex-row">
+                  <div className="flex-1">
+                    <label className="mb-2 block text-xl font-extrabold text-[#04284F]">
+                      EXP DATE
+                    </label>
+                    <input
+                      type="text"
+                      name="expDate"
+                      value={formData.expDate}
+                      onChange={handleInputChange}
+                      placeholder="MM/YY"
+                      className="h-[65px] w-full bg-[#F2F2F2] p-3 text-xl font-normal"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <label className="mb-2 block text-xl font-extrabold text-[#04284F]">CVV</label>
+                    <input
+                      type="text"
+                      name="cvv"
+                      value={formData.cvv}
+                      onChange={handleInputChange}
+                      placeholder="000"
+                      className="h-[65px] w-full bg-[#F2F2F2] p-3 text-xl font-normal"
+                    />
+                  </div>
+                </div> */}
+              </div>
+
+              {/* Pricing Plans - Positioned Absolutely */}
+              {/* <div className="relative mt-8 w-full lg:mt-0 lg:w-1/3">
+                <div className="relative flex flex-col items-start gap-4">
+                  <div className="h-auto w-full bg-[#15549A] p-2 text-start">
+                    <div className="border-4 border-white bg-[#15549A] px-2 py-1 text-white">
+                      <p className="text-xl font-bold sm:text-[28px]">$99.00/per month</p>
+                      <p className="text-lg font-bold sm:text-[20px]">Individual Pricing Plan</p>
+                    </div>
+                  </div>
+                  <div className="h-auto w-full bg-[#15549A] p-2 text-start">
+                    <div className="border-4 border-white bg-[#15549A] px-2 py-1 text-white">
+                      <p className="text-xl font-bold sm:text-[28px]">$149.00/per month</p>
+                      <p className="text-lg font-bold sm:text-[20px]">Couples Pricing Plan</p>
+                    </div>
+                  </div>
+                </div>
+              </div> */}
+            </div>
+
+            {/*new div starting*/}
+            <div className="md:flex">
+              <div className="md:w-[65%]">
                 <div className="mb-4">
                   <label className="mb-2 block text-xl font-extrabold text-[#04284F]">
                     CARD NUMBER
@@ -341,10 +405,9 @@ export const BillingInfoForm = ({
                     value={formData.cardNumber}
                     onChange={handleInputChange}
                     placeholder="0000-0000-0000-0000"
-                    className="h-[65px] w-full bg-[#F2F2F2] p-3 text-xl font-normal"
+                    className="mr-4 h-[65px] w-full bg-[#F2F2F2] p-3 pr-3 text-xl font-normal"
                   />
                 </div>
-
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <div className="flex-1">
                     <label className="mb-2 block text-xl font-extrabold text-[#04284F]">
@@ -373,19 +436,24 @@ export const BillingInfoForm = ({
                 </div>
               </div>
 
-              {/* Pricing Plans - Positioned Absolutely */}
-              <div className="relative mt-8 w-full lg:mt-0 lg:w-1/3">
-                <div className="relative flex flex-col items-start gap-4">
-                  <div className="h-auto w-full bg-[#15549A] p-2 text-start">
-                    <div className="border-4 border-white bg-[#15549A] px-2 py-1 text-white">
-                      <p className="text-xl font-bold sm:text-[28px]">$99.00/per month</p>
-                      <p className="text-lg font-bold sm:text-[20px]">Individual Pricing Plan</p>
+              {/* Right side div takes up remaining width */}
+              <div className="ml-3 flex-1 md:mt-8">
+                <div className="relative mt-8 w-full lg:mt-0">
+                  <div className="relative flex flex-col items-start gap-4">
+                    {/* Individual Pricing Plan */}
+                    <div className="h-auto w-full bg-[#15549A] p-2 text-center">
+                      <div className="border-4 border-white bg-[#15549A] px-2 py-1 text-white">
+                        <p className="text-xl font-bold sm:text-[28px]">$99.00/per month</p>
+                        <p className="text-lg font-bold sm:text-[20px]">Individual Pricing Plan</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="h-auto w-full bg-[#15549A] p-2 text-start">
-                    <div className="border-4 border-white bg-[#15549A] px-2 py-1 text-white">
-                      <p className="text-xl font-bold sm:text-[28px]">$149.00/per month</p>
-                      <p className="text-lg font-bold sm:text-[20px]">Couples Pricing Plan</p>
+
+                    {/* Couples Pricing Plan */}
+                    <div className="h-auto w-full bg-[#15549A] p-2 text-center">
+                      <div className="border-4 border-white bg-[#15549A] px-2 py-1 text-white">
+                        <p className="text-xl font-bold sm:text-[28px]">$149.00/per month</p>
+                        <p className="text-lg font-bold sm:text-[20px]">Couples Pricing Plan</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -393,7 +461,7 @@ export const BillingInfoForm = ({
             </div>
 
             {/* Billing Info Checkbox */}
-            <div className="mb-4">
+            <div className="mb-4 mt-6">
               <h3 className="mb-2 text-[24px] font-extrabold text-[#04284F] sm:text-[31px]">
                 BILLING INFO SAME AS PERSONAL INFO
               </h3>
@@ -459,14 +527,14 @@ export const BillingInfoForm = ({
               </h3>
               <button
                 onClick={() => setShowContract(true)}
-                className="mt-4 bg-[#15549A] px-7 py-4 text-[20px] font-bold text-white sm:text-[29px] lg:mt-0"
+                className="mt-4 rounded-xl bg-[#15549A] px-7 py-4 text-[20px] font-bold text-white sm:text-[29px] lg:mt-0"
               >
                 Click to Read
               </button>
             </div>
 
             {/* Disclaimer for Contract */}
-            <div className="mx-10 my-5 w-full text-start">
+            <div className="my-5 w-full text-start">
               <h3 className="mb-4 text-start text-2xl font-normal text-[#04284F]">
                 Please Check the Box Below:
               </h3>

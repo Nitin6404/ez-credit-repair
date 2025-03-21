@@ -7,6 +7,7 @@ import { NavigationButtons } from '../components/auth/register/NavigationButtons
 import { PersonalInfoForm } from '../components/auth/register/PersonalInfoForm';
 import { PricingPlan } from '../components/auth/register/PricingPlan';
 import { ProgressSteps } from '../components/ui/ProgressSteps';
+import { Link } from 'react-router-dom';
 
 const steps = [
   {
@@ -105,11 +106,13 @@ export function RegistrationPage() {
           alt="About Us Background"
           className="absolute inset-0 mt-[30px] h-full w-full object-cover opacity-100"
         />
-        <div className="relative flex h-[130px] items-center p-2 text-white">
-          <div className="ml-[80px] mt-[50px] flex max-w-screen-lg font-inter text-2xl font-bold leading-7">
-            <span className="ml-10">Home</span>
+        <div className="relative flex h-32 items-center p-2 text-white">
+          <div className="ml-5 mt-[50px] flex max-w-screen-lg font-inter text-lg font-bold leading-7 sm:ml-[80px] sm:text-2xl">
+            <span className="ml-3 sm:ml-10">
+              <Link to="/">Home</Link>
+            </span>
             <span className="mx-1">|</span>
-            <span>Registration</span>
+            <span>Pricing</span>
           </div>
         </div>
       </div>
