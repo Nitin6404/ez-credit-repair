@@ -12,12 +12,12 @@ const navigationLinks = [
   { path: '/service', label: 'Our Services' },
   { path: '/pricing', label: 'Pricing' },
   { path: '/how-it-works', label: 'How It Works' },
-  { path: '/learning-center', label: 'Learning Center' },
   { path: '/terms-and-conditions', label: 'Terms and Conditions' },
 ];
 
 const rightAlignedLinks = [
   { path: '/faq', label: 'FAQ' },
+  { path: '/learning-center', label: 'Learning Center' },
   { path: '/privacy-policy', label: 'Privacy Policy' },
 ];
 
@@ -64,7 +64,7 @@ NavigationLink.propTypes = {
 
 const ContactSection = ({ icon, title, children }) => (
   <div
-    className={`mb-4 flex flex-col items-center md:flex-row md:items-center md:space-x-2 ${icon === mail ? 'md:ml-[170px]' : 'md:ml-5'} `}
+    className={`hidden flex-col items-center md:flex-row md:items-center md:space-x-2 lg:mb-4 lg:flex ${icon === mail ? 'md:ml-[170px]' : 'md:ml-5'} `}
   >
     <div className="flex items-center">
       <img
@@ -95,10 +95,10 @@ export function Footer() {
   return (
     <div className="overflow-x-hidden">
       {/* Top Info Bar */}
-      <div className="mb-[0px] mt-[40px] border-y bg-[#15549A] py-4 text-white">
-        <div className="container mx-auto flex flex-col items-center px-4 md:flex-row md:justify-between">
+      <div className="mb-[0px] mt-[40px] bg-[#15549A] py-4 text-white lg:border-y">
+        <div className="mx-auto flex flex-col items-start px-4 md:flex-row md:justify-between lg:items-center">
           {/* Logo */}
-          <div className="mb-4 flex items-center md:mb-0">
+          <div className="mb-4 hidden items-center md:mb-0 lg:flex">
             <img
               src={credit0}
               alt="Eze Credit Repair Logo"
@@ -133,7 +133,7 @@ export function Footer() {
 
       {/* Main Footer */}
       <footer className="bg-[#15549a] py-[2px] text-white">
-        <div className="container mx-auto grid gap-8 px-4 md:grid-cols-1 lg:grid-cols-3">
+        <div className="mx-auto grid gap-8 px-4 md:grid-cols-1 lg:grid-cols-3">
           {/* Company Info */}
           <div className="mt-[1px] hidden md:ml-5 lg:block">
             <h2 className="text-left font-montserrat text-[25px] font-bold leading-normal md:text-left md:text-[31px] md:leading-[88px]">
@@ -147,7 +147,7 @@ export function Footer() {
           </div>
 
           {/* Navigation Section */}
-          <div className="relative border-y border-solid md:border-x md:border-y-0">
+          <div className="relative md:border-x md:border-y-0 lg:border-solid">
             <h2 className="text-left font-montserrat text-[25px] font-bold leading-normal md:ml-5 md:text-left md:text-[31px] md:leading-[88px]">
               Short Link
             </h2>
