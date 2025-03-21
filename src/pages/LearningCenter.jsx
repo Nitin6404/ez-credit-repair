@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import { Clock } from 'lucide-react';
+
 // Asset imports
 import AboutUs from '../components/asset/AboutUsbackground.png';
 import badCreditNew from '../components/asset/badCreditNew.svg';
@@ -130,7 +132,7 @@ export function LearningCenter() {
       </div>
 
       <div className="mx-16 max-w-full px-4 py-8">
-        <div className="flex flex-col gap-8 lg:flex-row">
+        <div className="flex flex-col gap-4 lg:flex-row">
           {/* Left Column - Video Topics */}
           <div className="w-full lg:w-1/4">
             <div className="rounded-lg bg-white p-6 shadow-sm">
@@ -220,7 +222,7 @@ export function LearningCenter() {
               {featuredContent.slice(0, 1).map((content, index) => (
                 <div
                   key={index}
-                  className="relative aspect-video w-full overflow-hidden rounded-lg bg-[#0c3b5e]"
+                  className="relative aspect-video w-full overflow-hidden rounded-lg border-[1px] border-[#919191] bg-[#0c3b5e]"
                 >
                   <img
                     src={content.image}
@@ -240,22 +242,39 @@ export function LearningCenter() {
               {/* Article Grid */}
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {featuredContent.slice(1).map((content, index) => (
-                  <div key={index} className="overflow-hidden rounded-lg bg-white shadow-sm">
-                    <div className="relative">
+                  <div
+                    key={index}
+                    className="group relative overflow-hidden rounded-lg border-[1px] border-[#919191] bg-white p-2 pb-6 shadow-sm"
+                  >
+                    {/* Video Thumbnail Container */}
+                    <div className="relative aspect-video">
                       <img
                         src={content.image}
                         alt={content.title}
-                        className="h-48 w-full object-cover"
+                        className="h-full w-full rounded-md object-cover"
                       />
+                      {/* Play Button Overlay */}
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity group-hover:opacity-100">
+                        <button className="text-4xl text-white">▶</button>
+                      </div>
+                    </div>
+                    {/* Video Info */}
+                    <div className="relative">
+                      <h4 className="mb-1 line-clamp-2 font-semibold text-[#0c3b5e]">
+                        {content.title}
+                      </h4>
+                      <p className="mb-1 line-clamp-2 text-xs text-gray-600">
+                        {content.description}
+                      </p>
+                      {/* Duration Badge */}
                       {content.duration && (
-                        <div className="absolute bottom-2 right-2 rounded bg-red-600 px-2 py-1 text-xs text-white">
-                          {content.duration}
+                        <div className="bottom-2right-1 absolute rounded px-2 py-1 text-xs font-bold text-red-500">
+                          <div className="flex items-center">
+                            <Clock className="mr-1 h-5 w-5" />
+                            {content.duration}
+                          </div>
                         </div>
                       )}
-                    </div>
-                    <div className="p-4">
-                      <h4 className="mb-2 font-semibold text-[#0c3b5e]">{content.title}</h4>
-                      <p className="text-sm text-gray-600">{content.description}</p>
                     </div>
                   </div>
                 ))}
