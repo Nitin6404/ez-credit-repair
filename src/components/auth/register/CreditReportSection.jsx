@@ -4,7 +4,7 @@ export function CreditReportSection({ formData, handleInputChange }) {
   return (
     <div className="w-full">
       {/* Blue background */}
-      <div className="h-auto w-full bg-[#15549A] py-8 md:h-[283px]">
+      <div className="h-auto w-full bg-[#15549A] py-8 md:h-[100%]">
         <div className="mx-auto max-w-[1439px] px-4 py-8">
           {/* Title */}
           <h2 className="mb-3 text-center text-[30px] font-bold text-white md:text-[50px]">

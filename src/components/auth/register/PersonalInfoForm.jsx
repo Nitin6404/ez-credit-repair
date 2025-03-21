@@ -5,7 +5,7 @@ const states = ['Maharashtra', 'Karnataka', 'Delhi', 'Tamil Nadu', 'Gujarat'];
 function PersonalInfoForm({ formData, handleInputChange }) {
   return (
     <div className="mb-8 w-full max-w-[95%] space-y-4 px-2 sm:mb-20 sm:w-[1272px] sm:space-y-6 sm:px-4">
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8">
+      <div className="grid grid-cols-1 gap-4 overflow-hidden sm:grid-cols-2 sm:gap-8">
         <div>
           <label className="mb-2 block font-inter text-base font-bold text-[#04284F] sm:text-[20px]">
             FIRST NAME
@@ -16,7 +16,7 @@ function PersonalInfoForm({ formData, handleInputChange }) {
             value={formData.firstName}
             onChange={handleInputChange}
             placeholder="First name"
-            className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[618px] sm:text-[20px]"
+            className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[100%] sm:text-[20px]"
           />
         </div>
         <div>
@@ -29,7 +29,7 @@ function PersonalInfoForm({ formData, handleInputChange }) {
             value={formData.lastName}
             onChange={handleInputChange}
             placeholder="Last Name"
-            className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[618px] sm:text-[20px]"
+            className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[100%] sm:text-[20px]"
           />
         </div>
       </div>
@@ -44,7 +44,7 @@ function PersonalInfoForm({ formData, handleInputChange }) {
           value={formData.streetAddress}
           onChange={handleInputChange}
           placeholder="Street Address"
-          className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:text-[20px]"
+          className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[100%] sm:text-[20px]"
         />
       </div>
 
@@ -55,7 +55,7 @@ function PersonalInfoForm({ formData, handleInputChange }) {
           value={formData.aptUnit}
           onChange={handleInputChange}
           placeholder="Apt. Unit, Floor, Ect"
-          className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:text-[20px]"
+          className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[100%] sm:text-[20px]"
         />
       </div>
 
@@ -110,7 +110,7 @@ function PersonalInfoForm({ formData, handleInputChange }) {
             value={formData.zipCode}
             onChange={handleInputChange}
             placeholder="Zip Code"
-            className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[407px] sm:text-[20px]"
+            className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[100%] sm:text-[20px]"
           />
         </div>
       </div>
@@ -126,7 +126,7 @@ function PersonalInfoForm({ formData, handleInputChange }) {
             value={formData.mobileNumber}
             onChange={handleInputChange}
             placeholder="Enter Mobile Number"
-            className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[618px] sm:text-[20px]"
+            className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[100%] sm:text-[20px]"
           />
         </div>
         <div>
@@ -139,7 +139,7 @@ function PersonalInfoForm({ formData, handleInputChange }) {
             value={formData.emailAddress}
             onChange={handleInputChange}
             placeholder="Email ID"
-            className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[618px] sm:text-[20px]"
+            className="h-[50px] w-full rounded-xl bg-[#F2F2F2] px-4 font-inter text-base font-normal text-gray-700 placeholder:text-gray-400 focus:outline-none sm:h-[65px] sm:w-[100%] sm:text-[20px]"
           />
         </div>
       </div>

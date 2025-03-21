@@ -15,12 +15,12 @@ const features = [
 
 export function PricingPlan() {
   return (
-    <div className="relative w-full">
+    <div className="relative mb-12 w-full">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#62D9FA] to-white" />
 
-      <div className="relative mx-auto flex max-w-[1439px] flex-col items-center justify-center px-4 pb-8 pt-4 sm:pb-16 sm:pt-8">
-        <h2 className="mb-4 text-center text-3xl font-bold text-white sm:mb-8 sm:text-[61px]">
+      <div className="relative mx-auto flex max-w-[1439px] flex-col items-center justify-center px-4 pb-8 pt-4 sm:pb-16 sm:pt-12">
+        <h2 className="mb-4 text-center text-3xl font-bold text-white sm:mb-12 sm:text-[61px]">
           Our Plan
         </h2>
 
@@ -34,7 +34,7 @@ export function PricingPlan() {
                   <h3 className="-center mb-2 flex items-center text-2xl font-bold text-white sm:mb-4 sm:text-[50px]">
                     Individual Pricing
                   </h3>
-                  <div className="h-[3px] w-[200px] bg-white sm:h-[7px] sm:w-[471px]" />
+                  <div className="mt-6 h-[3px] w-[200px] bg-white sm:h-[7px] sm:w-[100%]" />
                 </div>
                 <div className="text-center sm:text-right">
                   <p className="font-inter text-4xl font-bold leading-none text-white sm:text-[100px]">
