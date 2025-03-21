@@ -1,98 +1,393 @@
-import { LayoutGrid } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+// Asset imports
 import AboutUs from '../components/asset/AboutUsbackground.png';
-import badCreditLatest from '../components/asset/badCreditLatest.jpg';
-import { courses } from '../data/learningCenterData';
-import { CourseCard } from '../components/learningCenter/CourseCard';
+import badCreditNew from '../components/asset/badCreditNew.svg';
+
+// Learning center imports
+import relatedArticlesImage1 from '../components/learning-center/related-article-1.svg';
+import relatedArticlesImage2 from '../components/learning-center/related-article-2.svg';
+import relatedArticlesImage3 from '../components/learning-center/related-article-3.svg';
+import relatedArticlesImage4 from '../components/learning-center/related-article-4.svg';
+import followUsSocial from '../components/learning-center/follow-us-social.svg';
+import course1 from '../components/learning-center/course-1.svg';
+import course2 from '../components/learning-center/course-2.svg';
+import course3 from '../components/learning-center/course-3.svg';
+import course4 from '../components/learning-center/course-4.svg';
+import course5 from '../components/learning-center/course-5.svg';
+import course6 from '../components/learning-center/course-6.svg';
 
 export function LearningCenter() {
   const [searchTerm, setSearchTerm] = useState('');
 
+  const videoTopics = [
+    'Understanding a Good Credit Score',
+    'What affects your credit score',
+    'FCRA vs FDCPA vs what are your rights',
+    'Ways to Improve Your Credit Score',
+    'The Importance of Having a Good Credit Score',
+    'Ways to Check Your Credit Score',
+    'Steps to Understanding Credit Reports',
+    'The Best Ways To Remove Credit',
+    'Bad Credit Guide to Best Credit',
+    'Data Protection Laws Help You Win',
+  ];
+
+  const featuredContent = [
+    {
+      title: 'Data Science Courses',
+      description:
+        'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
+      image: course1,
+      duration: null,
+      type: 'video',
+    },
+    {
+      title: 'What defines a good credit score, and how can you achieve it?',
+      description:
+        'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
+      image: course2,
+      duration: '30Hrs 45 Mins',
+      type: 'article',
+    },
+    {
+      title: 'FICO vs. VantageScore: What You Need to Know',
+      description:
+        'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
+      image: course3,
+      duration: '30Hrs 45 Mins',
+      type: 'article',
+    },
+    {
+      title: 'Ways to Improve Your Credit Score',
+      description:
+        'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
+      image: course4,
+      duration: '30Hrs 45 Mins',
+      type: 'article',
+    },
+    {
+      title: 'The Importance of Having a Good Credit Score',
+      description:
+        'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
+      image: course5,
+      duration: '30Hrs 45 Mins',
+      type: 'article',
+    },
+    {
+      title: 'Ways to Check Your Credit Score',
+      description:
+        'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
+      image: course6,
+      duration: '30Hrs 45 Mins',
+      type: 'article',
+    },
+  ];
+
+  const relatedArticles = [
+    {
+      title: 'Atmospheric Chemistry Courses',
+      description:
+        'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
+      image: relatedArticlesImage1,
+    },
+    {
+      title: 'Atmospheric Chemistry Courses',
+      description:
+        'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
+      image: relatedArticlesImage2,
+    },
+    {
+      title: 'Atmospheric Chemistry Courses',
+      description:
+        'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
+      image: relatedArticlesImage3,
+    },
+    {
+      title: 'Atmospheric Chemistry Courses',
+      description:
+        'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
+      image: relatedArticlesImage4,
+    },
+  ];
+
   return (
-    <div className="min-h-screen pt-8">
-      <div className="relative mt-3 p-2">
+    <div className="min-h-screen bg-white">
+      <div className="relative">
         <img
           src={AboutUs}
           alt="About Us Background"
-          className="absolute inset-0 mt-[30px] h-full w-full object-cover opacity-100"
+          className="absolute inset-0 h-[130px] w-full object-cover"
         />
-        <div className="relative flex h-[130px] items-center p-2 text-white">
-          <div className="ml-5 mt-[50px] flex max-w-screen-lg font-inter text-lg font-bold leading-7 sm:ml-[80px] sm:text-2xl">
-            <span className="ml-3 sm:ml-10">
-              <Link to="/">Home</Link>
-            </span>
-            <span className="mx-1">|</span>
+        <div className="relative flex h-[130px] items-center text-white">
+          <div className="ml-5 flex font-inter text-lg font-bold sm:ml-[80px] sm:text-2xl">
+            <Link to="/">Home</Link>
+            <span className="mx-2">|</span>
             <span>Learning Center</span>
           </div>
         </div>
       </div>
 
-      {/* Search and Sort Section */}
-      <div className="mx-auto mb-8 mt-20 max-w-7xl px-4">
-        <div className="flex flex-col items-start justify-start gap-4 md:flex-row">
-          {/* Sort By Button (Aligned to Start) */}
-          <div className="flex w-full flex-col items-start">
-            <button className="flex h-[54px] w-[210px] items-center justify-between rounded-full border-2 border-[#6E6E6E] px-6 hover:border-[#04284F]">
-              <span className="flex items-center text-xl font-normal text-[#242424]">Sort By</span>
-              <LayoutGrid size={25} fill="#9C9C9C" className="text-[#9C9C9C]" />
-            </button>
+      <div className="mx-16 max-w-full px-4 py-8">
+        <div className="flex flex-col gap-8 lg:flex-row">
+          {/* Left Column - Video Topics */}
+          <div className="w-full lg:w-1/4">
+            <div className="rounded-lg bg-white p-6 shadow-sm">
+              <h3 className="mb-4 font-bold text-[#0c3b5e]">VIDEO TOPIC</h3>
+
+              {/* Understanding a Good Credit Score Section */}
+              <div className="mb-4">
+                <button className="flex w-full items-center justify-between text-left">
+                  <span className="font-semibold text-[#0c3b5e]">
+                    Understanding a Good Credit Score
+                  </span>
+                  <span className="text-sm">▼</span>
+                </button>
+                <ul className="mt-2 space-y-2 pl-4">
+                  <li className="text-sm text-gray-700">
+                    What defines a good credit score, and...
+                  </li>
+                  <li className="text-sm text-gray-700">FICO vs. VantageScore: What You Ne...</li>
+                  <li className="text-sm text-gray-700">Ways to Improve Your Credit Score...</li>
+                  <li className="text-sm text-gray-700">The Importance of Having a Good Cr...</li>
+                  <li className="text-sm text-gray-700">Ways to Check Your Credit Score</li>
+                </ul>
+              </div>
+
+              {/* Understanding a Credit Report Section */}
+              <div className="mb-4">
+                <button className="flex w-full items-center justify-between text-left">
+                  <span className="font-semibold text-[#0c3b5e]">
+                    Understanding a Credit Report
+                  </span>
+                  <span className="text-sm">▼</span>
+                </button>
+              </div>
+
+              {/* Guide to Understanding Your Credit Section */}
+              <div className="mb-4">
+                <button className="flex w-full items-center justify-between text-left">
+                  <span className="font-semibold text-[#0c3b5e]">
+                    A Guide to Understanding Your Cre...
+                  </span>
+                  <span className="text-sm">▼</span>
+                </button>
+              </div>
+
+              {/* Effective Ways Section */}
+              <div className="mb-4">
+                <button className="flex w-full items-center justify-between text-left">
+                  <span className="font-semibold text-[#0c3b5e]">
+                    Effective Ways to Build Your Credit
+                  </span>
+                  <span className="text-sm">▼</span>
+                </button>
+              </div>
+
+              {/* Best Credit Cards Section */}
+              <div className="mb-4">
+                <button className="flex w-full items-center justify-between text-left">
+                  <span className="font-semibold text-[#0c3b5e]">
+                    Best Credit Cards for Bad Credit
+                  </span>
+                  <span className="text-sm">▼</span>
+                </button>
+              </div>
+
+              {/* Personal Loan Section */}
+              <div className="mb-4">
+                <button className="flex w-full items-center justify-between text-left">
+                  <span className="font-semibold text-[#0c3b5e]">
+                    Can a Personal Loan Help You Deal...
+                  </span>
+                  <span className="text-sm">▼</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Bad Credit Image */}
+            <div className="mt-8">
+              <img src={badCreditNew} alt="Bad Credit" className="w-full rounded-lg shadow-sm" />
+            </div>
           </div>
 
-          {/* Search Input and Go Button */}
-          <div className="flex w-full flex-col items-start gap-3 sm:flex-row sm:justify-start md:justify-end">
-            <div className="relative w-full sm:w-[398px]">
+          {/* Middle Column - Main Content */}
+          <div className="w-full lg:w-1/2">
+            {/* Featured Content Grid */}
+            <div className="grid grid-cols-1 gap-6">
+              {/* Main Video */}
+              {featuredContent.slice(0, 1).map((content, index) => (
+                <div
+                  key={index}
+                  className="relative aspect-video w-full overflow-hidden rounded-lg bg-[#0c3b5e]"
+                >
+                  <img
+                    src={content.image}
+                    alt={content.title}
+                    className="h-full w-full object-cover opacity-50"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <button className="text-6xl text-white opacity-80 hover:opacity-100">▶</button>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
+                    <h3 className="text-lg font-semibold">{content.title}</h3>
+                    <p className="mt-1 text-sm opacity-90">{content.description}</p>
+                  </div>
+                </div>
+              ))}
+
+              {/* Article Grid */}
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {featuredContent.slice(1).map((content, index) => (
+                  <div key={index} className="overflow-hidden rounded-lg bg-white shadow-sm">
+                    <div className="relative">
+                      <img
+                        src={content.image}
+                        alt={content.title}
+                        className="h-48 w-full object-cover"
+                      />
+                      {content.duration && (
+                        <div className="absolute bottom-2 right-2 rounded bg-red-600 px-2 py-1 text-xs text-white">
+                          {content.duration}
+                        </div>
+                      )}
+                    </div>
+                    <div className="p-4">
+                      <h4 className="mb-2 font-semibold text-[#0c3b5e]">{content.title}</h4>
+                      <p className="text-sm text-gray-600">{content.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Related Articles and Search */}
+          <div className="w-full lg:w-1/4">
+            {/* Search Section */}
+            <div className="mb-6">
               <input
                 type="text"
-                placeholder="Search"
+                placeholder="Search..."
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                className="flex h-[53px] w-full items-center rounded-full border-2 border-[#6E6E6E] px-6 text-xl font-normal leading-none text-[#242424] placeholder:text-[#242424] focus:border-[#04284F] focus:outline-none"
+                className="w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-blue-500 focus:outline-none"
               />
+              <button className="mt-2 w-full rounded-md bg-gray-200 py-2 text-gray-700 hover:bg-gray-300">
+                Find Video
+              </button>
             </div>
-            <button className="flex h-[53px] w-[78px] items-center justify-center rounded-full border-2 border-[#6E6E6E]/80 bg-[#6E6E6E]/80 text-xl font-normal leading-none text-white">
-              Go
-            </button>
+
+            {/* Related Articles */}
+            <div className="rounded-lg bg-white p-6 shadow-sm">
+              <h2 className="mb-6 text-xl font-bold text-[#0c3b5e]">Related Articles/ Videos</h2>
+              <div className="space-y-4">
+                {relatedArticles.map((article, index) => (
+                  <div
+                    key={index}
+                    className="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 bg-white p-3 transition-all hover:border-blue-200"
+                  >
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      className="h-16 w-16 rounded object-cover"
+                    />
+                    <div>
+                      <h4 className="mb-1 text-sm font-semibold text-[#0c3b5e]">{article.title}</h4>
+                      <p className="text-xs text-gray-600">{article.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Follow us section */}
+              <div className="mt-8">
+                <h3 className="mb-4 text-xl font-bold text-[#0c3b5e]">Follow us</h3>
+                <img src={followUsSocial} alt="Follow us" className="w-full rounded-lg shadow-sm" />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Course Grid */}
-      <div className="mx-auto mb-10 max-w-7xl px-4">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {courses.map(course => (
-            <CourseCard key={course.id} {...course} />
-          ))}
-        </div>
-      </div>
+        {/* Related Videos Section */}
+        <div className="mt-12">
+          <div className="mb-6 bg-[#0c3b5e] px-4 py-2">
+            <h2 className="text-xl font-bold text-white">Related Video</h2>
+          </div>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+            <div className="overflow-hidden rounded-lg bg-white shadow-sm">
+              <img
+                src={course4}
+                alt="Ways to Improve Your Credit Score"
+                className="h-48 w-full object-cover"
+              />
+              <div className="p-4">
+                <h4 className="mb-2 font-semibold text-[#0c3b5e]">
+                  Ways to Improve Your Credit Score
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Credit repair is the process of fixing a credit history that has one of more
+                  problems, such as errors, identity
+                </p>
+                <div className="mt-2 text-xs text-red-600">30Hrs 45 Mins</div>
+              </div>
+            </div>
 
-      {/* Bottom Image Section */}
-      <div className="relative hidden h-[444px] w-full overflow-hidden md:block">
-        <div
-          className="h-full w-full bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${badCreditLatest})` }}
-        >
-          {/*<div className="relative h-full w-full">*/}
-          {/*  /!* Bad *!/*/}
-          {/*  <div className="absolute right-[10%] top-[10%] hidden md:right-[30%] md:top-[20%] md:block lg:right-[35%]">*/}
-          {/*    <h2 className="font-inter text-[60px] font-bold text-[#013044] [transform:rotate(-5deg)] md:text-[90px]">*/}
-          {/*      Bad*/}
-          {/*    </h2>*/}
-          {/*  </div>*/}
-          {/*  /!* CREDIT? *!/*/}
-          {/*  <div className="absolute right-[5%] top-[15%] hidden md:right-[10%] md:top-[25%] md:block lg:right-[15%]">*/}
-          {/*    <h1 className="font-inter text-[80px] font-extrabold uppercase text-[#013044] [transform:rotate(-5deg)] md:text-[142px]">*/}
-          {/*      Credit*/}
-          {/*      <span className="ml-4 text-[100px] md:text-[170px]">?</span>*/}
-          {/*    </h1>*/}
-          {/*  </div>*/}
-          {/*  /!* We can help! *!/*/}
-          {/*  <div className="absolute right-[20%] top-[60%] hidden md:right-[25%] md:top-[70%] md:block lg:right-[30%]">*/}
-          {/*    <p className="font-inter text-[40px] font-bold text-[#013044] [transform:rotate(-4deg)] md:text-[57px]">*/}
-          {/*      we can help!*/}
-          {/*    </p>*/}
-          {/*  </div>*/}
-          {/*</div>*/}
+            <div className="overflow-hidden rounded-lg bg-white shadow-sm">
+              <img
+                src={course5}
+                alt="The Importance of Having a Good Credit Score"
+                className="h-48 w-full object-cover"
+              />
+              <div className="p-4">
+                <h4 className="mb-2 font-semibold text-[#0c3b5e]">
+                  The Importance of Having a Good Credit Score
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Credit repair is the process of fixing a credit history that has one of more
+                  problems, such as errors, identity
+                </p>
+                <div className="mt-2 text-xs text-red-600">30Hrs 45 Mins</div>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-lg bg-white shadow-sm">
+              <img
+                src={course4}
+                alt="Ways to Improve Your Credit Score"
+                className="h-48 w-full object-cover"
+              />
+              <div className="p-4">
+                <h4 className="mb-2 font-semibold text-[#0c3b5e]">
+                  Ways to Improve Your Credit Score
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Credit repair is the process of fixing a credit history that has one of more
+                  problems, such as errors, identity
+                </p>
+                <div className="mt-2 text-xs text-red-600">30Hrs 45 Mins</div>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-lg bg-white shadow-sm">
+              <img
+                src={course5}
+                alt="The Importance of Having a Good Credit Score"
+                className="h-48 w-full object-cover"
+              />
+              <div className="p-4">
+                <h4 className="mb-2 font-semibold text-[#0c3b5e]">
+                  The Importance of Having a Good Credit Score
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Credit repair is the process of fixing a credit history that has one of more
+                  problems, such as errors, identity
+                </p>
+                <div className="mt-2 text-xs text-red-600">30Hrs 45 Mins</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
