@@ -266,27 +266,25 @@ export function LearningCenter() {
           {/* Right Column - Related Articles and Search */}
           <div className="w-full lg:w-1/4">
             {/* Search Section */}
-            <div className="mb-6">
+            <div className="mb-6 rounded-md bg-[#EFEFEF] p-3 text-black">
               <input
                 type="text"
                 placeholder="Search..."
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                className="w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-blue-500 focus:outline-none"
+                className="w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm placeholder:text-black focus:border-blue-500 focus:outline-none"
               />
-              <button className="mt-2 w-full rounded-md bg-gray-200 py-2 text-gray-700 hover:bg-gray-300">
-                Find Video
-              </button>
+              <button className="mt-2 w-full rounded-md bg-[#9C9C9C] py-2">Find Video</button>
             </div>
 
             {/* Related Articles */}
-            <div className="rounded-lg bg-white p-6 shadow-sm">
-              <h2 className="mb-6 text-xl font-bold text-[#0c3b5e]">Related Articles/ Videos</h2>
-              <div className="space-y-4">
+            <div className="rounded-lg">
+              <h2 className="mb-3 text-2xl font-bold text-[#0c3b5e]">Related Articles/ Videos</h2>
+              <div className="space-y-4 rounded-md border-[1px] border-[#919191] bg-[#E2E2E2]">
                 {relatedArticles.map((article, index) => (
                   <div
                     key={index}
-                    className="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 bg-white p-3 transition-all hover:border-blue-200"
+                    className="flex cursor-pointer items-start gap-3 rounded-md p-3 transition-all"
                   >
                     <img
                       src={article.image}
@@ -294,8 +292,8 @@ export function LearningCenter() {
                       className="h-16 w-16 rounded object-cover"
                     />
                     <div>
-                      <h4 className="mb-1 text-sm font-semibold text-[#0c3b5e]">{article.title}</h4>
-                      <p className="text-xs text-gray-600">{article.description}</p>
+                      <h4 className="mb-1 text-xs font-bold text-[#04284F]">{article.title}</h4>
+                      <p className="text-[10px] text-[#04284F]">{article.description}</p>
                     </div>
                   </div>
                 ))}
@@ -303,8 +301,8 @@ export function LearningCenter() {
 
               {/* Follow us section */}
               <div className="mt-8">
-                <h3 className="mb-4 text-xl font-bold text-[#0c3b5e]">Follow us</h3>
-                <img src={followUsSocial} alt="Follow us" className="w-full rounded-lg shadow-sm" />
+                <h3 className="mb-3 text-xl font-bold text-[#0c3b5e]">Follow us</h3>
+                <img src={followUsSocial} alt="Follow us" className="w-3/4 rounded-lg" />
               </div>
             </div>
           </div>
