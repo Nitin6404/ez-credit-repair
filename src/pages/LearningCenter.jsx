@@ -184,7 +184,7 @@ export function LearningCenter() {
             <span className="mx-2">|</span>
             <span>Learning Center</span>
           </div>
-          <div className="absolute right-[84px] top-1/2 w-full -translate-y-1/2 lg:w-[350px]">
+          <div className="absolute right-[84px] top-1/2 hidden w-full -translate-y-1/2 lg:block lg:w-[350px]">
             <div className="flex w-full justify-end">
               <select
                 className="w-1/2 rounded-lg border-[1px] border-[#04284F] bg-white px-4 py-2 text-sm font-semibold text-[#04284F] outline-none"
@@ -201,7 +201,7 @@ export function LearningCenter() {
         </div>
       </div>
 
-      <div className="mx-16 max-w-full px-4 py-8">
+      <div className="mx-6 max-w-full px-4 py-8 lg:mx-16">
         <div className="flex flex-col gap-4 lg:flex-row">
           {/* Left Column - Video Topics */}
           <div className="w-full lg:w-1/4">
@@ -263,9 +263,9 @@ export function LearningCenter() {
                       <img src={playbackYoutube} alt="Play" className="h-12 w-16" />
                     </button>
                   </div>
-                  <div className="absolute bottom-5 left-0 right-0 w-2/3 rounded-r-lg bg-black p-4 text-white opacity-60">
-                    <h3 className="text-lg font-semibold">{content.title}</h3>
-                    <p className="mt-1 text-sm">{content.description}</p>
+                  <div className="absolute bottom-2 left-0 right-0 w-3/4 rounded-r-lg bg-black p-4 text-white opacity-60 lg:bottom-5 lg:w-2/3">
+                    <h3 className="text-md font-semibold lg:text-lg">{content.title}</h3>
+                    <p className="mt-1 text-xs lg:text-sm">{content.description}</p>
                   </div>
                 </div>
               ))}
