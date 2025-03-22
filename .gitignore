@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 .vercel
 .cursorrules
+
+# Data conversion scripts
+src/scripts/convertTradelineData.js

@@ -4,6 +4,7 @@ import AboutUs from '../components/asset/AboutUsbackground.png';
 import { CustomTable } from '../components/ui/CustomTable';
 import { ShoppingCart } from '../components/ui/ShoppingCart';
 import { tradelineData } from '../data/tradelinesData';
+import { Link } from 'react-router-dom';
 
 export function Tradelines() {
   const [selectedInstitution, setSelectedInstitution] = useState('Select Institution');
@@ -90,7 +91,7 @@ export function Tradelines() {
   });
 
   return (
-    <div className="flex w-full flex-col">
+    <div className="flex w-full flex-col overflow-hidden">
       {!showShoppingCart ? (
         <>
           <div className="relative mt-3 p-2">
@@ -99,25 +100,26 @@ export function Tradelines() {
               alt="About Us Background"
               className="absolute inset-0 mt-[30px] h-full w-full object-cover opacity-100"
             />
-
             <div className="relative flex h-[130px] items-center p-2 text-white">
-              <div className="ml-[80px] mt-[50px] flex max-w-screen-lg font-inter text-2xl font-bold leading-7">
-                <span className="ml-10">Home</span>
+              <div className="ml-5 mt-[50px] flex max-w-screen-lg font-inter text-lg font-bold leading-7 sm:ml-[80px] sm:text-2xl">
+                <span className="ml-3 sm:ml-10">
+                  <Link to="/">Home</Link>
+                </span>
                 <span className="mx-1">|</span>
                 <span>Tradelines</span>
               </div>
             </div>
           </div>
 
-          <div className="mt-20 w-full bg-[#15549A] px-24 py-12 text-start font-inter text-white">
-            <h1 className="mb-3 font-inter text-5xl font-bold">Tradeline Inventory</h1>
-            <p className="mb-3 text-xl font-normal">
+          <div className="mt-20 w-full bg-[#15549A] px-5 py-6 text-start font-inter text-white lg:px-24 lg:py-12">
+            <h1 className="mb-3 font-inter text-2xl font-bold lg:text-5xl">Tradeline Inventory</h1>
+            <p className="mb-3 text-base font-normal lg:text-xl">
               Tradeline orders must be processed at least 5 days before the reporting date, except
               for American Express, which requires a <b>minimum of 10 days</b>. If the reporting
               date has already passed, the tradeline&apos;s first reporting date will shift to the
               following month.
             </p>
-            <p className="text-xl font-normal">
+            <p className="text-base font-normal lg:text-xl">
               Note: Once an order is placed, we will verify tradeline availability and notify you
               when the tradeline order has been accepted. If the requested tradelines are
               unavailable, alternative options will be added to your user account for you to select
@@ -126,18 +128,18 @@ export function Tradelines() {
             </p>
           </div>
 
-          <div className="mx-auto mb-14 mt-20 flex flex-col lg:w-[1250px]">
-            <div className="mb-6 flex flex-col items-center justify-end text-center font-inter">
+          <div className="mx-auto mb-0 mt-0 flex flex-col lg:mb-14 lg:mt-20 lg:w-[1250px]">
+            <div className="mb-6 hidden flex-col items-center justify-end text-center font-inter lg:flex">
               <div className="flex w-full justify-end">
                 <button
-                  className="flex items-center bg-[#04284F] px-5 py-2.5 text-lg font-normal text-white"
+                  className="flex items-center bg-[#04284F] px-4 py-2 text-base font-normal text-white lg:px-5 lg:py-2.5 lg:text-lg"
                   onClick={() => setShowShoppingCart(true)}
                 >
                   <span>Go to Checkout</span>
                 </button>
               </div>
               <div className="mx-auto mt-5 flex flex-col items-center gap-4 rounded-none">
-                <span className="mb-1 text-2xl font-normal text-[#04284F] md:whitespace-nowrap">
+                <span className="mb-1 text-base font-normal text-[#04284F] md:whitespace-nowrap lg:text-2xl">
                   Select Desired Tradeline and Reporting Date on your order:
                 </span>
                 <div className="flex w-full gap-4">
