@@ -3,7 +3,7 @@ import { Search, ChevronDown } from 'lucide-react';
 import AboutUs from '../components/asset/AboutUsbackground.png';
 import { CustomTable } from '../components/ui/CustomTable';
 import { ShoppingCart } from '../components/ui/ShoppingCart';
-import { tradelineData } from '../data/tradelinesData';
+import { newTradeLinesData } from '../data/tradelinesData';
 import { Link } from 'react-router-dom';
 
 export function Tradelines() {
@@ -82,7 +82,7 @@ export function Tradelines() {
     }
   };
 
-  const filteredData = tradelineData.filter(item => {
+  const filteredData = newTradeLinesData.filter(item => {
     const matchesSearch =
       searchQuery === '' || item.institution.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesInstitution =
@@ -152,7 +152,7 @@ export function Tradelines() {
                       <option className="text-lg font-normal text-[#122F6D]">
                         Select Institution
                       </option>
-                      {tradelineData.map(item => (
+                      {newTradeLinesData.map(item => (
                         <option key={item.id} value={item.institution}>
                           {item.institution}
                         </option>

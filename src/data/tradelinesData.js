@@ -11,6 +11,8 @@ export const bankLogos = {
   us: new URL('../images/banks/us-bank.svg', import.meta.url).href,
   jp: new URL('../images/banks/jp-morgan-bank.svg', import.meta.url).href,
   capitalOne: new URL('../images/banks/capital-one-bank.svg', import.meta.url).href,
+  barclays: new URL('../images/banks/barclays.svg', import.meta.url).href,
+  comenity: new URL('../images/banks/comenity.jpeg', import.meta.url).href,
 };
 
 export const tradelineData = [
@@ -199,7 +201,7 @@ export const newTradeLinesData = [
   },
   {
     id: 7,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Aug 2025',
     creditAmount: '$48,000.00',
@@ -349,7 +351,7 @@ export const newTradeLinesData = [
   },
   {
     id: 22,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Mar 2025',
     creditAmount: '$27,900.00',
@@ -409,7 +411,7 @@ export const newTradeLinesData = [
   },
   {
     id: 28,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'May 2025',
     creditAmount: '$16,000.00',
@@ -439,7 +441,7 @@ export const newTradeLinesData = [
   },
   {
     id: 31,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Jan 2025',
     creditAmount: '$20,000.00',
@@ -459,7 +461,7 @@ export const newTradeLinesData = [
   },
   {
     id: 33,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Mar 2025',
     creditAmount: '$44,100.00',
@@ -539,7 +541,7 @@ export const newTradeLinesData = [
   },
   {
     id: 41,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Dec 2025',
     creditAmount: '$14,800.00',
@@ -729,7 +731,7 @@ export const newTradeLinesData = [
   },
   {
     id: 60,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Jan 2025',
     creditAmount: '$29,500.00',
@@ -929,7 +931,7 @@ export const newTradeLinesData = [
   },
   {
     id: 80,
-    logo: '',
+    logo: bankLogos.comenity,
     institution: 'Comenity',
     monthYear: 'Sep 2025',
     creditAmount: '$12,250.00',
@@ -1069,7 +1071,7 @@ export const newTradeLinesData = [
   },
   {
     id: 94,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Jun 2025',
     creditAmount: '$10,000.00',
@@ -1139,7 +1141,7 @@ export const newTradeLinesData = [
   },
   {
     id: 101,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Apr 2025',
     creditAmount: '$1,000.00',
@@ -1219,7 +1221,7 @@ export const newTradeLinesData = [
   },
   {
     id: 109,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Jul 2025',
     creditAmount: '$15,000.00',
@@ -1289,7 +1291,7 @@ export const newTradeLinesData = [
   },
   {
     id: 116,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Apr 2025',
     creditAmount: '$11,000.00',
@@ -1299,7 +1301,7 @@ export const newTradeLinesData = [
   },
   {
     id: 117,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Mar 2025',
     creditAmount: '$11,000.00',
@@ -1529,7 +1531,7 @@ export const newTradeLinesData = [
   },
   {
     id: 140,
-    logo: '',
+    logo: bankLogos.comenity,
     institution: 'Comenity',
     monthYear: 'Mar 2025',
     creditAmount: '$7,500.00',
@@ -1589,7 +1591,7 @@ export const newTradeLinesData = [
   },
   {
     id: 146,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Mar 2025',
     creditAmount: '$18,000.00',
@@ -1709,7 +1711,7 @@ export const newTradeLinesData = [
   },
   {
     id: 158,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Jan 2025',
     creditAmount: '$15,000.00',
@@ -1799,7 +1801,7 @@ export const newTradeLinesData = [
   },
   {
     id: 167,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Feb 2025',
     creditAmount: '$18,000.00',
@@ -1809,7 +1811,7 @@ export const newTradeLinesData = [
   },
   {
     id: 168,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Jan 2025',
     creditAmount: '$22,000.00',
@@ -1829,7 +1831,7 @@ export const newTradeLinesData = [
   },
   {
     id: 170,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Nov 2025',
     creditAmount: '$7,500.00',
@@ -1869,7 +1871,7 @@ export const newTradeLinesData = [
   },
   {
     id: 174,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Jan 2025',
     creditAmount: '$20,000.00',
@@ -1879,7 +1881,7 @@ export const newTradeLinesData = [
   },
   {
     id: 175,
-    logo: '',
+    logo: bankLogos.barclays,
     institution: 'Barclays',
     monthYear: 'Nov 2025',
     creditAmount: '$17,000.00',
