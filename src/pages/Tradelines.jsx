@@ -152,11 +152,13 @@ export function Tradelines() {
                       <option className="text-lg font-normal text-[#122F6D]">
                         Select Institution
                       </option>
-                      {newTradeLinesData.map(item => (
-                        <option key={item.id} value={item.institution}>
-                          {item.institution}
-                        </option>
-                      ))}
+                      {[...new Set(newTradeLinesData.map(item => item.institution))].map(
+                        institution => (
+                          <option key={institution} value={institution}>
+                            {institution}
+                          </option>
+                        )
+                      )}
                     </select>
                     <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 text-[#04284F]" />
                   </div>
