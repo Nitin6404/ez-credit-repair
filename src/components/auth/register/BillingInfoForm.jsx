@@ -327,7 +327,7 @@ export const BillingInfoForm = ({
           </div>
 
           {/* Form Content */}
-          <div className="py-6">
+          <div className="pb-6">
             <div className="flex flex-col justify-between lg:flex-row">
               {/* Card Details Section */}
               <div className="mb-8 w-full lg:w-2/3">
@@ -478,7 +478,7 @@ export const BillingInfoForm = ({
 
                     <span>Yes, I would like to add a secondary member at just $50/month.</span>
                   </label>
-                  <p className="pb-10 pt-7 text-2xl font-bold text-[#04284F] md:ml-12">
+                  <p className="pb-4 text-2xl font-bold text-[#04284F] md:ml-12">
                     Test address, 110 SE 6th Street, Florida FL, 33301
                   </p>
                 </div>
@@ -522,12 +522,12 @@ export const BillingInfoForm = ({
 
             {/* Legal Section */}
             <div className="flex w-full flex-col items-center justify-between bg-[#03284E] px-4 py-3 lg:flex-row">
-              <h3 className="text-[24px] font-bold text-white sm:text-4xl">
+              <h3 className="text-[24px] font-bold text-white sm:text-3xl">
                 Contract, Information Statement, and Legal Disclosures
               </h3>
               <button
                 onClick={() => setShowContract(true)}
-                className="mt-4 rounded-xl bg-[#15549A] px-7 py-4 text-[20px] font-bold text-white sm:text-[29px] lg:mt-0"
+                className="mt-4 rounded-lg bg-[#15549A] px-4 py-1 text-[12px] font-bold text-white sm:text-[29px] lg:mt-0"
               >
                 Click to Read
               </button>
@@ -541,7 +541,7 @@ export const BillingInfoForm = ({
               <div className="flex items-center gap-4">
                 <input
                   type="checkbox"
-                  className="peer relative h-7 w-7 cursor-pointer appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2] checked:bg-[#04284F] sm:h-9 sm:w-9"
+                  className="peer relative h-7 w-7 cursor-pointer appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2] checked:bg-[#04284F] sm:h-8 sm:w-8"
                 />
 
                 <p>By checking this box you agree to statement</p>

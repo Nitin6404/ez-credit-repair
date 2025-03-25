@@ -91,7 +91,7 @@ export function CustomTable({ data, onSort, currentPage, totalPages, onPageChang
       </div>
 
       {/* Body */}
-      <div>
+      <div className="lg:h-screen lg:overflow-scroll">
         {data.map((row, index) => (
           <div
             key={row.id}

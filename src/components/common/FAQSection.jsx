@@ -33,7 +33,7 @@ export function FaqAbout() {
                 <div
                   className={`accordion-content px-6 py-3 md:px-8 md:py-4 ${openIndex === index ? '' : 'hidden'}`}
                 >
-                  <p className="font-montserrat text-[16px] font-semibold leading-[22px] md:text-[20px] md:leading-[25px]">
+                  <p className="font-montserrat text-[16px] font-semibold leading-[22px] md:text-[18px] md:leading-[25px]">
                     {item.content}
                   </p>
                 </div>

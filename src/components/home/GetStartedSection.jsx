@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import creditRepair from '../asset/creditrapiring.jpg';
 import pauseIcon from '../asset/pauseIcon.svg';
+import heroSectionImage from '../asset/herosection.jpg';
 
 export function GetStartedSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -32,11 +33,7 @@ export function GetStartedSection() {
         ) : (
           <button onClick={handleVideoToggle}>
             <div className="flex items-center justify-center gap-2">
-              <img
-                src="https://img.youtube.com/vi/Ts-qq_0qtbg/maxresdefault.jpg"
-                alt="EzeCredit Repair Video"
-                className="h-full w-full"
-              />
+              <img src={heroSectionImage} alt="EzeCredit Repair Video" className="h-full w-full" />
             </div>
           </button>
         )}

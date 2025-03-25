@@ -36,7 +36,7 @@ export function Contact() {
             <div className="w-full md:w-1/2">
               {/* Left Section - Form */}
               <div className="mt-[15px] flex-1 md:mr-8">
-                <h2 className="w-full font-inter text-3xl font-bold leading-[40px] md:text-5xl md:leading-[60px]">
+                <h2 className="w-full font-inter text-3xl font-bold leading-[40px] md:text-4xl md:leading-[60px]">
                   We are here to help you
                 </h2>
                 <p className="my-5 w-full font-montserrat text-base font-normal leading-6 md:text-lg">
@@ -93,7 +93,7 @@ export function Contact() {
             {/* Right Section - Contact Information */}
             <div className="mt-10 flex flex-col md:mt-0">
               <div className="ml-0 mt-[20px] md:ml-[50px] md:w-[70%]">
-                <h2 className="mb-4 font-inter text-3xl font-bold leading-[40px] md:text-5xl md:leading-[60px]">
+                <h2 className="mb-4 font-inter text-3xl font-bold leading-[40px] md:text-4xl md:leading-[60px]">
                   Contact Us
                 </h2>
                 <ul className="space-y-8 font-montserrat text-xl font-normal leading-9 md:text-3xl">

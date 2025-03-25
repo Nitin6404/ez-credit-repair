@@ -10,7 +10,7 @@ export function AboutSection() {
         <h1 className="font-inter text-[32px] font-bold leading-[40px] text-[#15549A] md:text-[50.04px] md:leading-[60.57px]">
           About Us
         </h1>
-        <p className="font-inter text-[16px] leading-[22px] text-[#2E2F31] md:text-[22.92px] md:leading-[27.73px]">
+        <p className="font-inter text-[16px] leading-[22px] text-[#2E2F31] md:text-[18px] md:leading-[27.73px] lg:text-justify">
           For the past 15 years, we&apos;ve been dedicated to helping thousands of individuals
           repair their credit and reclaim financial control. At EzeCredit, we fight for every
           consumer&apos;s right to an accurate, fair, and substantiated credit report.
@@ -25,7 +25,7 @@ export function AboutSection() {
         <h2 className="font-Montserrat mt-4 text-[22px] font-bold leading-[28px] text-[#529400] md:mb-3 md:text-[29px] md:leading-[35px]">
           Target Area
         </h2>
-        <ul className="w-full list-none space-y-3 pl-0 font-inter text-[16px] font-medium leading-[20px] tracking-tight text-[#2E2F31] md:w-[736px] md:space-y-4 md:text-[22.91px] md:leading-[27.73px]">
+        <ul className="w-full list-none space-y-3 pl-0 text-justify font-inter text-[16px] font-medium leading-[20px] tracking-tight text-[#2E2F31] md:w-[736px] md:space-y-4 md:text-[18px] md:leading-[27.73px]">
           <li>
             <div className="flex h-full w-full items-start">
               <div className="mr-1.5 pt-1.5">

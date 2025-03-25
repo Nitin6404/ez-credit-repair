@@ -26,7 +26,7 @@ export function Pricing() {
           </div>
         </div>
       </div>
-      <div className="mx-4 mb-10 mt-20 flex justify-center text-center md:mx-16 md:mb-8">
+      <div className="mx-4 mb-10 mt-[58px] flex justify-center text-center md:mx-16 md:mb-8">
         <div className="w-full max-w-7xl text-start font-inter text-2xl font-semibold leading-7">
           <h1 className="font-inter text-3xl font-bold text-[#15549A] md:text-5xl md:leading-[60px]">
             We only have 1 plan – A Comprehensive Service Plan
@@ -43,9 +43,8 @@ export function Pricing() {
       </div>
       <div className="flex h-auto w-full items-center justify-center bg-[url('/src/components/asset/pricingBg.svg')] bg-cover bg-center py-10 md:h-[535px]">
         <div className="flex flex-col items-center text-center font-inter">
-          <div className="w-full text-2xl font-bold leading-[35px] text-white md:text-[40px] md:leading-[55px]">
-            <p>How Much Does</p>
-            <p>EzeCredit Repair Cost</p>
+          <div className="w-full text-nowrap text-2xl font-bold leading-[35px] text-white md:text-[40px] md:leading-[55px]">
+            <p>How Much Does EzeCredit Repair Cost </p>
             <p>($99/mo)</p>
           </div>
           <div className="my-4">

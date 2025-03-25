@@ -2,7 +2,7 @@ import { ProgramCard } from './ProgramCards';
 import { useState } from 'react';
 import { programCards } from '../../data/programCardsData';
 import report from '../asset/report.jpg';
-import dispute from '../asset/dispute.svg';
+import dispute from '../asset/dispute.jpg';
 import recovery from '../asset/recovery.jpg';
 
 // import disputeBg from '../asset/dispute-bg.svg';

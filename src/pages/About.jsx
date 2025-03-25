@@ -14,7 +14,9 @@ export function About() {
         <ProgramSection />
       </div>
       <FaqAbout />
-      <Testimonial />
+      <div className="mb-20">
+        <Testimonial />
+      </div>
     </div>
   );
 }

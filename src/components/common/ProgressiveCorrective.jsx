@@ -1,7 +1,8 @@
 import rectangle from '../asset/Rectangle.png';
 import rectangle1 from '../asset/Rectangle1.png';
-import rectangle2 from '../asset/Rectangle2.png';
-import rectangle4 from '../asset/Rectangle4.png';
+// import rectangle2 from '../asset/Rectangle2.png';
+// import rectangle4 from '../asset/Rectangle4.png';
+import rectangle5 from '../asset/disputeNew1.png';
 import { useState } from 'react';
 import PropType from 'prop-types';
 
@@ -73,8 +74,7 @@ export function Program() {
     {
       number: '3',
       title: 'Credit Recovery',
-      image: rectangle4,
-      nestedImage: rectangle2,
+      image: rectangle5,
       description: 'Take action to Boost your credit score to reach your desired Score Range',
       data: 'Derogatory information will prevent your score from going up.  However, after we remove the negatives, more may be needed to build your score to be able to utilize your credit to its full potential.  We then create a path to get you beyond the 700 range which will impact to the level needed Removing all of the derogatory will only get us haft way there.',
     },

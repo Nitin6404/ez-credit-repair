@@ -49,7 +49,7 @@ const NavigationLink = ({ path, label, isActive }) => (
           window.location.href = path;
         }
       }}
-      className="inline-block font-montserrat text-[20px] font-[400] leading-[25px] hover:font-[700]"
+      className="inline-block font-montserrat text-[18px] font-[400] leading-[25px] hover:font-[700]"
     >
       {label}
     </a>
@@ -64,14 +64,10 @@ NavigationLink.propTypes = {
 
 const ContactSection = ({ icon, title, children }) => (
   <div
-    className={`hidden flex-col items-center md:flex-row md:items-center md:space-x-2 lg:mb-4 lg:flex ${icon === mail ? 'md:ml-[170px]' : 'md:ml-5'} `}
+    className={`hidden flex-col items-center md:ml-5 md:flex-row md:items-center lg:flex lg:w-full`}
   >
-    <div className="flex items-center">
-      <img
-        src={icon}
-        alt={`${title} Icon`}
-        className={`${icon === mail ? 'h-[50px] w-[45px] md:ml-[150px] md:h-[74px] md:w-[67px]' : 'h-[50px] w-[40px] md:h-[81px] md:w-[56px]'}`}
-      />
+    <div className="flex items-center lg:mr-5">
+      <img src={icon} alt={`${title} Icon`} className={`object-cover`} />
     </div>
     <div className="text-center md:text-left">
       <h3 className="font-montserrat text-[20px] font-bold leading-[30px] md:text-[25px]">
@@ -96,31 +92,35 @@ export function Footer() {
     <div className="overflow-x-hidden">
       {/* Top Info Bar */}
       <div className="mb-[0px] mt-[40px] bg-[#15549A] py-4 text-white lg:border-y">
-        <div className="mx-auto flex flex-col items-start px-4 md:flex-row md:justify-between lg:items-center">
+        <div className="mx-auto grid md:grid-cols-1 lg:grid-cols-3">
           {/* Logo */}
-          <div className="mb-4 hidden items-center md:mb-0 lg:flex">
-            <img
-              src={credit0}
-              alt="Eze Credit Repair Logo"
-              className="h-[60px] w-[100px] md:ml-[20px] md:h-[79px] md:w-[135px]"
-            />
+          <div className="ml-28 w-full">
+            <div className="mb-4 hidden items-center md:mb-0 lg:flex">
+              <img
+                src={credit0}
+                alt="Eze Credit Repair Logo"
+                className="h-[60px] w-[100px] md:h-[79px] md:w-[135px]"
+              />
+            </div>
           </div>
 
           {/* Contact Info */}
-          <ContactSection icon={mail} title="Mail & Phone">
-            <p className="font-montserrat text-[22px] font-normal leading-[27px]">
-              {contactInfo.email}
-            </p>
-            <p className="font-montserrat text-[22px] font-[400px] leading-[27px]">
-              {contactInfo.phone}
-            </p>
-          </ContactSection>
+          <div className="w-full">
+            <ContactSection icon={mail} title="Mail & Phone">
+              <p className="font-montserrat text-[22px] font-normal leading-[27px]">
+                {contactInfo.email}
+              </p>
+              <p className="font-montserrat text-[22px] font-[400px] leading-[27px]">
+                {contactInfo.phone}
+              </p>
+            </ContactSection>
+          </div>
 
           {/* Address */}
 
-          <div className="w-1/3">
+          <div className="w-full">
             <ContactSection icon={office} title="Office Address, USA">
-              <p className="font-montserrat text-[22px] font-normal leading-[27px]">
+              <p className="text-nowrap font-montserrat text-[22px] font-normal leading-[27px]">
                 {contactInfo.address.line1}
               </p>
               <p className="font-montserrat text-[22px] font-normal leading-[27px]">
@@ -133,13 +133,13 @@ export function Footer() {
 
       {/* Main Footer */}
       <footer className="bg-[#15549a] py-[2px] text-white">
-        <div className="mx-auto grid gap-8 px-4 md:grid-cols-1 lg:grid-cols-3">
+        <div className="mx-auto grid md:grid-cols-1 lg:grid-cols-3">
           {/* Company Info */}
-          <div className="mt-[1px] hidden md:ml-5 lg:block">
+          <div className="mt-[1px] hidden md:ml-5 lg:ml-28 lg:block lg:pr-4">
             <h2 className="text-left font-montserrat text-[25px] font-bold leading-normal md:text-left md:text-[31px] md:leading-[88px]">
               EzeCreditRepair LLC.
             </h2>
-            <p className="mt-2 text-left font-montserrat text-[16px] font-[700] leading-[25px] md:text-left md:text-[20px]">
+            <p className="mt-2 text-left font-montserrat text-[16px] font-normal leading-[25px] md:text-left md:text-[18px] lg:text-justify">
               EzeCredit Repair is your trusted guide to better credit, ensuring you&apos;re ready
               for every opportunity that comes your way. As the A-Team of credit repair, our
               fast-track process improves your credit for better rates, loans, and peace of mind.
@@ -184,10 +184,10 @@ export function Footer() {
 
           {/* Newsletter and Social */}
           <div className="mt-[30px] px-4 md:mt-0 md:px-0">
-            <h2 className="-ml-3 text-left font-montserrat text-[25px] font-bold leading-normal md:text-left md:text-[31px] md:leading-[88px]">
+            <h2 className="ml-5 text-left font-montserrat text-[25px] font-bold leading-normal md:text-left md:text-[31px] md:leading-[88px]">
               Follow Us
             </h2>
-            <div className="mt-4 flex flex-col items-center space-y-2 md:-ml-3 md:mt-1 md:items-start">
+            <div className="mt-4 flex flex-col items-center space-y-2 md:ml-5 md:mt-1 md:items-start">
               <input
                 type="email"
                 placeholder="Email address"
@@ -201,7 +201,7 @@ export function Footer() {
               <img
                 src={layer191}
                 alt="Social Media Icons"
-                className="mb-[40px] h-[45px] w-[211px] md:-ml-3"
+                className="mb-[40px] h-[45px] w-[211px] md:ml-5"
               />
             </div>
           </div>

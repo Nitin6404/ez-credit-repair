@@ -59,7 +59,7 @@ export function FAQ() {
               </button>
             ))}
           </div>
-          <div className="mt-3 w-full rounded-2xl border-4 border-[#DCDCDC] bg-white p-4 font-montserrat text-xl font-semibold leading-6 md:w-2/3">
+          <div className="mt-3 w-full rounded-2xl border-4 border-[#DCDCDC] bg-white p-4 font-montserrat text-lg font-normal leading-6 md:w-2/3">
             <p>{questions.find(q => q.id === selectedQuestion)?.answer}</p>
           </div>
         </div>

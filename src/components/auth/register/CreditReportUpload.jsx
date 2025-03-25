@@ -123,7 +123,7 @@ export function CreditReportUpload({ handleInputChange }) {
               {/* Upload boxes */}
               <div className="mt-6 space-y-4">
                 {/* Experian Upload */}
-                <div className="flex w-[550px] rounded-lg border-2 border-[#15549A] bg-[#E4E4E4]">
+                <div className="flex w-[600px] rounded-lg border-2 border-[#15549A] bg-[#E4E4E4]">
                   <div className="flex w-1/2 items-center p-3">
                     <span className="text-xl font-semibold text-[#04284F]">Upload</span>
                     <img src={ExperianLogo} alt="Experian" className="ml-4 h-10" />
@@ -152,7 +152,7 @@ export function CreditReportUpload({ handleInputChange }) {
                 </div>
 
                 {/* Equifax Upload */}
-                <div className="flex w-[550px] rounded-lg border-2 border-[#15549A] bg-[#E4E4E4]">
+                <div className="flex w-[600px] rounded-lg border-2 border-[#15549A] bg-[#E4E4E4]">
                   <div className="flex w-1/2 items-center p-3">
                     <span className="text-xl font-semibold text-[#04284F]">Upload</span>
                     <img src={EquifaxLogo} alt="Equifax" className="ml-4 h-9" />
@@ -181,7 +181,7 @@ export function CreditReportUpload({ handleInputChange }) {
                 </div>
 
                 {/* TransUnion Upload */}
-                <div className="flex w-[550px] rounded-lg border-2 border-[#15549A] bg-[#E4E4E4]">
+                <div className="flex w-[600px] rounded-lg border-2 border-[#15549A] bg-[#E4E4E4]">
                   <div className="flex w-1/2 items-center p-3">
                     <span className="text-xl font-semibold text-[#04284F]">Upload</span>
                     <img src={TransunionLogo} alt="TransUnion" className="ml-4 h-10" />
@@ -211,13 +211,12 @@ export function CreditReportUpload({ handleInputChange }) {
 
                 {/* ID Upload */}
                 <div className="mt-8">
-                  <h4 className="mb-4 text-3xl text-[#04284F]">
-                    Upload your driving license for your identity
-                  </h4>
-
                   <div className="flex gap-8">
                     {/* Upload Inputs Section */}
                     <div className="mt-5 flex-1 items-center justify-center space-x-4">
+                      <h4 className="mb-4 text-3xl text-[#04284F]">
+                        Upload your driving license for your identity
+                      </h4>
                       <input
                         type="file"
                         accept=".pdf,.jpg,.jpeg,.png"
@@ -277,14 +276,14 @@ export function CreditReportUpload({ handleInputChange }) {
                       </div>
                     </div>
                   </div>
-                  <div className="flex items-start gap-2">
+                  <div className="flex w-full items-start gap-2 lg:mt-8">
                     <input
                       type="checkbox"
                       className="peer relative mt-1 h-6 w-6 cursor-pointer appearance-none rounded-full border-4 border-[#04284F] bg-[#F2F2F2] checked:bg-[#04284F]"
                     />
-                    <p className="text-xl text-[#04284F]">
-                      By selecting here are consenting to the term and agreement for <br />{' '}
-                      EZECreditRepair to represent and work for you
+                    <p className="w-full text-xl text-[#04284F] lg:text-nowrap">
+                      By selecting here are consenting to the term and agreement for EZECreditRepair
+                      to represent and work for you
                       <span className="ml-1 cursor-pointer font-bold text-[#15549A] underline underline-offset-4">
                         Read More
                       </span>
@@ -383,7 +382,7 @@ export function CreditReportUpload({ handleInputChange }) {
             <br />
             Ensure the files are in PDF format for easy processing.
           </p>
-          <button className="rounded-lg bg-[#EDEDED] px-12 py-4 text-2xl font-semibold text-[#15549A]">
+          <button className="rounded-lg bg-[#EDEDED] px-6 py-2 text-2xl font-semibold text-[#15549A]">
             Submit Documents
           </button>
         </div>

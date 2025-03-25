@@ -113,13 +113,13 @@ export function Tradelines() {
 
           <div className="mt-20 w-full bg-[#15549A] px-5 py-6 text-start font-inter text-white lg:px-24 lg:py-12">
             <h1 className="mb-3 font-inter text-2xl font-bold lg:text-5xl">Tradeline Inventory</h1>
-            <p className="mb-3 text-base font-normal lg:text-xl">
+            <p className="mb-3 text-base font-normal lg:text-justify lg:text-xl">
               Tradeline orders must be processed at least 5 days before the reporting date, except
               for American Express, which requires a <b>minimum of 10 days</b>. If the reporting
               date has already passed, the tradeline&apos;s first reporting date will shift to the
               following month.
             </p>
-            <p className="text-base font-normal lg:text-xl">
+            <p className="text-base font-normal lg:text-justify lg:text-xl">
               Note: Once an order is placed, we will verify tradeline availability and notify you
               when the tradeline order has been accepted. If the requested tradelines are
               unavailable, alternative options will be added to your user account for you to select
