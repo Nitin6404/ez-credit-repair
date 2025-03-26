@@ -21,8 +21,12 @@ import course5 from '../components/learning-center/course-5.svg';
 import course6 from '../components/learning-center/course-6.svg';
 import playbackYoutube from '../components/learning-center/playback-youtube.svg';
 
+// Add this import at the top
+import { useEffect, useRef } from 'react';
+
 export function LearningCenter() {
   const [searchTerm, setSearchTerm] = useState('');
+  const [setSortBy] = useState('newest');
   const [expandedSection, setExpandedSection] = useState('Understanding a Good Credit Score');
 
   const videoTopics = [
@@ -165,6 +169,68 @@ export function LearningCenter() {
       image: relatedArticlesImage4,
     },
   ];
+
+  const relatedVideos = [
+    {
+      title: 'Ways to Improve Your Credit Score',
+      description:
+        'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
+      duration: '30Hrs 45 Mins',
+      image: course4,
+    },
+    {
+      title: 'The Importance of Having a Good Credit Score',
+      description:
+        'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
+      duration: '30Hrs 45 Mins',
+      image: course5,
+    },
+    {
+      title: 'Ways to Improve Your Credit Score',
+      description:
+        'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
+      duration: '30Hrs 45 Mins',
+      image: course4,
+    },
+    {
+      title: 'The Importance of Having a Good Credit Score',
+      description:
+        'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
+      duration: '30Hrs 45 Mins',
+      image: course5,
+    },
+    {
+      title: 'Ways to Improve Your Credit Score',
+      description:
+        'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
+      duration: '30Hrs 45 Mins',
+      image: course4,
+    },
+  ];
+
+  // Add this ref and effect for auto-scrolling
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    const scrollWidth = scrollContainer.scrollWidth;
+    const clientWidth = scrollContainer.clientWidth;
+    let scrollPosition = 0;
+
+    const scroll = () => {
+      scrollPosition += 1;
+      if (scrollPosition >= scrollWidth - clientWidth) {
+        scrollPosition = 0;
+      }
+      scrollContainer.scrollLeft = scrollPosition;
+    };
+
+    const intervalId = setInterval(scroll, 50);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   const toggleSection = title => {
     setExpandedSection(expandedSection === title ? null : title);
@@ -359,69 +425,44 @@ export function LearningCenter() {
           <div className="mb-6 bg-[#15549A] px-4 py-3">
             <h2 className="font-montserrat text-xl font-bold text-white">Related Video</h2>
           </div>
-          {/* Video Cards Grid */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
-            {[
-              {
-                title: 'Ways to Improve Your Credit Score',
-                description:
-                  'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-                duration: '30Hrs 45 Mins',
-                image: course4,
-              },
-              {
-                title: 'The Importance of Having a Good Credit Score',
-                description:
-                  'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-                duration: '30Hrs 45 Mins',
-                image: course5,
-              },
-              {
-                title: 'Ways to Improve Your Credit Score',
-                description:
-                  'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-                duration: '30Hrs 45 Mins',
-                image: course4,
-              },
-              {
-                title: 'The Importance of Having a Good Credit Score',
-                description:
-                  'Credit repair is the process of fixing a credit history that has one of more problems, such as errors, identity',
-                duration: '30Hrs 45 Mins',
-                image: course5,
-              },
-            ].map((video, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-lg border-[1px] border-[#919191] bg-white p-2 shadow-sm"
-              >
-                {/* Video Thumbnail Container */}
-                <div className="relative aspect-video">
-                  <img
-                    src={video.image}
-                    alt={video.title}
-                    className="h-full w-full rounded-md object-cover"
-                  />
-                  {/* Play Button Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity group-hover:opacity-100">
-                    <button className="text-4xl text-white">
-                      <img src={playbackYoutube} alt="Play" className="h-8 w-12" />
-                    </button>
+          {/* Video Cards Carousel */}
+          <div ref={scrollRef} className="flex overflow-hidden whitespace-nowrap">
+            <div className="animate-scroll flex gap-4">
+              {[...relatedVideos, ...relatedVideos, ...relatedVideos].map((video, index) => (
+                <div
+                  key={index}
+                  className="group relative w-[300px] shrink-0 overflow-hidden rounded-lg border-[1px] border-[#919191] bg-white p-2 shadow-sm"
+                >
+                  {/* Video Thumbnail Container */}
+                  <div className="relative aspect-video">
+                    <img
+                      src={video.image}
+                      alt={video.title}
+                      className="h-full w-full rounded-md object-cover"
+                    />
+                    {/* Play Button Overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity group-hover:opacity-100">
+                      <button className="text-4xl text-white">
+                        <img src={playbackYoutube} alt="Play" className="h-8 w-12" />
+                      </button>
+                    </div>
+                  </div>
+                  {/* Video Info */}
+                  <div className="relative mb-9 text-[#04284F]">
+                    <h4 className="text-md mb-1 line-clamp-2 font-bold">{video.title}</h4>
+                    <p className="mb-1 line-clamp-2 whitespace-normal text-sm">
+                      {video.description}
+                    </p>
+                  </div>
+                  <div className="absolute bottom-2 right-1 rounded px-2 py-1 text-xs font-bold text-red-500">
+                    <div className="flex items-center">
+                      <Clock className="mr-1 h-5 w-5" />
+                      {video.duration}
+                    </div>
                   </div>
                 </div>
-                {/* Video Info */}
-                <div className="relative mb-9 text-[#04284F]">
-                  <h4 className="text-md mb-1 line-clamp-2 font-bold">{video.title}</h4>
-                  <p className="mb-1 line-clamp-2 text-sm">{video.description}</p>
-                </div>
-                <div className="absolute bottom-2 right-1 rounded px-2 py-1 text-xs font-bold text-red-500">
-                  <div className="flex items-center">
-                    <Clock className="mr-1 h-5 w-5" />
-                    {video.duration}
-                  </div>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
