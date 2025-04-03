@@ -210,6 +210,7 @@ export function LearningCenter() {
 
   // Add this ref and effect for auto-scrolling
   const scrollRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -217,20 +218,21 @@ export function LearningCenter() {
 
     const scrollWidth = scrollContainer.scrollWidth;
     const clientWidth = scrollContainer.clientWidth;
-    let scrollPosition = 0;
+    let scrollPosition = scrollContainer.scrollLeft;
 
     const scroll = () => {
-      scrollPosition += 1;
-      if (scrollPosition >= scrollWidth - clientWidth) {
-        scrollPosition = 0;
+      if (!isPaused) {
+        scrollPosition += 1;
+        if (scrollPosition >= scrollWidth - clientWidth) {
+          scrollPosition = 0;
+        }
+        scrollContainer.scrollLeft = scrollPosition;
       }
-      scrollContainer.scrollLeft = scrollPosition;
     };
 
-    const intervalId = setInterval(scroll, 50);
-
+    const intervalId = setInterval(scroll, 30);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [isPaused]);
 
   const toggleSection = title => {
     setExpandedSection(expandedSection === title ? null : title);
@@ -253,7 +255,7 @@ export function LearningCenter() {
           <div className="absolute right-[84px] top-1/2 hidden w-full -translate-y-1/2 lg:block lg:w-[350px]">
             <div className="flex w-full justify-end">
               <select
-                className="w-1/2 rounded-lg border-[1px] border-[#04284F] bg-white px-4 py-2 text-sm font-semibold text-[#04284F] outline-none"
+                className="w-[25%] w-full appearance-none rounded-lg border-[1px] border-[#04284F] bg-white px-2 py-2 pr-8 text-sm font-semibold text-[#04284F] outline-none"
                 onChange={e => setSortBy(e.target.value)}
                 defaultValue="Sort by"
               >
@@ -262,6 +264,21 @@ export function LearningCenter() {
                 <option value="a-z">A-Z</option>
                 <option value="z-a">Z-A</option>
               </select>
+              <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+                <svg
+                  className="h-4 w-4 text-[#04284F]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -304,7 +321,7 @@ export function LearningCenter() {
             </div>
 
             {/* Bad Credit Image */}
-            <div className="mt-6">
+            <div className="mt-6 hidden md:block">
               <img src={badCreditNew} alt="Bad Credit" className="w-full" />
             </div>
           </div>
@@ -419,19 +436,31 @@ export function LearningCenter() {
           </div>
         </div>
 
+        <div className="mt-10 block md:hidden">
+          <img src={badCreditNew} alt="Bad Credit" className="w-full" />
+        </div>
+
         {/* Related Videos Section */}
-        <div className="mt-[150px]">
+        <div className="mt-10 md:mt-[150px]">
           {/* Blue Header */}
           <div className="mb-6 bg-[#15549A] px-4 py-3">
             <h2 className="font-montserrat text-xl font-bold text-white">Related Video</h2>
           </div>
           {/* Video Cards Carousel */}
-          <div ref={scrollRef} className="flex overflow-hidden whitespace-nowrap">
-            <div className="animate-scroll flex gap-4">
-              {[...relatedVideos, ...relatedVideos, ...relatedVideos].map((video, index) => (
+          <div
+            ref={scrollRef}
+            className="flex overflow-hidden whitespace-nowrap py-1"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            <div
+              className={`flex gap-4 transition-transform duration-300 ${isPaused ? 'animate-none' : 'animate-scroll'}`}
+            >
+              {[...relatedVideos, ...relatedVideos].map((video, index) => (
                 <div
                   key={index}
                   className="group relative w-[300px] shrink-0 overflow-hidden rounded-lg border-[1px] border-[#919191] bg-white p-2 shadow-sm"
+                  onClick={() => setIsPaused(!isPaused)} // Toggle pause state on click
                 >
                   {/* Video Thumbnail Container */}
                   <div className="relative aspect-video">

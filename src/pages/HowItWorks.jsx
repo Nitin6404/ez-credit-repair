@@ -60,7 +60,7 @@ export function HowItWorks() {
                   width={320}
                   height={260}
                   alt="Registration Form"
-                  className="w-full max-w-sm sm:max-w-md"
+                  className="max-w-sm sm:max-w-md lg:w-full"
                 />
               </div>
             </div>
@@ -90,7 +90,7 @@ export function HowItWorks() {
                   width={320}
                   height={260}
                   alt="Audit Process"
-                  className="w-full max-w-sm sm:max-w-md"
+                  className="max-w-sm sm:max-w-md lg:w-full"
                 />
               </div>
             </div>
@@ -121,7 +121,7 @@ export function HowItWorks() {
                   width={320}
                   height={260}
                   alt="Dispute Process"
-                  className="w-full max-w-sm sm:max-w-md"
+                  className="max-w-sm sm:max-w-md lg:w-full"
                 />
               </div>
             </div>
@@ -151,7 +151,7 @@ export function HowItWorks() {
                   width={320}
                   height={260}
                   alt="Boost Score"
-                  className="w-full max-w-sm sm:max-w-md"
+                  className="max-w-sm sm:max-w-md lg:w-full"
                 />
               </div>
             </div>

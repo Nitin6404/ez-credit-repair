@@ -112,7 +112,7 @@ export function RegistrationPage() {
               <Link to="/">Home</Link>
             </span>
             <span className="mx-1">|</span>
-            <span>Pricing</span>
+            <span>Registration</span>
           </div>
         </div>
       </div>

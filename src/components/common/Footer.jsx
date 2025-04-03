@@ -148,10 +148,10 @@ export function Footer() {
 
           {/* Navigation Section */}
           <div className="relative md:border-x md:border-y-0 lg:border-solid">
-            <h2 className="text-left font-montserrat text-[25px] font-bold leading-normal md:ml-5 md:text-left md:text-[31px] md:leading-[88px]">
+            <h2 className="ml-5 px-4 text-left font-montserrat text-[25px] font-bold leading-normal md:ml-5 md:py-0 md:text-left md:text-[31px] md:leading-[88px]">
               Short Link
             </h2>
-            <div className="flex flex-col px-4 md:flex-row">
+            <div className="ml-5 flex flex-col px-4 md:flex-row">
               {/* Main Navigation */}
               <div className="w-full md:w-1/2">
                 <ul className="mt-[5px] space-y-1 text-left font-montserrat md:text-left lg:text-center">

@@ -47,11 +47,11 @@ export function CreditReportUpload({ handleInputChange }) {
   return (
     <>
       <div className="w-full max-w-[1300px] px-4 py-6">
-        <div className="mb-8 bg-[#04284F] px-6 py-6 text-white sm:px-12 sm:py-8 md:px-16 md:py-10 lg:px-24">
-          <h2 className="mb-2 text-center text-3xl font-bold sm:text-4xl md:text-5xl">
+        <div className="mb-8 bg-[#04284F] px-4 py-6 text-white sm:px-12 sm:py-8 md:px-16 md:py-10 lg:px-24">
+          <h2 className="mb-2 text-center text-xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">
             Obtain current copy of Your Credit Reports
           </h2>
-          <p className="text-center text-lg sm:text-xl md:text-2xl">
+          <p className="text-center text-base sm:text-lg md:text-xl lg:text-2xl">
             To help us with your personalized Credit Report review, please follow these simple
             steps:
           </p>
@@ -60,18 +60,20 @@ export function CreditReportUpload({ handleInputChange }) {
         {isFormOpen ? (
           <div className="mt-8 w-full">
             {/* Consent Section */}
-            <div className="flex items-center justify-center bg-[#15549A] px-6 py-4 text-center text-white">
-              <h3 className="text-2xl font-bold">CONSENT & LIMITED POWER OF ATTORNEY</h3>
+            <div className="relative flex items-center justify-center bg-[#15549A] px-4 py-4 text-center text-white sm:px-6">
+              <h3 className="text-lg font-bold sm:text-xl md:text-2xl">
+                CONSENT & LIMITED POWER OF ATTORNEY
+              </h3>
               <button
                 onClick={handleFormClose}
-                className="absolute right-44 flex h-9 w-9 items-center justify-center rounded-full bg-white text-center text-3xl font-bold text-[#15549A]"
+                className="absolute right-4 flex h-8 w-8 items-center justify-center rounded-full bg-white text-center text-2xl font-bold text-[#15549A] md:right-8 lg:right-44 lg:h-9 lg:w-9 lg:text-3xl"
               >
                 <X />
               </button>
             </div>
 
-            <div className="mt-4 text-lg">
-              <p className="mb-2 text-center text-2xl font-semibold text-[#333333]">
+            <div className="mt-4 text-base sm:text-lg">
+              <p className="mb-2 text-center text-xl font-semibold text-[#333333] sm:text-2xl">
                 By checking the box on our application form that states:
               </p>
 
@@ -108,7 +110,7 @@ export function CreditReportUpload({ handleInputChange }) {
                 <input
                   type="text"
                   placeholder="Your Signature"
-                  className="w-1/4 rounded-lg border border-[#15549A] bg-white p-3"
+                  className="w-full rounded-lg border border-[#15549A] bg-white p-3 sm:w-1/2 md:w-1/3 lg:w-1/4"
                 />
               </div>
             </div>
@@ -116,18 +118,18 @@ export function CreditReportUpload({ handleInputChange }) {
         ) : (
           <>
             {/* Step 1 */}
-            <div className="flex">
-              <div className="flex items-start justify-center gap-4 pt-3">
+            <div className="flex flex-col sm:flex-row">
+              <div className="flex items-start justify-center gap-4 pb-3 md:pb-0 md:pt-3">
                 <div className="relative h-full">
                   <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#15549A] text-2xl font-bold text-white">
                     1
                   </div>
-                  <div className="absolute left-5 top-11 h-[calc(100%+2.75rem)] w-[2px] bg-[#15549A]"></div>
+                  <div className="absolute left-5 top-11 hidden h-[calc(100%+2.75rem)] w-[2px] bg-[#15549A] md:block"></div>
                 </div>
               </div>
-              <div className="mb-8 ml-6 w-full rounded-lg bg-[#F2F2F2] px-5 py-7 text-[#04284F]">
-                <h3 className="text-2xl font-bold">Obtain Your Credit Reports</h3>
-                <ul className="mt-4 space-y-3 text-lg">
+              <div className="mb-8 ml-0 w-full rounded-lg bg-[#F2F2F2] px-4 py-5 text-[#04284F] sm:ml-6 sm:px-5 sm:py-7">
+                <h3 className="text-xl font-bold sm:text-2xl">Obtain Your Credit Reports</h3>
+                <ul className="mt-4 space-y-3 text-base sm:text-lg">
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
                     <span>
@@ -144,11 +146,12 @@ export function CreditReportUpload({ handleInputChange }) {
                     </span>
                   </li>
                 </ul>
-                <button className="ml-8 mt-7 rounded-lg bg-[#15549A] px-4 py-4 text-xl text-white">
+                <button className="ml-0 mt-5 w-full rounded-lg bg-[#15549A] px-4 py-3 text-base text-white sm:ml-8 sm:mt-7 sm:w-auto sm:py-4 sm:text-xl">
                   <Link
                     to="https://www.annualcreditreport.com"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="block w-full text-center"
                   >
                     www.AnnualCreditReport.com
                   </Link>
@@ -156,38 +159,40 @@ export function CreditReportUpload({ handleInputChange }) {
               </div>
             </div>
             {/* Step 2 */}
-            <div className="flex">
-              <div className="flex items-start justify-center gap-4 pt-16">
+            <div className="flex flex-col sm:flex-row">
+              <div className="flex items-start justify-center gap-4 pb-3 sm:pt-16 md:pb-0 md:pt-3">
                 <div className="relative h-full">
                   <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#15549A] text-2xl font-bold text-white">
                     2
                   </div>
-                  <div className="absolute left-5 top-11 h-[calc(100%+0.5rem)] w-[2px] bg-[#15549A]"></div>
+                  <div className="absolute left-5 top-11 hidden h-[calc(100%+0.5rem)] w-[2px] bg-[#15549A] md:block"></div>
                 </div>
               </div>
 
-              <div className="mb-8 ml-6">
-                <div className="mb-8 rounded-lg bg-[#04284F] px-24 py-10 text-white">
-                  <h2 className="mb-2 text-center text-3xl font-bold">
+              <div className="mb-8 ml-0 w-full sm:ml-6">
+                <div className="mb-8 rounded-lg bg-[#04284F] px-4 py-6 text-white sm:px-8 sm:py-8 md:px-16 md:py-10 lg:px-24">
+                  <h2 className="mb-2 text-center text-xl font-bold sm:text-2xl md:text-3xl">
                     Upload Your Credit Reports and identification
                   </h2>
-                  <p className="text-center text-2xl">
+                  <p className="text-center text-base sm:text-xl md:text-2xl">
                     Your credit Repair jurney Starts Todays - Upload Your Credit Report & ID to
                     Begin
                   </p>
                 </div>
-                <div className="w-full rounded-lg bg-[#F2F2F2] px-5 py-7 text-[#04284F]">
-                  <h3 className="text-2xl font-bold">Upload Your Reports to Our System</h3>
-                  <ul className="mt-3 text-lg">
+                <div className="w-full rounded-lg bg-[#F2F2F2] px-4 py-5 text-[#04284F] sm:px-5 sm:py-7">
+                  <h3 className="text-xl font-bold sm:text-2xl">
+                    Upload Your Reports to Our System
+                  </h3>
+                  <ul className="mt-3 text-base sm:text-lg">
                     <li className="mb-2 flex items-start">
-                      <span className="mr-2 text-2xl">•</span>
+                      <span className="mr-2 text-xl sm:text-2xl">•</span>
                       <span>
                         Once you&apos;ve obtained your credit reports, upload them to our secure
                         system using the upload feature below.
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="mr-2 text-2xl">•</span>
+                      <span className="mr-2 text-xl sm:text-2xl">•</span>
                       <span>
                         A minimum of 2 reports are required to start the assessment process
                       </span>
@@ -197,12 +202,14 @@ export function CreditReportUpload({ handleInputChange }) {
                   {/* Upload boxes */}
                   <div className="mt-6 space-y-4">
                     {/* Experian Upload */}
-                    <div className="flex w-[600px] rounded-lg border-2 border-[#15549A] bg-[#E4E4E4]">
-                      <div className="flex w-1/2 items-center p-3">
-                        <span className="text-xl font-semibold text-[#04284F]">Upload</span>
-                        <img src={ExperianLogo} alt="Experian" className="ml-4 h-10" />
+                    <div className="flex flex-col rounded-lg border-2 border-[#15549A] bg-[#E4E4E4] sm:w-[600px] sm:flex-row">
+                      <div className="flex w-full items-center p-3 sm:w-1/2">
+                        <span className="text-lg font-semibold text-[#04284F] sm:text-xl">
+                          Upload
+                        </span>
+                        <img src={ExperianLogo} alt="Experian" className="ml-4 h-8 sm:h-10" />
                       </div>
-                      <div className="w-1/2 rounded-lg bg-[#F5F5F5]">
+                      <div className="w-full rounded-lg bg-[#F5F5F5] sm:w-1/2">
                         <input
                           type="file"
                           accept=".pdf,.jpg,.jpeg,.png"
@@ -212,13 +219,13 @@ export function CreditReportUpload({ handleInputChange }) {
                         />
                         <label
                           htmlFor="experian-upload"
-                          className="flex h-full cursor-pointer items-center"
+                          className="flex h-full cursor-pointer items-center p-2 sm:p-0"
                         >
                           <span className="flex items-center rounded px-2 py-2">
-                            <img src={fileIcon} alt="File Icon" className="h-6 px-2" />
-                            <p className="text-xl">Browse</p>
+                            <img src={fileIcon} alt="File Icon" className="h-5 px-2 sm:h-6" />
+                            <p className="text-base sm:text-xl">Browse</p>
                           </span>
-                          <span className="ml-3 text-base text-gray-500">
+                          <span className="ml-2 truncate text-sm text-gray-500 sm:ml-3 sm:text-base">
                             {uploadedFiles.experian ? uploadedFiles.experian.name : 'File name....'}
                           </span>
                         </label>
@@ -226,12 +233,14 @@ export function CreditReportUpload({ handleInputChange }) {
                     </div>
 
                     {/* Equifax Upload */}
-                    <div className="flex w-[600px] rounded-lg border-2 border-[#15549A] bg-[#E4E4E4]">
-                      <div className="flex w-1/2 items-center p-3">
-                        <span className="text-xl font-semibold text-[#04284F]">Upload</span>
-                        <img src={EquifaxLogo} alt="Equifax" className="ml-4 h-9" />
+                    <div className="flex flex-col rounded-lg border-2 border-[#15549A] bg-[#E4E4E4] sm:w-[600px] sm:flex-row">
+                      <div className="flex w-full items-center p-3 sm:w-1/2">
+                        <span className="text-lg font-semibold text-[#04284F] sm:text-xl">
+                          Upload
+                        </span>
+                        <img src={EquifaxLogo} alt="Equifax" className="ml-4 h-7 sm:h-9" />
                       </div>
-                      <div className="w-1/2 rounded-lg bg-[#F5F5F5]">
+                      <div className="w-full rounded-lg bg-[#F5F5F5] sm:w-1/2">
                         <input
                           type="file"
                           accept=".pdf,.jpg,.jpeg,.png"
@@ -241,13 +250,13 @@ export function CreditReportUpload({ handleInputChange }) {
                         />
                         <label
                           htmlFor="equifax-upload"
-                          className="flex h-full cursor-pointer items-center"
+                          className="flex h-full cursor-pointer items-center p-2 sm:p-0"
                         >
                           <span className="flex items-center rounded px-2 py-2">
-                            <img src={fileIcon} alt="File Icon" className="h-6 px-2" />
-                            <p className="text-xl">Browse</p>
+                            <img src={fileIcon} alt="File Icon" className="h-5 px-2 sm:h-6" />
+                            <p className="text-base sm:text-xl">Browse</p>
                           </span>
-                          <span className="ml-3 text-base text-gray-500">
+                          <span className="ml-2 truncate text-sm text-gray-500 sm:ml-3 sm:text-base">
                             {uploadedFiles.equifax ? uploadedFiles.equifax.name : 'File name....'}
                           </span>
                         </label>
@@ -255,12 +264,14 @@ export function CreditReportUpload({ handleInputChange }) {
                     </div>
 
                     {/* TransUnion Upload */}
-                    <div className="flex w-[600px] rounded-lg border-2 border-[#15549A] bg-[#E4E4E4]">
-                      <div className="flex w-1/2 items-center p-3">
-                        <span className="text-xl font-semibold text-[#04284F]">Upload</span>
-                        <img src={TransunionLogo} alt="TransUnion" className="ml-4 h-10" />
+                    <div className="flex flex-col rounded-lg border-2 border-[#15549A] bg-[#E4E4E4] sm:w-[600px] sm:flex-row">
+                      <div className="flex w-full items-center p-3 sm:w-1/2">
+                        <span className="text-lg font-semibold text-[#04284F] sm:text-xl">
+                          Upload
+                        </span>
+                        <img src={TransunionLogo} alt="TransUnion" className="ml-4 h-8 sm:h-10" />
                       </div>
-                      <div className="w-1/2 rounded-lg bg-[#F5F5F5]">
+                      <div className="w-full rounded-lg bg-[#F5F5F5] sm:w-1/2">
                         <input
                           type="file"
                           accept=".pdf,.jpg,.jpeg,.png"
@@ -270,13 +281,13 @@ export function CreditReportUpload({ handleInputChange }) {
                         />
                         <label
                           htmlFor="transunion-upload"
-                          className="flex h-full cursor-pointer items-center"
+                          className="flex h-full cursor-pointer items-center p-2 sm:p-0"
                         >
                           <span className="flex items-center rounded px-2 py-2">
-                            <img src={fileIcon} alt="File Icon" className="h-6 px-2" />
-                            <p className="text-xl">Browse</p>
+                            <img src={fileIcon} alt="File Icon" className="h-5 px-2 sm:h-6" />
+                            <p className="text-base sm:text-xl">Browse</p>
                           </span>
-                          <span className="ml-3 text-base text-gray-500">
+                          <span className="ml-2 truncate text-sm text-gray-500 sm:ml-3 sm:text-base">
                             {uploadedFiles.transunion
                               ? uploadedFiles.transunion.name
                               : 'File name....'}
@@ -287,31 +298,33 @@ export function CreditReportUpload({ handleInputChange }) {
 
                     {/* ID Upload */}
                     <div className="mt-8">
-                      <div className="flex gap-8">
+                      <div className="flex flex-col gap-4 lg:flex-row lg:gap-8">
                         {/* Upload Inputs Section */}
-                        <div className="mt-5 flex-1 items-center justify-center space-x-4">
-                          <h4 className="mb-4 text-3xl text-[#04284F]">
+                        <div className="mt-2 flex-1 items-center justify-center space-y-3 lg:mt-5 lg:space-x-4 lg:space-y-0">
+                          <h4 className="mb-2 text-xl text-[#04284F] sm:text-2xl md:text-3xl lg:mb-4">
                             Upload your driving license for your identity
                           </h4>
-                          <input
-                            type="file"
-                            accept=".pdf,.jpg,.jpeg,.png"
-                            onChange={e => handleFileUpload(e, 'identificationFront')}
-                            className="w-2/5 rounded-lg border border-[#15549A] bg-white p-3"
-                            placeholder="Upload Front Side"
-                          />
-                          <input
-                            type="file"
-                            accept=".pdf,.jpg,.jpeg,.png"
-                            onChange={e => handleFileUpload(e, 'identificationBack')}
-                            className="ml-2 w-2/5 rounded-lg border border-[#15549A] bg-white p-3"
-                            placeholder="Upload Back Side"
-                          />
+                          <div className="flex flex-col space-y-3 lg:flex-row lg:space-x-2 lg:space-y-0">
+                            <input
+                              type="file"
+                              accept=".pdf,.jpg,.jpeg,.png"
+                              onChange={e => handleFileUpload(e, 'identificationFront')}
+                              className="w-full rounded-lg border border-[#15549A] bg-white p-3 lg:w-2/5"
+                              placeholder="Upload Front Side"
+                            />
+                            <input
+                              type="file"
+                              accept=".pdf,.jpg,.jpeg,.png"
+                              onChange={e => handleFileUpload(e, 'identificationBack')}
+                              className="w-full rounded-lg border border-[#15549A] bg-white p-3 lg:ml-2 lg:w-2/5"
+                              placeholder="Upload Back Side"
+                            />
+                          </div>
                         </div>
                         {/* Preview Images Section */}
-                        <div className="flex gap-8">
-                          <div className="w-[180px]">
-                            <div className="h-[118px] w-[177px] overflow-hidden rounded-lg border border-[#15549A] bg-white">
+                        <div className="flex justify-between gap-4 sm:gap-8">
+                          <div className="w-[160px] sm:w-[180px]">
+                            <div className="h-[100px] w-[160px] overflow-hidden rounded-lg border border-[#15549A] bg-white sm:h-[118px] sm:w-[177px]">
                               {uploadedFiles.identificationFront ? (
                                 <img
                                   src={URL.createObjectURL(uploadedFiles.identificationFront)}
@@ -326,12 +339,12 @@ export function CreditReportUpload({ handleInputChange }) {
                                 />
                               )}
                             </div>
-                            <button className="mt-2 h-[39px] w-[180px] rounded-[5px] border border-[#15549A] bg-[#15549A] text-sm text-white">
+                            <button className="mt-2 h-[35px] w-full rounded-[5px] border border-[#15549A] bg-[#15549A] text-xs text-white sm:h-[39px] sm:text-sm">
                               Click here to Preview
                             </button>
                           </div>
-                          <div className="w-[180px]">
-                            <div className="h-[118px] w-[177px] overflow-hidden rounded-lg border border-[#15549A] bg-white">
+                          <div className="w-[160px] sm:w-[180px]">
+                            <div className="h-[100px] w-[160px] overflow-hidden rounded-lg border border-[#15549A] bg-white sm:h-[118px] sm:w-[177px]">
                               {uploadedFiles.identificationBack ? (
                                 <img
                                   src={URL.createObjectURL(uploadedFiles.identificationBack)}
@@ -346,18 +359,18 @@ export function CreditReportUpload({ handleInputChange }) {
                                 />
                               )}
                             </div>
-                            <button className="mt-2 h-[39px] w-[180px] rounded-[5px] border border-[#15549A] bg-[#15549A] text-sm text-white">
+                            <button className="mt-2 h-[35px] w-full rounded-[5px] border border-[#15549A] bg-[#15549A] text-xs text-white sm:h-[39px] sm:text-sm">
                               Click here to Preview
                             </button>
                           </div>
                         </div>
                       </div>
-                      <div className="flex w-full items-start gap-2 lg:mt-8">
+                      <div className="mt-6 flex w-full items-start gap-2 lg:mt-8">
                         <input
                           type="checkbox"
-                          className="peer relative mt-1 h-6 w-6 cursor-pointer appearance-none rounded-full border-4 border-[#04284F] bg-[#F2F2F2] checked:bg-[#04284F]"
+                          className="peer relative mt-1 h-5 w-5 cursor-pointer appearance-none rounded-full border-4 border-[#04284F] bg-[#F2F2F2] checked:bg-[#04284F] sm:h-6 sm:w-6"
                         />
-                        <p className="w-full text-xl text-[#04284F] lg:text-nowrap">
+                        <p className="w-full text-base text-[#04284F] sm:text-lg md:text-xl">
                           By selecting here are consenting to the term and agreement for
                           EZECreditRepair to represent and work for you
                           <span
@@ -374,21 +387,23 @@ export function CreditReportUpload({ handleInputChange }) {
               </div>
             </div>
             {/* Step 3 - Why This Is Important */}
-            <div className="flex">
-              <div className="flex items-start justify-center gap-4 pt-3">
+            <div className="flex flex-col sm:flex-row">
+              <div className="flex items-start justify-center gap-4 pb-3 md:pb-0 md:pt-3">
                 <div className="relative h-full">
                   <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#15549A] text-2xl font-bold text-white">
                     3
                   </div>
                 </div>
               </div>
-              <div className="mb-8 ml-6 w-full rounded-lg bg-[#F2F2F2] px-5 py-7">
+              <div className="mb-8 ml-0 w-full rounded-lg bg-[#F2F2F2] px-4 py-5 sm:ml-6 sm:px-5 sm:py-7">
                 <div className="flex items-center gap-2">
-                  <h3 className="text-2xl font-bold text-[#04284F]">Why This is Important</h3>
+                  <h3 className="text-xl font-bold text-[#04284F] sm:text-2xl">
+                    Why This is Important
+                  </h3>
                 </div>
                 <div className="mt-4 flex items-start gap-2">
                   <span className="text-[#04284F]">•</span>
-                  <p className="text-lg text-[#04284F]">
+                  <p className="text-base text-[#04284F] sm:text-lg">
                     By analyzing your credit reports, we can establish a baseline and identify any
                     inaccuracies or questionable items. This step is essential to crafting your
                     personalized credit repair strategy.
@@ -399,26 +414,28 @@ export function CreditReportUpload({ handleInputChange }) {
           </>
         )}
       </div>
-      <div className="w-screen">
+      <div className="w-full">
         {/* Submit Documents Section */}
-        <div className="w-full bg-[#15549A] px-8 py-10 text-center text-white">
-          <h2 className="mb-2z text-3xl font-bold">SUBMIT & UPLOAD YOUR DOCUMENTS</h2>
-          <p className="mb-6 text-2xl">
+        <div className="w-full bg-[#15549A] px-4 py-6 text-center text-white sm:px-8 sm:py-10">
+          <h2 className="mb-2 text-xl font-bold sm:text-2xl md:text-3xl">
+            SUBMIT & UPLOAD YOUR DOCUMENTS
+          </h2>
+          <p className="mb-4 text-base sm:mb-6 sm:text-xl md:text-2xl">
             Click the Upload button below to securely submit your credit reports and verification
             details
-            <br />
+            <br className="hidden sm:block" />
             Ensure the files are in PDF format for easy processing.
           </p>
-          <button className="rounded-lg bg-[#EDEDED] px-6 py-2 text-2xl font-semibold text-[#15549A]">
+          <button className="rounded-lg bg-[#EDEDED] px-4 py-2 text-lg font-semibold text-[#15549A] sm:px-6 sm:text-2xl">
             Submit Documents
           </button>
         </div>
         {/* Support Message */}
-        <div className="mt-12 text-center text-xl text-[#04284F]">
+        <div className="mt-8 px-4 text-center text-base text-[#04284F] sm:mt-12 sm:text-lg md:text-xl">
           <p>
             If you encounter any issues while obtaining or uploading your reports, feel free to
             contact our support team for assistance.
-            <br />
+            <br className="hidden sm:block" />
             We&apos;re here to guide you every step of the way!
           </p>
         </div>
@@ -428,6 +445,6 @@ export function CreditReportUpload({ handleInputChange }) {
 }
 
 CreditReportUpload.propTypes = {
-  formData: PropTypes.object.isRequired,
+  formData: PropTypes.object,
   handleInputChange: PropTypes.func.isRequired,
 };

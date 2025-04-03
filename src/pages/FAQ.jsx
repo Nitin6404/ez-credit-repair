@@ -80,7 +80,7 @@ export function FAQ() {
             <img
               src={manOnFaq}
               alt="Placeholder"
-              className="mb-[50px] w-[200px] sm:w-[250px] md:w-[350px] lg:mb-[105px] lg:w-auto"
+              className="mb-0 w-[300px] sm:w-[250px] md:w-[350px] lg:mb-[105px] lg:w-auto"
             />
           </div>
         </div>

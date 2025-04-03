@@ -521,13 +521,13 @@ export const BillingInfoForm = ({
             </div>
 
             {/* Legal Section */}
-            <div className="flex w-full flex-col items-center justify-between bg-[#03284E] px-4 py-3 lg:flex-row">
-              <h3 className="text-[24px] font-bold text-white sm:text-3xl">
+            <div className="flex w-full flex-row items-center justify-between bg-[#03284E] px-4 py-2 md:flex-col md:py-3 lg:flex-row">
+              <h3 className="text-sm font-bold text-white sm:text-3xl md:text-[24px]">
                 Contract, Information Statement, and Legal Disclosures
               </h3>
               <button
                 onClick={() => setShowContract(true)}
-                className="mt-4 rounded-lg bg-[#15549A] px-4 py-1 text-[12px] font-bold text-white sm:text-[29px] lg:mt-0"
+                className="mt-0 rounded-lg bg-[#15549A] px-4 py-1 text-[12px] font-bold text-white sm:text-[29px] md:mt-4 lg:mt-0"
               >
                 Click to Read
               </button>

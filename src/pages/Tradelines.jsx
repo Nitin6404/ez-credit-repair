@@ -128,7 +128,7 @@ export function Tradelines() {
             </p>
           </div>
 
-          <div className="mx-auto mb-0 mt-0 flex flex-col lg:mb-14 lg:mt-20 lg:w-[1250px]">
+          <div className="mx-0 mb-0 mt-0 flex flex-col lg:mx-auto lg:mb-14 lg:mt-20 lg:w-[1250px]">
             <div className="mb-6 hidden flex-col items-center justify-end text-center font-inter lg:flex">
               <div className="flex w-full justify-end">
                 <button
@@ -176,7 +176,7 @@ export function Tradelines() {
               </div>
             </div>
 
-            <div className="hidden lg:block">
+            <div className="lg:block">
               <CustomTable
                 columns={columns}
                 data={filteredData}

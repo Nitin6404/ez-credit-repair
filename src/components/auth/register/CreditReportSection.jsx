@@ -18,16 +18,18 @@ export function CreditReportSection({ formData, handleInputChange }) {
           </p>
 
           {/* Checkbox Container */}
-          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
-            <input
-              type="checkbox"
-              name="addSecondaryMember"
-              checked={formData.addSecondaryMember}
-              onChange={handleInputChange}
-              className="mx-2 h-8 w-8 cursor-pointer appearance-none rounded-full border-4 border-[#767676] bg-[#F2F2F2] checked:border-[#767676] checked:bg-black sm:block"
-            />
+          <div className="flex w-full flex-row items-center justify-center gap-2 md:flex-row lg:gap-4">
+            <div className="sm:w-[10%] md:w-auto">
+              <input
+                type="checkbox"
+                name="addSecondaryMember"
+                checked={formData.addSecondaryMember}
+                onChange={handleInputChange}
+                className="mx-0 h-8 w-8 cursor-pointer appearance-none rounded-full border-2 border-[#767676] bg-[#F2F2F2] checked:border-[#767676] checked:bg-black sm:block md:mx-2 md:h-8 md:w-8 md:border-4"
+              />
+            </div>
 
-            <label className="text-lg font-semibold text-white md:text-2xl">
+            <label className="text-base font-semibold text-white md:text-2xl">
               Yes, I understand I am required to obtain my credit reports to begin the process.
             </label>
           </div>

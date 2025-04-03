@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import comma from '../asset/comma.png';
 import jack from '../asset/jack.svg';
 import mathew from '../asset/mathew.svg';
@@ -135,20 +135,39 @@ TestimonialCard.propTypes = {
 // In the Testimonial component, update the testimonials section
 export function Testimonial() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const getTestimonialIndex = offset =>
     (currentIndex + offset + testimonials.length) % testimonials.length;
 
   const handleCardClick = position => {
+    setIsPaused(true); // Pause auto-scroll when manually clicking
     if (position === 'left') {
       setCurrentIndex(prev => (prev === 0 ? testimonials.length - 1 : prev - 1));
     } else if (position === 'right') {
       setCurrentIndex(prev => (prev + 1) % testimonials.length);
     }
+    // Resume auto-scroll after 5 seconds of inactivity
+    setTimeout(() => setIsPaused(false), 1000);
   };
 
+  // Auto-scroll effect
+  useEffect(() => {
+    if (!isPaused) {
+      const intervalId = setInterval(() => {
+        setCurrentIndex(prev => (prev + 1) % testimonials.length);
+      }, 5000); // Change testimonial every 3 seconds
+
+      return () => clearInterval(intervalId);
+    }
+  }, [isPaused]);
+
   return (
-    <div className="relative flex flex-col items-center bg-white py-0 md:py-0">
+    <div
+      className="relative flex flex-col items-center bg-white py-0 md:py-0"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       {/* Header Section */}
       <div className="mb-8 mt-6 text-center md:mb-8 md:mt-12">
         <h2 className="mt-2 font-inter text-[32px] font-bold leading-[40px] text-[#15549A] md:mb-0 md:mt-0 md:text-[50px] md:leading-[60px]">
@@ -175,6 +194,24 @@ export function Testimonial() {
             position="right"
             onClick={() => handleCardClick('right')}
           />
+        </div>
+
+        {/* Navigation Dots */}
+        <div className="mt-12 flex justify-center space-x-3">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                setCurrentIndex(index);
+                setIsPaused(true);
+                setTimeout(() => setIsPaused(false), 5000);
+              }}
+              className={`h-3 w-3 rounded-full transition-all duration-300 ${
+                currentIndex === index ? 'w-8 bg-[#15549A]' : 'bg-[#B8B8B8]'
+              }`}
+              aria-label={`Go to testimonial ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
     </div>
